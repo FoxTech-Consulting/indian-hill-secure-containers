@@ -10,10 +10,11 @@ through GitHub Container Registry under the `foxtech-consulting` namespace.
 
 The repository has been initialized. Automated source synchronization and the
 first image publications are being connected. No generally available container
-release or download reference is announced by this initial repository commit.
+release or download reference is announced by this initial repository setup.
 
 The initial source scope covers the Secure and Hardened recipes for ASP.NET,
-NGINX, Python, PostgreSQL, Java, Redis, Apache Tomcat, Elasticsearch, and Go.
+NGINX, Python, PostgreSQL, Node.js, Java, Redis, Apache Tomcat, and Elasticsearch.
+Go is maintained in a separate bare-image pipeline.
 Each source snapshot will identify its GitLab revision and exported file hashes;
 each published image record will identify its exact digest and assurance evidence.
 
