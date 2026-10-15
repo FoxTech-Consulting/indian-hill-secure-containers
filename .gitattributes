@@ -1,0 +1,2 @@
+# SOURCE.json hashes exact exported bytes. Preserve those bytes on every host.
+* -text

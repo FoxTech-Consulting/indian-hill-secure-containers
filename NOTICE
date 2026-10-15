@@ -1,0 +1,29 @@
+Indian Hill Labs Secure Containers
+Copyright 2026 Indian Hill Labs
+
+The Apache License, Version 2.0 in LICENSE applies to Indian Hill Labs'
+original code, configuration, build helpers, and documentation in this
+public source snapshot, except where an individual file states otherwise.
+
+It does not replace the licenses of upstream source archives, container base
+images, runtimes, libraries, software downloaded during builds, or third-party
+material that carries its own notice. The original notices and terms for
+those components continue to apply. Image labels identify selected upstream
+licenses; they do not establish the license of every component in an image.
+
+The Redis build selects the AGPL-3.0-only option. Redis distribution must
+retain its notices and satisfy applicable corresponding-source obligations.
+The Java and Tomcat recipes include OpenJDK components under GPLv2 with the
+Classpath Exception. Elasticsearch uses an Elastic vendor image; its bundled
+components and distribution terms must be reviewed separately. These examples
+are not an exhaustive third-party inventory; use the exact image's SBOM and
+upstream license files for component-specific review.
+
+This source snapshot does not contain downloaded upstream archives or
+redistribute their contents under Apache-2.0. Downstream image distributors
+remain responsible for their complete component inventory, license texts,
+notices, source delivery, and applicable offers or other obligations.
+
+Indian Hill Labs names and marks are not licensed for endorsement or
+certification. Source availability, a local build, or a tier label does not
+confer a qualification decision or a certification of the resulting image.
