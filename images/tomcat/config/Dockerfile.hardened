@@ -1,0 +1,9 @@
+ARG SECURE_BASE
+FROM ${SECURE_BASE}
+ARG OCI_REVISION="manual-build"
+LABEL com.indianhilllabs.assurance.level="hardened" \
+      com.indianhilllabs.assurance.inherits="secure" \
+      org.opencontainers.image.revision="${OCI_REVISION}"
+ENV IHL_ASSURANCE_LEVEL="hardened" \
+    JAVA_TOOL_OPTIONS="-XX:+DisableAttachMechanism -XX:-UsePerfData -XX:+ExitOnOutOfMemoryError -XX:MaxRAMPercentage=60 -Djava.awt.headless=true"
+USER 1654:1654

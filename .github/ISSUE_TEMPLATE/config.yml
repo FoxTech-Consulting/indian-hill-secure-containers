@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/foxtech-consulting/indian-hill-secure-containers/security/policy
+    about: Read the private reporting instructions; do not disclose vulnerabilities in public issues.

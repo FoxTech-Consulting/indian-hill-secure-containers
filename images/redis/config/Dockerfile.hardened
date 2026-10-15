@@ -1,0 +1,9 @@
+# The factory supplies the immutable Secure digest.
+ARG SECURE_BASE
+FROM ${SECURE_BASE}
+LABEL com.indianhilllabs.assurance.level="hardened" \
+      com.indianhilllabs.assurance.inherits="secure" \
+      com.indianhilllabs.assurance.stig-profile="ihl-redis-oss-enterprise-v2r2-tailored"
+COPY --chmod=0444 images/redis/config/redis.hardened.conf /opt/ihl/redis/redis.conf
+ENV IHL_ASSURANCE_LEVEL="hardened"
+USER 1654:1654

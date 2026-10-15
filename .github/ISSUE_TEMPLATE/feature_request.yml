@@ -1,0 +1,15 @@
+name: Feature proposal
+description: Propose an improvement to the public container sources.
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Problem and proposed behavior
+      description: Identify the affected family and the practical use case.
+    validations:
+      required: true
+  - type: textarea
+    id: implications
+    attributes:
+      label: Security, compatibility, and licensing considerations
+      description: Explain any changes to runtime controls, dependencies, or expected deployment behavior.

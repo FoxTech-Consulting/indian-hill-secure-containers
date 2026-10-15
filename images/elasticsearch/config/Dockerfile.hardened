@@ -1,0 +1,8 @@
+ARG SECURE_BASE
+FROM ${SECURE_BASE}
+LABEL com.indianhilllabs.assurance.level="hardened" \
+      com.indianhilllabs.assurance.inherits="secure"
+COPY --chown=1000:0 --chmod=0660 images/elasticsearch/config/elasticsearch.hardened.yml /usr/share/elasticsearch/config/elasticsearch.yml
+COPY --chown=1000:0 --chmod=0440 images/elasticsearch/config/hardening.options /usr/share/elasticsearch/config/jvm.options.d/ihl-hardening.options
+ENV IHL_ASSURANCE_LEVEL="hardened"
+USER 1000:0

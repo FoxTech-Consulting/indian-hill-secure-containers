@@ -1,0 +1,1120 @@
+{
+  "files": [
+    {
+      "mode": "100644",
+      "path": ".dockerignore",
+      "sha256": "52957451d70043a7ed33403697b74e01c7e252e5af73bbbabd80a6f7560622cd",
+      "size": 23
+    },
+    {
+      "mode": "100644",
+      "path": ".gitattributes",
+      "sha256": "d13050eebe8cbde711a9ac108d2483f92e59fd79ba3ce14547ef736e92bcea08",
+      "size": 87
+    },
+    {
+      "mode": "100644",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "sha256": "a294f4679347c153f5154dca571686086d90e4e8fc4df92ee8a9195f27e580f4",
+      "size": 703
+    },
+    {
+      "mode": "100644",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "9e0ae7fa2f4cd6582f364c3cfa9c036fa1f0d7372b4211811451ffab6a163fa4",
+      "size": 280
+    },
+    {
+      "mode": "100644",
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "sha256": "281ca66f46edeac8a7ca015c247e3f2de9785759cdaaa2194534e70c5ce5bb2f",
+      "size": 537
+    },
+    {
+      "mode": "100644",
+      "path": ".gitignore",
+      "sha256": "6b950877b17c14dadb2145bbbea511f19c165f13526d68d8c4fe9223881c6957",
+      "size": 114
+    },
+    {
+      "mode": "100644",
+      "path": "CONTRIBUTING.md",
+      "sha256": "e6175ba8b1037ed20e36901db444a61a9567b36e414bfe746df5cfce24064f08",
+      "size": 2698
+    },
+    {
+      "mode": "100644",
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size": 11357
+    },
+    {
+      "mode": "100644",
+      "path": "NOTICE",
+      "sha256": "1187b734025ea4e5eb52138d0a18fd5bf86d5e231cea737e3e746b407e7563fb",
+      "size": 1691
+    },
+    {
+      "mode": "100644",
+      "path": "README.md",
+      "sha256": "7bf0ec7c3e852f3ea0d67ceb4cd449496d0749aff99030fcb1d59cc081e82f77",
+      "size": 7474
+    },
+    {
+      "mode": "100644",
+      "path": "SECURITY.md",
+      "sha256": "f0cacb752d0435d3f93c8d14820997a48ebd17bc9094fa420b77ce4d654539b5",
+      "size": 1898
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/config/Dockerfile",
+      "sha256": "a0b232fcd0b84528a7f4aa6e7d629f3a60b48c9448673d8fa4a8b83df8795c99",
+      "size": 1675
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/config/Dockerfile.hardened",
+      "sha256": "3721f3d80a02c0b3fbc73309e101ca343885c6f168dd86be47ba5d486431537e",
+      "size": 2006
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/examples/reference-api/Dockerfile",
+      "sha256": "8d706af99c382f16c5473c6d3a12c671c36a12908a2f02c044345540e73ee046",
+      "size": 1685
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/examples/reference-api/Ihl.ReferenceApi.csproj",
+      "sha256": "93b01a38e71c9711940ce872117d9fb4847949d6ec686ad59274dc7db2f6516c",
+      "size": 268
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/examples/reference-api/NuGet.Config",
+      "sha256": "89b2c2e5485897ba8e95a82fda47688ecf629ec3ab6d0ecf871e992e14bb3e44",
+      "size": 287
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/examples/reference-api/Program.cs",
+      "sha256": "9b9ef9d2ab2320a940ab8e370ff6e6f08c0a957125b45261bd109ba9141d15f7",
+      "size": 9044
+    },
+    {
+      "mode": "100644",
+      "path": "images/elasticsearch/config/Dockerfile",
+      "sha256": "094bd6db625486dfd4ff736dc05d033bda794735b916b6eaf6d9402075998c4b",
+      "size": 1087
+    },
+    {
+      "mode": "100644",
+      "path": "images/elasticsearch/config/Dockerfile.hardened",
+      "sha256": "d6b67cb039914344edea2792f8919fd7d101939b04307566d6d5bfc4dd0d7810",
+      "size": 475
+    },
+    {
+      "mode": "100644",
+      "path": "images/elasticsearch/config/elasticsearch.hardened.yml",
+      "sha256": "1640908c9df8bcaaa1fc4a28db10c4f5ea2650dff93a9b866567585b63dde6c6",
+      "size": 942
+    },
+    {
+      "mode": "100644",
+      "path": "images/elasticsearch/config/elasticsearch.secure.yml",
+      "sha256": "5aca6f7a51cb0adffb90f7fcbf61c6dcd5fd66dea73b47c9e0b9f9cf8c3846f5",
+      "size": 874
+    },
+    {
+      "mode": "100644",
+      "path": "images/elasticsearch/config/hardening.options",
+      "sha256": "adfdf79c90770a9216b1a559c18f091abf4c64d81adf2394481bc96a8aa8dc25",
+      "size": 228
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/11/bcfips-2-1-1/Dockerfile",
+      "sha256": "691613b35c5bfa55e2878262192cb02d75240d7e23b59bcb3aa4f64090f763f3",
+      "size": 1915
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/11/bcfips-2-1-1/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/11/bcfips-2-1-3/Dockerfile",
+      "sha256": "94a143c49070492add6c0ddc36468103c4f003c531fa5f101ae615f741398d0f",
+      "size": 1915
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/11/bcfips-2-1-3/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/17/bcfips-2-1-1/Dockerfile",
+      "sha256": "0725aff711532803d32cf1eb7cb10811809e7b4ced633a420dae8cf749a102b3",
+      "size": 1915
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/17/bcfips-2-1-1/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/17/bcfips-2-1-3/Dockerfile",
+      "sha256": "055ad524f1c7d848e5dcc8089c7ecfc6202b5d4d08a12a4922d0a00b59a0cfd3",
+      "size": 1915
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/17/bcfips-2-1-3/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/21/bcfips-2-1-1/Dockerfile",
+      "sha256": "5c49ba844bb7351d024c4553b3a36fd5f7f48f70792e8f59687323a0ee255b6c",
+      "size": 1915
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/21/bcfips-2-1-1/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/21/bcfips-2-1-3/Dockerfile",
+      "sha256": "1693451a6637a44f12f97690236b45e3a9c958cb808d0b7d4d163962a0286a79",
+      "size": 1915
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/21/bcfips-2-1-3/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/25/bcfips-2-1-1/Dockerfile",
+      "sha256": "6163d83bc46d12fae54aedea5e2374e942bdbd2bf0654b3377c73c259e702409",
+      "size": 1912
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/25/bcfips-2-1-1/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/25/bcfips-2-1-3/Dockerfile",
+      "sha256": "94cbfd7e7d67f8653402fefcb6c2c1e66ab729379f94506f24e87d2cfc0a231d",
+      "size": 1912
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/25/bcfips-2-1-3/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/26/bcfips-2-1-1/Dockerfile",
+      "sha256": "4d4c8345bd1147f2839a7cafa16ec4d05637af1dab956a4109897c3363a94ebb",
+      "size": 1912
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/26/bcfips-2-1-1/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/26/bcfips-2-1-3/Dockerfile",
+      "sha256": "e6aef691f7797dd8b3c76c945bbac1d82f7ee76960778a1bd8cb87386744948d",
+      "size": 1912
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/26/bcfips-2-1-3/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/27/bcfips-2-1-1/Dockerfile",
+      "sha256": "35a0937e911d6d4e3cc239c0f3cd082468c80f7c8c478c540c75d75abe406c5a",
+      "size": 1896
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/27/bcfips-2-1-1/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/27/bcfips-2-1-3/Dockerfile",
+      "sha256": "0e94920df846a3079878b54a61583ade9e934b5243cf49382964aecdeded5f49",
+      "size": 1896
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/27/bcfips-2-1-3/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/8/bcfips-2-1-1/Dockerfile",
+      "sha256": "49bd30c130d16cd83a47d31106f8cfa4589fe1678638b87ddd50d3b2f4d33a6d",
+      "size": 1760
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/8/bcfips-2-1-1/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/8/bcfips-2-1-3/Dockerfile",
+      "sha256": "8900f81acb626e61dddebbc6b52e017308f865ed999c15ce0aab75d56892e612",
+      "size": 1760
+    },
+    {
+      "mode": "100644",
+      "path": "images/java/8/bcfips-2-1-3/Dockerfile.hardened",
+      "sha256": "6eafb383758dfc41f77050809fa59378f02efe67707be60cb0edb8ad4867e8e0",
+      "size": 430
+    },
+    {
+      "mode": "100644",
+      "path": "images/nginx/config/Dockerfile",
+      "sha256": "8b3d893664f21146cb67257e824bc5fe5e8d65a93df091fa21633a75064bee69",
+      "size": 6113
+    },
+    {
+      "mode": "100644",
+      "path": "images/nginx/config/Dockerfile.hardened",
+      "sha256": "df40d00f8decb1aeb99e4bae1ecc6b95dab7219fef349bcfc76941e821e40af5",
+      "size": 1619
+    },
+    {
+      "mode": "100644",
+      "path": "images/nginx/config/health/hardened.json",
+      "sha256": "047db47796a0aa15461be9bdbd28479b672502d64c6a15da4b74d9f99353857a",
+      "size": 70
+    },
+    {
+      "mode": "100644",
+      "path": "images/nginx/config/health/secure.json",
+      "sha256": "36e2f30c013e53feb445a322753370d016fa2b61d6cacd6fa6fb1039d40252a1",
+      "size": 68
+    },
+    {
+      "mode": "100644",
+      "path": "images/nginx/config/nginx.hardened.conf",
+      "sha256": "c7c90534c0472d8ca2238d9d682ae2db8179cf5434e6f0d1a5175825a2a121e2",
+      "size": 1302
+    },
+    {
+      "mode": "100644",
+      "path": "images/nginx/config/nginx.secure.conf",
+      "sha256": "115a523bb933cd7a43ca8ba3efa74f8006340b4115dfd5b1b496dd20c205860f",
+      "size": 813
+    },
+    {
+      "mode": "100644",
+      "path": "images/node/config/Dockerfile",
+      "sha256": "3bbb28f6803e67e46325c8d662501682bdfdd2941f70f98c0d785a399db4c633",
+      "size": 8582
+    },
+    {
+      "mode": "100644",
+      "path": "images/node/config/Dockerfile.hardened",
+      "sha256": "edff5bca714394be3b6aa8102087aa6543ee0268dc60d8b2b6877c5dc8d427c1",
+      "size": 1513
+    },
+    {
+      "mode": "100644",
+      "path": "images/node/config/build_resources.py",
+      "sha256": "f7cd7ac7ffcf91bca4e058801fad8a932565fc0380ba776d1eb0fd7359a5dbc7",
+      "size": 8806
+    },
+    {
+      "mode": "100644",
+      "path": "images/node/examples/reference-api/Dockerfile",
+      "sha256": "65448fca4ac39a898f8015952cd9d386ad4d4e1fc9e3a016f602958ff5dc7fd7",
+      "size": 1093
+    },
+    {
+      "mode": "100644",
+      "path": "images/node/examples/reference-api/server.js",
+      "sha256": "3680208ac1f77d73b8428f7c623ce767747bb247764ac7bc1e1834be658abd7f",
+      "size": 2680
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/Dockerfile",
+      "sha256": "c3f1d310453b4fef602539feb5e2f90ef8c4cc5417119b43479a5788c5a2070e",
+      "size": 6080
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/Dockerfile.hardened",
+      "sha256": "e93ce8d2a2786bde27e6099c26e0d8abe75f8319d6aeaa71e0f6c4129c26437d",
+      "size": 1514
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/group",
+      "sha256": "9767016ebf8f0166746d5cda7a5292c07785153eeff56050ab7d109ac83213a4",
+      "size": 27
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/ihl-postgres-entrypoint.c",
+      "sha256": "c7cbfd4e7d8235cb856f291609a892ec570f415439c715bf034316163078d163",
+      "size": 5682
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/passwd",
+      "sha256": "cd6264388c48e12c4d5f9b52763ec3c592524b4e6cb612e089b582d67f3c8d42",
+      "size": 110
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/pg_hba.hardened.conf",
+      "sha256": "cf98df6766799c1a808033b7c31cd96923f35bc55af3b9cf50985e9915c64ebb",
+      "size": 379
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/pg_hba.secure.conf",
+      "sha256": "f04463bfb73d5bece9ab3c2b54738b40160fd8a6dae10c5c67b24475cca17545",
+      "size": 296
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/pg_ident.conf",
+      "sha256": "28433e4858b8a25698fe06196effaa2427131df87a058a0587b41c006fa84def",
+      "size": 69
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/postgresql.hardened.conf",
+      "sha256": "edff08e52d9412c48cee2b9cfdc8206a97e5f18079050ba9e87e63a70c873d2a",
+      "size": 782
+    },
+    {
+      "mode": "100644",
+      "path": "images/postgres/config/postgresql.secure.conf",
+      "sha256": "d385b122c70efec9e0948d3d34f216cc1bb4f44da687862add9b8cbd07fb62bd",
+      "size": 596
+    },
+    {
+      "mode": "100644",
+      "path": "images/python/config/Dockerfile",
+      "sha256": "20e2ed2193ac7b257ccc4b85330683f0b83c4ed48d7717595737bf8f3c3ce418",
+      "size": 8343
+    },
+    {
+      "mode": "100644",
+      "path": "images/python/config/Dockerfile.hardened",
+      "sha256": "3f36e3b837556a33fb1d2f62ed70699bc9b7ad2f64b944abec15075b25f5d0f9",
+      "size": 1577
+    },
+    {
+      "mode": "100644",
+      "path": "images/python/examples/reference-api/Dockerfile",
+      "sha256": "1ce1271e5667bfbcfc2cb9dfd9f73fb48214744e0160ead11bc62595dc6cf322",
+      "size": 1127
+    },
+    {
+      "mode": "100644",
+      "path": "images/python/examples/reference-api/server.py",
+      "sha256": "9feb17747ca2737f8f9c5a18feef4305c37158352c664daf040f3bf0bd905482",
+      "size": 4033
+    },
+    {
+      "mode": "100644",
+      "path": "images/redis/config/Dockerfile",
+      "sha256": "a11783583afa1e790dd06372e468310fc1b5e9025c534ad13d40261b84caa51a",
+      "size": 3082
+    },
+    {
+      "mode": "100644",
+      "path": "images/redis/config/Dockerfile.hardened",
+      "sha256": "67b216fa8784bb3b44cd4939887bc63b2f1c23ea797a0a2a32b5addd906d9ddc",
+      "size": 420
+    },
+    {
+      "mode": "100644",
+      "path": "images/redis/config/redis.hardened.conf",
+      "sha256": "23aa12461835dcdb4dd4a3a6fc62e603c1bb21aa409084399da9d9975e1a4485",
+      "size": 828
+    },
+    {
+      "mode": "100644",
+      "path": "images/redis/config/redis.secure.conf",
+      "sha256": "ab0e39a5003684dc1d0cdbb1f6615b5f28667c52878561469775505d412ea348",
+      "size": 682
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/config/Dockerfile",
+      "sha256": "f0763ab2644cdb83e3bc13403e1b15ef261410fbb4ea99632e5ece2bf950f663",
+      "size": 3668
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/config/Dockerfile.hardened",
+      "sha256": "4680ff21d4d45797d104238c110101a418925e875eeaae573d5a084373a534cc",
+      "size": 433
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/config/HealthCheck.java",
+      "sha256": "90577d3b7ff0338a80b0e71c2dc5050baf77b95f9b3691b6c77abf94d6280c11",
+      "size": 570
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/config/context.xml",
+      "sha256": "e5926aa701295c25378faac7c86143303fbcf3cb7eeb5b70a13a1be3799ee639",
+      "size": 171
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/config/logging.properties",
+      "sha256": "93488211c64a765e674999279ac3728b859decb21bc37144a1f8991e68d94d3a",
+      "size": 227
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/config/server.xml",
+      "sha256": "4e7780ba853e1ca3fa6c2c5872ae4359a5c7febcf4d45d17fd8fccb795be35b1",
+      "size": 1035
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/examples/reference-app/Dockerfile",
+      "sha256": "17e938156899fca79270e51720a9c54aa892ae3a1b13c25c760b3c3cc28c588b",
+      "size": 1357
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/examples/reference-app/HealthServlet.java",
+      "sha256": "da29f7ccf0210656933ac2758c09ef4d0af0c1b2a9d340530ff2913e1f642737",
+      "size": 548
+    },
+    {
+      "mode": "100644",
+      "path": "images/tomcat/examples/reference-app/health-web.xml",
+      "sha256": "bb6e4819a535cf305d6ebdd7f1062b7a6ba8eae10834219b40095146c7be0ad2",
+      "size": 494
+    },
+    {
+      "mode": "100644",
+      "path": "public-products.json",
+      "sha256": "513107025aad345fe3fdeb462ca489f12260da5cfc90122e4aee3e5401803df6",
+      "size": 16924
+    },
+    {
+      "mode": "100755",
+      "path": "tools/build.py",
+      "sha256": "86d2c3b8e241e5f3a7cb0a91cfeaadb9077e4fb5e4acb922f909afc4d62a07d4",
+      "size": 12020
+    }
+  ],
+  "license": "Apache-2.0",
+  "platform": "linux/amd64",
+  "policySha256": "e4e62775931f19b7ac3123e3c13b515bb6e7a53fb20e6fff7dbd058fe430251f",
+  "products": [
+    {
+      "family": "aspnet",
+      "id": "IHL-CTR-0001",
+      "image": {
+        "repository": "aspnet-runtime",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/aspnet/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/aspnet/config/Dockerfile"
+          }
+        }
+      },
+      "key": "aspnet",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "10.0.13",
+      "status": "candidate",
+      "targetId": "aspnet-10",
+      "title": "Indian Hill ASP.NET 10 Runtime",
+      "versionLine": "10",
+      "workloads": [
+        {
+          "dockerfile": "images/aspnet/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0001",
+          "key": "reference-api",
+          "repository": "reference-api"
+        }
+      ]
+    },
+    {
+      "family": "elasticsearch",
+      "id": "IHL-CTR-0009",
+      "image": {
+        "repository": "elasticsearch",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/elasticsearch/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/elasticsearch/config/Dockerfile"
+          }
+        }
+      },
+      "key": "elasticsearch",
+      "kind": "standalone-server",
+      "productVersion": "9.5.3",
+      "status": "candidate",
+      "targetId": "elasticsearch-9.5",
+      "title": "Indian Hill Elasticsearch 9.5 Platform",
+      "versionLine": "9.5",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0006",
+      "image": {
+        "repository": "java",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/21/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/21/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "21.0.12.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-21-bcfips-2-1-3",
+      "title": "Indian Hill Java 21 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "21",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0102",
+      "image": {
+        "repository": "java-11-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/11/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/11/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-11-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "11.0.32.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-11-bcfips-2-1-1",
+      "title": "Indian Hill Java 11 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "11",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0103",
+      "image": {
+        "repository": "java-11-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/11/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/11/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-11-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "11.0.32.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-11-bcfips-2-1-3",
+      "title": "Indian Hill Java 11 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "11",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0104",
+      "image": {
+        "repository": "java-17-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/17/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/17/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-17-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "17.0.20.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-17-bcfips-2-1-1",
+      "title": "Indian Hill Java 17 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "17",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0105",
+      "image": {
+        "repository": "java-17-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/17/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/17/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-17-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "17.0.20.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-17-bcfips-2-1-3",
+      "title": "Indian Hill Java 17 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "17",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0106",
+      "image": {
+        "repository": "java-21-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/21/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/21/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-21-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "21.0.12.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-21-bcfips-2-1-1",
+      "title": "Indian Hill Java 21 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "21",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0108",
+      "image": {
+        "repository": "java-25-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/25/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/25/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-25-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "25.0.4.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-25-bcfips-2-1-1",
+      "title": "Indian Hill Java 25 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "25",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0109",
+      "image": {
+        "repository": "java-25-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/25/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/25/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-25-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "25.0.4.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-25-bcfips-2-1-3",
+      "title": "Indian Hill Java 25 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "25",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0110",
+      "image": {
+        "repository": "java-26-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/26/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/26/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-26-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "26.0.2.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-26-bcfips-2-1-1",
+      "title": "Indian Hill Java 26 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "26",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0111",
+      "image": {
+        "repository": "java-26-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/26/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/26/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-26-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "26.0.2.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-26-bcfips-2-1-3",
+      "title": "Indian Hill Java 26 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "26",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0112",
+      "image": {
+        "repository": "java-27-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/27/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/27/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-27-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "27",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-27-bcfips-2-1-1",
+      "title": "Indian Hill Java 27 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "27",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0113",
+      "image": {
+        "repository": "java-27-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/27/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/27/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-27-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "27",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-27-bcfips-2-1-3",
+      "title": "Indian Hill Java 27 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "27",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0100",
+      "image": {
+        "repository": "java-8-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/8/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/8/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-8-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "8.0.504",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-8-bcfips-2-1-1",
+      "title": "Indian Hill Java 8 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "8",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0101",
+      "image": {
+        "repository": "java-8-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/8/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/8/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-8-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "8.0.504",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-8-bcfips-2-1-3",
+      "title": "Indian Hill Java 8 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "8",
+      "workloads": []
+    },
+    {
+      "family": "nginx",
+      "id": "IHL-CTR-0002",
+      "image": {
+        "repository": "nginx",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/nginx/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/nginx/config/Dockerfile"
+          }
+        }
+      },
+      "key": "nginx",
+      "kind": "standalone-server",
+      "productVersion": "1.30.4",
+      "status": "candidate",
+      "targetId": "nginx-1.30",
+      "title": "Indian Hill NGINX 1.30 Platform",
+      "versionLine": "1.30",
+      "workloads": []
+    },
+    {
+      "family": "node",
+      "id": "IHL-CTR-0005",
+      "image": {
+        "repository": "node",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/node/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/node/config/Dockerfile"
+          }
+        }
+      },
+      "key": "node",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "24.20.0",
+      "status": "candidate",
+      "targetId": "node-24",
+      "title": "Indian Hill Node.js 24 Runtime",
+      "versionLine": "24",
+      "workloads": [
+        {
+          "dockerfile": "images/node/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0003",
+          "key": "node-reference-api",
+          "repository": "node-reference-api"
+        }
+      ]
+    },
+    {
+      "family": "postgres",
+      "id": "IHL-CTR-0004",
+      "image": {
+        "repository": "postgres",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/postgres/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/postgres/config/Dockerfile"
+          }
+        }
+      },
+      "key": "postgres",
+      "kind": "standalone-server",
+      "productVersion": "16.15",
+      "status": "candidate",
+      "targetId": "postgres-16",
+      "title": "Indian Hill PostgreSQL 16 Platform",
+      "versionLine": "16",
+      "workloads": []
+    },
+    {
+      "family": "python",
+      "id": "IHL-CTR-0003",
+      "image": {
+        "repository": "python",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/python/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/python/config/Dockerfile"
+          }
+        }
+      },
+      "key": "python",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "3.13.16",
+      "status": "candidate",
+      "targetId": "python-3.13",
+      "title": "Indian Hill Python 3.13 Runtime",
+      "versionLine": "3.13",
+      "workloads": [
+        {
+          "dockerfile": "images/python/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0002",
+          "key": "python-reference-api",
+          "repository": "python-reference-api"
+        }
+      ]
+    },
+    {
+      "family": "redis",
+      "id": "IHL-CTR-0007",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis",
+      "kind": "standalone-server",
+      "productVersion": "8.2.9",
+      "status": "candidate",
+      "targetId": "redis-8.2",
+      "title": "Indian Hill Redis Open Source 8.2 Platform",
+      "versionLine": "8.2",
+      "workloads": []
+    },
+    {
+      "family": "tomcat",
+      "id": "IHL-CTR-0008",
+      "image": {
+        "repository": "tomcat",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/tomcat/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/tomcat/config/Dockerfile"
+          }
+        }
+      },
+      "key": "tomcat",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "10.1.59",
+      "status": "candidate",
+      "targetId": "tomcat-10.1",
+      "title": "Indian Hill Apache Tomcat 10.1 Platform",
+      "versionLine": "10.1",
+      "workloads": [
+        {
+          "dockerfile": "images/tomcat/examples/reference-app/Dockerfile",
+          "id": "IHL-APP-0006",
+          "key": "tomcat-reference-app",
+          "repository": "tomcat-reference-app"
+        }
+      ]
+    }
+  ],
+  "publicRegistry": "ghcr.io/foxtech-consulting",
+  "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
+  "schemaVersion": 1,
+  "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
+  "sourceRevision": "25dfe5ef14bbdac60ee9594c63ecc87007bad8f2",
+  "tiers": [
+    "secure",
+    "hardened"
+  ]
+}

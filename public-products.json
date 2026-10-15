@@ -1,0 +1,572 @@
+{
+  "platform": "linux/amd64",
+  "products": [
+    {
+      "family": "aspnet",
+      "id": "IHL-CTR-0001",
+      "image": {
+        "repository": "aspnet-runtime",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/aspnet/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/aspnet/config/Dockerfile"
+          }
+        }
+      },
+      "key": "aspnet",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "10.0.13",
+      "status": "candidate",
+      "targetId": "aspnet-10",
+      "title": "Indian Hill ASP.NET 10 Runtime",
+      "versionLine": "10",
+      "workloads": [
+        {
+          "dockerfile": "images/aspnet/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0001",
+          "key": "reference-api",
+          "repository": "reference-api"
+        }
+      ]
+    },
+    {
+      "family": "elasticsearch",
+      "id": "IHL-CTR-0009",
+      "image": {
+        "repository": "elasticsearch",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/elasticsearch/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/elasticsearch/config/Dockerfile"
+          }
+        }
+      },
+      "key": "elasticsearch",
+      "kind": "standalone-server",
+      "productVersion": "9.5.3",
+      "status": "candidate",
+      "targetId": "elasticsearch-9.5",
+      "title": "Indian Hill Elasticsearch 9.5 Platform",
+      "versionLine": "9.5",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0006",
+      "image": {
+        "repository": "java",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/21/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/21/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "21.0.12.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-21-bcfips-2-1-3",
+      "title": "Indian Hill Java 21 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "21",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0102",
+      "image": {
+        "repository": "java-11-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/11/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/11/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-11-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "11.0.32.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-11-bcfips-2-1-1",
+      "title": "Indian Hill Java 11 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "11",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0103",
+      "image": {
+        "repository": "java-11-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/11/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/11/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-11-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "11.0.32.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-11-bcfips-2-1-3",
+      "title": "Indian Hill Java 11 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "11",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0104",
+      "image": {
+        "repository": "java-17-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/17/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/17/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-17-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "17.0.20.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-17-bcfips-2-1-1",
+      "title": "Indian Hill Java 17 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "17",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0105",
+      "image": {
+        "repository": "java-17-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/17/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/17/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-17-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "17.0.20.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-17-bcfips-2-1-3",
+      "title": "Indian Hill Java 17 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "17",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0106",
+      "image": {
+        "repository": "java-21-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/21/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/21/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-21-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "21.0.12.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-21-bcfips-2-1-1",
+      "title": "Indian Hill Java 21 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "21",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0108",
+      "image": {
+        "repository": "java-25-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/25/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/25/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-25-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "25.0.4.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-25-bcfips-2-1-1",
+      "title": "Indian Hill Java 25 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "25",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0109",
+      "image": {
+        "repository": "java-25-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/25/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/25/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-25-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "25.0.4.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-25-bcfips-2-1-3",
+      "title": "Indian Hill Java 25 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "25",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0110",
+      "image": {
+        "repository": "java-26-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/26/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/26/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-26-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "26.0.2.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-26-bcfips-2-1-1",
+      "title": "Indian Hill Java 26 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "26",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0111",
+      "image": {
+        "repository": "java-26-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/26/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/26/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-26-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "26.0.2.1",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-26-bcfips-2-1-3",
+      "title": "Indian Hill Java 26 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "26",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0112",
+      "image": {
+        "repository": "java-27-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/27/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/27/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-27-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "27",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-27-bcfips-2-1-1",
+      "title": "Indian Hill Java 27 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "27",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0113",
+      "image": {
+        "repository": "java-27-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/27/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/27/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-27-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "27",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-27-bcfips-2-1-3",
+      "title": "Indian Hill Java 27 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "27",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0100",
+      "image": {
+        "repository": "java-8-bcfips-2-1-1",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/8/bcfips-2-1-1/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/8/bcfips-2-1-1/Dockerfile"
+          }
+        }
+      },
+      "key": "java-8-bcfips-2-1-1",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "8.0.504",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-8-bcfips-2-1-1",
+      "title": "Indian Hill Java 8 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "variant": "bcfips-2-1-1",
+      "versionLine": "8",
+      "workloads": []
+    },
+    {
+      "family": "java",
+      "id": "IHL-CTR-0101",
+      "image": {
+        "repository": "java-8-bcfips-2-1-3",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/java/8/bcfips-2-1-3/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/java/8/bcfips-2-1-3/Dockerfile"
+          }
+        }
+      },
+      "key": "java-8-bcfips-2-1-3",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "8.0.504",
+      "referenceWorkload": "not-in-public-snapshot",
+      "status": "candidate",
+      "targetId": "java-8-bcfips-2-1-3",
+      "title": "Indian Hill Java 8 · BC-FJA 2.1.3 (pre-certification)",
+      "variant": "bcfips-2-1-3",
+      "versionLine": "8",
+      "workloads": []
+    },
+    {
+      "family": "nginx",
+      "id": "IHL-CTR-0002",
+      "image": {
+        "repository": "nginx",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/nginx/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/nginx/config/Dockerfile"
+          }
+        }
+      },
+      "key": "nginx",
+      "kind": "standalone-server",
+      "productVersion": "1.30.4",
+      "status": "candidate",
+      "targetId": "nginx-1.30",
+      "title": "Indian Hill NGINX 1.30 Platform",
+      "versionLine": "1.30",
+      "workloads": []
+    },
+    {
+      "family": "node",
+      "id": "IHL-CTR-0005",
+      "image": {
+        "repository": "node",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/node/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/node/config/Dockerfile"
+          }
+        }
+      },
+      "key": "node",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "24.20.0",
+      "status": "candidate",
+      "targetId": "node-24",
+      "title": "Indian Hill Node.js 24 Runtime",
+      "versionLine": "24",
+      "workloads": [
+        {
+          "dockerfile": "images/node/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0003",
+          "key": "node-reference-api",
+          "repository": "node-reference-api"
+        }
+      ]
+    },
+    {
+      "family": "postgres",
+      "id": "IHL-CTR-0004",
+      "image": {
+        "repository": "postgres",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/postgres/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/postgres/config/Dockerfile"
+          }
+        }
+      },
+      "key": "postgres",
+      "kind": "standalone-server",
+      "productVersion": "16.15",
+      "status": "candidate",
+      "targetId": "postgres-16",
+      "title": "Indian Hill PostgreSQL 16 Platform",
+      "versionLine": "16",
+      "workloads": []
+    },
+    {
+      "family": "python",
+      "id": "IHL-CTR-0003",
+      "image": {
+        "repository": "python",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/python/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/python/config/Dockerfile"
+          }
+        }
+      },
+      "key": "python",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "3.13.16",
+      "status": "candidate",
+      "targetId": "python-3.13",
+      "title": "Indian Hill Python 3.13 Runtime",
+      "versionLine": "3.13",
+      "workloads": [
+        {
+          "dockerfile": "images/python/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0002",
+          "key": "python-reference-api",
+          "repository": "python-reference-api"
+        }
+      ]
+    },
+    {
+      "family": "redis",
+      "id": "IHL-CTR-0007",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis",
+      "kind": "standalone-server",
+      "productVersion": "8.2.9",
+      "status": "candidate",
+      "targetId": "redis-8.2",
+      "title": "Indian Hill Redis Open Source 8.2 Platform",
+      "versionLine": "8.2",
+      "workloads": []
+    },
+    {
+      "family": "tomcat",
+      "id": "IHL-CTR-0008",
+      "image": {
+        "repository": "tomcat",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/tomcat/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "dockerfile": "images/tomcat/config/Dockerfile"
+          }
+        }
+      },
+      "key": "tomcat",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "10.1.59",
+      "status": "candidate",
+      "targetId": "tomcat-10.1",
+      "title": "Indian Hill Apache Tomcat 10.1 Platform",
+      "versionLine": "10.1",
+      "workloads": [
+        {
+          "dockerfile": "images/tomcat/examples/reference-app/Dockerfile",
+          "id": "IHL-APP-0006",
+          "key": "tomcat-reference-app",
+          "repository": "tomcat-reference-app"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "tiers": [
+    "secure",
+    "hardened"
+  ]
+}

@@ -1,0 +1,5 @@
+# Elasticsearch attaches its entitlement agent during bootstrap. Disabling
+# attach prevents startup and defeats the vendor's required security setup.
+-XX:-UsePerfData
+-XX:-HeapDumpOnOutOfMemoryError
+-XX:+ExitOnOutOfMemoryError

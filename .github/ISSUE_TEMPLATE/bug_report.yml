@@ -1,0 +1,20 @@
+name: Non-sensitive bug report
+description: Report an issue in the public container sources or local build helper.
+body:
+  - type: markdown
+    attributes:
+      value: "For security findings, use SECURITY.md. Never include secrets or sensitive exploit details here."
+  - type: input
+    id: snapshot
+    attributes:
+      label: Source snapshot tag and family
+      placeholder: source-<GitLab revision>; nginx
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction, expected result, and actual result
+      description: Include the command, Docker version, host architecture, and sanitized output.
+    validations:
+      required: true
