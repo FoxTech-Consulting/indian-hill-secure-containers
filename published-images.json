@@ -3,18 +3,48 @@
   "status": "engineering-preview",
   "platform": "linux/amd64",
   "scope": "runtime-images",
-  "checkedAt": "2026-10-16T00:33:21.762753+00:00",
+  "checkedAt": "2026-10-16T15:39:36.438915+00:00",
   "verification": {
-    "method": "Anonymous OCI HTTP GET; SHA-256 verified for manifests, configurations and every referenced layer",
+    "method": "Cumulative per-record anonymous OCI HTTP GET checks; SHA-256 verified for manifests, configurations and every referenced layer",
     "credentialsUsed": false,
     "runtimeExecuted": false,
     "independentCryptographicSignatureVerificationPerformed": false,
-    "reportSha256": "0fb3caec38dec129c5bc023a71e91a19a3927e2f3c6cd74e97817d7f2ff73e6f",
-    "inventorySha256": "66fe96805165808683754c429cf70b668e549d8ee158c7324820f92babecde51",
-    "scope": "29 listed runtime images from a 34-artifact full-download check; five Hardened companion artifacts are not listed",
-    "publicationReceiptAuditSha256": "b977a1e8852d2bd144cb9be8cf9ac80dfb72f5fee7e3babb3637483534cea94c"
+    "scope": "30 listed runtime images; each retains its own timestamped anonymousDownload proof. Required public companions are verified during their publication reconciliation and are not runtime catalog entries.",
+    "listedRuntimeCount": 30,
+    "secureRuntimeCount": 22,
+    "hardenedRuntimeCount": 8,
+    "recordsWithAnonymousByteProofCount": 30,
+    "freshness": "checkedAt is the catalog reconciliation time. It does not refresh unchanged records; use each anonymousDownload.verifiedAt.",
+    "latestReconciliation": {
+      "proofCoreSha256": "3fb3605a462b98c288fc348216ecce79a8d4437e28bc447e373803419c67ba1a",
+      "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
+      "proofAccess": "Retained GitLab artifact; project access may be required",
+      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17240028803",
+      "proofCoreFields": [
+        "schemaVersion",
+        "reportType",
+        "factoryProjectId",
+        "discoveryStartedAt",
+        "startedAt",
+        "baseSourceRevision",
+        "baseSourceManifestSha256",
+        "baseCatalogSha256",
+        "consideredPublicationJobIds",
+        "jobs",
+        "anonymousProofs",
+        "historicalPublicationCutoff",
+        "historicalSkippedPublicationJobIds",
+        "remoteMutationPerformed",
+        "cryptographicSignatureVerification",
+        "independentCryptographicSignatureVerification"
+      ],
+      "verifiedArtifactCount": 1,
+      "verifiedRuntimeArtifactCount": 1,
+      "verifiedCompanionArtifactCount": 0,
+      "importedRuntimeRecordCount": 1
+    }
   },
-  "signatureProvenance": "Signature status comes from the original GitLab publication records, including nine current publication-only receipts. The anonymous full-download check did not repeat cryptographic signature verification. Fifteen legacy Secure records lack complete signed annotation values in this catalog; obtain them from the linked original publication record.",
+  "signatureProvenance": "Signature status comes from the original GitLab publication CI records and their hash-checked verification outputs. 15 listed runtime records contain complete recorded signed annotation values; 15 lack complete values and require the linked original publication record. Anonymous OCI byte verification does not repeat cryptographic signature verification or execute images.",
   "evidenceAccess": "Publication job links and retained qualification evidence may require GitLab access.",
   "images": [
     {
@@ -1612,6 +1642,100 @@
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis"
     },
     {
+      "key": "redis",
+      "targetId": "redis-8.2",
+      "family": "redis",
+      "tier": "hardened",
+      "version": "8.2.9",
+      "platform": "linux/amd64",
+      "status": "engineering-preview",
+      "repository": "ghcr.io/foxtech-consulting/redis",
+      "tag": "IHL-Redis-8.2.9-20261016T011415Z-Hardened",
+      "digest": "sha256:c73e6f9d466af1225b9b77a8cc2c9e85d080ca92f59a505db40de9be02a9a492",
+      "image": "ghcr.io/foxtech-consulting/redis@sha256:c73e6f9d466af1225b9b77a8cc2c9e85d080ca92f59a505db40de9be02a9a492",
+      "sourceRevision": "a53db910b29baabb215ac563cd82be3cfab844ef",
+      "publishedAt": "2026-10-16T01:14:15Z",
+      "publicationContext": "engineering-candidate",
+      "publication": {
+        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17219384235",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2953285378"
+      },
+      "producer": {
+        "sourceRevision": "a53db910b29baabb215ac563cd82be3cfab844ef",
+        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17219384234",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2953285378"
+      },
+      "publisher": {
+        "sourceRevision": "a53db910b29baabb215ac563cd82be3cfab844ef",
+        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17219384235",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2953285378"
+      },
+      "candidateManifestSha256": "e12b27fffce6c8b42bf9c5d5b8d8fee8445283d023663ae204498bc142a408f7",
+      "signatureManifestSha256": "e12b27fffce6c8b42bf9c5d5b8d8fee8445283d023663ae204498bc142a408f7",
+      "publicSourceBinding": {
+        "sourceRevision": "a53db910b29baabb215ac563cd82be3cfab844ef",
+        "sourceCommit": "3c7a927aa86f588fb9198901871c4c998b497bf9",
+        "sourceManifestSha256": "8473de4772aa3b63f5594590d9bdf1ee7cd4b2b5e046b5764a74806d2bd3f9d4",
+        "sourceTag": "source-a53db910b29baabb215ac563cd82be3cfab844ef",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/source-a53db910b29baabb215ac563cd82be3cfab844ef",
+        "status": "verified-by-original-publication-ci"
+      },
+      "signatureVerification": {
+        "status": "verified-by-original-publication-ci",
+        "independentlyReverifiedDuringDownload": false,
+        "certificateOidcIssuer": "https://gitlab.com",
+        "certificateIdentity": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers//.gitlab-ci.yml@refs/heads/main",
+        "anonymousSignatureVerifiedAtPublication": true,
+        "signedAnnotationsComplete": true,
+        "signedAnnotations": {
+          "assurance-tier": "hardened",
+          "source-revision": "a53db910b29baabb215ac563cd82be3cfab844ef",
+          "assurance-manifest-sha256": "e12b27fffce6c8b42bf9c5d5b8d8fee8445283d023663ae204498bc142a408f7",
+          "public-source-commit": "3c7a927aa86f588fb9198901871c4c998b497bf9",
+          "public-source-manifest-sha256": "8473de4772aa3b63f5594590d9bdf1ee7cd4b2b5e046b5764a74806d2bd3f9d4",
+          "publication-context": "engineering-candidate",
+          "release-registry": "github-container-registry"
+        }
+      },
+      "anonymousDownload": {
+        "status": "verified",
+        "credentialsUsed": false,
+        "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
+        "verifiedAt": "2026-10-16T15:39:36.437961+00:00",
+        "configCount": 1,
+        "layerCount": 13,
+        "runtimeExecuted": false,
+        "proofCoreSha256": "3fb3605a462b98c288fc348216ecce79a8d4437e28bc447e373803419c67ba1a",
+        "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
+        "proofAccess": "Retained GitLab artifact; project access may be required",
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17240028803"
+      },
+      "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/redis@sha256:c73e6f9d466af1225b9b77a8cc2c9e85d080ca92f59a505db40de9be02a9a492",
+      "vulnerabilitySummary": {
+        "cisaKevMatches": 0,
+        "emittedFindings": 8,
+        "fixState": {
+          "not-fixed": 6,
+          "unknown": 1,
+          "wont-fix": 1
+        },
+        "matches": 8,
+        "severity": {
+          "critical": 0,
+          "high": 0,
+          "low": 1,
+          "medium": 6,
+          "negligible": 1,
+          "unknown": 0
+        },
+        "truncatedFindings": 0
+      },
+      "vulnerabilityPolicy": {
+        "findingsBlockPublication": true
+      }
+    },
+    {
       "key": "tomcat",
       "targetId": "tomcat-10.1",
       "family": "tomcat",
@@ -1787,5 +1911,20 @@
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat"
     }
-  ]
+  ],
+  "historicalInitialCatalogVerification": {
+    "catalogCheckedAt": "2026-10-16T00:33:21.762753+00:00",
+    "verification": {
+      "method": "Anonymous OCI HTTP GET; SHA-256 verified for manifests, configurations and every referenced layer",
+      "credentialsUsed": false,
+      "runtimeExecuted": false,
+      "independentCryptographicSignatureVerificationPerformed": false,
+      "reportSha256": "0fb3caec38dec129c5bc023a71e91a19a3927e2f3c6cd74e97817d7f2ff73e6f",
+      "inventorySha256": "66fe96805165808683754c429cf70b668e549d8ee158c7324820f92babecde51",
+      "scope": "29 listed runtime images from a 34-artifact full-download check; five Hardened companion artifacts are not listed",
+      "publicationReceiptAuditSha256": "b977a1e8852d2bd144cb9be8cf9ac80dfb72f5fee7e3babb3637483534cea94c"
+    },
+    "signatureProvenance": "Signature status comes from the original GitLab publication records, including nine current publication-only receipts. The anonymous full-download check did not repeat cryptographic signature verification. Fifteen legacy Secure records lack complete signed annotation values in this catalog; obtain them from the linked original publication record.",
+    "scopeNote": "Historical initial-catalog evidence only. Its scope and hashes do not prove later catalog updates."
+  }
 }

@@ -32,6 +32,7 @@ Image tags include timestamps; determine whether an image is a preview or a rele
 
 For example, pull the verified NGINX previews by immutable digest:
 
+<!-- BEGIN VERIFIED PULL EXAMPLES -->
 ```console
 # Secure NGINX
 docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:a180c03a4ee59c8a4cb23e8775d3008d9fa42c91fb59e94d27925f9abb0dfc19
@@ -39,27 +40,20 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:a180c
 # Hardened NGINX
 docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ffb5232b592ed35b3e60f47fce39a0d2a7e7623d6bacb78f193c6833878a0a24
 ```
+<!-- END VERIFIED PULL EXAMPLES -->
 
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **15 October 2026, 20:33 EDT (16 October, 00:33 UTC)**: **22 Secure and seven Hardened runtime previews**. No registry login was needed for these listed digests; individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-16 15:39 UTC**: **22 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
-Every repository below uses the prefix `ghcr.io/foxtech-consulting/`. Repository links open its GitHub package page. Copyable commands and full digests are in [published-images.json](published-images.json). Tags identify the exact listed versions; some previews predate newer source-build versions.
+All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
 | Build key | Repository | Secure tag | Hardened tag |
 | --- | --- | --- | --- |
 | `aspnet` | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-10.0.13-20261016T002432Z` | `IHL-ASPNet-10.0.13-20261015T173239Z-Hardened` |
-| `nginx` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.4-20261016T001214Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
-| `python` | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261015T174218Z-Hardened` |
-| `postgres` | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
-| `node` | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.20.0-20261016T001723Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
-| `java` (Java 21 / bcfips-2-1-3) | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T221045Z` | `IHL-Java-21.0.12.1-20261015T024556Z-Hardened` |
-| `redis` | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.9-20261016T003040Z` | Pending qualification |
-| `tomcat` | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-10.1.59-20261016T002859Z` | `IHL-Tomcat-10.1.59-20261016T003116Z-Hardened` |
 | `elasticsearch` | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.3-20261010T231254Z` | Not listed |
-| `java-8-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
-| `java-8-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | Not listed |
+| `java` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T221045Z` | `IHL-Java-21.0.12.1-20261015T024556Z-Hardened` |
 | `java-11-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221803Z` | Not listed |
 | `java-11-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221932Z` | Not listed |
 | `java-17-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222357Z` | Not listed |
@@ -71,12 +65,20 @@ Every repository below uses the prefix `ghcr.io/foxtech-consulting/`. Repository
 | `java-26-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224212Z` | Not listed |
 | `java-27-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224344Z` | Not listed |
 | `java-27-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224518Z` | Not listed |
+| `java-8-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
+| `java-8-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | Not listed |
+| `nginx` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.4-20261016T001214Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
+| `node` | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.20.0-20261016T001723Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
+| `postgres` | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
+| `python` | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261015T174218Z-Hardened` |
+| `redis` | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.9-20261016T003040Z` | `IHL-Redis-8.2.9-20261016T011415Z-Hardened` |
+| `tomcat` | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-10.1.59-20261016T002859Z` | `IHL-Tomcat-10.1.59-20261016T003116Z-Hardened` |
 
-"Not listed" means this snapshot advertises no verified download for that tier. Redis Hardened is awaiting qualification. The Java provider names identify build targets and do not confer FIPS validation.
+"Not listed" means no verified download for that exact target and tier is advertised. Provider variant names do not confer FIPS validation.
 
-Fifteen Secure previews (the 14 Java targets and Elasticsearch) and the Java Hardened preview predate signed GitHub source bindings. The seven newer Secure previews and six other Hardened previews have bindings recorded in the catalog. Publication-only entries distinguish the image's original producer commit Q from the current publisher commit R. A newer source snapshot must not be substituted for a legacy image's original source.
+14 runtime records include signed public source bindings; 16 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
-Recorded vulnerability summaries are included where available. Download verification and tier labels do not imply zero findings. Signature provenance and missing legacy annotation values are disclosed separately from anonymous download checks.
+Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
 
 The table covers runtime images. Companion qualification images have separate visibility and are not required to download or build on a runtime. Source builds remain available for every target in `public-products.json`, including targets without a listed prebuilt image. Publication job links and retained qualification evidence can require GitLab access. Follow the signature checks below before trusting a downloaded preview.
