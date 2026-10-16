@@ -1118,7 +1118,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "35d8785581a3b925282924f44a5d435b6061842d",
+  "sourceRevision": "a53db910b29baabb215ac563cd82be3cfab844ef",
   "tiers": [
     "secure",
     "hardened"
