@@ -35,7 +35,7 @@ For example, pull the verified NGINX previews by immutable digest:
 <!-- BEGIN VERIFIED PULL EXAMPLES -->
 ```console
 # Secure NGINX
-docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:a180c03a4ee59c8a4cb23e8775d3008d9fa42c91fb59e94d27925f9abb0dfc19
+docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:2c6bd01ba8269ce8fd2fe6cddacf598db5cc2ae8ec53f4b3e158b1060ddcbe19
 
 # Hardened NGINX
 docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ffb5232b592ed35b3e60f47fce39a0d2a7e7623d6bacb78f193c6833878a0a24
@@ -45,7 +45,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ffb52
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-10-16 15:39 UTC**: **22 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-16 19:37 UTC**: **22 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -67,7 +67,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | `java-27-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224518Z` | Not listed |
 | `java-8-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
 | `java-8-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | Not listed |
-| `nginx` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.4-20261016T001214Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
+| `nginx` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261016T193408Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
 | `node` | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.20.0-20261016T001723Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
 | `postgres` | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
 | `python` | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261015T174218Z-Hardened` |
