@@ -57,8 +57,8 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "7bf0ec7c3e852f3ea0d67ceb4cd449496d0749aff99030fcb1d59cc081e82f77",
-      "size": 7474
+      "sha256": "018a0297760b9e30aff50bf3a4a318f478867b4c207e2e308f0604d34477e3c9",
+      "size": 17112
     },
     {
       "mode": "100644",
@@ -535,6 +535,12 @@
       "size": 16924
     },
     {
+      "mode": "100644",
+      "path": "published-images.json",
+      "sha256": "7bc2c26f6a9916f406396e4fb2e5d0da16eb110e3d64394f8a22e5cfb4febfcf",
+      "size": 87459
+    },
+    {
       "mode": "100755",
       "path": "tools/build.py",
       "sha256": "86d2c3b8e241e5f3a7cb0a91cfeaadb9077e4fb5e4acb922f909afc4d62a07d4",
@@ -543,7 +549,7 @@
   ],
   "license": "Apache-2.0",
   "platform": "linux/amd64",
-  "policySha256": "e4e62775931f19b7ac3123e3c13b515bb6e7a53fb20e6fff7dbd058fe430251f",
+  "policySha256": "bd3dee995b316f31a3277e33e369f2fa61f8d3895a7dbc0b1d6dce9030b92fcc",
   "products": [
     {
       "family": "aspnet",
@@ -1112,7 +1118,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "91a143c9a5da6fef8bcc4791091ac78fcd3c2ff9",
+  "sourceRevision": "35d8785581a3b925282924f44a5d435b6061842d",
   "tiers": [
     "secure",
     "hardened"
