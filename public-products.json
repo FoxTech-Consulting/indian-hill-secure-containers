@@ -414,17 +414,52 @@
             "dockerfile": "images/nginx/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "NGINX_ARTIFACT_ID": "IHL-CTR-0002",
+              "NGINX_SOURCE_SHA256": "3cf46f5ed7504d460125866b7bea99fb357f31d887e2e63b35503310e9b8b6c8",
+              "NGINX_VERSION": "1.30.6",
+              "NGINX_VERSION_LINE": "1.30"
+            },
             "dockerfile": "images/nginx/config/Dockerfile"
           }
         }
       },
       "key": "nginx",
       "kind": "standalone-server",
-      "productVersion": "1.30.4",
+      "productVersion": "1.30.6",
       "status": "candidate",
       "targetId": "nginx-1.30",
-      "title": "Indian Hill NGINX 1.30 Platform",
+      "title": "Indian Hill NGINX 1.30 Stable Platform",
       "versionLine": "1.30",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "nginx",
+      "id": "IHL-CTR-0011",
+      "image": {
+        "repository": "nginx",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "NGINX_ARTIFACT_ID": "IHL-CTR-0011",
+              "NGINX_SOURCE_SHA256": "89ea8a3dc171511f7325043b50e4c036248d9fad5feb7ec809c0b82d5df42c65",
+              "NGINX_VERSION": "1.31.7",
+              "NGINX_VERSION_LINE": "1.31"
+            },
+            "dockerfile": "images/nginx/config/Dockerfile"
+          }
+        }
+      },
+      "key": "nginx-mainline",
+      "kind": "standalone-server",
+      "productVersion": "1.31.7",
+      "status": "candidate",
+      "targetId": "nginx-1.31",
+      "title": "Indian Hill NGINX 1.31 Mainline Platform",
+      "versionLine": "1.31",
       "workloads": []
     },
     {

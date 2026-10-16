@@ -4,6 +4,10 @@
 # compiler, shell entrypoint, or dynamic NGINX modules.
 ARG NGINX_BUILDER=docker.io/library/gcc:11.2.0@sha256:2c5cae6b84598eb6865d6c7b340deef80e8834a4c4037a5cbba755a5258809d4
 ARG NGINX_BASE=mcr.microsoft.com/dotnet/runtime-deps:10.0.13-noble-chiseled-amd64@sha256:e6cb0d241bab6f29daf92f2e11b3e605e0b0df4face98a71811c084aafa45593
+ARG NGINX_VERSION=1.30.6
+ARG NGINX_SOURCE_SHA256=3cf46f5ed7504d460125866b7bea99fb357f31d887e2e63b35503310e9b8b6c8
+ARG NGINX_VERSION_LINE=1.30
+ARG NGINX_ARTIFACT_ID=IHL-CTR-0002
 FROM ${NGINX_BUILDER} AS openssl-supported-base-build
 
 ARG NGINX_BUILDER
@@ -40,17 +44,19 @@ RUN set -eu; \
 
 FROM ${NGINX_BUILDER} AS nginx-build
 
-ARG NGINX_VERSION=1.30.4
-ARG NGINX_SOURCE_SHA256=4261dc90e9e47c1c4041276e9aaa3d48ebe2e664f728e14fa95ae6c67d57a08b
+ARG NGINX_VERSION
+ARG NGINX_SOURCE_SHA256
+ARG NGINX_VERSION_LINE
+ARG NGINX_ARTIFACT_ID
 
 COPY --from=openssl-supported-base-build /opt/openssl /opt/openssl
 
-# The source checksum was calculated from the official nginx.org stable
-# release archive. The source build deliberately omits dynamic modules, PCRE
+# The selected source checksum is reviewed against the official nginx.org
+# release archive and its detached upstream signature. The source build deliberately omits dynamic modules, PCRE
 # rewrite support, and gzip to keep the reusable server platform small.
-ADD --checksum=sha256:4261dc90e9e47c1c4041276e9aaa3d48ebe2e664f728e14fa95ae6c67d57a08b \
-    https://nginx.org/download/nginx-1.30.4.tar.gz \
-    /tmp/nginx-1.30.4.tar.gz
+ADD --checksum=sha256:${NGINX_SOURCE_SHA256} \
+    https://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
+    /tmp/nginx-source.tar.gz
 
 RUN set -eu; \
     run_logged() { \
@@ -61,10 +67,12 @@ RUN set -eu; \
         exit 1; \
       fi; \
     }; \
-    printf '%s  %s\n' "$NGINX_SOURCE_SHA256" /tmp/nginx-1.30.4.tar.gz \
+    printf '%s  %s\n' "$NGINX_SOURCE_SHA256" /tmp/nginx-source.tar.gz \
       | sha256sum --check --strict; \
-    tar --extract --gzip --file /tmp/nginx-1.30.4.tar.gz --directory /tmp; \
+    tar --extract --gzip --file /tmp/nginx-source.tar.gz --directory /tmp; \
     cd "/tmp/nginx-$NGINX_VERSION"; \
+    [ "${NGINX_VERSION%.*}" = "$NGINX_VERSION_LINE" ]; \
+    case "$NGINX_ARTIFACT_ID" in IHL-CTR-[0-9][0-9][0-9][0-9]) ;; *) exit 1 ;; esac; \
     run_logged /tmp/nginx-configure.log ./configure \
       --prefix=/usr/share/nginx \
       --sbin-path=/usr/sbin/nginx \
@@ -92,23 +100,31 @@ RUN set -eu; \
     ! grep -F 'libcrypt.so.1' /tmp/nginx-linkage.txt; \
     grep -F '/opt/openssl/lib/libssl.so.3' /tmp/nginx-linkage.txt; \
     grep -F '/opt/openssl/lib/libcrypto.so.3' /tmp/nginx-linkage.txt; \
+    nginx_version="$(/usr/sbin/nginx -v 2>&1)"; \
+    [ "$nginx_version" = "nginx version: nginx/$NGINX_VERSION" ]; \
+    printf '{"status":"ok","artifact":"%s","assuranceLevel":"secure","nginxVersion":"%s"}\n' \
+      "$NGINX_ARTIFACT_ID" "$NGINX_VERSION" > /tmp/nginx-healthz.json; \
     printf 'NGINX %s build completed and is linked to /opt/openssl.\n' "$NGINX_VERSION"
 
 FROM ${NGINX_BASE}
+
+ARG NGINX_VERSION
+ARG NGINX_VERSION_LINE
+ARG NGINX_ARTIFACT_ID
 
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
-LABEL org.opencontainers.image.title="Indian Hill Secure NGINX 1.30" \
-      org.opencontainers.image.description="Minimal non-root NGINX 1.30 server linked to a controlled OpenSSL 3.5.9 base library" \
-      org.opencontainers.image.version="1.30.4-secure-lab.1" \
+LABEL org.opencontainers.image.title="Indian Hill Secure NGINX ${NGINX_VERSION_LINE}" \
+      org.opencontainers.image.description="Minimal non-root NGINX ${NGINX_VERSION_LINE} server linked to a controlled OpenSSL 3.5.9 base library" \
+      org.opencontainers.image.version="${NGINX_VERSION}-secure-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="BSD-2-Clause AND Apache-2.0" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0002" \
+      com.indianhilllabs.artifact.id="${NGINX_ARTIFACT_ID}" \
       com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
       com.indianhilllabs.assurance.level="secure"
 
@@ -117,7 +133,7 @@ COPY --from=nginx-build /opt/openssl/lib/libcrypto.so.3 /opt/openssl/lib/libcryp
 COPY --from=nginx-build /opt/openssl/lib/libssl.so.3 /opt/openssl/lib/libssl.so.3
 COPY --from=nginx-build /opt/openssl/share/licenses/openssl/LICENSE.txt /opt/openssl/share/licenses/openssl/LICENSE.txt
 COPY images/nginx/config/nginx.secure.conf /etc/nginx/nginx.conf
-COPY images/nginx/config/health/secure.json /usr/share/nginx/html/healthz.json
+COPY --from=nginx-build /tmp/nginx-healthz.json /usr/share/nginx/html/healthz.json
 
 ENV IHL_ASSURANCE_LEVEL="secure" \
     LD_LIBRARY_PATH="/opt/openssl/lib"

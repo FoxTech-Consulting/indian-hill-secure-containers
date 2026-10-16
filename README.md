@@ -85,6 +85,8 @@ The table covers runtime images. Companion qualification images have separate vi
 
 ## Build a local image
 
+The active NGINX source targets are stable `nginx` 1.30.6 and Secure-only mainline `nginx-mainline` 1.31.7. The public build tool passes each target's reviewed source checksum, full version, version line, and artifact identity to the shared recipe. Mainline has no Hardened recipe. These source definitions do not update the historical verified download records above.
+
 You need Python 3.10 or newer and Docker with BuildKit and Linux container support. Source builds download pinned upstream inputs and can take several minutes. Run commands from the repository root:
 
 ```console

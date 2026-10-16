@@ -87,6 +87,37 @@ def recipe_path(root: Path, value: Any) -> str:
     return value
 
 
+def product_tiers(product: dict[str, Any]) -> tuple[str, ...]:
+    declared = product.get("assessmentTiers", list(TIERS))
+    tiers = product.get("image", {}).get("tiers", {})
+    if (declared not in (["secure"], list(TIERS)) or not isinstance(tiers, dict)
+            or set(tiers) != set(declared)):
+        raise ValueError(f"Public product recipes differ from supported assessment tiers: {product.get('key')}")
+    return tuple(declared)
+
+
+def public_build_args(product: dict[str, Any], tier: str, recipe: dict) -> dict[str, str]:
+    """Export only the reviewed NGINX source/identity pins, never arbitrary args."""
+    args = recipe.get("buildArgs", {})
+    required = {"NGINX_VERSION", "NGINX_SOURCE_SHA256", "NGINX_ARTIFACT_ID", "NGINX_VERSION_LINE"}
+    if not isinstance(args, dict):
+        raise ValueError("Public recipe buildArgs must be an object")
+    if not args and product.get("key") != "nginx-mainline":
+        return {}
+    if (tier != "secure" or product.get("family") != "nginx"
+            or product.get("key") not in {"nginx", "nginx-mainline"} or set(args) != required
+            or not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", str(product.get("productVersion", "")))
+            or product.get("versionLine") != ".".join(product["productVersion"].split(".")[:2])
+            or not re.fullmatch(r"IHL-CTR-[0-9]{4}", str(product.get("id", "")))
+            or not all(isinstance(value, str) for value in args.values())
+            or args["NGINX_VERSION"] != product["productVersion"]
+            or args["NGINX_ARTIFACT_ID"] != product["id"]
+            or args["NGINX_VERSION_LINE"] != product["versionLine"]
+            or not re.fullmatch(r"[0-9a-f]{64}", args["NGINX_SOURCE_SHA256"])):
+        raise ValueError("Public NGINX buildArgs must contain exact reviewed version, source, and identity pins")
+    return dict(args)
+
+
 def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
     catalog = json.loads(snapshot_path(root, "public-products.json").read_text(encoding="utf-8"))
     if not isinstance(catalog, dict) or catalog.get("schemaVersion") != 1:
@@ -108,9 +139,14 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
         if not isinstance(product.get("productVersion"), str) or not VERSION.fullmatch(product["productVersion"]):
             raise ValueError(f"Invalid public product version: {key}")
         tiers = product.get("image", {}).get("tiers", {})
-        if not isinstance(tiers, dict) or set(tiers) != set(TIERS):
-            raise ValueError(f"Public product must have exactly Secure and Hardened recipes: {key}")
-        recipes = [recipe_path(root, tiers[tier].get("dockerfile")) for tier in TIERS]
+        supported = product_tiers(product)
+        recipes = []
+        for tier in supported:
+            recipe = tiers[tier]
+            if not isinstance(recipe, dict):
+                raise ValueError(f"Invalid public recipe: {key}")
+            recipes.append(recipe_path(root, recipe.get("dockerfile")))
+            public_build_args(product, tier, recipe)
         workloads = product.get("workloads", [])
         if not isinstance(workloads, list):
             raise ValueError(f"Invalid public workloads: {key}")
@@ -137,6 +173,8 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
                nonce: str | None = None) -> list[dict[str, Any]]:
     if tier not in TIERS or not REVISION.fullmatch(revision):
         raise ValueError("Local builds require a Secure/Hardened tier and full source revision")
+    if tier not in product_tiers(product):
+        raise ValueError(f"Unsupported assessment tier for {product['key']}: {tier}")
     check_tag_prefix(tag_prefix)
     workloads = product.get("workloads", [])
     if with_example and not workloads:
@@ -170,7 +208,8 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
         return {"image": image, "argv": argv}
 
     recipes = product["image"]["tiers"]
-    steps = [command(recipes["secure"]["dockerfile"], secure, "secure", {},
+    steps = [command(recipes["secure"]["dockerfile"], secure, "secure",
+                     public_build_args(product, "secure", recipes["secure"]),
                      (parent,) if tier == "hardened" else ())]
     runtime = secure
     if tier == "hardened":

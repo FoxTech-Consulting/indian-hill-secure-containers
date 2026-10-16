@@ -1,7 +1,7 @@
 # The Hardened server remains a digest-bound additive child of the Secure
 # image. Its behavior is restricted through a reviewed static-only NGINX
 # configuration rather than an entrypoint script.
-ARG SECURE_BASE=ihl/nginx:1.30.4-secure-lab.1
+ARG SECURE_BASE=ihl/nginx:1.30.6-secure-lab.1
 FROM ${SECURE_BASE}
 
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
@@ -10,7 +10,7 @@ ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
 LABEL org.opencontainers.image.title="Indian Hill Hardened NGINX 1.30" \
       org.opencontainers.image.description="CIS-aligned non-root NGINX with a static-only hardened server configuration" \
-      org.opencontainers.image.version="1.30.4-hardened-lab.1" \
+      org.opencontainers.image.version="1.30.6-hardened-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="BSD-2-Clause AND Apache-2.0" \
       org.opencontainers.image.source="${OCI_SOURCE}" \

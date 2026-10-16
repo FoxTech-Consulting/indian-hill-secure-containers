@@ -57,8 +57,8 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "6f2c5eff46e07b1b2929708605da956370fc79f88db2339b3da2204ed16b0dc0",
-      "size": 16685
+      "sha256": "b34411e1a8d334164d567446c8624ee2e8bfcd3b2ebab4db23989cd37cf7fd7a",
+      "size": 17055
     },
     {
       "mode": "100644",
@@ -303,13 +303,13 @@
     {
       "mode": "100644",
       "path": "images/nginx/config/Dockerfile",
-      "sha256": "8b3d893664f21146cb67257e824bc5fe5e8d65a93df091fa21633a75064bee69",
-      "size": 6113
+      "sha256": "a768c862ead4be013d62ce2c140194d6cc6cbf2fb495f4210eb4fbbb9d2802ec",
+      "size": 6819
     },
     {
       "mode": "100644",
       "path": "images/nginx/config/Dockerfile.hardened",
-      "sha256": "df40d00f8decb1aeb99e4bae1ecc6b95dab7219fef349bcfc76941e821e40af5",
+      "sha256": "30fb0e519249aa960aba02aa38b16663f83268d570c11f1d2ff20dd250d3acc3",
       "size": 1619
     },
     {
@@ -335,6 +335,12 @@
       "path": "images/nginx/config/nginx.secure.conf",
       "sha256": "115a523bb933cd7a43ca8ba3efa74f8006340b4115dfd5b1b496dd20c205860f",
       "size": 813
+    },
+    {
+      "mode": "100644",
+      "path": "images/nginx/config/source-releases.json",
+      "sha256": "9bf88a0bf5af5841176e41c007dce354a60ff7bb3cb2b5331cf65a028a1469b1",
+      "size": 1645
     },
     {
       "mode": "100644",
@@ -531,8 +537,8 @@
     {
       "mode": "100644",
       "path": "public-products.json",
-      "sha256": "513107025aad345fe3fdeb462ca489f12260da5cfc90122e4aee3e5401803df6",
-      "size": 16924
+      "sha256": "7c46e08eb56db00924304b61f44ff7b06bea9a65765336cb02cb6a82fe4288f6",
+      "size": 18064
     },
     {
       "mode": "100644",
@@ -543,13 +549,13 @@
     {
       "mode": "100755",
       "path": "tools/build.py",
-      "sha256": "86d2c3b8e241e5f3a7cb0a91cfeaadb9077e4fb5e4acb922f909afc4d62a07d4",
-      "size": 12020
+      "sha256": "b6f2803379c7cf1c9cd8710e15248c7805e89d7e56cfda3fc1ea726e30df0b6d",
+      "size": 14187
     }
   ],
   "license": "Apache-2.0",
   "platform": "linux/amd64",
-  "policySha256": "bd3dee995b316f31a3277e33e369f2fa61f8d3895a7dbc0b1d6dce9030b92fcc",
+  "policySha256": "1135580587ede4f41b4d4bdf919d52f07a9e933ea07087b73eac441e7c754d3a",
   "products": [
     {
       "family": "aspnet",
@@ -964,17 +970,52 @@
             "dockerfile": "images/nginx/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "NGINX_ARTIFACT_ID": "IHL-CTR-0002",
+              "NGINX_SOURCE_SHA256": "3cf46f5ed7504d460125866b7bea99fb357f31d887e2e63b35503310e9b8b6c8",
+              "NGINX_VERSION": "1.30.6",
+              "NGINX_VERSION_LINE": "1.30"
+            },
             "dockerfile": "images/nginx/config/Dockerfile"
           }
         }
       },
       "key": "nginx",
       "kind": "standalone-server",
-      "productVersion": "1.30.4",
+      "productVersion": "1.30.6",
       "status": "candidate",
       "targetId": "nginx-1.30",
-      "title": "Indian Hill NGINX 1.30 Platform",
+      "title": "Indian Hill NGINX 1.30 Stable Platform",
       "versionLine": "1.30",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "nginx",
+      "id": "IHL-CTR-0011",
+      "image": {
+        "repository": "nginx",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "NGINX_ARTIFACT_ID": "IHL-CTR-0011",
+              "NGINX_SOURCE_SHA256": "89ea8a3dc171511f7325043b50e4c036248d9fad5feb7ec809c0b82d5df42c65",
+              "NGINX_VERSION": "1.31.7",
+              "NGINX_VERSION_LINE": "1.31"
+            },
+            "dockerfile": "images/nginx/config/Dockerfile"
+          }
+        }
+      },
+      "key": "nginx-mainline",
+      "kind": "standalone-server",
+      "productVersion": "1.31.7",
+      "status": "candidate",
+      "targetId": "nginx-1.31",
+      "title": "Indian Hill NGINX 1.31 Mainline Platform",
+      "versionLine": "1.31",
       "workloads": []
     },
     {
@@ -1118,7 +1159,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "5f1fd3d67d3c288876a9a97ac7f2c43668b428e3",
+  "sourceRevision": "c361b29a50f20ba9300d7b1324f737da41185073",
   "tiers": [
     "secure",
     "hardened"
