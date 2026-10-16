@@ -45,7 +45,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ffb52
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-10-16 19:37 UTC**: **22 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-16 19:52 UTC**: **23 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -68,6 +68,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | `java-8-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
 | `java-8-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | Not listed |
 | `nginx` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261016T193408Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
+| `nginx-mainline` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.7-20261016T195003Z` | Not listed |
 | `node` | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.20.0-20261016T001723Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
 | `postgres` | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
 | `python` | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261015T174218Z-Hardened` |
@@ -76,7 +77,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 "Not listed" means no verified download for that exact target and tier is advertised. Provider variant names do not confer FIPS validation.
 
-14 runtime records include signed public source bindings; 16 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+15 runtime records include signed public source bindings; 16 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
