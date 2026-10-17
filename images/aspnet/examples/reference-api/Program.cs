@@ -8,9 +8,9 @@ var assuranceLevel = Environment.GetEnvironmentVariable("IHL_ASSURANCE_LEVEL") ?
 
 app.MapGet("/", () => Results.Ok(new
 {
-    artifact = "IHL-CTR-0001",
+    artifact = Environment.GetEnvironmentVariable("IHL_ARTIFACT_ID") ?? "IHL-CTR-0001",
     assuranceLevel,
-    message = "Indian Hill ASP.NET 10 Runtime reference application"
+    message = "Indian Hill ASP.NET Runtime reference application"
 }));
 
 app.MapGet("/healthz", () => Results.Ok(new { status = "ok" }));

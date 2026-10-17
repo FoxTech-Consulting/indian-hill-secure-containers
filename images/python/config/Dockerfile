@@ -23,6 +23,7 @@ RUN set -eu; \
       libncurses-dev \
       libreadline-dev \
       libsqlite3-dev \
+      libzstd-dev \
       perl \
       uuid-dev \
       xz-utils \
@@ -60,14 +61,15 @@ FROM python-toolchain AS python-build
 
 ARG PYTHON_BUILDER
 ARG PYTHON_VERSION=3.13.16
+ARG PYTHON_VERSION_LINE=3.13
 ARG PYTHON_SOURCE_SHA256=f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d
 ARG OPENSSL_BASE_SOURCE_SHA256=603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a
 
 COPY --from=openssl-supported-base-build /opt/openssl /opt/openssl
 
-ADD --checksum=sha256:f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d \
-    https://www.python.org/ftp/python/3.13.16/Python-3.13.16.tar.xz \
-    /tmp/Python-3.13.16.tar.xz
+ADD --checksum=sha256:${PYTHON_SOURCE_SHA256} \
+    https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz \
+    /tmp/Python-${PYTHON_VERSION}.tar.xz
 
 RUN set -eu; \
     run_logged() { \
@@ -78,8 +80,8 @@ RUN set -eu; \
         exit 1; \
       fi; \
     }; \
-    printf '%s  %s\n' "$PYTHON_SOURCE_SHA256" /tmp/Python-3.13.16.tar.xz | sha256sum --check --strict; \
-    tar --extract --xz --file /tmp/Python-3.13.16.tar.xz --directory /tmp; \
+    printf '%s  %s\n' "$PYTHON_SOURCE_SHA256" /tmp/Python-${PYTHON_VERSION}.tar.xz | sha256sum --check --strict; \
+    tar --extract --xz --file /tmp/Python-${PYTHON_VERSION}.tar.xz --directory /tmp; \
     cd "/tmp/Python-$PYTHON_VERSION"; \
     run_logged /tmp/python-configure.log ./configure \
       --prefix=/opt/python \
@@ -90,11 +92,11 @@ RUN set -eu; \
       --without-static-libpython; \
     run_logged /tmp/python-build.log make -j2; \
     run_logged /tmp/python-install.log make altinstall; \
-    ln -s python3.13 /opt/python/bin/python3; \
-    ln -s python3.13 /opt/python/bin/python; \
+    ln -s "python${PYTHON_VERSION_LINE}" /opt/python/bin/python3; \
+    ln -s "python${PYTHON_VERSION_LINE}" /opt/python/bin/python; \
     export LD_LIBRARY_PATH=/opt/openssl/lib; \
-    /opt/python/bin/python3 -I -c 'import hashlib, ssl, sys; assert sys.version_info[:2] == (3, 13); assert ssl.OPENSSL_VERSION.startswith("OpenSSL 3.5.9 "); assert hashlib.sha256(b"Indian Hill Python Secure").hexdigest()'; \
-    ldd /opt/python/lib/python3.13/lib-dynload/_ssl*.so > /tmp/python-ssl-linkage.txt; \
+    /opt/python/bin/python3 -I -c 'import hashlib, ssl, sys; assert sys.version.split()[0] == sys.argv[1]; assert ssl.OPENSSL_VERSION.startswith("OpenSSL 3.5.9 "); assert hashlib.sha256(b"Indian Hill Python Secure").hexdigest()' "$PYTHON_VERSION"; \
+    ldd /opt/python/lib/python${PYTHON_VERSION_LINE}/lib-dynload/_ssl*.so > /tmp/python-ssl-linkage.txt; \
     ! grep -F 'not found' /tmp/python-ssl-linkage.txt; \
     grep -F '/opt/openssl/lib/libssl.so.3' /tmp/python-ssl-linkage.txt; \
     grep -F '/opt/openssl/lib/libcrypto.so.3' /tmp/python-ssl-linkage.txt; \
@@ -107,24 +109,28 @@ RUN set -eu; \
       printf 'opensslBaseSourceArchiveSha256=%s\n' "$OPENSSL_BASE_SOURCE_SHA256"; \
       /opt/python/bin/python3 --version; \
       /opt/python/bin/python3 -I -c 'import ssl; print(ssl.OPENSSL_VERSION)'; \
-      sha256sum /opt/python/lib/python3.13/lib-dynload/_ssl*.so; \
+      sha256sum /opt/python/lib/python${PYTHON_VERSION_LINE}/lib-dynload/_ssl*.so; \
     } > /opt/python/share/indianhilllabs/build-info.txt
 
 FROM ${PYTHON_BASE}
+
+ARG PYTHON_VERSION=3.13.16
+ARG PYTHON_VERSION_LINE=3.13
+ARG PYTHON_ARTIFACT_ID=IHL-CTR-0003
 
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
-LABEL org.opencontainers.image.title="Indian Hill Secure Python 3.13 Runtime" \
-      org.opencontainers.image.description="Minimal non-root CPython 3.13 runtime linked to a controlled OpenSSL 3.5.9 base library" \
-      org.opencontainers.image.version="3.13.16-secure-lab.1" \
+LABEL org.opencontainers.image.title="Indian Hill Secure Python ${PYTHON_VERSION_LINE} Runtime" \
+      org.opencontainers.image.description="Minimal non-root CPython ${PYTHON_VERSION_LINE} runtime linked to a controlled OpenSSL 3.5.9 base library" \
+      org.opencontainers.image.version="${PYTHON_VERSION}-secure-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="PSF-2.0 AND Apache-2.0" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0003" \
+      com.indianhilllabs.artifact.id="${PYTHON_ARTIFACT_ID}" \
       com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
       com.indianhilllabs.assurance.level="secure"
 
@@ -145,8 +151,10 @@ COPY --from=python-build /usr/lib/x86_64-linux-gnu/libsqlite3.so.* /lib/x86_64-l
 COPY --from=python-build /usr/lib/x86_64-linux-gnu/libtinfo.so.* /lib/x86_64-linux-gnu/
 COPY --from=python-build /usr/lib/x86_64-linux-gnu/libuuid.so.* /lib/x86_64-linux-gnu/
 COPY --from=python-build /usr/lib/x86_64-linux-gnu/libz.so.* /lib/x86_64-linux-gnu/
+COPY --from=python-build /usr/lib/x86_64-linux-gnu/libzstd.so.* /lib/x86_64-linux-gnu/
 
 ENV IHL_ASSURANCE_LEVEL="secure" \
+    IHL_ARTIFACT_ID="${PYTHON_ARTIFACT_ID}" \
     PYTHONHOME="/opt/python" \
     PYTHONNOUSERSITE="1" \
     PYTHONUNBUFFERED="1" \

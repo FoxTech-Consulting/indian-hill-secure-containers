@@ -2,7 +2,7 @@
 """Bound source-build workers by affinity, cgroup quotas and memory headroom.
 
 Only capacity/counter data is reported: no environment, hostnames or addresses.
-Compatible with the Python 3 supplied by the pinned GCC builder.
+Compatible with the Python 3 supplied by the configured Linux builder.
 """
 import argparse
 import json

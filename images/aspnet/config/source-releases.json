@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-17",
+  "releases": [
+    {
+      "version": "8.0.32",
+      "versionLine": "8",
+      "runtimeImage": "mcr.microsoft.com/dotnet/aspnet:8.0.32-noble-chiseled-amd64@sha256:e47cf5156b40b554a5ad4b30fdaa4111a2ee789413d7b89f86f31c9049ba7530",
+      "sdkVersion": "8.0.426",
+      "sdkImage": "mcr.microsoft.com/dotnet/sdk:8.0.426-noble-amd64@sha256:5c580c9ef8111b2677c6e75e5173f8cf8b36ec63c7ff06c8cf5e1d272e237aa2",
+      "metadataUrl": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/8.0/releases.json",
+      "digestVerification": "Docker-Content-Digest header from the Microsoft Container Registry manifest endpoint; HTTP 200 on 2026-10-17"
+    },
+    {
+      "version": "9.0.21",
+      "versionLine": "9",
+      "runtimeImage": "mcr.microsoft.com/dotnet/aspnet:9.0.21-noble-chiseled-amd64@sha256:e22db25736a223242d5481b5bf43f56c5778418e27507808de7f47c630786860",
+      "sdkVersion": "9.0.319",
+      "sdkImage": "mcr.microsoft.com/dotnet/sdk:9.0.319-noble-amd64@sha256:d29da2b08de98d11934c02fcd3a833e3a64318b9290ce2f1826a0a44ce2efd61",
+      "metadataUrl": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/9.0/releases.json",
+      "digestVerification": "Docker-Content-Digest header from the Microsoft Container Registry manifest endpoint; HTTP 200 on 2026-10-17"
+    },
+    {
+      "version": "10.0.13",
+      "versionLine": "10",
+      "runtimeImage": "mcr.microsoft.com/dotnet/aspnet:10.0.13-noble-chiseled-amd64@sha256:f9d8d2664e0a80931b3db97401824b0721819eedee54aeda15bf8bb7a4306738",
+      "sdkVersion": "10.0.402",
+      "sdkImage": "mcr.microsoft.com/dotnet/sdk:10.0.402-noble-amd64@sha256:3a48280a9a7c6276c3eeaba1efa6a08820f18c84fb9e6274c187719ecfaf9fbc",
+      "metadataUrl": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json",
+      "digestVerification": "Existing reviewed immutable runtime and SDK pins retained"
+    }
+  ]
+}

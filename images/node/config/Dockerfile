@@ -1,10 +1,20 @@
 # Node is built from the checksum-pinned upstream source against a controlled
 # OpenSSL 3.5.9 shared library. The final Ubuntu Chiseled image deliberately
 # contains neither a shell nor a package manager, npm, or Corepack.
-ARG NODE_BUILDER=docker.io/library/gcc:12.2.0@sha256:a3e091325c0af43bc9c1c576ddd155351d5b16438124421188bb4b4fcacc1452
+ARG NODE_BUILDER=docker.io/library/ubuntu:24.04@sha256:224a1869083a311ef3f13648a154ba79832fbef6364d31493642ca03082da254
+ARG NODE_RUST_BUILDER=docker.io/library/rust:1.86.0-bookworm@sha256:300ec56abce8cc9448ddea2172747d048ed902a3090e6b57babb2bf19f754081
 ARG NODE_BASE=mcr.microsoft.com/dotnet/runtime-deps:10.0.13-noble-chiseled-amd64@sha256:e6cb0d241bab6f29daf92f2e11b3e605e0b0df4face98a71811c084aafa45593
 
-FROM ${NODE_BUILDER} AS openssl-supported-base-build
+FROM ${NODE_RUST_BUILDER} AS node-rust-toolchain
+
+FROM ${NODE_BUILDER} AS node-toolchain
+RUN set -eu; \
+    export DEBIAN_FRONTEND=noninteractive; \
+    apt-get -o APT::Update::Error-Mode=any update; \
+    apt-get install --yes --no-install-recommends build-essential ca-certificates libatomic1 perl pkg-config python3 xz-utils; \
+    rm -rf /var/lib/apt/lists/*
+
+FROM node-toolchain AS openssl-supported-base-build
 
 ARG NODE_BUILD_JOBS=auto
 ARG NODE_BUILD_CPU_LIMIT=3
@@ -62,22 +72,28 @@ RUN set -eu; \
     install -d -m 0755 /opt/openssl/share/licenses/openssl; \
     install -m 0644 LICENSE.txt /opt/openssl/share/licenses/openssl/LICENSE.txt
 
-FROM ${NODE_BUILDER} AS node-build
+FROM node-toolchain AS node-build
+COPY --from=node-rust-toolchain /usr/local/cargo /usr/local/cargo
+COPY --from=node-rust-toolchain /usr/local/rustup /usr/local/rustup
+ENV CARGO_HOME=/usr/local/cargo \
+    RUSTUP_HOME=/usr/local/rustup \
+    PATH="/usr/local/cargo/bin:${PATH}"
 
 ARG NODE_BUILD_JOBS=auto
 ARG NODE_BUILD_CPU_LIMIT=3
 ARG NODE_BUILD_MEMORY_LIMIT_BYTES=8589934592
 COPY images/node/config/build_resources.py /usr/local/lib/ihl-build-resources.py
 
-ARG NODE_VERSION=24.20.0
-ARG NODE_SOURCE_SHA256=987113866ab9018998f09f74072afe7136f3da8b934e35d89531e1e49890062f
+ARG NODE_VERSION=24.22.0
+ARG NODE_VERSION_LINE=24
+ARG NODE_SOURCE_SHA256=9010e34b40beb69ee5eb8c0ee22e08da6a6c7bff16c6f8be7904638970a66c91
 ARG OPENSSL_BASE_SOURCE_SHA256=603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a
 
 COPY --from=openssl-supported-base-build /opt/openssl /opt/openssl
 
-ADD --checksum=sha256:987113866ab9018998f09f74072afe7136f3da8b934e35d89531e1e49890062f \
-    https://nodejs.org/dist/v24.20.0/node-v24.20.0.tar.gz \
-    /tmp/node-v24.20.0.tar.gz
+ADD --checksum=sha256:${NODE_SOURCE_SHA256} \
+    https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.gz \
+    /tmp/node-v${NODE_VERSION}.tar.gz
 
 RUN set -eu; \
     command -v python3; \
@@ -115,17 +131,19 @@ RUN set -eu; \
         exit "$status"; \
       fi; \
     }; \
-    printf '%s  %s\n' "$NODE_SOURCE_SHA256" /tmp/node-v24.20.0.tar.gz | sha256sum --check --strict; \
-    tar --extract --gzip --file /tmp/node-v24.20.0.tar.gz --directory /tmp; \
+    printf '%s  %s\n' "$NODE_SOURCE_SHA256" /tmp/node-v${NODE_VERSION}.tar.gz | sha256sum --check --strict; \
+    tar --extract --gzip --file /tmp/node-v${NODE_VERSION}.tar.gz --directory /tmp; \
     cd "/tmp/node-v$NODE_VERSION"; \
     export LD_LIBRARY_PATH=/opt/openssl/lib; \
     export LDFLAGS='-Wl,-rpath,/opt/openssl/lib'; \
-    run_logged /tmp/node-configure.log ./configure \
+    case "$NODE_VERSION_LINE" in 26) set -- --v8-enable-temporal-support ;; *) set -- ;; esac; \
+    run_logged /tmp/node-configure.log ./configure "$@" \
       --shared-openssl \
       --shared-openssl-includes=/opt/openssl/include \
       --shared-openssl-libpath=/opt/openssl/lib \
       --openssl-conf-name=nodejs_conf; \
     build_jobs="$(python3 /usr/local/lib/ihl-build-resources.py)"; \
+    export CARGO_BUILD_JOBS="$build_jobs"; \
     run_progress_logged /tmp/node-build.log make -j"$build_jobs"; \
     install -d -m 0755 /opt/node/bin /opt/node/share/indianhilllabs; \
     install -m 0755 out/Release/node /opt/node/bin/node; \
@@ -133,7 +151,7 @@ RUN set -eu; \
     ! grep -F 'not found' /tmp/node-linkage.txt; \
     grep -F '/opt/openssl/lib/libssl.so.3' /tmp/node-linkage.txt; \
     grep -F '/opt/openssl/lib/libcrypto.so.3' /tmp/node-linkage.txt; \
-    /opt/node/bin/node -e 'const assert = require("node:assert"); const crypto = require("node:crypto"); assert.strictEqual(process.version, "v24.20.0"); assert.strictEqual(process.versions.openssl, "3.5.9"); assert(crypto.createHash("sha256").update("Indian Hill Node Secure").digest("hex"));'; \
+    /opt/node/bin/node -e 'const assert = require("node:assert"); const crypto = require("node:crypto"); assert.strictEqual(process.version, "v" + process.argv[1]); assert.strictEqual(process.versions.openssl, "3.5.9"); assert(crypto.createHash("sha256").update("Indian Hill Node Secure").digest("hex"));' "$NODE_VERSION"; \
     { \
       printf 'nodeSourceVersion=%s\n' "$NODE_VERSION"; \
       printf 'nodeSourceArchiveSha256=%s\n' "$NODE_SOURCE_SHA256"; \
@@ -147,19 +165,23 @@ RUN set -eu; \
 
 FROM ${NODE_BASE}
 
+ARG NODE_VERSION=24.22.0
+ARG NODE_VERSION_LINE=24
+ARG NODE_ARTIFACT_ID=IHL-CTR-0005
+
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
-LABEL org.opencontainers.image.title="Indian Hill Secure Node.js 24 Runtime" \
-      org.opencontainers.image.description="Minimal non-root Node.js 24 runtime linked to a controlled OpenSSL 3.5.9 base library" \
-      org.opencontainers.image.version="24.20.0-secure-lab.1" \
+LABEL org.opencontainers.image.title="Indian Hill Secure Node.js ${NODE_VERSION_LINE} Runtime" \
+      org.opencontainers.image.description="Minimal non-root Node.js ${NODE_VERSION_LINE} runtime linked to a controlled OpenSSL 3.5.9 base library" \
+      org.opencontainers.image.version="${NODE_VERSION}-secure-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="MIT AND Apache-2.0" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0005" \
+      com.indianhilllabs.artifact.id="${NODE_ARTIFACT_ID}" \
       com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
       com.indianhilllabs.assurance.level="secure"
 
@@ -167,11 +189,12 @@ COPY --from=node-build /opt/node /opt/node
 COPY --from=node-build /opt/openssl/lib/libcrypto.so.3 /opt/openssl/lib/libcrypto.so.3
 COPY --from=node-build /opt/openssl/lib/libssl.so.3 /opt/openssl/lib/libssl.so.3
 COPY --from=node-build /opt/openssl/share/licenses/openssl/LICENSE.txt /opt/openssl/share/licenses/openssl/LICENSE.txt
-# Retain the Ubuntu base's packaged libstdc++ and libgcc. The GCC builder
-# keeps its GCC 12 libraries in /usr/local/lib64; its /usr/lib copy is the
-# older Debian runtime and must not overwrite Ubuntu's newer libraries.
+# Preserve the final Ubuntu base's libstdc++ and libgcc; supply Node26 libatomic
+# from the same supported Ubuntu release used by the source builder.
+COPY --from=node-build /usr/lib/x86_64-linux-gnu/libatomic.so.* /lib/x86_64-linux-gnu/
 
 ENV IHL_ASSURANCE_LEVEL="secure" \
+    IHL_ARTIFACT_ID="${NODE_ARTIFACT_ID}" \
     NODE_DISABLE_COLORS="1" \
     LD_LIBRARY_PATH="/opt/openssl/lib"
 

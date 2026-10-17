@@ -74,7 +74,7 @@ http.createServer((request, response) => {
   }
   if (request.url === "/") {
     respond(response, 200, {
-      artifact: "IHL-CTR-0005",
+      artifact: process.env.IHL_ARTIFACT_ID || "IHL-CTR-0005",
       assuranceLevel: ASSURANCE_LEVEL,
       effectiveUid: process.getuid(),
     });

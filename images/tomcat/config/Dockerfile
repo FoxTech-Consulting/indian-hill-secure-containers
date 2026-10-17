@@ -2,7 +2,13 @@
 # This builder is discarded; the shipped runtime has no shell or compiler.
 ARG JAVA_BUILDER=docker.io/library/gcc:11.2.0@sha256:2c5cae6b84598eb6865d6c7b340deef80e8834a4c4037a5cbba755a5258809d4
 ARG JAVA_BASE=mcr.microsoft.com/dotnet/runtime-deps:10.0.13-noble-chiseled-amd64@sha256:e6cb0d241bab6f29daf92f2e11b3e605e0b0df4face98a71811c084aafa45593
+ARG TOMCAT_VERSION=10.1.61
+ARG TOMCAT_MAJOR=10
+ARG TOMCAT_SOURCE_SHA512=35120a2b1182bac3d55438fbec0dc581d03b0f1c16ce692a930f3bb6a1097cf896b94b389152257071a87cb2928ac8c15f1bad08387c14acc7c17dbc1bb598fb
 FROM ${JAVA_BUILDER} AS java-build
+ARG TOMCAT_VERSION
+ARG TOMCAT_MAJOR
+ARG TOMCAT_SOURCE_SHA512
 ADD --checksum=sha256:ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94 https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz /tmp/jdk.tar.gz
 RUN mkdir /opt/jdk && tar -xzf /tmp/jdk.tar.gz --strip-components=1 -C /opt/jdk \
     && /opt/jdk/bin/jlink --add-modules java.base,java.logging,java.naming,java.management,java.sql,java.xml,java.net.http,jdk.httpserver,jdk.crypto.ec,jdk.unsupported,jdk.security.auth,java.desktop,java.instrument,java.rmi,java.security.jgss,jdk.management,jdk.zipfs,jdk.naming.dns \
@@ -10,8 +16,8 @@ RUN mkdir /opt/jdk && tar -xzf /tmp/jdk.tar.gz --strip-components=1 -C /opt/jdk 
     && /opt/java/bin/java --version
 
 
-ADD https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.59/bin/apache-tomcat-10.1.59.tar.gz /tmp/tomcat.tar.gz
-RUN echo '992a8e88fc9c0338445f018a1e4a2757c9e71708dba795e2864c9b1613f2b3b9b19c048e787682deae6d6bff9971defc746e31282085d52ef1d32192e09f7a0f  /tmp/tomcat.tar.gz' | sha512sum -c - \
+ADD https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz /tmp/tomcat.tar.gz
+RUN echo "${TOMCAT_SOURCE_SHA512}  /tmp/tomcat.tar.gz" | sha512sum -c - \
     && mkdir -p /opt/tomcat && tar -xzf /tmp/tomcat.tar.gz --strip-components=1 -C /opt/tomcat \
     && rm -rf /opt/tomcat/webapps/* /opt/tomcat/bin/*.sh /opt/tomcat/bin/*.bat /opt/tomcat/bin/*.tar.gz \
     && mkdir -p /opt/tomcat/webapps /opt/tomcat/health /opt/tomcat/conf/Catalina/localhost
@@ -21,16 +27,19 @@ RUN /opt/jdk/bin/javac --release 21 -d /opt/tomcat/health /tmp/HealthCheck.java 
     && chown 1654:1654 /opt/tomcat/work /opt/tomcat/temp
 
 FROM ${JAVA_BASE}
+ARG TOMCAT_VERSION=10.1.61
+ARG TOMCAT_VERSION_LINE=10.1
+ARG TOMCAT_ARTIFACT_ID=IHL-CTR-0008
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
-LABEL org.opencontainers.image.title="Indian Hill Apache Tomcat 10.1 Platform" \
-      org.opencontainers.image.version="10.1.59" \
+LABEL org.opencontainers.image.title="Indian Hill Apache Tomcat ${TOMCAT_VERSION_LINE} Platform" \
+      org.opencontainers.image.version="${TOMCAT_VERSION}" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
       org.opencontainers.image.licenses="Apache-2.0 AND GPL-2.0-with-classpath-exception" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0008" \
+      com.indianhilllabs.artifact.id="${TOMCAT_ARTIFACT_ID}" \
       com.indianhilllabs.assurance.level="secure"
 COPY --from=java-build /opt/java /opt/java
 COPY --from=java-build /opt/tomcat /opt/tomcat

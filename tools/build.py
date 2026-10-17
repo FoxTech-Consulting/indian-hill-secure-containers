@@ -97,25 +97,12 @@ def product_tiers(product: dict[str, Any]) -> tuple[str, ...]:
 
 
 def public_build_args(product: dict[str, Any], tier: str, recipe: dict) -> dict[str, str]:
-    """Export only the reviewed NGINX source/identity pins, never arbitrary args."""
-    args = recipe.get("buildArgs", {})
-    required = {"NGINX_VERSION", "NGINX_SOURCE_SHA256", "NGINX_ARTIFACT_ID", "NGINX_VERSION_LINE"}
-    if not isinstance(args, dict):
-        raise ValueError("Public recipe buildArgs must be an object")
-    if not args and product.get("key") != "nginx-mainline":
-        return {}
-    if (tier != "secure" or product.get("family") != "nginx"
-            or product.get("key") not in {"nginx", "nginx-mainline"} or set(args) != required
-            or not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", str(product.get("productVersion", "")))
-            or product.get("versionLine") != ".".join(product["productVersion"].split(".")[:2])
-            or not re.fullmatch(r"IHL-CTR-[0-9]{4}", str(product.get("id", "")))
-            or not all(isinstance(value, str) for value in args.values())
-            or args["NGINX_VERSION"] != product["productVersion"]
-            or args["NGINX_ARTIFACT_ID"] != product["id"]
-            or args["NGINX_VERSION_LINE"] != product["versionLine"]
-            or not re.fullmatch(r"[0-9a-f]{64}", args["NGINX_SOURCE_SHA256"])):
-        raise ValueError("Public NGINX buildArgs must contain exact reviewed version, source, and identity pins")
-    return dict(args)
+    # The exported helper is the same reviewed contract used by the factory.
+    from importlib.util import spec_from_file_location, module_from_spec
+    spec = spec_from_file_location("ihl_recipe_contract", Path(__file__).with_name("recipe_contract.py"))
+    module = module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.image_build_args(product, tier, recipe)
 
 
 def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:

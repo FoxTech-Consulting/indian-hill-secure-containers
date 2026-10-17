@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-17",
+  "releases": [
+    {
+      "version": "14.24",
+      "versionLine": "14",
+      "sourceUrl": "https://ftp.postgresql.org/pub/source/v14.24/postgresql-14.24.tar.gz",
+      "sourceSha256": "563d0b2a985411ed508d05d5b2d883d45abbe51ba5b5e43875ecf25f1ebf26f2",
+      "checksumUrl": "https://ftp.postgresql.org/pub/source/v14.24/postgresql-14.24.tar.gz.sha256",
+      "checksumVerified": true
+    },
+    {
+      "version": "15.19",
+      "versionLine": "15",
+      "sourceUrl": "https://ftp.postgresql.org/pub/source/v15.19/postgresql-15.19.tar.gz",
+      "sourceSha256": "4bf5474f0ee4afc55de5e71fb5cc8cd133ee56cd1bf16092093897b7c93328fb",
+      "checksumUrl": "https://ftp.postgresql.org/pub/source/v15.19/postgresql-15.19.tar.gz.sha256",
+      "checksumVerified": true
+    },
+    {
+      "version": "16.15",
+      "versionLine": "16",
+      "sourceUrl": "https://ftp.postgresql.org/pub/source/v16.15/postgresql-16.15.tar.gz",
+      "sourceSha256": "4f200ca23dfb120ff9838f13ce06014aad1d3c432d16ee9f93ab2000c0eeef7b",
+      "checksumUrl": "https://ftp.postgresql.org/pub/source/v16.15/postgresql-16.15.tar.gz.sha256",
+      "checksumVerified": true
+    },
+    {
+      "version": "17.11",
+      "versionLine": "17",
+      "sourceUrl": "https://ftp.postgresql.org/pub/source/v17.11/postgresql-17.11.tar.gz",
+      "sourceSha256": "5367f6fb2ec97efe1eb2e0c7926bb33438e51b0bd3a9733b88498056a7dc9a7e",
+      "checksumUrl": "https://ftp.postgresql.org/pub/source/v17.11/postgresql-17.11.tar.gz.sha256",
+      "checksumVerified": true
+    },
+    {
+      "version": "18.6",
+      "versionLine": "18",
+      "sourceUrl": "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.gz",
+      "sourceSha256": "983ee554ec53dbeb9b70797bef9fcf4e67e117e7e48ca1463cc80b3ff8e8ff3f",
+      "checksumUrl": "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.gz.sha256",
+      "checksumVerified": true
+    }
+  ],
+  "buildOnlyTools": [
+    {
+      "name": "Bison",
+      "version": "3.8.2",
+      "sourceUrl": "https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.xz",
+      "sourceSha256": "9bba0214ccf7f1079c5d59210045227bcf619519840ebfa80cd3849cff5a5bf2",
+      "checksumUrl": "https://lists.gnu.org/archive/html/bug-bison/2021-09/msg00056.html",
+      "checksumVerified": true
+    },
+    {
+      "name": "Flex",
+      "version": "2.6.4",
+      "sourceUrl": "https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz",
+      "sourceSha256": "e87aae032bf07c26f85ac0ed3250998c37621d95f8bd748b31f15b33c45ee995",
+      "checksumUrl": "https://sourceforge.net/p/flex/mailman/message/35825789/",
+      "upstreamSha1": "fafece095a0d9890ebd618adb1f242d8908076e1",
+      "checksumVerified": true
+    }
+  ]
+}

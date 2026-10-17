@@ -1,6 +1,6 @@
 # Indian Hill Labs Secure Containers
 
-Public source snapshots for Indian Hill Labs Secure and Hardened container engineering previews. The nine families are ASP.NET, NGINX, Python, PostgreSQL, Node.js, Java, Redis, Apache Tomcat, and Elasticsearch. The catalog includes each selected Java version and provider variant as an exact build target. Go's separate bare-image pipeline is outside this initial Secure/Hardened source snapshot.
+Public source snapshots for Indian Hill Labs Secure and Hardened container engineering previews. The nine families are ASP.NET, NGINX, Python, PostgreSQL, Node.js, Java, Redis, Apache Tomcat, and Elasticsearch. The catalog includes each selected Java version and exact build target. Go's separate bare-image pipeline is outside this initial Secure/Hardened source snapshot.
 
 **These sources are engineering previews. A successful local build does not qualify an image as Secure or Hardened and does not create a supported, generally available release.** The tier names describe the build definitions. Qualification requires the authoritative GitLab factory's exact digest, policy, tests, and retained evidence. No Validated sources or qualification workflows are included here.
 
@@ -49,33 +49,33 @@ Verified download inventory updated **2026-10-16 19:52 UTC**: **23 Secure and 8 
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
-| Build key | Repository | Secure tag | Hardened tag |
+| Family and version | Repository | Secure tag | Hardened tag |
 | --- | --- | --- | --- |
-| `aspnet` | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-10.0.13-20261016T002432Z` | `IHL-ASPNet-10.0.13-20261015T173239Z-Hardened` |
-| `elasticsearch` | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.3-20261010T231254Z` | Not listed |
-| `java` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T221045Z` | `IHL-Java-21.0.12.1-20261015T024556Z-Hardened` |
-| `java-11-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221803Z` | Not listed |
-| `java-11-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221932Z` | Not listed |
-| `java-17-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222357Z` | Not listed |
-| `java-17-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222713Z` | Not listed |
-| `java-21-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T223142Z` | Not listed |
-| `java-25-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223358Z` | Not listed |
-| `java-25-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223527Z` | Not listed |
-| `java-26-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224015Z` | Not listed |
-| `java-26-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224212Z` | Not listed |
-| `java-27-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224344Z` | Not listed |
-| `java-27-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224518Z` | Not listed |
-| `java-8-bcfips-2-1-1` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
-| `java-8-bcfips-2-1-3` | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | Not listed |
-| `nginx` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261016T193408Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
-| `nginx-mainline` | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.7-20261016T195003Z` | Not listed |
-| `node` | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.20.0-20261016T001723Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
-| `postgres` | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
-| `python` | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261015T174218Z-Hardened` |
-| `redis` | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.9-20261016T003040Z` | `IHL-Redis-8.2.9-20261016T011415Z-Hardened` |
-| `tomcat` | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-10.1.59-20261016T002859Z` | `IHL-Tomcat-10.1.59-20261016T003116Z-Hardened` |
+| ASP.NET 10.0.13 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-10.0.13-20261016T002432Z` | `IHL-ASPNet-10.0.13-20261015T173239Z-Hardened` |
+| Elasticsearch 9.5.3 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.3-20261010T231254Z` | Not listed |
+| Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T221045Z` | `IHL-Java-21.0.12.1-20261015T024556Z-Hardened` |
+| Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221803Z` | Not listed |
+| Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221932Z` | Not listed |
+| Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222357Z` | Not listed |
+| Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222713Z` | Not listed |
+| Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T223142Z` | Not listed |
+| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223358Z` | Not listed |
+| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223527Z` | Not listed |
+| Java 26.0.2.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224015Z` | Not listed |
+| Java 26.0.2.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224212Z` | Not listed |
+| Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224344Z` | Not listed |
+| Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224518Z` | Not listed |
+| Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
+| Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | Not listed |
+| NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261016T193408Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
+| NGINX 1.31.7 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.7-20261016T195003Z` | Not listed |
+| Node.js 24.20.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.20.0-20261016T001723Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
+| PostgreSQL 16.15 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
+| Python 3.13.16 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261015T174218Z-Hardened` |
+| Redis 8.2.9 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.9-20261016T003040Z` | `IHL-Redis-8.2.9-20261016T011415Z-Hardened` |
+| Apache Tomcat 10.1.59 | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-10.1.59-20261016T002859Z` | `IHL-Tomcat-10.1.59-20261016T003116Z-Hardened` |
 
-"Not listed" means no verified download for that exact target and tier is advertised. Provider variant names do not confer FIPS validation.
+"Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
 15 runtime records include signed public source bindings; 16 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
@@ -96,14 +96,14 @@ python tools/build.py nginx --tier secure --dry-run
 python tools/build.py nginx --tier secure
 python tools/build.py nginx --tier hardened
 python tools/build.py aspnet --tier hardened --with-example
-python tools/build.py java-17-bcfips-2-1-1 --tier hardened --dry-run
+python tools/build.py java --tier hardened --dry-run
 ```
 
 The helper verifies this snapshot's exported file checksums before planning a build. Hardened builds first construct the local Secure parent, then use that invocation's uniquely tagged local parent. A registered example is built only with `--with-example`. All results use `local/ihl` tags and explicit `local-unqualified` metadata. The helper does not push, sign, scan, or qualify images. `--dry-run` prints argument arrays without contacting Docker or downloading anything.
 
 For example, NGINX Secure builds to `local/ihl/nginx:<version>-secure-local`, where `<version>` comes from `public-products.json`. Override the local name prefix with `--tag-prefix`; this changes local names only. Dockerfiles use the repository root as their build context. Configuration may require mounted data, certificates, or secrets; examine the selected family's files before running it. Source builds are not promised to reproduce a published digest bit for bit.
 
-Use the exact key printed by `--list` for Java version/provider variants. A provider variant name identifies its selected build target; it does not confer a FIPS qualification decision. Java reference examples are not included because they depend on the private qualification workload.
+Use the exact key printed by `--list` to select a versioned build. Catalog keys and source paths retain technical identities for reproducibility; display names do not grant qualification. Java reference examples are not included because they depend on the private qualification workload.
 
 ## Verify a published image
 

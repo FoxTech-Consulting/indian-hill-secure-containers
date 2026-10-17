@@ -76,7 +76,7 @@ class Handler(BaseHTTPRequestHandler):
             self.respond_json(
                 HTTPStatus.OK,
                 {
-                    "artifact": "IHL-CTR-0003",
+                    "artifact": os.environ.get("IHL_ARTIFACT_ID", "IHL-CTR-0003"),
                     "assuranceLevel": ASSURANCE_LEVEL,
                     "effectiveUid": os.geteuid(),
                 },

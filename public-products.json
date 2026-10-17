@@ -32,6 +32,78 @@
       ]
     },
     {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "aspnet",
+      "id": "IHL-CTR-0012",
+      "image": {
+        "repository": "aspnet-runtime",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.32-noble-chiseled-amd64@sha256:e47cf5156b40b554a5ad4b30fdaa4111a2ee789413d7b89f86f31c9049ba7530",
+              "ASPNET_VERSION": "8.0.32",
+              "ASPNET_VERSION_LINE": "8"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile"
+          }
+        }
+      },
+      "key": "aspnet-8",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "8.0.32",
+      "status": "candidate",
+      "targetId": "aspnet-8",
+      "title": "Indian Hill ASP.NET 8 Runtime",
+      "versionLine": "8",
+      "workloads": [
+        {
+          "dockerfile": "images/aspnet/examples/reference-api/8/Dockerfile",
+          "id": "IHL-APP-0001",
+          "key": "aspnet-8-reference-api",
+          "repository": "aspnet-8-reference-api"
+        }
+      ]
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "aspnet",
+      "id": "IHL-CTR-0013",
+      "image": {
+        "repository": "aspnet-runtime",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.21-noble-chiseled-amd64@sha256:e22db25736a223242d5481b5bf43f56c5778418e27507808de7f47c630786860",
+              "ASPNET_VERSION": "9.0.21",
+              "ASPNET_VERSION_LINE": "9"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile"
+          }
+        }
+      },
+      "key": "aspnet-9",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "9.0.21",
+      "status": "candidate",
+      "targetId": "aspnet-9",
+      "title": "Indian Hill ASP.NET 9 Runtime",
+      "versionLine": "9",
+      "workloads": [
+        {
+          "dockerfile": "images/aspnet/examples/reference-api/9/Dockerfile",
+          "id": "IHL-APP-0001",
+          "key": "aspnet-9-reference-api",
+          "repository": "aspnet-9-reference-api"
+        }
+      ]
+    },
+    {
       "family": "elasticsearch",
       "id": "IHL-CTR-0009",
       "image": {
@@ -41,17 +113,81 @@
             "dockerfile": "images/elasticsearch/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0009",
+              "ELASTICSEARCH_BASE": "docker.elastic.co/elasticsearch/elasticsearch:9.5.5-amd64@sha256:c40a1fb2bc6976821e5625d2329992a1e9c29df576e5955fdcba02421abf0d3c",
+              "ELASTICSEARCH_VERSION": "9.5.5",
+              "ELASTICSEARCH_VERSION_LINE": "9.5"
+            },
             "dockerfile": "images/elasticsearch/config/Dockerfile"
           }
         }
       },
       "key": "elasticsearch",
       "kind": "standalone-server",
-      "productVersion": "9.5.3",
+      "productVersion": "9.5.5",
       "status": "candidate",
       "targetId": "elasticsearch-9.5",
       "title": "Indian Hill Elasticsearch 9.5 Platform",
       "versionLine": "9.5",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "elasticsearch",
+      "id": "IHL-CTR-0033",
+      "image": {
+        "repository": "elasticsearch",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0033",
+              "ELASTICSEARCH_BASE": "docker.elastic.co/elasticsearch/elasticsearch:8.19.23-amd64@sha256:b6339612c7c680390be5c5472456a84ffbd6881e0216922ab3597c9c573950db",
+              "ELASTICSEARCH_VERSION": "8.19.23",
+              "ELASTICSEARCH_VERSION_LINE": "8.19"
+            },
+            "dockerfile": "images/elasticsearch/config/Dockerfile"
+          }
+        }
+      },
+      "key": "elasticsearch-8-19",
+      "kind": "standalone-server",
+      "productVersion": "8.19.23",
+      "status": "candidate",
+      "targetId": "elasticsearch-8.19",
+      "title": "Indian Hill Elasticsearch 8.19 Platform",
+      "versionLine": "8.19",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "elasticsearch",
+      "id": "IHL-CTR-0034",
+      "image": {
+        "repository": "elasticsearch",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0034",
+              "ELASTICSEARCH_BASE": "docker.elastic.co/elasticsearch/elasticsearch:9.4.8-amd64@sha256:0375b21e94b8b8e082e9de35fcd5417a5588510976d080170f84d83c7ceaabd2",
+              "ELASTICSEARCH_VERSION": "9.4.8",
+              "ELASTICSEARCH_VERSION_LINE": "9.4"
+            },
+            "dockerfile": "images/elasticsearch/config/Dockerfile"
+          }
+        }
+      },
+      "key": "elasticsearch-9-4",
+      "kind": "standalone-server",
+      "productVersion": "9.4.8",
+      "status": "candidate",
+      "targetId": "elasticsearch-9.4",
+      "title": "Indian Hill Elasticsearch 9.4 Platform",
+      "versionLine": "9.4",
       "workloads": []
     },
     {
@@ -74,7 +210,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-21-bcfips-2-1-3",
-      "title": "Indian Hill Java 21 · BC-FJA 2.1.3 (pre-certification)",
+      "title": "Indian Hill Java 21",
       "variant": "bcfips-2-1-3",
       "versionLine": "21",
       "workloads": []
@@ -99,7 +235,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-11-bcfips-2-1-1",
-      "title": "Indian Hill Java 11 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "title": "Indian Hill Java 11",
       "variant": "bcfips-2-1-1",
       "versionLine": "11",
       "workloads": []
@@ -124,7 +260,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-11-bcfips-2-1-3",
-      "title": "Indian Hill Java 11 · BC-FJA 2.1.3 (pre-certification)",
+      "title": "Indian Hill Java 11",
       "variant": "bcfips-2-1-3",
       "versionLine": "11",
       "workloads": []
@@ -149,7 +285,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-17-bcfips-2-1-1",
-      "title": "Indian Hill Java 17 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "title": "Indian Hill Java 17",
       "variant": "bcfips-2-1-1",
       "versionLine": "17",
       "workloads": []
@@ -174,7 +310,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-17-bcfips-2-1-3",
-      "title": "Indian Hill Java 17 · BC-FJA 2.1.3 (pre-certification)",
+      "title": "Indian Hill Java 17",
       "variant": "bcfips-2-1-3",
       "versionLine": "17",
       "workloads": []
@@ -199,7 +335,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-21-bcfips-2-1-1",
-      "title": "Indian Hill Java 21 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "title": "Indian Hill Java 21",
       "variant": "bcfips-2-1-1",
       "versionLine": "21",
       "workloads": []
@@ -224,7 +360,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-25-bcfips-2-1-1",
-      "title": "Indian Hill Java 25 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "title": "Indian Hill Java 25",
       "variant": "bcfips-2-1-1",
       "versionLine": "25",
       "workloads": []
@@ -249,7 +385,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-25-bcfips-2-1-3",
-      "title": "Indian Hill Java 25 · BC-FJA 2.1.3 (pre-certification)",
+      "title": "Indian Hill Java 25",
       "variant": "bcfips-2-1-3",
       "versionLine": "25",
       "workloads": []
@@ -274,7 +410,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-26-bcfips-2-1-1",
-      "title": "Indian Hill Java 26 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "title": "Indian Hill Java 26",
       "variant": "bcfips-2-1-1",
       "versionLine": "26",
       "workloads": []
@@ -299,7 +435,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-26-bcfips-2-1-3",
-      "title": "Indian Hill Java 26 · BC-FJA 2.1.3 (pre-certification)",
+      "title": "Indian Hill Java 26",
       "variant": "bcfips-2-1-3",
       "versionLine": "26",
       "workloads": []
@@ -324,7 +460,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-27-bcfips-2-1-1",
-      "title": "Indian Hill Java 27 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "title": "Indian Hill Java 27",
       "variant": "bcfips-2-1-1",
       "versionLine": "27",
       "workloads": []
@@ -349,7 +485,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-27-bcfips-2-1-3",
-      "title": "Indian Hill Java 27 · BC-FJA 2.1.3 (pre-certification)",
+      "title": "Indian Hill Java 27",
       "variant": "bcfips-2-1-3",
       "versionLine": "27",
       "workloads": []
@@ -374,7 +510,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-8-bcfips-2-1-1",
-      "title": "Indian Hill Java 8 · BC-FJA 2.1.1 (certificate-listed-version)",
+      "title": "Indian Hill Java 8",
       "variant": "bcfips-2-1-1",
       "versionLine": "8",
       "workloads": []
@@ -399,7 +535,7 @@
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-8-bcfips-2-1-3",
-      "title": "Indian Hill Java 8 · BC-FJA 2.1.3 (pre-certification)",
+      "title": "Indian Hill Java 8",
       "variant": "bcfips-2-1-3",
       "versionLine": "8",
       "workloads": []
@@ -472,13 +608,19 @@
             "dockerfile": "images/node/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "NODE_ARTIFACT_ID": "IHL-CTR-0005",
+              "NODE_SOURCE_SHA256": "9010e34b40beb69ee5eb8c0ee22e08da6a6c7bff16c6f8be7904638970a66c91",
+              "NODE_VERSION": "24.22.0",
+              "NODE_VERSION_LINE": "24"
+            },
             "dockerfile": "images/node/config/Dockerfile"
           }
         }
       },
       "key": "node",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "24.20.0",
+      "productVersion": "24.22.0",
       "status": "candidate",
       "targetId": "node-24",
       "title": "Indian Hill Node.js 24 Runtime",
@@ -493,6 +635,78 @@
       ]
     },
     {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "node",
+      "id": "IHL-CTR-0018",
+      "image": {
+        "repository": "node",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "NODE_ARTIFACT_ID": "IHL-CTR-0018",
+              "NODE_SOURCE_SHA256": "9436c81b284889303d39f5b8bd629bf19e790c665ccb94b4994aa87220d9799a",
+              "NODE_VERSION": "22.23.3",
+              "NODE_VERSION_LINE": "22"
+            },
+            "dockerfile": "images/node/config/Dockerfile"
+          }
+        }
+      },
+      "key": "node-22",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "22.23.3",
+      "status": "candidate",
+      "targetId": "node-22",
+      "title": "Indian Hill Node.js 22 Runtime",
+      "versionLine": "22",
+      "workloads": [
+        {
+          "dockerfile": "images/node/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0003",
+          "key": "node-22-reference-api",
+          "repository": "node-22-reference-api"
+        }
+      ]
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "node",
+      "id": "IHL-CTR-0019",
+      "image": {
+        "repository": "node",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "NODE_ARTIFACT_ID": "IHL-CTR-0019",
+              "NODE_SOURCE_SHA256": "435d4e5b5e12e14819f2598710f0f637f2094b25232fdf0cc304b7c4eadeadbb",
+              "NODE_VERSION": "26.12.0",
+              "NODE_VERSION_LINE": "26"
+            },
+            "dockerfile": "images/node/config/Dockerfile"
+          }
+        }
+      },
+      "key": "node-26",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "26.12.0",
+      "status": "candidate",
+      "targetId": "node-26",
+      "title": "Indian Hill Node.js 26 Runtime",
+      "versionLine": "26",
+      "workloads": [
+        {
+          "dockerfile": "images/node/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0003",
+          "key": "node-26-reference-api",
+          "repository": "node-26-reference-api"
+        }
+      ]
+    },
+    {
       "family": "postgres",
       "id": "IHL-CTR-0004",
       "image": {
@@ -502,6 +716,12 @@
             "dockerfile": "images/postgres/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0004",
+              "POSTGRES_SOURCE_SHA256": "4f200ca23dfb120ff9838f13ce06014aad1d3c432d16ee9f93ab2000c0eeef7b",
+              "POSTGRES_VERSION": "16.15",
+              "POSTGRES_VERSION_LINE": "16"
+            },
             "dockerfile": "images/postgres/config/Dockerfile"
           }
         }
@@ -516,6 +736,122 @@
       "workloads": []
     },
     {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "postgres",
+      "id": "IHL-CTR-0020",
+      "image": {
+        "repository": "postgres",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0020",
+              "POSTGRES_SOURCE_SHA256": "563d0b2a985411ed508d05d5b2d883d45abbe51ba5b5e43875ecf25f1ebf26f2",
+              "POSTGRES_VERSION": "14.24",
+              "POSTGRES_VERSION_LINE": "14"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile"
+          }
+        }
+      },
+      "key": "postgres-14",
+      "kind": "standalone-server",
+      "productVersion": "14.24",
+      "status": "candidate",
+      "targetId": "postgres-14",
+      "title": "Indian Hill PostgreSQL 14 Secure Platform",
+      "versionLine": "14",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "postgres",
+      "id": "IHL-CTR-0021",
+      "image": {
+        "repository": "postgres",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0021",
+              "POSTGRES_SOURCE_SHA256": "4bf5474f0ee4afc55de5e71fb5cc8cd133ee56cd1bf16092093897b7c93328fb",
+              "POSTGRES_VERSION": "15.19",
+              "POSTGRES_VERSION_LINE": "15"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile"
+          }
+        }
+      },
+      "key": "postgres-15",
+      "kind": "standalone-server",
+      "productVersion": "15.19",
+      "status": "candidate",
+      "targetId": "postgres-15",
+      "title": "Indian Hill PostgreSQL 15 Secure Platform",
+      "versionLine": "15",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "postgres",
+      "id": "IHL-CTR-0022",
+      "image": {
+        "repository": "postgres",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0022",
+              "POSTGRES_SOURCE_SHA256": "5367f6fb2ec97efe1eb2e0c7926bb33438e51b0bd3a9733b88498056a7dc9a7e",
+              "POSTGRES_VERSION": "17.11",
+              "POSTGRES_VERSION_LINE": "17"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile"
+          }
+        }
+      },
+      "key": "postgres-17",
+      "kind": "standalone-server",
+      "productVersion": "17.11",
+      "status": "candidate",
+      "targetId": "postgres-17",
+      "title": "Indian Hill PostgreSQL 17 Secure Platform",
+      "versionLine": "17",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "postgres",
+      "id": "IHL-CTR-0023",
+      "image": {
+        "repository": "postgres",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0023",
+              "POSTGRES_SOURCE_SHA256": "983ee554ec53dbeb9b70797bef9fcf4e67e117e7e48ca1463cc80b3ff8e8ff3f",
+              "POSTGRES_VERSION": "18.6",
+              "POSTGRES_VERSION_LINE": "18"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile"
+          }
+        }
+      },
+      "key": "postgres-18",
+      "kind": "standalone-server",
+      "productVersion": "18.6",
+      "status": "candidate",
+      "targetId": "postgres-18",
+      "title": "Indian Hill PostgreSQL 18 Secure Platform",
+      "versionLine": "18",
+      "workloads": []
+    },
+    {
       "family": "python",
       "id": "IHL-CTR-0003",
       "image": {
@@ -525,6 +861,12 @@
             "dockerfile": "images/python/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0003",
+              "PYTHON_SOURCE_SHA256": "f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d",
+              "PYTHON_VERSION": "3.13.16",
+              "PYTHON_VERSION_LINE": "3.13"
+            },
             "dockerfile": "images/python/config/Dockerfile"
           }
         }
@@ -546,6 +888,150 @@
       ]
     },
     {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "python",
+      "id": "IHL-CTR-0014",
+      "image": {
+        "repository": "python",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0014",
+              "PYTHON_SOURCE_SHA256": "bfb74ad39efae27cda510f134ab408e00f9992c56851cfc0b1cdb5646da11599",
+              "PYTHON_VERSION": "3.11.17",
+              "PYTHON_VERSION_LINE": "3.11"
+            },
+            "dockerfile": "images/python/config/Dockerfile"
+          }
+        }
+      },
+      "key": "python-3-11",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "3.11.17",
+      "status": "candidate",
+      "targetId": "python-3.11",
+      "title": "Indian Hill Python 3.11 Runtime",
+      "versionLine": "3.11",
+      "workloads": [
+        {
+          "dockerfile": "images/python/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0002",
+          "key": "python-3-11-reference-api",
+          "repository": "python-3-11-reference-api"
+        }
+      ]
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "python",
+      "id": "IHL-CTR-0015",
+      "image": {
+        "repository": "python",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0015",
+              "PYTHON_SOURCE_SHA256": "c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
+              "PYTHON_VERSION": "3.12.15",
+              "PYTHON_VERSION_LINE": "3.12"
+            },
+            "dockerfile": "images/python/config/Dockerfile"
+          }
+        }
+      },
+      "key": "python-3-12",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "3.12.15",
+      "status": "candidate",
+      "targetId": "python-3.12",
+      "title": "Indian Hill Python 3.12 Runtime",
+      "versionLine": "3.12",
+      "workloads": [
+        {
+          "dockerfile": "images/python/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0002",
+          "key": "python-3-12-reference-api",
+          "repository": "python-3-12-reference-api"
+        }
+      ]
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "python",
+      "id": "IHL-CTR-0016",
+      "image": {
+        "repository": "python",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0016",
+              "PYTHON_SOURCE_SHA256": "c2215904f02b175596dc49351585104f4bc20341e1c47378b26a2c274360ce73",
+              "PYTHON_VERSION": "3.14.8",
+              "PYTHON_VERSION_LINE": "3.14"
+            },
+            "dockerfile": "images/python/config/Dockerfile"
+          }
+        }
+      },
+      "key": "python-3-14",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "3.14.8",
+      "status": "candidate",
+      "targetId": "python-3.14",
+      "title": "Indian Hill Python 3.14 Runtime",
+      "versionLine": "3.14",
+      "workloads": [
+        {
+          "dockerfile": "images/python/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0002",
+          "key": "python-3-14-reference-api",
+          "repository": "python-3-14-reference-api"
+        }
+      ]
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "python",
+      "id": "IHL-CTR-0017",
+      "image": {
+        "repository": "python",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0017",
+              "PYTHON_SOURCE_SHA256": "ba4bed1ba346b916890b76d9e320451420aa69f6408997d33c66482eeae3d575",
+              "PYTHON_VERSION": "3.15.0",
+              "PYTHON_VERSION_LINE": "3.15"
+            },
+            "dockerfile": "images/python/config/Dockerfile"
+          }
+        }
+      },
+      "key": "python-3-15",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "3.15.0",
+      "status": "candidate",
+      "targetId": "python-3.15",
+      "title": "Indian Hill Python 3.15 Runtime",
+      "versionLine": "3.15",
+      "workloads": [
+        {
+          "dockerfile": "images/python/examples/reference-api/Dockerfile",
+          "id": "IHL-APP-0002",
+          "key": "python-3-15-reference-api",
+          "repository": "python-3-15-reference-api"
+        }
+      ]
+    },
+    {
       "family": "redis",
       "id": "IHL-CTR-0007",
       "image": {
@@ -555,17 +1041,234 @@
             "dockerfile": "images/redis/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0007",
+              "REDIS_LICENSES": "AGPL-3.0-only",
+              "REDIS_SOURCE_SHA256": "d33935732f7fc15476295fe05f5ce740927bc14847798e47b3f67b4f27b8b478",
+              "REDIS_VERSION": "8.2.10",
+              "REDIS_VERSION_LINE": "8.2"
+            },
             "dockerfile": "images/redis/config/Dockerfile"
           }
         }
       },
       "key": "redis",
       "kind": "standalone-server",
-      "productVersion": "8.2.9",
+      "productVersion": "8.2.10",
       "status": "candidate",
       "targetId": "redis-8.2",
       "title": "Indian Hill Redis Open Source 8.2 Platform",
       "versionLine": "8.2",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "redis",
+      "id": "IHL-CTR-0024",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0024",
+              "REDIS_LICENSES": "BSD-3-Clause",
+              "REDIS_SOURCE_SHA256": "c3f112749c7cb108597713469cc9beed305e91f036fba313ce8dcbad829f5821",
+              "REDIS_VERSION": "6.2.24",
+              "REDIS_VERSION_LINE": "6.2"
+            },
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis-6-2",
+      "kind": "standalone-server",
+      "productVersion": "6.2.24",
+      "status": "candidate",
+      "targetId": "redis-6.2",
+      "title": "Indian Hill Redis 6.2 Secure Platform",
+      "versionLine": "6.2",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "redis",
+      "id": "IHL-CTR-0025",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0025",
+              "REDIS_LICENSES": "BSD-3-Clause",
+              "REDIS_SOURCE_SHA256": "960a8ec15e34ff40e57ff16837b26b33bd81f2da6d24497bb63de532a323a18e",
+              "REDIS_VERSION": "7.2.16",
+              "REDIS_VERSION_LINE": "7.2"
+            },
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis-7-2",
+      "kind": "standalone-server",
+      "productVersion": "7.2.16",
+      "status": "candidate",
+      "targetId": "redis-7.2",
+      "title": "Indian Hill Redis 7.2 Secure Platform",
+      "versionLine": "7.2",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "redis",
+      "id": "IHL-CTR-0026",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0026",
+              "REDIS_LICENSES": "SSPL-1.0",
+              "REDIS_SOURCE_SHA256": "3c266ece0abd54ed3b1c912c6eb86b7508cf382cb690ee6649d3843f018f6357",
+              "REDIS_VERSION": "7.4.11",
+              "REDIS_VERSION_LINE": "7.4"
+            },
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis-7-4",
+      "kind": "standalone-server",
+      "productVersion": "7.4.11",
+      "status": "candidate",
+      "targetId": "redis-7.4",
+      "title": "Indian Hill Redis 7.4 Secure Platform",
+      "versionLine": "7.4",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "redis",
+      "id": "IHL-CTR-0030",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0030",
+              "REDIS_LICENSES": "AGPL-3.0-only",
+              "REDIS_SOURCE_SHA256": "b9ffee226b5eecdba98a679260dad764b2a4ebd90dce4ad5ac9e9f3eef9c02b3",
+              "REDIS_VERSION": "8.10.2",
+              "REDIS_VERSION_LINE": "8.10"
+            },
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis-8-10",
+      "kind": "standalone-server",
+      "productVersion": "8.10.2",
+      "status": "candidate",
+      "targetId": "redis-8.10",
+      "title": "Indian Hill Redis 8.10 Secure Platform",
+      "versionLine": "8.10",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "redis",
+      "id": "IHL-CTR-0027",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0027",
+              "REDIS_LICENSES": "AGPL-3.0-only",
+              "REDIS_SOURCE_SHA256": "ed83df9fcb724176fc901147aaa63830166e35c1cff39835c4fc9a5860ed1310",
+              "REDIS_VERSION": "8.4.7",
+              "REDIS_VERSION_LINE": "8.4"
+            },
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis-8-4",
+      "kind": "standalone-server",
+      "productVersion": "8.4.7",
+      "status": "candidate",
+      "targetId": "redis-8.4",
+      "title": "Indian Hill Redis 8.4 Secure Platform",
+      "versionLine": "8.4",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "redis",
+      "id": "IHL-CTR-0028",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0028",
+              "REDIS_LICENSES": "AGPL-3.0-only",
+              "REDIS_SOURCE_SHA256": "1632b042a60670d6f7c516d6f3ffaec7d2b3e032b2e34f80e8f2b28dfa76e2c9",
+              "REDIS_VERSION": "8.6.7",
+              "REDIS_VERSION_LINE": "8.6"
+            },
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis-8-6",
+      "kind": "standalone-server",
+      "productVersion": "8.6.7",
+      "status": "candidate",
+      "targetId": "redis-8.6",
+      "title": "Indian Hill Redis 8.6 Secure Platform",
+      "versionLine": "8.6",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "redis",
+      "id": "IHL-CTR-0029",
+      "image": {
+        "repository": "redis",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0029",
+              "REDIS_LICENSES": "AGPL-3.0-only",
+              "REDIS_SOURCE_SHA256": "13dbcfc6107ab8b6ab2a4f4582678143d5b2fd03ba38611b810359564cfe8a3c",
+              "REDIS_VERSION": "8.8.3",
+              "REDIS_VERSION_LINE": "8.8"
+            },
+            "dockerfile": "images/redis/config/Dockerfile"
+          }
+        }
+      },
+      "key": "redis-8-8",
+      "kind": "standalone-server",
+      "productVersion": "8.8.3",
+      "status": "candidate",
+      "targetId": "redis-8.8",
+      "title": "Indian Hill Redis 8.8 Secure Platform",
+      "versionLine": "8.8",
       "workloads": []
     },
     {
@@ -578,13 +1281,20 @@
             "dockerfile": "images/tomcat/config/Dockerfile.hardened"
           },
           "secure": {
+            "buildArgs": {
+              "TOMCAT_ARTIFACT_ID": "IHL-CTR-0008",
+              "TOMCAT_MAJOR": "10",
+              "TOMCAT_SOURCE_SHA512": "35120a2b1182bac3d55438fbec0dc581d03b0f1c16ce692a930f3bb6a1097cf896b94b389152257071a87cb2928ac8c15f1bad08387c14acc7c17dbc1bb598fb",
+              "TOMCAT_VERSION": "10.1.61",
+              "TOMCAT_VERSION_LINE": "10.1"
+            },
             "dockerfile": "images/tomcat/config/Dockerfile"
           }
         }
       },
       "key": "tomcat",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "10.1.59",
+      "productVersion": "10.1.61",
       "status": "candidate",
       "targetId": "tomcat-10.1",
       "title": "Indian Hill Apache Tomcat 10.1 Platform",
@@ -595,6 +1305,80 @@
           "id": "IHL-APP-0006",
           "key": "tomcat-reference-app",
           "repository": "tomcat-reference-app"
+        }
+      ]
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "tomcat",
+      "id": "IHL-CTR-0032",
+      "image": {
+        "repository": "tomcat",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "TOMCAT_ARTIFACT_ID": "IHL-CTR-0032",
+              "TOMCAT_MAJOR": "11",
+              "TOMCAT_SOURCE_SHA512": "a617896307cada4884b24f80c4e977ddad8b3e0f88ce0e2a6eea29d5f332498e276ae5976c227a9c8daecf05c7c90def684a3766dd5a81f47a56d8b1adf43dc3",
+              "TOMCAT_VERSION": "11.0.27",
+              "TOMCAT_VERSION_LINE": "11.0"
+            },
+            "dockerfile": "images/tomcat/config/Dockerfile"
+          }
+        }
+      },
+      "key": "tomcat-11-0",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "11.0.27",
+      "status": "candidate",
+      "targetId": "tomcat-11.0",
+      "title": "Indian Hill Apache Tomcat 11.0 Platform",
+      "versionLine": "11.0",
+      "workloads": [
+        {
+          "dockerfile": "images/tomcat/examples/reference-app/Dockerfile",
+          "id": "IHL-APP-0006",
+          "key": "tomcat-11-0-reference-app",
+          "repository": "tomcat-11-0-reference-app"
+        }
+      ]
+    },
+    {
+      "assessmentTiers": [
+        "secure"
+      ],
+      "family": "tomcat",
+      "id": "IHL-CTR-0031",
+      "image": {
+        "repository": "tomcat",
+        "tiers": {
+          "secure": {
+            "buildArgs": {
+              "TOMCAT_ARTIFACT_ID": "IHL-CTR-0031",
+              "TOMCAT_MAJOR": "9",
+              "TOMCAT_SOURCE_SHA512": "64b1130e719399c0a409e6996081433b16af8d9c89266c7aaa9849af70a1815feca91e13896f5ccc41451dc5759716d1c84882682de955822c30509de102f290",
+              "TOMCAT_VERSION": "9.0.123",
+              "TOMCAT_VERSION_LINE": "9.0"
+            },
+            "dockerfile": "images/tomcat/config/Dockerfile"
+          }
+        }
+      },
+      "key": "tomcat-9-0",
+      "kind": "runtime-with-reference-workload",
+      "productVersion": "9.0.123",
+      "status": "candidate",
+      "targetId": "tomcat-9.0",
+      "title": "Indian Hill Apache Tomcat 9.0 Platform",
+      "versionLine": "9.0",
+      "workloads": [
+        {
+          "dockerfile": "images/tomcat/examples/reference-app/Dockerfile",
+          "id": "IHL-APP-0006",
+          "key": "tomcat-9-0-reference-app",
+          "repository": "tomcat-9-0-reference-app"
         }
       ]
     }
