@@ -45,13 +45,13 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ffb52
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-10-18 16:36 UTC**: **46 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-18 23:10 UTC**: **46 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
 | Family and version | Repository | Secure tag | Hardened tag |
 | --- | --- | --- | --- |
-| ASP.NET 10.0.13 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-10.0.13-20261016T002432Z` | `IHL-ASPNet-10.0.13-20261015T173239Z-Hardened` |
+| ASP.NET 10.0.13 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-10.0.13-20261016T002432Z` | `IHL-ASPNet-10.0.13-20261018T224842Z-Hardened` |
 | ASP.NET 8.0.32 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-8.0.32-20261017T182823Z` | Not listed |
 | ASP.NET 9.0.21 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-9.0.21-20261017T184043Z` | Not listed |
 | Elasticsearch 9.5.5 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.5-20261017T200335Z` | Not listed |

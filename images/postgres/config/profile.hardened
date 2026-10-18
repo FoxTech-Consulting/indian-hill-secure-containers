@@ -1,0 +1,9 @@
+# CIS shell-profile policy for TMOUT-capable interactive login shells.
+# PostgreSQL retains dash only for noninteractive initdb startup; this setting
+# is neither a PostgreSQL session timeout nor a claim that dash auto-logs out.
+case ${TMOUT-} in
+    [1-9]|[1-9][0-9]|[1-8][0-9][0-9]|900) ;;
+    *) TMOUT=900 ;;
+esac
+readonly TMOUT
+export TMOUT

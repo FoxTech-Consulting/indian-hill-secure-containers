@@ -21,6 +21,8 @@ LABEL org.opencontainers.image.title="Indian Hill Hardened PostgreSQL ${POSTGRES
       com.indianhilllabs.assurance.cis-profile="ihl-ubuntu2404-chiseled-cis-level1-tailored"
 COPY --chown=1654:1654 images/postgres/config/postgresql.hardened.conf /opt/ihl/postgresql/postgresql.conf
 COPY --chown=1654:1654 images/postgres/config/pg_hba.hardened.conf /opt/ihl/postgresql/pg_hba.hardened.conf
+# Install the reviewed login-shell policy without changing noninteractive startup.
+COPY --chown=0:0 --chmod=0644 images/postgres/config/profile.hardened /etc/profile
 ENV IHL_ASSURANCE_LEVEL="hardened"
 USER 1654:1654
 WORKDIR /var/lib/postgresql/data
