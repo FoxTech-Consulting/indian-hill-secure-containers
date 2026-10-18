@@ -57,8 +57,8 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "15bf5c737c8eb0eb81abd4f3dcd9ecee47bc37c91dac031bc7353c8225ef239d",
-      "size": 20864
+      "sha256": "a0372b609fad6d1f907ff9987d6d110483a64832b72a3baa652625f26b20a162",
+      "size": 21127
     },
     {
       "mode": "100644",
@@ -585,8 +585,8 @@
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "519bbce1b92adef92108855ae6cf631932439704ffe1f6c8bfb8b92f1a3f6abb",
-      "size": 210635
+      "sha256": "acad4167a294d0b8de379e3e098ec9ff0d33ed6333269dd7f93c2fc9aeacaee7",
+      "size": 215431
     },
     {
       "mode": "100755",
@@ -1991,7 +1991,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "f3cf6395e1a83f016214a02a5da6424f16d9008f",
+  "sourceRevision": "6f38dd14e61b9bb0857643c4ddf3b2818b6d6c0e",
   "tiers": [
     "secure",
     "hardened"

@@ -45,7 +45,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ffb52
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-10-18 12:11 UTC**: **45 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-18 16:36 UTC**: **46 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -71,10 +71,11 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224518Z` | Not listed |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | Not listed |
-| NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261016T193408Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
+| NGINX (Secure 1.30.6; Hardened 1.30.4) | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261016T193408Z` | `IHL-NGINX-1.30.4-20261015T173635Z-Hardened` |
 | NGINX 1.31.7 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.7-20261016T195003Z` | Not listed |
-| Node.js 24.22.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.22.0-20261018T120226Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
+| Node.js (Secure 24.22.0; Hardened 24.20.0) | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.22.0-20261018T120226Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
 | Node.js 22.23.3 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-22.23.3-20261018T084620Z` | Not listed |
+| Node.js 26.12.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-26.12.0-20261018T160236Z` | Not listed |
 | PostgreSQL 16.15 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
 | PostgreSQL 14.24 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-14.24-20261017T202354Z` | Not listed |
 | PostgreSQL 15.19 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-15.19-20261017T204132Z` | Not listed |
@@ -85,7 +86,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Python 3.12.15 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.12.15-20261018T052338Z` | Not listed |
 | Python 3.14.8 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.14.8-20261018T054543Z` | Not listed |
 | Python 3.15.0 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.15.0-20261018T060702Z` | Not listed |
-| Redis 8.2.10 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.10-20261018T034948Z` | `IHL-Redis-8.2.9-20261016T011415Z-Hardened` |
+| Redis (Secure 8.2.10; Hardened 8.2.9) | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.10-20261018T034948Z` | `IHL-Redis-8.2.9-20261016T011415Z-Hardened` |
 | Redis 6.2.24 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-6.2.24-20261018T032855Z` | Not listed |
 | Redis 7.2.16 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-7.2.16-20261018T033711Z` | Not listed |
 | Redis 7.4.11 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-7.4.11-20261018T034231Z` | Not listed |
@@ -93,13 +94,13 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Redis 8.4.7 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.4.7-20261018T032207Z` | Not listed |
 | Redis 8.6.7 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.6.7-20261018T040743Z` | Not listed |
 | Redis 8.8.3 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.8.3-20261018T042208Z` | Not listed |
-| Apache Tomcat 10.1.61 | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-10.1.61-20261017T191314Z` | `IHL-Tomcat-10.1.59-20261016T003116Z-Hardened` |
+| Apache Tomcat (Secure 10.1.61; Hardened 10.1.59) | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-10.1.61-20261017T191314Z` | `IHL-Tomcat-10.1.59-20261016T003116Z-Hardened` |
 | Apache Tomcat 11.0.27 | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-11.0.27-20261017T192452Z` | Not listed |
 | Apache Tomcat 9.0.123 | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-9.0.123-20261017T190013Z` | Not listed |
 
 "Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
-38 runtime records include signed public source bindings; 15 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+39 runtime records include signed public source bindings; 15 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
