@@ -77,6 +77,7 @@ http.createServer((request, response) => {
       artifact: process.env.IHL_ARTIFACT_ID || "IHL-CTR-0005",
       assuranceLevel: ASSURANCE_LEVEL,
       effectiveUid: process.getuid(),
+      runtimeVersion: process.versions.node,
     });
     return;
   }

@@ -4,19 +4,23 @@
 ARG SECURE_BASE=ihl/python:3.13.16-secure-lab.1
 FROM ${SECURE_BASE}
 
+ARG PYTHON_VERSION=3.13.16
+ARG PYTHON_VERSION_LINE=3.13
+ARG PYTHON_ARTIFACT_ID=IHL-CTR-0003
+
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
-LABEL org.opencontainers.image.title="Indian Hill Hardened Python 3.13 Runtime" \
+LABEL org.opencontainers.image.title="Indian Hill Hardened Python ${PYTHON_VERSION_LINE} Runtime" \
       org.opencontainers.image.description="CIS-aligned non-root CPython runtime with hardened import and bytecode defaults" \
-      org.opencontainers.image.version="3.13.16-hardened-lab.1" \
+      org.opencontainers.image.version="${PYTHON_VERSION}-hardened-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="PSF-2.0 AND Apache-2.0" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0003" \
+      com.indianhilllabs.artifact.id="${PYTHON_ARTIFACT_ID}" \
       com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
       com.indianhilllabs.assurance.level="hardened" \
       com.indianhilllabs.assurance.inherits="secure" \

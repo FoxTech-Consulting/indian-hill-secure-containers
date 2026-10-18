@@ -33,13 +33,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "aspnet",
       "id": "IHL-CTR-0012",
       "image": {
         "repository": "aspnet-runtime",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
+              "ASPNET_VERSION": "8.0.32",
+              "ASPNET_VERSION_LINE": "8"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
@@ -69,13 +78,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "aspnet",
       "id": "IHL-CTR-0013",
       "image": {
         "repository": "aspnet-runtime",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
+              "ASPNET_VERSION": "9.0.21",
+              "ASPNET_VERSION_LINE": "9"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
@@ -110,6 +128,11 @@
         "repository": "elasticsearch",
         "tiers": {
           "hardened": {
+            "buildArgs": {
+              "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0009",
+              "ELASTICSEARCH_VERSION": "9.5.5",
+              "ELASTICSEARCH_VERSION_LINE": "9.5"
+            },
             "dockerfile": "images/elasticsearch/config/Dockerfile.hardened"
           },
           "secure": {
@@ -134,13 +157,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "elasticsearch",
       "id": "IHL-CTR-0033",
       "image": {
         "repository": "elasticsearch",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0033",
+              "ELASTICSEARCH_VERSION": "8.19.23",
+              "ELASTICSEARCH_VERSION_LINE": "8.19"
+            },
+            "dockerfile": "images/elasticsearch/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0033",
@@ -163,13 +195,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "elasticsearch",
       "id": "IHL-CTR-0034",
       "image": {
         "repository": "elasticsearch",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0034",
+              "ELASTICSEARCH_VERSION": "9.4.8",
+              "ELASTICSEARCH_VERSION_LINE": "9.4"
+            },
+            "dockerfile": "images/elasticsearch/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "ELASTICSEARCH_ARTIFACT_ID": "IHL-CTR-0034",
@@ -188,6 +229,68 @@
       "targetId": "elasticsearch-9.4",
       "title": "Indian Hill Elasticsearch 9.4 Platform",
       "versionLine": "9.4",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure",
+        "hardened"
+      ],
+      "family": "go",
+      "id": "IHL-CTR-0010",
+      "image": {
+        "repository": "go",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/go/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "buildArgs": {
+              "GO_ARTIFACT_ID": "IHL-CTR-0010",
+              "GO_PRODUCT_VERSION": "1.27.2"
+            },
+            "dockerfile": "images/go/config/Dockerfile"
+          }
+        }
+      },
+      "key": "go",
+      "kind": "runtime-base",
+      "productVersion": "1.27.2",
+      "status": "candidate",
+      "targetId": "go-1.27",
+      "title": "Indian Hill Go 1.27 static application runtime base",
+      "versionLine": "1.27",
+      "workloads": []
+    },
+    {
+      "assessmentTiers": [
+        "secure",
+        "hardened"
+      ],
+      "family": "go",
+      "id": "IHL-CTR-0035",
+      "image": {
+        "repository": "go",
+        "tiers": {
+          "hardened": {
+            "dockerfile": "images/go/config/Dockerfile.hardened"
+          },
+          "secure": {
+            "buildArgs": {
+              "GO_ARTIFACT_ID": "IHL-CTR-0035",
+              "GO_PRODUCT_VERSION": "1.26.9"
+            },
+            "dockerfile": "images/go/config/Dockerfile"
+          }
+        }
+      },
+      "key": "go-1-26",
+      "kind": "runtime-base",
+      "productVersion": "1.26.9",
+      "status": "candidate",
+      "targetId": "go-1.26",
+      "title": "Indian Hill Go 1.26 static application runtime base",
+      "versionLine": "1.26",
       "workloads": []
     },
     {
@@ -571,13 +674,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "nginx",
       "id": "IHL-CTR-0011",
       "image": {
         "repository": "nginx",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "NGINX_ARTIFACT_ID": "IHL-CTR-0011",
+              "NGINX_VERSION": "1.31.7",
+              "NGINX_VERSION_LINE": "1.31"
+            },
+            "dockerfile": "images/nginx/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "NGINX_ARTIFACT_ID": "IHL-CTR-0011",
@@ -636,13 +748,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "node",
       "id": "IHL-CTR-0018",
       "image": {
         "repository": "node",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "NODE_ARTIFACT_ID": "IHL-CTR-0018",
+              "NODE_VERSION": "22.23.3",
+              "NODE_VERSION_LINE": "22"
+            },
+            "dockerfile": "images/node/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "NODE_ARTIFACT_ID": "IHL-CTR-0018",
@@ -672,13 +793,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "node",
       "id": "IHL-CTR-0019",
       "image": {
         "repository": "node",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "NODE_ARTIFACT_ID": "IHL-CTR-0019",
+              "NODE_VERSION": "26.12.0",
+              "NODE_VERSION_LINE": "26"
+            },
+            "dockerfile": "images/node/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "NODE_ARTIFACT_ID": "IHL-CTR-0019",
@@ -737,13 +867,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "postgres",
       "id": "IHL-CTR-0020",
       "image": {
         "repository": "postgres",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0020",
+              "POSTGRES_VERSION": "14.24",
+              "POSTGRES_VERSION_LINE": "14"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "POSTGRES_ARTIFACT_ID": "IHL-CTR-0020",
@@ -760,19 +899,28 @@
       "productVersion": "14.24",
       "status": "candidate",
       "targetId": "postgres-14",
-      "title": "Indian Hill PostgreSQL 14 Secure Platform",
+      "title": "Indian Hill PostgreSQL 14 Platform",
       "versionLine": "14",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "postgres",
       "id": "IHL-CTR-0021",
       "image": {
         "repository": "postgres",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0021",
+              "POSTGRES_VERSION": "15.19",
+              "POSTGRES_VERSION_LINE": "15"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "POSTGRES_ARTIFACT_ID": "IHL-CTR-0021",
@@ -789,19 +937,28 @@
       "productVersion": "15.19",
       "status": "candidate",
       "targetId": "postgres-15",
-      "title": "Indian Hill PostgreSQL 15 Secure Platform",
+      "title": "Indian Hill PostgreSQL 15 Platform",
       "versionLine": "15",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "postgres",
       "id": "IHL-CTR-0022",
       "image": {
         "repository": "postgres",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0022",
+              "POSTGRES_VERSION": "17.11",
+              "POSTGRES_VERSION_LINE": "17"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "POSTGRES_ARTIFACT_ID": "IHL-CTR-0022",
@@ -818,19 +975,28 @@
       "productVersion": "17.11",
       "status": "candidate",
       "targetId": "postgres-17",
-      "title": "Indian Hill PostgreSQL 17 Secure Platform",
+      "title": "Indian Hill PostgreSQL 17 Platform",
       "versionLine": "17",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "postgres",
       "id": "IHL-CTR-0023",
       "image": {
         "repository": "postgres",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "POSTGRES_ARTIFACT_ID": "IHL-CTR-0023",
+              "POSTGRES_VERSION": "18.6",
+              "POSTGRES_VERSION_LINE": "18"
+            },
+            "dockerfile": "images/postgres/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "POSTGRES_ARTIFACT_ID": "IHL-CTR-0023",
@@ -847,7 +1013,7 @@
       "productVersion": "18.6",
       "status": "candidate",
       "targetId": "postgres-18",
-      "title": "Indian Hill PostgreSQL 18 Secure Platform",
+      "title": "Indian Hill PostgreSQL 18 Platform",
       "versionLine": "18",
       "workloads": []
     },
@@ -889,13 +1055,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "python",
       "id": "IHL-CTR-0014",
       "image": {
         "repository": "python",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0014",
+              "PYTHON_VERSION": "3.11.17",
+              "PYTHON_VERSION_LINE": "3.11"
+            },
+            "dockerfile": "images/python/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0014",
@@ -925,13 +1100,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "python",
       "id": "IHL-CTR-0015",
       "image": {
         "repository": "python",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0015",
+              "PYTHON_VERSION": "3.12.15",
+              "PYTHON_VERSION_LINE": "3.12"
+            },
+            "dockerfile": "images/python/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0015",
@@ -961,13 +1145,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "python",
       "id": "IHL-CTR-0016",
       "image": {
         "repository": "python",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0016",
+              "PYTHON_VERSION": "3.14.8",
+              "PYTHON_VERSION_LINE": "3.14"
+            },
+            "dockerfile": "images/python/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0016",
@@ -997,13 +1190,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "python",
       "id": "IHL-CTR-0017",
       "image": {
         "repository": "python",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0017",
+              "PYTHON_VERSION": "3.15.0",
+              "PYTHON_VERSION_LINE": "3.15"
+            },
+            "dockerfile": "images/python/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0017",
@@ -1063,13 +1265,23 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "redis",
       "id": "IHL-CTR-0024",
       "image": {
         "repository": "redis",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0024",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened-6.2.conf",
+              "REDIS_VERSION": "6.2.24",
+              "REDIS_VERSION_LINE": "6.2"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "REDIS_ARTIFACT_ID": "IHL-CTR-0024",
@@ -1087,19 +1299,29 @@
       "productVersion": "6.2.24",
       "status": "candidate",
       "targetId": "redis-6.2",
-      "title": "Indian Hill Redis 6.2 Secure Platform",
+      "title": "Indian Hill Redis 6.2 Platform",
       "versionLine": "6.2",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "redis",
       "id": "IHL-CTR-0025",
       "image": {
         "repository": "redis",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0025",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "7.2.16",
+              "REDIS_VERSION_LINE": "7.2"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "REDIS_ARTIFACT_ID": "IHL-CTR-0025",
@@ -1117,19 +1339,29 @@
       "productVersion": "7.2.16",
       "status": "candidate",
       "targetId": "redis-7.2",
-      "title": "Indian Hill Redis 7.2 Secure Platform",
+      "title": "Indian Hill Redis 7.2 Platform",
       "versionLine": "7.2",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "redis",
       "id": "IHL-CTR-0026",
       "image": {
         "repository": "redis",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0026",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "7.4.11",
+              "REDIS_VERSION_LINE": "7.4"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "REDIS_ARTIFACT_ID": "IHL-CTR-0026",
@@ -1147,19 +1379,29 @@
       "productVersion": "7.4.11",
       "status": "candidate",
       "targetId": "redis-7.4",
-      "title": "Indian Hill Redis 7.4 Secure Platform",
+      "title": "Indian Hill Redis 7.4 Platform",
       "versionLine": "7.4",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "redis",
       "id": "IHL-CTR-0030",
       "image": {
         "repository": "redis",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0030",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "8.10.2",
+              "REDIS_VERSION_LINE": "8.10"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "REDIS_ARTIFACT_ID": "IHL-CTR-0030",
@@ -1177,19 +1419,29 @@
       "productVersion": "8.10.2",
       "status": "candidate",
       "targetId": "redis-8.10",
-      "title": "Indian Hill Redis 8.10 Secure Platform",
+      "title": "Indian Hill Redis 8.10 Platform",
       "versionLine": "8.10",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "redis",
       "id": "IHL-CTR-0027",
       "image": {
         "repository": "redis",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0027",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "8.4.7",
+              "REDIS_VERSION_LINE": "8.4"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "REDIS_ARTIFACT_ID": "IHL-CTR-0027",
@@ -1207,19 +1459,29 @@
       "productVersion": "8.4.7",
       "status": "candidate",
       "targetId": "redis-8.4",
-      "title": "Indian Hill Redis 8.4 Secure Platform",
+      "title": "Indian Hill Redis 8.4 Platform",
       "versionLine": "8.4",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "redis",
       "id": "IHL-CTR-0028",
       "image": {
         "repository": "redis",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0028",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "8.6.7",
+              "REDIS_VERSION_LINE": "8.6"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "REDIS_ARTIFACT_ID": "IHL-CTR-0028",
@@ -1237,19 +1499,29 @@
       "productVersion": "8.6.7",
       "status": "candidate",
       "targetId": "redis-8.6",
-      "title": "Indian Hill Redis 8.6 Secure Platform",
+      "title": "Indian Hill Redis 8.6 Platform",
       "versionLine": "8.6",
       "workloads": []
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "redis",
       "id": "IHL-CTR-0029",
       "image": {
         "repository": "redis",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0029",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "8.8.3",
+              "REDIS_VERSION_LINE": "8.8"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened"
+          },
           "secure": {
             "buildArgs": {
               "REDIS_ARTIFACT_ID": "IHL-CTR-0029",
@@ -1267,7 +1539,7 @@
       "productVersion": "8.8.3",
       "status": "candidate",
       "targetId": "redis-8.8",
-      "title": "Indian Hill Redis 8.8 Secure Platform",
+      "title": "Indian Hill Redis 8.8 Platform",
       "versionLine": "8.8",
       "workloads": []
     },
@@ -1310,13 +1582,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "tomcat",
       "id": "IHL-CTR-0032",
       "image": {
         "repository": "tomcat",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "TOMCAT_ARTIFACT_ID": "IHL-CTR-0032",
+              "TOMCAT_VERSION": "11.0.27",
+              "TOMCAT_VERSION_LINE": "11.0"
+            },
+            "dockerfile": "images/tomcat/config/Dockerfile.hardened-supported"
+          },
           "secure": {
             "buildArgs": {
               "TOMCAT_ARTIFACT_ID": "IHL-CTR-0032",
@@ -1347,13 +1628,22 @@
     },
     {
       "assessmentTiers": [
-        "secure"
+        "secure",
+        "hardened"
       ],
       "family": "tomcat",
       "id": "IHL-CTR-0031",
       "image": {
         "repository": "tomcat",
         "tiers": {
+          "hardened": {
+            "buildArgs": {
+              "TOMCAT_ARTIFACT_ID": "IHL-CTR-0031",
+              "TOMCAT_VERSION": "9.0.123",
+              "TOMCAT_VERSION_LINE": "9.0"
+            },
+            "dockerfile": "images/tomcat/config/Dockerfile.hardened-supported"
+          },
           "secure": {
             "buildArgs": {
               "TOMCAT_ARTIFACT_ID": "IHL-CTR-0031",

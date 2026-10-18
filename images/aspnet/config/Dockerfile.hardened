@@ -3,19 +3,23 @@
 ARG SECURE_BASE=ihl/aspnet-runtime:10.0.13-secure-lab.1
 FROM ${SECURE_BASE}
 
+ARG ASPNET_VERSION=10.0.13
+ARG ASPNET_VERSION_LINE=10
+ARG ASPNET_ARTIFACT_ID=IHL-CTR-0001
+
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
-LABEL org.opencontainers.image.title="Indian Hill Hardened ASP.NET 10 Runtime" \
-      org.opencontainers.image.description="CIS-aligned Hardened ASP.NET 10 runtime with .NET diagnostic surfaces disabled" \
-      org.opencontainers.image.version="10.0.13-hardened-lab.1" \
+LABEL org.opencontainers.image.title="Indian Hill Hardened ASP.NET ${ASPNET_VERSION_LINE} Runtime" \
+      org.opencontainers.image.description="CIS-aligned Hardened ASP.NET ${ASPNET_VERSION_LINE} runtime with .NET diagnostic surfaces disabled" \
+      org.opencontainers.image.version="${ASPNET_VERSION}-hardened-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0001" \
+      com.indianhilllabs.artifact.id="${ASPNET_ARTIFACT_ID}" \
       com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
       com.indianhilllabs.assurance.level="hardened" \
       com.indianhilllabs.assurance.inherits="secure" \

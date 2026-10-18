@@ -4,26 +4,29 @@
 ARG SECURE_BASE=ihl/nginx:1.30.6-secure-lab.1
 FROM ${SECURE_BASE}
 
+ARG NGINX_VERSION=1.30.6
+ARG NGINX_VERSION_LINE=1.30
+ARG NGINX_ARTIFACT_ID=IHL-CTR-0002
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
-LABEL org.opencontainers.image.title="Indian Hill Hardened NGINX 1.30" \
+LABEL org.opencontainers.image.title="Indian Hill Hardened NGINX ${NGINX_VERSION_LINE}" \
       org.opencontainers.image.description="CIS-aligned non-root NGINX with a static-only hardened server configuration" \
-      org.opencontainers.image.version="1.30.6-hardened-lab.1" \
+      org.opencontainers.image.version="${NGINX_VERSION}-hardened-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="BSD-2-Clause AND Apache-2.0" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0002" \
+      com.indianhilllabs.artifact.id="${NGINX_ARTIFACT_ID}" \
       com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
       com.indianhilllabs.assurance.level="hardened" \
       com.indianhilllabs.assurance.inherits="secure" \
       com.indianhilllabs.assurance.cis-profile="ihl-ubuntu2404-chiseled-cis-level1-tailored"
 
 COPY images/nginx/config/nginx.hardened.conf /etc/nginx/nginx.conf
-COPY images/nginx/config/health/hardened.json /usr/share/nginx/html/healthz.json
+COPY images/nginx/${NGINX_VERSION_LINE}/health.hardened.json /usr/share/nginx/html/healthz.json
 
 ENV IHL_ASSURANCE_LEVEL="hardened"
 

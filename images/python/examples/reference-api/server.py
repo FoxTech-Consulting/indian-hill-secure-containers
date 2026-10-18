@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 import ssl
+import sys
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
@@ -79,6 +80,7 @@ class Handler(BaseHTTPRequestHandler):
                     "artifact": os.environ.get("IHL_ARTIFACT_ID", "IHL-CTR-0003"),
                     "assuranceLevel": ASSURANCE_LEVEL,
                     "effectiveUid": os.geteuid(),
+                    "runtimeVersion": sys.version.split()[0],
                 },
             )
             return

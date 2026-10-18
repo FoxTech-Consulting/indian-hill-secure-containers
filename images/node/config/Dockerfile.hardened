@@ -4,19 +4,23 @@
 ARG SECURE_BASE=ihl/node:24.22.0-secure-lab.1
 FROM ${SECURE_BASE}
 
+ARG NODE_VERSION=24.22.0
+ARG NODE_VERSION_LINE=24
+ARG NODE_ARTIFACT_ID=IHL-CTR-0005
+
 ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 ARG OCI_REVISION="manual-build"
 ARG OCI_CREATED="1970-01-01T00:00:00Z"
 
-LABEL org.opencontainers.image.title="Indian Hill Hardened Node.js 24 Runtime" \
+LABEL org.opencontainers.image.title="Indian Hill Hardened Node.js ${NODE_VERSION_LINE} Runtime" \
       org.opencontainers.image.description="CIS-aligned non-root Node.js runtime with constrained prototype mutation" \
-      org.opencontainers.image.version="24.22.0-hardened-lab.1" \
+      org.opencontainers.image.version="${NODE_VERSION}-hardened-lab.1" \
       org.opencontainers.image.vendor="Indian Hill Labs" \
       org.opencontainers.image.licenses="MIT AND Apache-2.0" \
       org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
-      com.indianhilllabs.artifact.id="IHL-CTR-0005" \
+      com.indianhilllabs.artifact.id="${NODE_ARTIFACT_ID}" \
       com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
       com.indianhilllabs.assurance.level="hardened" \
       com.indianhilllabs.assurance.inherits="secure" \

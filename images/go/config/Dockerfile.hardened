@@ -1,0 +1,13 @@
+ARG SECURE_BASE
+FROM ${SECURE_BASE}
+ARG OCI_REVISION
+ARG OCI_CREATED
+LABEL org.opencontainers.image.title="Indian Hill Hardened Go Static Runtime Base" \
+      org.opencontainers.image.revision="${OCI_REVISION}" \
+      org.opencontainers.image.created="${OCI_CREATED}" \
+      com.indianhilllabs.assurance.level="hardened" \
+      com.indianhilllabs.assurance.inherits="secure" \
+      com.indianhilllabs.assurance.cis-profile="ihl-go-portable-image-cis"
+ENV IHL_ASSURANCE_LEVEL="hardened" GOMEMLIMIT="192MiB" GOTRACEBACK="none"
+USER 1654:1654
+WORKDIR /app

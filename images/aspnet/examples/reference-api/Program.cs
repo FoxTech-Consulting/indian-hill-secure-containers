@@ -10,6 +10,7 @@ app.MapGet("/", () => Results.Ok(new
 {
     artifact = Environment.GetEnvironmentVariable("IHL_ARTIFACT_ID") ?? "IHL-CTR-0001",
     assuranceLevel,
+    runtimeVersion = Environment.Version.ToString(),
     message = "Indian Hill ASP.NET Runtime reference application"
 }));
 

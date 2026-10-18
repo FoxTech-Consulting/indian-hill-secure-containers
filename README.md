@@ -1,6 +1,6 @@
 # Indian Hill Labs Secure Containers
 
-Public source snapshots for Indian Hill Labs Secure and Hardened container engineering previews. The nine families are ASP.NET, NGINX, Python, PostgreSQL, Node.js, Java, Redis, Apache Tomcat, and Elasticsearch. The catalog includes each selected Java version and exact build target. Go's separate bare-image pipeline is outside this initial Secure/Hardened source snapshot.
+Public source snapshots for Indian Hill Labs Secure and Hardened container engineering previews. The ten families are ASP.NET, NGINX, Python, PostgreSQL, Node.js, Java, Redis, Apache Tomcat, Elasticsearch, and Go static runtime bases. The catalog includes each supported version and exact build target. Go includes only its bare runtime Dockerfiles; its compiler, transient test probes, and private CI remain outside this snapshot.
 
 **These sources are engineering previews. A successful local build does not qualify an image as Secure or Hardened and does not create a supported, generally available release.** The tier names describe the build definitions. Qualification requires the authoritative GitLab factory's exact digest, policy, tests, and retained evidence. No Validated sources or qualification workflows are included here.
 

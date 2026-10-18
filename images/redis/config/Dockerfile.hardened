@@ -1,9 +1,22 @@
 # The factory supplies the immutable Secure digest.
 ARG SECURE_BASE
 FROM ${SECURE_BASE}
-LABEL com.indianhilllabs.assurance.level="hardened" \
+ARG REDIS_VERSION=8.2.10
+ARG REDIS_VERSION_LINE=8.2
+ARG REDIS_ARTIFACT_ID=IHL-CTR-0007
+ARG REDIS_CONFIG_FILE=images/redis/config/redis.hardened.conf
+ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
+ARG OCI_REVISION="manual-build"
+ARG OCI_CREATED="1970-01-01T00:00:00Z"
+LABEL org.opencontainers.image.title="Indian Hill Hardened Redis ${REDIS_VERSION_LINE}" \
+      org.opencontainers.image.version="${REDIS_VERSION}" \
+      com.indianhilllabs.artifact.id="${REDIS_ARTIFACT_ID}" \
+      org.opencontainers.image.source="${OCI_SOURCE}" \
+      org.opencontainers.image.revision="${OCI_REVISION}" \
+      org.opencontainers.image.created="${OCI_CREATED}" \
+      com.indianhilllabs.assurance.level="hardened" \
       com.indianhilllabs.assurance.inherits="secure" \
       com.indianhilllabs.assurance.stig-profile="ihl-redis-oss-enterprise-v2r2-tailored"
-COPY --chmod=0444 images/redis/config/redis.hardened.conf /opt/ihl/redis/redis.conf
+COPY --chmod=0444 ${REDIS_CONFIG_FILE} /opt/ihl/redis/redis.conf
 ENV IHL_ASSURANCE_LEVEL="hardened"
 USER 1654:1654

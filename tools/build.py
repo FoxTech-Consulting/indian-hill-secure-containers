@@ -201,7 +201,8 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
     runtime = secure
     if tier == "hardened":
         runtime = f"{repository}:{version}-hardened-local"
-        steps.append(command(recipes["hardened"]["dockerfile"], runtime, "hardened", {"SECURE_BASE": parent}))
+        args = public_build_args(product, "hardened", recipes["hardened"])
+        steps.append(command(recipes["hardened"]["dockerfile"], runtime, "hardened", {**args, "SECURE_BASE": parent}))
     if with_example:
         for workload in workloads:
             image = f"{tag_prefix}/{key}-{workload['repository']}:{version}-{tier}-local"

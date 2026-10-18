@@ -1,0 +1,27 @@
+# Secure/Hardened-only release lines retain the selected Secure Tomcat and Java binaries.
+ARG SECURE_BASE
+FROM ${SECURE_BASE} AS inherited-policy
+FROM docker.io/library/gcc:11.2.0@sha256:2c5cae6b84598eb6865d6c7b340deef80e8834a4c4037a5cbba755a5258809d4 AS hardening-policy
+COPY --from=inherited-policy /opt/java/conf/security/java.security /tmp/upstream.security
+# Preserve upstream restrictions and add provider-neutral minimum algorithm policy.
+RUN set -eu; \
+    grep -q '^jdk.tls.disabledAlgorithms=' /tmp/upstream.security; \
+    grep -q '^jdk.certpath.disabledAlgorithms=' /tmp/upstream.security; \
+    sed '/^security.overridePropertiesFile=/d' /tmp/upstream.security > /tmp/java.security; \
+    sed -i '/^jdk.tls.disabledAlgorithms=/s/=/=SHA1, RSA keySize < 2048, DH keySize < 2048, /; /^jdk.certpath.disabledAlgorithms=/s/=/=SHA1, RSA keySize < 2048, /' /tmp/java.security; \
+    printf '\nsecurity.overridePropertiesFile=false\n' >> /tmp/java.security
+FROM ${SECURE_BASE}
+ARG TOMCAT_VERSION=10.1.61
+ARG TOMCAT_VERSION_LINE=10.1
+ARG TOMCAT_ARTIFACT_ID=IHL-CTR-0008
+ARG OCI_REVISION="manual-build"
+LABEL org.opencontainers.image.title="Indian Hill Hardened Apache Tomcat ${TOMCAT_VERSION_LINE}" \
+      org.opencontainers.image.version="${TOMCAT_VERSION}" \
+      com.indianhilllabs.artifact.id="${TOMCAT_ARTIFACT_ID}" \
+      com.indianhilllabs.assurance.level="hardened" \
+      com.indianhilllabs.assurance.inherits="secure" \
+      org.opencontainers.image.revision="${OCI_REVISION}"
+COPY --from=hardening-policy --chmod=0444 /tmp/java.security /opt/java/conf/security/java.security
+ENV IHL_ASSURANCE_LEVEL="hardened" \
+    JAVA_TOOL_OPTIONS="-XX:+DisableAttachMechanism -XX:-UsePerfData -XX:+ExitOnOutOfMemoryError -XX:MaxRAMPercentage=60 -Djava.awt.headless=true"
+USER 1654:1654
