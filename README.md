@@ -45,7 +45,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ffb52
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-10-18 05:23 UTC**: **41 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-18 05:38 UTC**: **42 Secure and 8 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -81,6 +81,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | PostgreSQL 18.6 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-18.6-20261017T211812Z` | Not listed |
 | Python 3.13.16 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261015T174218Z-Hardened` |
 | Python 3.11.17 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.11.17-20261018T050406Z` | Not listed |
+| Python 3.12.15 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.12.15-20261018T052338Z` | Not listed |
 | Redis 8.2.10 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.10-20261018T034948Z` | `IHL-Redis-8.2.9-20261016T011415Z-Hardened` |
 | Redis 6.2.24 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-6.2.24-20261018T032855Z` | Not listed |
 | Redis 7.2.16 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-7.2.16-20261018T033711Z` | Not listed |
@@ -95,7 +96,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 "Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
-34 runtime records include signed public source bindings; 15 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+35 runtime records include signed public source bindings; 15 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->

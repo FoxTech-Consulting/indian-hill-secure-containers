@@ -3,23 +3,23 @@
   "status": "engineering-preview",
   "platform": "linux/amd64",
   "scope": "runtime-images",
-  "checkedAt": "2026-10-18T05:23:10.648705+00:00",
+  "checkedAt": "2026-10-18T05:38:15.831064+00:00",
   "verification": {
     "method": "Cumulative per-record anonymous OCI HTTP GET checks; SHA-256 verified for manifests, configurations and every referenced layer",
     "credentialsUsed": false,
     "runtimeExecuted": false,
     "independentCryptographicSignatureVerificationPerformed": false,
-    "scope": "49 listed runtime images; each retains its own timestamped anonymousDownload proof. Required public companions are verified during their publication reconciliation and are not runtime catalog entries.",
-    "listedRuntimeCount": 49,
-    "secureRuntimeCount": 41,
+    "scope": "50 listed runtime images; each retains its own timestamped anonymousDownload proof. Required public companions are verified during their publication reconciliation and are not runtime catalog entries.",
+    "listedRuntimeCount": 50,
+    "secureRuntimeCount": 42,
     "hardenedRuntimeCount": 8,
-    "recordsWithAnonymousByteProofCount": 49,
+    "recordsWithAnonymousByteProofCount": 50,
     "freshness": "checkedAt is the catalog reconciliation time. It does not refresh unchanged records; use each anonymousDownload.verifiedAt.",
     "latestReconciliation": {
-      "proofCoreSha256": "872077cd5ffaaab6cf76ac87bd48fe1b41b74e321d8653861eb411bec74548c4",
+      "proofCoreSha256": "8c13a5179698dc5b8aa920e8e9f777d2a2bd7e0adcc51e1f6bf2dfe57ab7792c",
       "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
       "proofAccess": "Retained GitLab artifact; project access may be required",
-      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17262206040",
+      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17262286859",
       "proofCoreFields": [
         "schemaVersion",
         "reportType",
@@ -44,7 +44,7 @@
       "importedRuntimeRecordCount": 1
     }
   },
-  "signatureProvenance": "Signature status comes from the original GitLab publication CI records and their hash-checked verification outputs. 35 listed runtime records contain complete recorded signed annotation values; 14 lack complete values and require the linked original publication record. Anonymous OCI byte verification does not repeat cryptographic signature verification or execute images.",
+  "signatureProvenance": "Signature status comes from the original GitLab publication CI records and their hash-checked verification outputs. 36 listed runtime records contain complete recorded signed annotation values; 14 lack complete values and require the linked original publication record. Anonymous OCI byte verification does not repeat cryptographic signature verification or execute images.",
   "evidenceAccess": "Publication job links and retained qualification evidence may require GitLab access.",
   "images": [
     {
@@ -2521,6 +2521,100 @@
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:30c5492b1dfaed96c010d5e34b13a080af64b0b1a95773e64396a85e23f963cd",
+      "vulnerabilitySummary": {
+        "cisaKevMatches": 0,
+        "emittedFindings": 14,
+        "fixState": {
+          "fixed": 7,
+          "not-fixed": 6,
+          "wont-fix": 1
+        },
+        "matches": 14,
+        "severity": {
+          "critical": 0,
+          "high": 0,
+          "low": 0,
+          "medium": 12,
+          "negligible": 2,
+          "unknown": 0
+        },
+        "truncatedFindings": 0
+      },
+      "vulnerabilityPolicy": {
+        "findingsBlockPublication": false
+      }
+    },
+    {
+      "key": "python-3-12",
+      "targetId": "python-3.12",
+      "family": "python",
+      "tier": "secure",
+      "version": "3.12.15",
+      "platform": "linux/amd64",
+      "status": "engineering-preview",
+      "repository": "ghcr.io/foxtech-consulting/python",
+      "tag": "IHL-Python-3.12.15-20261018T052338Z",
+      "digest": "sha256:3a53d6bacbdf59dbcc90d5a1760aaa58ec288bd4dae279cc6d77da06dc34b230",
+      "image": "ghcr.io/foxtech-consulting/python@sha256:3a53d6bacbdf59dbcc90d5a1760aaa58ec288bd4dae279cc6d77da06dc34b230",
+      "sourceRevision": "a68c84447fe3675f00e0b45a60c02911939bf604",
+      "publishedAt": "2026-10-18T05:23:38Z",
+      "publicationContext": "engineering-candidate",
+      "publication": {
+        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17262098301",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2959708249"
+      },
+      "producer": {
+        "sourceRevision": "a68c84447fe3675f00e0b45a60c02911939bf604",
+        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17262098297",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2959708249"
+      },
+      "publisher": {
+        "sourceRevision": "a68c84447fe3675f00e0b45a60c02911939bf604",
+        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17262098301",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2959708249"
+      },
+      "candidateManifestSha256": "74992552ee2ea62ee63b9353ef242abf9ce4fb320be6f314a69779d4f9f89dc0",
+      "signatureManifestSha256": "74992552ee2ea62ee63b9353ef242abf9ce4fb320be6f314a69779d4f9f89dc0",
+      "publicSourceBinding": {
+        "sourceRevision": "a68c84447fe3675f00e0b45a60c02911939bf604",
+        "sourceCommit": "d6e37baa603dff78768ce3e7566dd4f41577a41b",
+        "sourceManifestSha256": "7e02d12a92f842d828d60e33084a9230aaa58fbadfc2b9307acf14c93dd909ed",
+        "sourceTag": "source-a68c84447fe3675f00e0b45a60c02911939bf604",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/source-a68c84447fe3675f00e0b45a60c02911939bf604",
+        "status": "verified-by-original-publication-ci"
+      },
+      "signatureVerification": {
+        "status": "verified-by-original-publication-ci",
+        "independentlyReverifiedDuringDownload": false,
+        "certificateOidcIssuer": "https://gitlab.com",
+        "certificateIdentity": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers//.gitlab-ci.yml@refs/heads/main",
+        "anonymousSignatureVerifiedAtPublication": true,
+        "signedAnnotationsComplete": true,
+        "signedAnnotations": {
+          "assurance-tier": "secure",
+          "source-revision": "a68c84447fe3675f00e0b45a60c02911939bf604",
+          "assurance-manifest-sha256": "74992552ee2ea62ee63b9353ef242abf9ce4fb320be6f314a69779d4f9f89dc0",
+          "public-source-commit": "d6e37baa603dff78768ce3e7566dd4f41577a41b",
+          "public-source-manifest-sha256": "7e02d12a92f842d828d60e33084a9230aaa58fbadfc2b9307acf14c93dd909ed",
+          "publication-context": "engineering-candidate",
+          "release-registry": "github-container-registry"
+        }
+      },
+      "anonymousDownload": {
+        "status": "verified",
+        "credentialsUsed": false,
+        "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
+        "verifiedAt": "2026-10-18T05:38:15.830356+00:00",
+        "configCount": 1,
+        "layerCount": 20,
+        "runtimeExecuted": false,
+        "proofCoreSha256": "8c13a5179698dc5b8aa920e8e9f777d2a2bd7e0adcc51e1f6bf2dfe57ab7792c",
+        "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
+        "proofAccess": "Retained GitLab artifact; project access may be required",
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17262286859"
+      },
+      "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:3a53d6bacbdf59dbcc90d5a1760aaa58ec288bd4dae279cc6d77da06dc34b230",
       "vulnerabilitySummary": {
         "cisaKevMatches": 0,
         "emittedFindings": 14,
