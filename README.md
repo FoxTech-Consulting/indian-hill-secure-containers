@@ -45,7 +45,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:bb985
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-10-19 00:30 UTC**: **46 Secure and 25 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-19 03:56 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -57,50 +57,52 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Elasticsearch 9.5.5 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.5-20261017T200335Z` | Not listed |
 | Elasticsearch 8.19.23 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-8.19.23-20261017T194104Z` | Not listed |
 | Elasticsearch 9.4.8 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.4.8-20261017T195103Z` | Not listed |
+| Go 1.27.2 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | Not listed | `IHL-Go-1.27.2-20261019T035241Z-Hardened` |
+| Go 1.26.9 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | Not listed | `IHL-Go-1.26.9-20261019T035043Z-Hardened` |
 | Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T221045Z` | `IHL-Java-21.0.12.1-20261018T233231Z-Hardened` |
-| Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221803Z` | Not listed |
+| Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221803Z` | `IHL-Java-11.0.32.1-20261019T033233Z-Hardened` |
 | Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261010T221932Z` | `IHL-Java-11.0.32.1-20261018T233752Z-Hardened` |
-| Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222357Z` | Not listed |
+| Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222357Z` | `IHL-Java-17.0.20.1-20261019T033357Z-Hardened` |
 | Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222713Z` | `IHL-Java-17.0.20.1-20261018T233928Z-Hardened` |
-| Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T223142Z` | Not listed |
-| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223358Z` | Not listed |
+| Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261010T223142Z` | `IHL-Java-21.0.12.1-20261019T034138Z-Hardened` |
+| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223358Z` | `IHL-Java-25.0.4.1-20261019T033518Z-Hardened` |
 | Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223527Z` | `IHL-Java-25.0.4.1-20261018T234049Z-Hardened` |
-| Java 26.0.2.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224015Z` | Not listed |
+| Java 26.0.2.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224015Z` | `IHL-Java-26.0.2.1-20261019T033656Z-Hardened` |
 | Java 26.0.2.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224212Z` | `IHL-Java-26.0.2.1-20261018T234210Z-Hardened` |
-| Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224344Z` | Not listed |
+| Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224344Z` | `IHL-Java-27-20261019T033821Z-Hardened` |
 | Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224518Z` | `IHL-Java-27-20261018T234334Z-Hardened` |
-| Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | Not listed |
+| Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | `IHL-Java-8.0.504-20261019T033111Z-Hardened` |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | `IHL-Java-8.0.504-20261018T233614Z-Hardened` |
 | NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261016T193408Z` | `IHL-NGINX-1.30.6-20261018T232940Z-Hardened` |
 | NGINX 1.31.7 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.7-20261016T195003Z` | `IHL-NGINX-1.31.7-20261018T234457Z-Hardened` |
-| Node.js (Secure 24.22.0; Hardened 24.20.0) | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.22.0-20261018T120226Z` | `IHL-Node-24.20.0-20261016T002924Z-Hardened` |
+| Node.js 24.22.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.22.0-20261018T120226Z` | `IHL-Node-24.22.0-20261019T032957Z-Hardened` |
 | Node.js 22.23.3 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-22.23.3-20261018T084620Z` | `IHL-Node-22.23.3-20261018T235447Z-Hardened` |
 | Node.js 26.12.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-26.12.0-20261018T160236Z` | `IHL-Node-26.12.0-20261018T235608Z-Hardened` |
-| PostgreSQL 16.15 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261015T174531Z-Hardened` |
-| PostgreSQL 14.24 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-14.24-20261017T202354Z` | Not listed |
-| PostgreSQL 15.19 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-15.19-20261017T204132Z` | Not listed |
-| PostgreSQL 17.11 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-17.11-20261017T210003Z` | Not listed |
-| PostgreSQL 18.6 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-18.6-20261017T211812Z` | Not listed |
+| PostgreSQL 16.15 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-16.15-20261016T002606Z` | `IHL-Postgres-16.15-20261019T032838Z-Hardened` |
+| PostgreSQL 14.24 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-14.24-20261017T202354Z` | `IHL-Postgres-14.24-20261019T034550Z-Hardened` |
+| PostgreSQL 15.19 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-15.19-20261017T204132Z` | `IHL-Postgres-15.19-20261019T034838Z-Hardened` |
+| PostgreSQL 17.11 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-17.11-20261017T210003Z` | `IHL-Postgres-17.11-20261019T033942Z-Hardened` |
+| PostgreSQL 18.6 | [`postgres`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres) | `IHL-Postgres-18.6-20261017T211812Z` | `IHL-Postgres-18.6-20261019T034037Z-Hardened` |
 | Python 3.13.16 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.13.16-20261016T002718Z` | `IHL-Python-3.13.16-20261018T233042Z-Hardened` |
 | Python 3.11.17 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.11.17-20261018T050406Z` | `IHL-Python-3.11.17-20261018T234853Z-Hardened` |
 | Python 3.12.15 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.12.15-20261018T052338Z` | `IHL-Python-3.12.15-20261018T235015Z-Hardened` |
 | Python 3.14.8 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.14.8-20261018T054543Z` | `IHL-Python-3.14.8-20261018T235143Z-Hardened` |
 | Python 3.15.0 | [`python`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/python) | `IHL-Python-3.15.0-20261018T060702Z` | `IHL-Python-3.15.0-20261018T235319Z-Hardened` |
 | Redis 8.2.10 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.2.10-20261018T034948Z` | `IHL-Redis-8.2.10-20261018T233345Z-Hardened` |
-| Redis 6.2.24 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-6.2.24-20261018T032855Z` | Not listed |
-| Redis 7.2.16 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-7.2.16-20261018T033711Z` | Not listed |
-| Redis 7.4.11 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-7.4.11-20261018T034231Z` | Not listed |
-| Redis 8.10.2 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.10.2-20261018T043936Z` | Not listed |
-| Redis 8.4.7 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.4.7-20261018T032207Z` | Not listed |
-| Redis 8.6.7 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.6.7-20261018T040743Z` | Not listed |
-| Redis 8.8.3 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.8.3-20261018T042208Z` | Not listed |
+| Redis 6.2.24 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-6.2.24-20261018T032855Z` | `IHL-Redis-6.2.24-20261019T034300Z-Hardened` |
+| Redis 7.2.16 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-7.2.16-20261018T033711Z` | `IHL-Redis-7.2.16-20261019T034354Z-Hardened` |
+| Redis 7.4.11 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-7.4.11-20261018T034231Z` | `IHL-Redis-7.4.11-20261019T035143Z-Hardened` |
+| Redis 8.10.2 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.10.2-20261018T043936Z` | `IHL-Redis-8.10.2-20261019T034937Z-Hardened` |
+| Redis 8.4.7 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.4.7-20261018T032207Z` | `IHL-Redis-8.4.7-20261019T034451Z-Hardened` |
+| Redis 8.6.7 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.6.7-20261018T040743Z` | `IHL-Redis-8.6.7-20261019T034647Z-Hardened` |
+| Redis 8.8.3 | [`redis`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/redis) | `IHL-Redis-8.8.3-20261018T042208Z` | `IHL-Redis-8.8.3-20261019T034740Z-Hardened` |
 | Apache Tomcat 10.1.61 | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-10.1.61-20261017T191314Z` | `IHL-Tomcat-10.1.61-20261018T233442Z-Hardened` |
 | Apache Tomcat 11.0.27 | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-11.0.27-20261017T192452Z` | `IHL-Tomcat-11.0.27-20261018T235730Z-Hardened` |
 | Apache Tomcat 9.0.123 | [`tomcat`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/tomcat) | `IHL-Tomcat-9.0.123-20261017T190013Z` | `IHL-Tomcat-9.0.123-20261018T235851Z-Hardened` |
 
 "Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
-57 runtime records include signed public source bindings; 14 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+77 runtime records include signed public source bindings; 14 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
