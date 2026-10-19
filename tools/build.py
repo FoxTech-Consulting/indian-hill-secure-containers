@@ -133,6 +133,23 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
             if not isinstance(recipe, dict):
                 raise ValueError(f"Invalid public recipe: {key}")
             recipes.append(recipe_path(root, recipe.get("dockerfile")))
+            java_hardened = product.get("family") == "java" and tier == "hardened"
+            if java_hardened or "materialDockerfile" in recipe or "javaMaterialProfile" in recipe:
+                # Both fields are mandatory for Java H. A self-consistent
+                # snapshot must not silently fall back to its additive parent.
+                material = recipe.get("javaMaterialProfile")
+                actual = recipe_path(root, recipe.get("materialDockerfile"))
+                expected = f"images/java/{product.get('versionLine')}/bcfips-2-1-3/Dockerfile.hardened-material"
+                profile = {"moduleName": "BC-FJA", "moduleVersion": "2.1.3",
+                    "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e",
+                    "certificationStatus": "pending", "moduleCertificate": None,
+                    "recipe": {"path": actual, "sha256": hashlib.sha256(snapshot_path(root, actual).read_bytes()).hexdigest()},
+                    "qualificationGranted": False}
+                if (not java_hardened or product.get("versionLine") not in {"8", "11", "17", "21", "25", "26", "27"}
+                        or actual != expected or not isinstance(material, dict) or material != profile
+                        or material.get("qualificationGranted") is not False):
+                    raise ValueError("Public Java Hardened material differs from its reviewed recipe and provider pins")
+                recipes.append(actual)
             public_build_args(product, tier, recipe)
         workloads = product.get("workloads", [])
         if not isinstance(workloads, list):
@@ -202,7 +219,12 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
     if tier == "hardened":
         runtime = f"{repository}:{version}-hardened-local"
         args = public_build_args(product, "hardened", recipes["hardened"])
-        steps.append(command(recipes["hardened"]["dockerfile"], runtime, "hardened", {**args, "SECURE_BASE": parent}))
+        material = recipes["hardened"].get("materialDockerfile")
+        additive = f"{repository}:{version}-hardened-local-parent-{nonce}" if material else runtime
+        steps.append(command(recipes["hardened"]["dockerfile"], additive, "hardened", {**args, "SECURE_BASE": parent}))
+        if material:
+            steps.append(command(material, runtime, "hardened", {"HARDENED_BASE": additive,
+                "IHL_FIPS_BUILD_VALIDATION": "false"}))
     if with_example:
         for workload in workloads:
             image = f"{tag_prefix}/{key}-{workload['repository']}:{version}-{tier}-local"

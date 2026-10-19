@@ -300,7 +300,20 @@
         "repository": "java",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/21/bcfips-2-1-3/Dockerfile.hardened"
+            "dockerfile": "images/java/21/bcfips-2-1-3/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/21/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "382d138d12a9aabcde5710d4e81b74418bed479afa5998f3f952969dae47e45a"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/21/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/21/bcfips-2-1-3/Dockerfile"
@@ -325,7 +338,20 @@
         "repository": "java-11-bcfips-2-1-1",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/11/bcfips-2-1-1/Dockerfile.hardened"
+            "dockerfile": "images/java/11/bcfips-2-1-1/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/11/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "0804097f34d138bc6ce21bbba8b2c66d93119c687212fad5526b86005f3650ec"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/11/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/11/bcfips-2-1-1/Dockerfile"
@@ -350,7 +376,20 @@
         "repository": "java-11-bcfips-2-1-3",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/11/bcfips-2-1-3/Dockerfile.hardened"
+            "dockerfile": "images/java/11/bcfips-2-1-3/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/11/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "0804097f34d138bc6ce21bbba8b2c66d93119c687212fad5526b86005f3650ec"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/11/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/11/bcfips-2-1-3/Dockerfile"
@@ -375,7 +414,20 @@
         "repository": "java-17-bcfips-2-1-1",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/17/bcfips-2-1-1/Dockerfile.hardened"
+            "dockerfile": "images/java/17/bcfips-2-1-1/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/17/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "3795d321783349aa214c0afcbad10495fb3f9efd0c8f19d3cb6c27e996361c9e"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/17/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/17/bcfips-2-1-1/Dockerfile"
@@ -400,7 +452,20 @@
         "repository": "java-17-bcfips-2-1-3",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/17/bcfips-2-1-3/Dockerfile.hardened"
+            "dockerfile": "images/java/17/bcfips-2-1-3/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/17/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "3795d321783349aa214c0afcbad10495fb3f9efd0c8f19d3cb6c27e996361c9e"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/17/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/17/bcfips-2-1-3/Dockerfile"
@@ -425,7 +490,20 @@
         "repository": "java-21-bcfips-2-1-1",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/21/bcfips-2-1-1/Dockerfile.hardened"
+            "dockerfile": "images/java/21/bcfips-2-1-1/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/21/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "382d138d12a9aabcde5710d4e81b74418bed479afa5998f3f952969dae47e45a"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/21/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/21/bcfips-2-1-1/Dockerfile"
@@ -450,7 +528,20 @@
         "repository": "java-25-bcfips-2-1-1",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/25/bcfips-2-1-1/Dockerfile.hardened"
+            "dockerfile": "images/java/25/bcfips-2-1-1/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/25/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "7a38f41504933fa555d6f999efefff253b7f8ccb3764900f2df978c20c048977"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/25/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/25/bcfips-2-1-1/Dockerfile"
@@ -475,7 +566,20 @@
         "repository": "java-25-bcfips-2-1-3",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/25/bcfips-2-1-3/Dockerfile.hardened"
+            "dockerfile": "images/java/25/bcfips-2-1-3/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/25/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "7a38f41504933fa555d6f999efefff253b7f8ccb3764900f2df978c20c048977"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/25/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/25/bcfips-2-1-3/Dockerfile"
@@ -500,7 +604,20 @@
         "repository": "java-26-bcfips-2-1-1",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/26/bcfips-2-1-1/Dockerfile.hardened"
+            "dockerfile": "images/java/26/bcfips-2-1-1/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/26/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "49a31fdf01721dd62eb377b7e1a863d3df6b071fce514ad26e7294b60b9dbf02"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/26/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/26/bcfips-2-1-1/Dockerfile"
@@ -525,7 +642,20 @@
         "repository": "java-26-bcfips-2-1-3",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/26/bcfips-2-1-3/Dockerfile.hardened"
+            "dockerfile": "images/java/26/bcfips-2-1-3/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/26/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "49a31fdf01721dd62eb377b7e1a863d3df6b071fce514ad26e7294b60b9dbf02"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/26/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/26/bcfips-2-1-3/Dockerfile"
@@ -550,7 +680,20 @@
         "repository": "java-27-bcfips-2-1-1",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/27/bcfips-2-1-1/Dockerfile.hardened"
+            "dockerfile": "images/java/27/bcfips-2-1-1/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/27/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "4315db856c61e5e145a12c0a71793988c322e63709043d2e014d77f840077e2b"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/27/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/27/bcfips-2-1-1/Dockerfile"
@@ -575,7 +718,20 @@
         "repository": "java-27-bcfips-2-1-3",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/27/bcfips-2-1-3/Dockerfile.hardened"
+            "dockerfile": "images/java/27/bcfips-2-1-3/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/27/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "4315db856c61e5e145a12c0a71793988c322e63709043d2e014d77f840077e2b"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/27/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/27/bcfips-2-1-3/Dockerfile"
@@ -600,7 +756,20 @@
         "repository": "java-8-bcfips-2-1-1",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/8/bcfips-2-1-1/Dockerfile.hardened"
+            "dockerfile": "images/java/8/bcfips-2-1-1/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/8/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "a0e47bdb59e76a1e1b1b7cf780f8537107c1afe55d1ebbabcffd48bac00a6001"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/8/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/8/bcfips-2-1-1/Dockerfile"
@@ -625,7 +794,20 @@
         "repository": "java-8-bcfips-2-1-3",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/java/8/bcfips-2-1-3/Dockerfile.hardened"
+            "dockerfile": "images/java/8/bcfips-2-1-3/Dockerfile.hardened",
+            "javaMaterialProfile": {
+              "certificationStatus": "pending",
+              "moduleCertificate": null,
+              "moduleName": "BC-FJA",
+              "moduleVersion": "2.1.3",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/java/8/bcfips-2-1-3/Dockerfile.hardened-material",
+                "sha256": "a0e47bdb59e76a1e1b1b7cf780f8537107c1afe55d1ebbabcffd48bac00a6001"
+              },
+              "sha256": "f55fc476ede820d5c03fe87e6ced5bb0095e1dc30b387445846a3ff0274f8c0e"
+            },
+            "materialDockerfile": "images/java/8/bcfips-2-1-3/Dockerfile.hardened-material"
           },
           "secure": {
             "dockerfile": "images/java/8/bcfips-2-1-3/Dockerfile"

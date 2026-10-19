@@ -1,5 +1,16 @@
 ARG SECURE_BASE
+# Directory-only stages normalize inherited mode bits without adding a tool,
+# application, or replacement identity/trust data to the delivered image.
+FROM scratch AS root-directory-metadata
+WORKDIR /etc/ssl/certs
+
+FROM scratch AS app-directory-metadata
+USER 1654:1654
+WORKDIR /app
+
 FROM ${SECURE_BASE}
+COPY --from=root-directory-metadata --chown=0:0 --chmod=0755 / /
+COPY --from=app-directory-metadata --chown=1654:1654 --chmod=0755 / /
 ARG OCI_REVISION
 ARG OCI_CREATED
 LABEL org.opencontainers.image.title="Indian Hill Hardened Go Static Runtime Base" \
