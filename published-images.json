@@ -3,7 +3,7 @@
   "status": "engineering-preview",
   "platform": "linux/amd64",
   "scope": "runtime-images",
-  "checkedAt": "2026-10-29T01:20:39.763513+00:00",
+  "checkedAt": "2026-10-29T12:35:29.922297+00:00",
   "verification": {
     "method": "Cumulative per-record anonymous OCI HTTP GET checks; SHA-256 verified for manifests, configurations and every referenced layer",
     "credentialsUsed": false,
@@ -16,10 +16,10 @@
     "recordsWithAnonymousByteProofCount": 91,
     "freshness": "checkedAt is the catalog reconciliation time. It does not refresh unchanged records; use each anonymousDownload.verifiedAt.",
     "latestReconciliation": {
-      "proofCoreSha256": "35a30691a6e0a2e98ec7512abd5ecc058bb5a0f8c5b6ca1e4d6fcf2fd7fb7add",
+      "proofCoreSha256": "f4bb88872fbb832b2b768aea742c6a6ecf5ad421267e7d7e62cf0636aeea0a80",
       "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
       "proofAccess": "Retained GitLab artifact; project access may be required",
-      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17559640140",
+      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17573879668",
       "proofCoreFields": [
         "schemaVersion",
         "reportType",
@@ -3116,72 +3116,73 @@
       "targetId": "nginx-1.31",
       "family": "nginx",
       "tier": "secure",
-      "version": "1.31.7",
+      "version": "1.31.8",
       "platform": "linux/amd64",
       "status": "engineering-preview",
       "repository": "ghcr.io/foxtech-consulting/nginx",
-      "tag": "IHL-NGINX-1.31.7-20261016T195003Z",
-      "digest": "sha256:1b9a472ffce36e5936357239fbd8afd0f40f5940a13da5b693427a2a59075de4",
-      "image": "ghcr.io/foxtech-consulting/nginx@sha256:1b9a472ffce36e5936357239fbd8afd0f40f5940a13da5b693427a2a59075de4",
-      "sourceRevision": "c361b29a50f20ba9300d7b1324f737da41185073",
-      "publishedAt": "2026-10-16T19:50:03Z",
+      "tag": "IHL-NGINX-1.31.8-20261029T123330Z",
+      "digest": "sha256:1d37cf3b02fd3101dca374ce2be5d4a538187586695ab5f4f927bf76b540c44a",
+      "image": "ghcr.io/foxtech-consulting/nginx@sha256:1d37cf3b02fd3101dca374ce2be5d4a538187586695ab5f4f927bf76b540c44a",
+      "sourceRevision": "5e92f42a82e7a1afc6630164fc4f271333d425bb",
+      "publishedAt": "2026-10-29T12:33:30Z",
       "publicationContext": "engineering-candidate",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17245387515",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2956786281"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/nginx/-/jobs/17573635104",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/nginx/-/pipelines/3003806411"
       },
       "producer": {
-        "sourceRevision": "c361b29a50f20ba9300d7b1324f737da41185073",
-        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17245387511",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2956786281"
+        "sourceRevision": "5e92f42a82e7a1afc6630164fc4f271333d425bb",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/nginx/-/jobs/17559165996",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/nginx/-/pipelines/3001716672"
       },
       "publisher": {
-        "sourceRevision": "c361b29a50f20ba9300d7b1324f737da41185073",
-        "jobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17245387515",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/pipelines/2956786281"
+        "sourceRevision": "5e92f42a82e7a1afc6630164fc4f271333d425bb",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/nginx/-/jobs/17573635104",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/nginx/-/pipelines/3003806411"
       },
-      "candidateManifestSha256": "2556dd9d9b227603e16304f1053604596808895d39608a98d6113962a7decd94",
-      "signatureManifestSha256": "2556dd9d9b227603e16304f1053604596808895d39608a98d6113962a7decd94",
+      "candidateManifestSha256": "165d41c952414ccb6553b8db8f7a2bfcd102fafaf167fc0e8dbf6642bd5ee919",
+      "signatureManifestSha256": "165d41c952414ccb6553b8db8f7a2bfcd102fafaf167fc0e8dbf6642bd5ee919",
       "publicSourceBinding": {
-        "sourceRevision": "c361b29a50f20ba9300d7b1324f737da41185073",
-        "sourceCommit": "946fffc8f721a7a81855813610f53268c668b557",
-        "sourceManifestSha256": "236c03b6e16f79b91d7122cdadc13aeca25dad8a5139340632d1beb86b663006",
-        "sourceTag": "source-c361b29a50f20ba9300d7b1324f737da41185073",
-        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/source-c361b29a50f20ba9300d7b1324f737da41185073",
+        "sourceRevision": "5e92f42a82e7a1afc6630164fc4f271333d425bb",
+        "sourceCommit": "1d5976b93fc814b9bed479a2e12a2b59c97c2b17",
+        "sourceManifestSha256": "4fa2da06c615d95dd491a9e650c8c97dbcb08af76bbd10d8b1e3da9bec158cd8",
+        "sourceTag": "source-5e92f42a82e7a1afc6630164fc4f271333d425bb",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/source-5e92f42a82e7a1afc6630164fc4f271333d425bb",
         "status": "verified-by-original-publication-ci"
       },
       "signatureVerification": {
         "status": "verified-by-original-publication-ci",
         "independentlyReverifiedDuringDownload": false,
         "certificateOidcIssuer": "https://gitlab.com",
-        "certificateIdentity": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers//.gitlab-ci.yml@refs/heads/main",
+        "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/nginx//.gitlab-ci.yml@refs/heads/main",
         "anonymousSignatureVerifiedAtPublication": true,
         "signedAnnotationsComplete": true,
         "signedAnnotations": {
           "assurance-tier": "secure",
-          "source-revision": "c361b29a50f20ba9300d7b1324f737da41185073",
-          "assurance-manifest-sha256": "2556dd9d9b227603e16304f1053604596808895d39608a98d6113962a7decd94",
-          "public-source-commit": "946fffc8f721a7a81855813610f53268c668b557",
-          "public-source-manifest-sha256": "236c03b6e16f79b91d7122cdadc13aeca25dad8a5139340632d1beb86b663006",
+          "source-revision": "5e92f42a82e7a1afc6630164fc4f271333d425bb",
+          "assurance-manifest-sha256": "165d41c952414ccb6553b8db8f7a2bfcd102fafaf167fc0e8dbf6642bd5ee919",
+          "public-source-commit": "1d5976b93fc814b9bed479a2e12a2b59c97c2b17",
+          "public-source-manifest-sha256": "4fa2da06c615d95dd491a9e650c8c97dbcb08af76bbd10d8b1e3da9bec158cd8",
           "publication-context": "engineering-candidate",
-          "release-registry": "github-container-registry"
+          "release-registry": "github-container-registry",
+          "publisher-revision": "5e92f42a82e7a1afc6630164fc4f271333d425bb"
         }
       },
       "anonymousDownload": {
         "status": "verified",
         "credentialsUsed": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-10-16T19:52:09.180179+00:00",
+        "verifiedAt": "2026-10-29T12:35:29.921847+00:00",
         "configCount": 1,
         "layerCount": 9,
         "runtimeExecuted": false,
-        "proofCoreSha256": "55d3a5de1cfbb15ee6507c3ef147ae28311477e855871ad14b5d44b1388ffca5",
+        "proofCoreSha256": "f4bb88872fbb832b2b768aea742c6a6ecf5ad421267e7d7e62cf0636aeea0a80",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17245702296"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17573879668"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx",
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:1b9a472ffce36e5936357239fbd8afd0f40f5940a13da5b693427a2a59075de4",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:1d37cf3b02fd3101dca374ce2be5d4a538187586695ab5f4f927bf76b540c44a",
       "vulnerabilitySummary": {
         "cisaKevMatches": 0,
         "emittedFindings": 7,
