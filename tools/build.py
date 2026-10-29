@@ -18,12 +18,28 @@ from typing import Any
 
 
 SOURCE_REPOSITORY = "https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
+NGINX_SOURCE_REPOSITORY = "https://gitlab.com/indianhilllabs/containers/nginx"
+NGINX_IDENTITIES = {
+    "nginx": {"family": "nginx", "id": "IHL-CTR-0002", "targetId": "nginx-1.30", "versionLine": "1.30"},
+    "nginx-mainline": {"family": "nginx", "id": "IHL-CTR-0011", "targetId": "nginx-1.31", "versionLine": "1.31"},
+}
 PLATFORM = "linux/amd64"
 TIERS = ("secure", "hardened")
 SHA256 = re.compile(r"[0-9a-f]{64}")
 REVISION = re.compile(r"[0-9a-f]{40}")
 NAME = re.compile(r"[a-z0-9]+(?:[._-][a-z0-9]+)*")
 VERSION = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,63}")
+
+
+def require_source_context(repository: object, product: dict[str, Any] | None = None) -> str:
+    """Constrain labels to reviewed origins; checksums alone do not authenticate."""
+    if repository not in (SOURCE_REPOSITORY, NGINX_SOURCE_REPOSITORY):
+        raise ValueError("SOURCE.json must identify an exact approved sourceRepository")
+    if repository == NGINX_SOURCE_REPOSITORY and product is not None:
+        identity = NGINX_IDENTITIES.get(product.get("key"))
+        if identity is None or any(product.get(field) != value for field, value in identity.items()):
+            raise ValueError("NGINX source context cannot identify another family or target")
+    return repository
 
 
 def snapshot_path(root: Path, name: str) -> Path:
@@ -53,6 +69,7 @@ def verify_snapshot(root: Path) -> dict[str, Any]:
     source = json.loads(snapshot_path(root, "SOURCE.json").read_text(encoding="utf-8"))
     if not isinstance(source, dict) or not REVISION.fullmatch(str(source.get("sourceRevision", ""))):
         raise ValueError("SOURCE.json must identify a full lowercase GitLab sourceRevision")
+    require_source_context(source.get("sourceRepository"))
     entries = source.get("files")
     if not isinstance(entries, list) or not entries:
         raise ValueError("SOURCE.json must contain a nonempty exported files list")
@@ -106,6 +123,7 @@ def public_build_args(product: dict[str, Any], tier: str, recipe: dict) -> dict[
 
 
 def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
+    source_repository = require_source_context(source.get("sourceRepository"))
     catalog = json.loads(snapshot_path(root, "public-products.json").read_text(encoding="utf-8"))
     if not isinstance(catalog, dict) or catalog.get("schemaVersion") != 1:
         raise ValueError("Unsupported public-products.json schema")
@@ -119,6 +137,7 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
     for product in products:
         if not isinstance(product, dict):
             raise ValueError("Invalid public product")
+        require_source_context(source_repository, product)
         key = product.get("key")
         if not isinstance(key, str) or not NAME.fullmatch(key) or key in keys:
             raise ValueError("Public product keys must be unique lowercase image names")
@@ -174,7 +193,9 @@ def check_tag_prefix(prefix: str) -> None:
 
 def build_plan(product: dict[str, Any], revision: str, tier: str, *,
                with_example: bool = False, tag_prefix: str = "local/ihl",
-               nonce: str | None = None) -> list[dict[str, Any]]:
+               nonce: str | None = None,
+               source_repository: str = SOURCE_REPOSITORY) -> list[dict[str, Any]]:
+    source_repository = require_source_context(source_repository, product)
     if tier not in TIERS or not REVISION.fullmatch(revision):
         raise ValueError("Local builds require a Secure/Hardened tier and full source revision")
     if tier not in product_tiers(product):
@@ -198,13 +219,13 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
                 "--tag", image]
         for alias in aliases:
             argv.extend(["--tag", alias])
-        for name, value in {"OCI_SOURCE": SOURCE_REPOSITORY, "OCI_REVISION": revision, **args}.items():
+        for name, value in {"OCI_SOURCE": source_repository, "OCI_REVISION": revision, **args}.items():
             argv.extend(["--build-arg", f"{name}={value}"])
         for name, value in {
             "com.indianhilllabs.release.status": "local-unqualified",
             "com.indianhilllabs.assurance.qualification": "not-assessed",
             "com.indianhilllabs.assurance.level": level,
-            "org.opencontainers.image.source": SOURCE_REPOSITORY,
+            "org.opencontainers.image.source": source_repository,
             "org.opencontainers.image.revision": revision,
         }.items():
             argv.extend(["--label", f"{name}={value}"])
@@ -259,7 +280,8 @@ def main(argv: list[str] | None = None, *, root: Path | None = None) -> int:
         if product is None:
             raise ValueError(f"Unknown product: {args.product}; use --list")
         steps = build_plan(product, source["sourceRevision"], args.tier,
-                           with_example=args.with_example, tag_prefix=args.tag_prefix)
+                           with_example=args.with_example, tag_prefix=args.tag_prefix,
+                           source_repository=source["sourceRepository"])
         if args.dry_run:
             for step in steps:
                 print(json.dumps(step["argv"]))
