@@ -21,14 +21,13 @@
       "signatureVerified": true
     },
     {
-      "version": "1.31.7",
+      "version": "1.31.8",
       "versionLine": "1.31",
       "channel": "mainline",
-      "releaseDate": "2026-10-14",
-      "sourceUrl": "https://nginx.org/download/nginx-1.31.7.tar.gz",
-      "sourceSha256": "89ea8a3dc171511f7325043b50e4c036248d9fad5feb7ec809c0b82d5df42c65",
-      "signatureUrl": "https://nginx.org/download/nginx-1.31.7.tar.gz.asc",
-      "signatureSha256": "c3e66f885bbaeef9e07223980178f6cf68b7db8b8dc64ae52f7f42c74ac2352e",
+      "sourceUrl": "https://nginx.org/download/nginx-1.31.8.tar.gz",
+      "sourceSha256": "0652b760b3b772d2ec17b47c2fc15d9a95e6fe35cd5b877eadc1a62d9bc75af1",
+      "signatureUrl": "https://nginx.org/download/nginx-1.31.8.tar.gz.asc",
+      "signatureSha256": "4dc5609ad6a51f2f5ce7d7375b8193580abc557b6d96bc0277f1ec2dbd7376c8",
       "signingKey": {
         "fingerprint": "D6786CE303D9A9022998DC6CC8464D549AF75C0A",
         "url": "https://nginx.org/keys/pluknet.key",

@@ -52,7 +52,7 @@
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
-              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.32-noble-chiseled-amd64@sha256:e47cf5156b40b554a5ad4b30fdaa4111a2ee789413d7b89f86f31c9049ba7530",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.32-noble-chiseled-amd64@sha256:ff6b559786349848422eacb6e44f067709456c98119bb739655bcb4eeb6d2568",
               "ASPNET_VERSION": "8.0.32",
               "ASPNET_VERSION_LINE": "8"
             },
@@ -97,7 +97,7 @@
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
-              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.21-noble-chiseled-amd64@sha256:e22db25736a223242d5481b5bf43f56c5778418e27507808de7f47c630786860",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.21-noble-chiseled-amd64@sha256:9a7a9cf1bfd0ad64df17fd156345e3a36df1be26d92c8230bfc212f6627a6b41",
               "ASPNET_VERSION": "9.0.21",
               "ASPNET_VERSION_LINE": "9"
             },
@@ -247,7 +247,7 @@
           "secure": {
             "buildArgs": {
               "GO_ARTIFACT_ID": "IHL-CTR-0010",
-              "GO_PRODUCT_VERSION": "1.27.2"
+              "GO_PRODUCT_VERSION": "1.27.3"
             },
             "dockerfile": "images/go/config/Dockerfile"
           }
@@ -255,7 +255,7 @@
       },
       "key": "go",
       "kind": "runtime-base",
-      "productVersion": "1.27.2",
+      "productVersion": "1.27.3",
       "status": "candidate",
       "targetId": "go-1.27",
       "title": "Indian Hill Go 1.27 static application runtime base",
@@ -278,7 +278,7 @@
           "secure": {
             "buildArgs": {
               "GO_ARTIFACT_ID": "IHL-CTR-0035",
-              "GO_PRODUCT_VERSION": "1.26.9"
+              "GO_PRODUCT_VERSION": "1.26.10"
             },
             "dockerfile": "images/go/config/Dockerfile"
           }
@@ -286,7 +286,7 @@
       },
       "key": "go-1-26",
       "kind": "runtime-base",
-      "productVersion": "1.26.9",
+      "productVersion": "1.26.10",
       "status": "candidate",
       "targetId": "go-1.26",
       "title": "Indian Hill Go 1.26 static application runtime base",
@@ -322,7 +322,7 @@
       },
       "key": "java",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "21.0.12.1",
+      "productVersion": "21.0.13",
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-21-bcfips-2-1-3",
@@ -436,7 +436,7 @@
       },
       "key": "java-17-bcfips-2-1-1",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "17.0.20.1",
+      "productVersion": "17.0.21",
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-17-bcfips-2-1-1",
@@ -474,7 +474,7 @@
       },
       "key": "java-17-bcfips-2-1-3",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "17.0.20.1",
+      "productVersion": "17.0.21",
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-17-bcfips-2-1-3",
@@ -512,7 +512,7 @@
       },
       "key": "java-21-bcfips-2-1-1",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "21.0.12.1",
+      "productVersion": "21.0.13",
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-21-bcfips-2-1-1",
@@ -550,7 +550,7 @@
       },
       "key": "java-25-bcfips-2-1-1",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "25.0.4.1",
+      "productVersion": "25.0.5",
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-25-bcfips-2-1-1",
@@ -588,7 +588,7 @@
       },
       "key": "java-25-bcfips-2-1-3",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "25.0.4.1",
+      "productVersion": "25.0.5",
       "referenceWorkload": "not-in-public-snapshot",
       "status": "candidate",
       "targetId": "java-25-bcfips-2-1-3",
@@ -867,7 +867,7 @@
           "hardened": {
             "buildArgs": {
               "NGINX_ARTIFACT_ID": "IHL-CTR-0011",
-              "NGINX_VERSION": "1.31.7",
+              "NGINX_VERSION": "1.31.8",
               "NGINX_VERSION_LINE": "1.31"
             },
             "dockerfile": "images/nginx/config/Dockerfile.hardened"
@@ -875,8 +875,8 @@
           "secure": {
             "buildArgs": {
               "NGINX_ARTIFACT_ID": "IHL-CTR-0011",
-              "NGINX_SOURCE_SHA256": "89ea8a3dc171511f7325043b50e4c036248d9fad5feb7ec809c0b82d5df42c65",
-              "NGINX_VERSION": "1.31.7",
+              "NGINX_SOURCE_SHA256": "0652b760b3b772d2ec17b47c2fc15d9a95e6fe35cd5b877eadc1a62d9bc75af1",
+              "NGINX_VERSION": "1.31.8",
               "NGINX_VERSION_LINE": "1.31"
             },
             "dockerfile": "images/nginx/config/Dockerfile"
@@ -885,7 +885,7 @@
       },
       "key": "nginx-mainline",
       "kind": "standalone-server",
-      "productVersion": "1.31.7",
+      "productVersion": "1.31.8",
       "status": "candidate",
       "targetId": "nginx-1.31",
       "title": "Indian Hill NGINX 1.31 Mainline Platform",
@@ -1211,8 +1211,8 @@
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0003",
-              "PYTHON_SOURCE_SHA256": "f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d",
-              "PYTHON_VERSION": "3.13.16",
+              "PYTHON_SOURCE_SHA256": "6020bd10aff3bf4821be16f088ebb1591beb7b811dcd8fab1da8f7c22a7b27e7",
+              "PYTHON_VERSION": "3.13.17",
               "PYTHON_VERSION_LINE": "3.13"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -1221,7 +1221,7 @@
       },
       "key": "python",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.13.16",
+      "productVersion": "3.13.17",
       "status": "candidate",
       "targetId": "python-3.13",
       "title": "Indian Hill Python 3.13 Runtime",
@@ -1338,7 +1338,7 @@
           "hardened": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0016",
-              "PYTHON_VERSION": "3.14.8",
+              "PYTHON_VERSION": "3.14.9",
               "PYTHON_VERSION_LINE": "3.14"
             },
             "dockerfile": "images/python/config/Dockerfile.hardened"
@@ -1346,8 +1346,8 @@
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0016",
-              "PYTHON_SOURCE_SHA256": "c2215904f02b175596dc49351585104f4bc20341e1c47378b26a2c274360ce73",
-              "PYTHON_VERSION": "3.14.8",
+              "PYTHON_SOURCE_SHA256": "e02d9ac21cebda6e46435369744a92c65cc7cd8669697694122cf97ffacd1e53",
+              "PYTHON_VERSION": "3.14.9",
               "PYTHON_VERSION_LINE": "3.14"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -1356,7 +1356,7 @@
       },
       "key": "python-3-14",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.14.8",
+      "productVersion": "3.14.9",
       "status": "candidate",
       "targetId": "python-3.14",
       "title": "Indian Hill Python 3.14 Runtime",
@@ -1383,7 +1383,7 @@
           "hardened": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0017",
-              "PYTHON_VERSION": "3.15.0",
+              "PYTHON_VERSION": "3.15.1",
               "PYTHON_VERSION_LINE": "3.15"
             },
             "dockerfile": "images/python/config/Dockerfile.hardened"
@@ -1391,8 +1391,8 @@
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0017",
-              "PYTHON_SOURCE_SHA256": "ba4bed1ba346b916890b76d9e320451420aa69f6408997d33c66482eeae3d575",
-              "PYTHON_VERSION": "3.15.0",
+              "PYTHON_SOURCE_SHA256": "673ae7232d84c894729882c8257d300ef2d26523911bfd3917ec8ce7f526f99b",
+              "PYTHON_VERSION": "3.15.1",
               "PYTHON_VERSION_LINE": "3.15"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -1401,7 +1401,7 @@
       },
       "key": "python-3-15",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.15.0",
+      "productVersion": "3.15.1",
       "status": "candidate",
       "targetId": "python-3.15",
       "title": "Indian Hill Python 3.15 Runtime",

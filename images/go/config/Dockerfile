@@ -2,7 +2,7 @@
 # The compiler and every application executable are supplied separately.
 FROM mcr.microsoft.com/dotnet/runtime-deps:10.0.11-noble-chiseled-amd64@sha256:854aabebc630c23bfc0d67c09f06dda4fbce8a846ae6e040f4b2a382bb3c4653 AS trust
 FROM scratch
-ARG GO_PRODUCT_VERSION=1.27.2
+ARG GO_PRODUCT_VERSION=1.27.3
 ARG GO_ARTIFACT_ID=IHL-CTR-0010
 ARG OCI_REVISION
 ARG OCI_CREATED

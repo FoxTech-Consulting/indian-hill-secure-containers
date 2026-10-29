@@ -1,7 +1,7 @@
 # This minimal standard-library application is a test consumer for the
 # reusable Python runtime. It adds no interpreter, package manager, shell, or
 # third-party dependency to the selected assurance-tier base image.
-ARG RUNTIME_BASE=ihl/python:3.13.16-secure-lab.1
+ARG RUNTIME_BASE=ihl/python:3.13.17-secure-lab.1
 ARG ASSURANCE_LEVEL=secure
 FROM ${RUNTIME_BASE}
 

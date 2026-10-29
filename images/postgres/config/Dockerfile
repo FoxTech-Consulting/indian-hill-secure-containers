@@ -44,7 +44,6 @@ ENV PATH="/opt/parser-tools/bin:${PATH}"
 COPY --from=parser-build /opt/parser-tools /opt/parser-tools
 COPY --from=openssl-supported-base-build /opt/openssl /opt/openssl
 ADD --checksum=sha256:${POSTGRES_SOURCE_SHA256} https://ftp.postgresql.org/pub/source/v${POSTGRES_VERSION}/postgresql-${POSTGRES_VERSION}.tar.gz /tmp/postgresql.tar.gz
-COPY images/postgres/config/ihl-postgres-entrypoint.c /tmp/ihl-postgres-entrypoint.c
 RUN set -eu; \
     printf '%s  %s\n' "$POSTGRES_SOURCE_SHA256" /tmp/postgresql.tar.gz | sha256sum --check --strict; \
     [ "${POSTGRES_VERSION%%.*}" = "$POSTGRES_VERSION_LINE" ]; \
@@ -70,11 +69,15 @@ RUN set -eu; \
     install -m 0644 COPYRIGHT /opt/postgresql/share/licenses/COPYRIGHT; \
     LD_LIBRARY_PATH=/opt/openssl/lib /opt/postgresql/bin/postgres --version | grep -Fx "postgres (PostgreSQL) $POSTGRES_VERSION"; \
     for tool in clusterdb createdb createuser dropdb dropuser pg_amcheck pg_basebackup pg_bench pg_config pg_ctl pg_dump pg_dumpall pg_isready pg_receivewal pg_recvlogical pg_resetwal pg_restore pg_rewind pg_test_fsync pg_test_timing pg_upgrade pg_verifybackup pg_waldump psql reindexdb vacuumdb; do rm -f "/opt/postgresql/bin/$tool"; done; \
-    gcc -Os -fPIE -pie -Wl,-z,relro,-z,now -o /usr/local/bin/ihl-postgres-entrypoint /tmp/ihl-postgres-entrypoint.c; \
     ldd /opt/postgresql/bin/postgres > /tmp/postgres-linkage.txt; \
     ! grep -F 'not found' /tmp/postgres-linkage.txt; \
     grep -F '/opt/openssl/lib/libssl.so.3' /tmp/postgres-linkage.txt; \
     grep -F '/opt/openssl/lib/libcrypto.so.3' /tmp/postgres-linkage.txt
+
+# Entrypoint changes must not invalidate the checksum-pinned PostgreSQL build.
+COPY images/postgres/config/ihl-postgres-entrypoint.c /tmp/ihl-postgres-entrypoint.c
+RUN set -eu; \
+    gcc -Os -fPIE -pie -Wl,-z,relro,-z,now -o /usr/local/bin/ihl-postgres-entrypoint /tmp/ihl-postgres-entrypoint.c
 
 FROM ${POSTGRES_BASE}
 ARG POSTGRES_VERSION

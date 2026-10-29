@@ -1,10 +1,10 @@
 # Hardened remains an additive child of the exact Secure digest. It adds
 # Python runtime safety defaults without adding a shell, package manager, or
 # unreviewed dependencies.
-ARG SECURE_BASE=ihl/python:3.13.16-secure-lab.1
+ARG SECURE_BASE=ihl/python:3.13.17-secure-lab.1
 FROM ${SECURE_BASE}
 
-ARG PYTHON_VERSION=3.13.16
+ARG PYTHON_VERSION=3.13.17
 ARG PYTHON_VERSION_LINE=3.13
 ARG PYTHON_ARTIFACT_ID=IHL-CTR-0003
 

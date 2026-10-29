@@ -28,7 +28,6 @@ ARG REDIS_VERSION_LINE
 ARG REDIS_ARTIFACT_ID
 COPY --from=openssl-supported-base-build /opt/openssl /opt/openssl
 ADD --checksum=sha256:${REDIS_SOURCE_SHA256} https://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz /tmp/redis.tar.gz
-COPY images/redis/config/redis.secure.conf /tmp/redis.secure.conf
 RUN set -eu; \
     printf '%s  %s\n' "$REDIS_SOURCE_SHA256" /tmp/redis.tar.gz | sha256sum --check --strict; \
     [ "${REDIS_VERSION%.*}" = "$REDIS_VERSION_LINE" ]; \
@@ -46,7 +45,11 @@ RUN set -eu; \
     ldd src/redis-server > /tmp/redis-linkage.txt; \
     ! grep -F 'not found' /tmp/redis-linkage.txt; \
     grep -F '/opt/openssl/lib/libssl.so.3' /tmp/redis-linkage.txt; \
-    grep -F '/opt/openssl/lib/libcrypto.so.3' /tmp/redis-linkage.txt; \
+    grep -F '/opt/openssl/lib/libcrypto.so.3' /tmp/redis-linkage.txt
+
+# Configuration edits must not invalidate the checksum-pinned native build.
+COPY images/redis/config/redis.secure.conf /tmp/redis.secure.conf
+RUN set -eu; \
     cp /tmp/redis.secure.conf /out/opt/ihl/redis/redis.conf; \
     if [ "$REDIS_VERSION_LINE" = "6.2" ]; then \
       sed -i '/^enable-protected-configs /d; /^enable-debug-command /d; /^enable-module-command /d' /out/opt/ihl/redis/redis.conf; \
