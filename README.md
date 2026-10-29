@@ -38,14 +38,14 @@ For example, pull the verified NGINX previews by immutable digest:
 docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:3c6c7fc2629e9f666d7c852b4a3c8a96cda275c598bf0680b245ca7e3b2fca7b
 
 # Hardened NGINX
-docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:b171dcdcc5395a27d91a7eb9ec8d37b89dc42d28ba16ce92f31f6f1aaa43e3a7
+docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:65c01c555b418bef7d107d466cc186c3970740511dba9972a28015ecbd17ca4f
 ```
 <!-- END VERIFIED PULL EXAMPLES -->
 
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-10-29 23:05 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-10-29 23:33 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -73,7 +73,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224518Z` | `IHL-Java-27-20261018T234334Z-Hardened` |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221458Z` | `IHL-Java-8.0.504-20261019T033111Z-Hardened` |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | `IHL-Java-8.0.504-20261018T233614Z-Hardened` |
-| NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261029T225542Z` | `IHL-NGINX-1.30.6-20261029T151230Z-Hardened` |
+| NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261029T225542Z` | `IHL-NGINX-1.30.6-20261029T231228Z-Hardened` |
 | NGINX 1.31.8 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.8-20261029T230301Z` | `IHL-NGINX-1.31.8-20261029T154247Z-Hardened` |
 | Node.js 24.22.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.22.0-20261018T120226Z` | `IHL-Node-24.22.0-20261019T032957Z-Hardened` |
 | Node.js 22.23.3 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-22.23.3-20261018T084620Z` | `IHL-Node-22.23.3-20261018T235447Z-Hardened` |
