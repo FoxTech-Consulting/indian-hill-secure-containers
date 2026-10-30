@@ -14,6 +14,13 @@ GitLab remains the authoritative build and qualification system. This repository
 
 `public-products.json` lists the exact versions and build paths in this snapshot. Current sources target **Linux on AMD64 (`linux/amd64`)**. They do not establish ARM64 support. Java's private qualification sample is omitted; its runtime sources remain available.
 
+Container families can publish independently from their own GitLab repositories.
+The shared catalog accepts their verified publication receipts and preserves each
+image's original producer, source revision, qualification evidence, and digest.
+The website uses this same GitHub catalog and immutable source snapshot. Catalog
+refreshes do not rebuild containers. Unchanged public content needs no new
+website deployment.
+
 Prebuilt images, when published, are distributed through GitHub Container Registry. A source snapshot or a proposed registry name is not evidence that a package is available. Use only a published release or preview record that supplies all of the following:
 
 - the public image location and immutable `sha256` digest;
