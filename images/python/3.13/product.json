@@ -1,0 +1,52 @@
+{
+  "assessmentTiers": [
+    "secure",
+    "hardened",
+    "validated"
+  ],
+  "family": "python",
+  "id": "IHL-CTR-0003",
+  "image": {
+    "repository": "python",
+    "tiers": {
+      "hardened": {
+        "buildArgs": {
+          "PYTHON_ARTIFACT_ID": "IHL-CTR-0003",
+          "PYTHON_VERSION": "3.13.18",
+          "PYTHON_VERSION_LINE": "3.13"
+        },
+        "dockerfile": "images/python/config/Dockerfile.hardened"
+      },
+      "secure": {
+        "buildArgs": {
+          "PYTHON_ARTIFACT_ID": "IHL-CTR-0003",
+          "PYTHON_SOURCE_SHA256": "abb0102e6d4ae027509bcb82327d9dd85515b44a3ba8ad538cfc5e9847029f68",
+          "PYTHON_VERSION": "3.13.18",
+          "PYTHON_VERSION_LINE": "3.13"
+        },
+        "dockerfile": "images/python/config/Dockerfile"
+      },
+      "validated": {
+        "buildArgs": {
+          "PYTHON_ARTIFACT_ID": "IHL-CTR-0003",
+          "PYTHON_VERSION": "3.13.18",
+          "PYTHON_VERSION_LINE": "3.13"
+        },
+        "dockerfile": "images/python/config/Dockerfile.validated"
+      }
+    }
+  },
+  "key": "python",
+  "productVersion": "3.13.18",
+  "targetId": "python-3.13",
+  "title": "Indian Hill Python 3.13 Runtime",
+  "versionLine": "3.13",
+  "workloads": [
+    {
+      "dockerfile": "images/python/examples/reference-api/Dockerfile",
+      "id": "IHL-APP-0002",
+      "key": "python-reference-api",
+      "repository": "python-reference-api"
+    }
+  ]
+}
