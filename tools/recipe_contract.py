@@ -42,7 +42,7 @@ def image_build_args(product: dict, tier: str, recipe: dict | None = None) -> di
             raise ValueError("Hardened image buildArgs require exact version and identity pins")
         return {}
     prefix = PREFIXES.get(family)
-    if tier not in {"secure", "hardened"} or not prefix:
+    if (tier not in {"secure", "hardened"} and not (family == "python" and tier == "validated")) or not prefix:
         raise ValueError("image buildArgs are restricted to reviewed Secure/Hardened family recipes")
     required = {prefix + suffix for suffix in ("_VERSION", "_VERSION_LINE", "_ARTIFACT_ID")}
     if tier == "secure":

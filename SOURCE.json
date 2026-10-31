@@ -57,8 +57,8 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "25359c6bb848fa269a4a690d4d45762ce5134c665462729ec14fae6062cab3d6",
-      "size": 23020
+      "sha256": "6e41acf8fc7f0c7149abb91eae597de3d711ac7d4407c31640c2de0d3da012e3",
+      "size": 23018
     },
     {
       "mode": "100644",
@@ -68,15 +68,45 @@
     },
     {
       "mode": "100644",
+      "path": "cis-reports/4cc5f0aa247ecb480a3574b2f662e7d5b5e5953cc809fc6f7eea0f280767b396.json",
+      "sha256": "10b36d7adf122e02587befa6a7327bcfd141834b2a6298b058d417ccee96ec23",
+      "size": 363668
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/69c85ae8d064ff9a24701b45cc8225e078f99bede927ab9b849b788111062927.json",
+      "sha256": "19080e8db9b7f925efaeb8b366fd2c0bda67e4b3e8115dc6beedc9177e1eda07",
+      "size": 363666
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/6aeca2d33af8e6e3fab82219922d4a6d087bba27394bdee8f9fbcd039099e2c6.json",
+      "sha256": "ef720863195668d87fcb238c2043500dca3922c7b42d66231c575e1e27f72eb6",
+      "size": 363598
+    },
+    {
+      "mode": "100644",
       "path": "cis-reports/7efb4017769b20b7e8064da53fa787b0336390a02b937ee30269896746fcdecd.json",
       "sha256": "bf81c51837bd29210ff85ad23fc0d0108fc9a706270fe574a2a883842266052d",
       "size": 363564
     },
     {
       "mode": "100644",
+      "path": "cis-reports/ad62246ed125addb007c3a3d13dda3591f196eed4f79d1b2272fd006de557d79.json",
+      "sha256": "90a647779944f06492ef1a44156a16fd652b5a6dcb12eda6b50f09e2e36ea64c",
+      "size": 363668
+    },
+    {
+      "mode": "100644",
       "path": "cis-reports/ec0e3570a0dd7e586967dada6d143bdd6f6db53e829bd7ff167ed2782bb5abf3.json",
       "sha256": "775373399265b5a2afe6d07da69b91b47f7c0d27b6607e54ab0a9a880c7fa907",
       "size": 363690
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/fee3bb848ec295924b62d585368c7d5a03c0461c53b3c01bac2ebd5c741dd940.json",
+      "sha256": "50d8e2514d78444469ffa4c5f6cee93e4beced33190eef91cad22dd1718d0be1",
+      "size": 363668
     },
     {
       "mode": "100644",
@@ -615,26 +645,26 @@
     {
       "mode": "100644",
       "path": "images/python/config/Dockerfile",
-      "sha256": "107e63ad08783871407deb9d35f0e903a5c4514c15e92636de5faf9f83305366",
+      "sha256": "6004c66f0bc96dde5beb420cc247354c2d8ea981afbaf81e989a5163ffc59673",
       "size": 8782
     },
     {
       "mode": "100644",
       "path": "images/python/config/Dockerfile.hardened",
-      "sha256": "7fa88fdf7c2f195fc2667b10b528d8ebb88920feb751ce49a315fc8d824119e9",
+      "sha256": "0c54227cc38d005323335a924f952fb6c608ed3ac642df1532eacee10300b9b5",
       "size": 1707
     },
     {
       "mode": "100644",
       "path": "images/python/config/source-releases.json",
-      "sha256": "2fdf303061b2f14af678af6030d012fae7fb8fa2438bca3c802eea5627bdfb7e",
-      "size": 2008
+      "sha256": "b6f73a02bcb3172c9f2e3343aef3e516898b6f8db696ce5bf62fb041d3b02e8c",
+      "size": 2089
     },
     {
       "mode": "100644",
       "path": "images/python/examples/reference-api/Dockerfile",
-      "sha256": "0e08c140158c2ad64370585b8b049ebc564e0c85211f7b012c9d88bb55eaee1c",
-      "size": 1127
+      "sha256": "ff3883abb396208d008b03fdb25b259985ce9ce7502def97e1f8f64ea46b4f82",
+      "size": 1388
     },
     {
       "mode": "100644",
@@ -741,14 +771,14 @@
     {
       "mode": "100644",
       "path": "public-products.json",
-      "sha256": "a334f5c89189711404858bea45829c0d9f6a905626ff9ee388bd1184831e82de",
-      "size": 61249
+      "sha256": "9b7397d94c7a3d823cf4542b17ad458f7a6b724bdf2556c5fc59b5783a895dc1",
+      "size": 61506
     },
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "9780dfce54ed3291e9266abc2ae810bce260975b42dbed02e6f17922b4706479",
-      "size": 402340
+      "sha256": "a215cde1333f2dad973acb453511427f41d5f527f36037ee9ddaa9bc5e94b4ad",
+      "size": 400116
     },
     {
       "mode": "100755",
@@ -759,8 +789,8 @@
     {
       "mode": "100644",
       "path": "tools/recipe_contract.py",
-      "sha256": "190a8b91247ea9af541f30b11653c036ed9f4693dbcffde299968e736e1c0e56",
-      "size": 6012
+      "sha256": "c3c019c51504ff58d717b8f51c87c800f17744a5e20a73611b65d7c1767176da",
+      "size": 6067
     }
   ],
   "license": "Apache-2.0",
@@ -1966,19 +1996,28 @@
       "workloads": []
     },
     {
+      "assessmentTiers": [
+        "secure",
+        "hardened"
+      ],
       "family": "python",
       "id": "IHL-CTR-0003",
       "image": {
         "repository": "python",
         "tiers": {
           "hardened": {
+            "buildArgs": {
+              "PYTHON_ARTIFACT_ID": "IHL-CTR-0003",
+              "PYTHON_VERSION": "3.13.18",
+              "PYTHON_VERSION_LINE": "3.13"
+            },
             "dockerfile": "images/python/config/Dockerfile.hardened"
           },
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0003",
-              "PYTHON_SOURCE_SHA256": "6020bd10aff3bf4821be16f088ebb1591beb7b811dcd8fab1da8f7c22a7b27e7",
-              "PYTHON_VERSION": "3.13.17",
+              "PYTHON_SOURCE_SHA256": "abb0102e6d4ae027509bcb82327d9dd85515b44a3ba8ad538cfc5e9847029f68",
+              "PYTHON_VERSION": "3.13.18",
               "PYTHON_VERSION_LINE": "3.13"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -1987,7 +2026,7 @@
       },
       "key": "python",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.13.17",
+      "productVersion": "3.13.18",
       "status": "candidate",
       "targetId": "python-3.13",
       "title": "Indian Hill Python 3.13 Runtime",
@@ -2014,7 +2053,7 @@
           "hardened": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0014",
-              "PYTHON_VERSION": "3.11.17",
+              "PYTHON_VERSION": "3.11.18",
               "PYTHON_VERSION_LINE": "3.11"
             },
             "dockerfile": "images/python/config/Dockerfile.hardened"
@@ -2022,8 +2061,8 @@
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0014",
-              "PYTHON_SOURCE_SHA256": "bfb74ad39efae27cda510f134ab408e00f9992c56851cfc0b1cdb5646da11599",
-              "PYTHON_VERSION": "3.11.17",
+              "PYTHON_SOURCE_SHA256": "9120e0a653868f6e3698d36cdd99e5a58903ec9469e448f21d98f7b16d8fa290",
+              "PYTHON_VERSION": "3.11.18",
               "PYTHON_VERSION_LINE": "3.11"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -2032,7 +2071,7 @@
       },
       "key": "python-3-11",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.11.17",
+      "productVersion": "3.11.18",
       "status": "candidate",
       "targetId": "python-3.11",
       "title": "Indian Hill Python 3.11 Runtime",
@@ -2059,7 +2098,7 @@
           "hardened": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0015",
-              "PYTHON_VERSION": "3.12.15",
+              "PYTHON_VERSION": "3.12.16",
               "PYTHON_VERSION_LINE": "3.12"
             },
             "dockerfile": "images/python/config/Dockerfile.hardened"
@@ -2067,8 +2106,8 @@
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0015",
-              "PYTHON_SOURCE_SHA256": "c2c4321961fab0fb999d66e0cecf521c2ab3994c7992873ea99e306c1094fd5a",
-              "PYTHON_VERSION": "3.12.15",
+              "PYTHON_SOURCE_SHA256": "b5796915dc45ff745cfb4e990a7e7c93d6f546328a102ce31448d69ebc37575c",
+              "PYTHON_VERSION": "3.12.16",
               "PYTHON_VERSION_LINE": "3.12"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -2077,7 +2116,7 @@
       },
       "key": "python-3-12",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.12.15",
+      "productVersion": "3.12.16",
       "status": "candidate",
       "targetId": "python-3.12",
       "title": "Indian Hill Python 3.12 Runtime",
@@ -2104,7 +2143,7 @@
           "hardened": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0016",
-              "PYTHON_VERSION": "3.14.9",
+              "PYTHON_VERSION": "3.14.10",
               "PYTHON_VERSION_LINE": "3.14"
             },
             "dockerfile": "images/python/config/Dockerfile.hardened"
@@ -2112,8 +2151,8 @@
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0016",
-              "PYTHON_SOURCE_SHA256": "e02d9ac21cebda6e46435369744a92c65cc7cd8669697694122cf97ffacd1e53",
-              "PYTHON_VERSION": "3.14.9",
+              "PYTHON_SOURCE_SHA256": "de414a57119abef52784d8993e341d53aed635fc2b05c2607d9f98a2c5b72032",
+              "PYTHON_VERSION": "3.14.10",
               "PYTHON_VERSION_LINE": "3.14"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -2122,7 +2161,7 @@
       },
       "key": "python-3-14",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.14.9",
+      "productVersion": "3.14.10",
       "status": "candidate",
       "targetId": "python-3.14",
       "title": "Indian Hill Python 3.14 Runtime",
@@ -2149,7 +2188,7 @@
           "hardened": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0017",
-              "PYTHON_VERSION": "3.15.1",
+              "PYTHON_VERSION": "3.15.2",
               "PYTHON_VERSION_LINE": "3.15"
             },
             "dockerfile": "images/python/config/Dockerfile.hardened"
@@ -2157,8 +2196,8 @@
           "secure": {
             "buildArgs": {
               "PYTHON_ARTIFACT_ID": "IHL-CTR-0017",
-              "PYTHON_SOURCE_SHA256": "673ae7232d84c894729882c8257d300ef2d26523911bfd3917ec8ce7f526f99b",
-              "PYTHON_VERSION": "3.15.1",
+              "PYTHON_SOURCE_SHA256": "8b5536d280142ecf6cdfe15d12a21ba1c65e300bbf7b28a8d0cdb849575797de",
+              "PYTHON_VERSION": "3.15.2",
               "PYTHON_VERSION_LINE": "3.15"
             },
             "dockerfile": "images/python/config/Dockerfile"
@@ -2167,7 +2206,7 @@
       },
       "key": "python-3-15",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "3.15.1",
+      "productVersion": "3.15.2",
       "status": "candidate",
       "targetId": "python-3.15",
       "title": "Indian Hill Python 3.15 Runtime",
@@ -2625,7 +2664,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "774e15d5703ee9d66f2f117890e13f50d66d12d4",
+  "sourceRevision": "61ac95657224ee444c3da412de51ebc2682540d3",
   "tiers": [
     "secure",
     "hardened"
