@@ -52,7 +52,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ca630
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-11-01 20:16 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-11-01 20:23 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -70,10 +70,10 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261101T200541Z` | `IHL-Java-11.0.32.1-20261019T033233Z-Hardened` |
 | Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261101T200751Z` | `IHL-Java-11.0.32.1-20261018T233752Z-Hardened` |
 | Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261101T201017Z` | `IHL-Java-17.0.20.1-20261019T033357Z-Hardened` |
-| Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261010T222713Z` | `IHL-Java-17.0.20.1-20261018T233928Z-Hardened` |
+| Java 17.0.20.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-17.0.20.1-20261101T201628Z` | `IHL-Java-17.0.20.1-20261018T233928Z-Hardened` |
 | Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261101T201404Z` | `IHL-Java-21.0.12.1-20261019T034138Z-Hardened` |
-| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223358Z` | `IHL-Java-25.0.4.1-20261019T033518Z-Hardened` |
-| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261010T223527Z` | `IHL-Java-25.0.4.1-20261018T234049Z-Hardened` |
+| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261101T201847Z` | `IHL-Java-25.0.4.1-20261019T033518Z-Hardened` |
+| Java 25.0.4.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-25.0.4.1-20261101T202103Z` | `IHL-Java-25.0.4.1-20261018T234049Z-Hardened` |
 | Java 26.0.2.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224015Z` | `IHL-Java-26.0.2.1-20261019T033656Z-Hardened` |
 | Java 26.0.2.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-26.0.2.1-20261010T224212Z` | `IHL-Java-26.0.2.1-20261018T234210Z-Hardened` |
 | Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261010T224344Z` | `IHL-Java-27-20261019T033821Z-Hardened` |
@@ -109,7 +109,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 "Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
-82 runtime records include signed public source bindings; 9 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+85 runtime records include signed public source bindings; 6 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
