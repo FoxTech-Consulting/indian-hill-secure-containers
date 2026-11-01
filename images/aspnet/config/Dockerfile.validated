@@ -1,0 +1,200 @@
+# The builder uses the GCC version identified for the Ubuntu tested
+# configuration in CMVP certificate 4985's Security Policy. It is disposable;
+# only the explicitly copied OpenSSL runtime boundary enters the final image.
+ARG FIPS_BUILDER=docker.io/library/gcc:11.2.0@sha256:2c5cae6b84598eb6865d6c7b340deef80e8834a4c4037a5cbba755a5258809d4
+ARG HARDENED_BASE=ihl/aspnet-runtime:10.0.14-hardened-lab.1
+FROM ${FIPS_BUILDER} AS openssl-fips-module-build
+
+ARG FIPS_BUILDER
+ARG OPENSSL_VERSION=3.1.2
+ARG OPENSSL_SOURCE_SHA256=a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539
+
+# BuildKit verifies the official OpenSSL release archive before exposing it to
+# the build. The hash is the one published by the OpenSSL Project for 3.1.2.
+ADD --checksum=sha256:a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539 \
+    https://www.openssl.org/source/openssl-3.1.2.tar.gz \
+    /tmp/openssl-3.1.2.tar.gz
+
+RUN set -eu; \
+    run_logged() { \
+      log="$1"; shift; \
+      if ! "$@" >"$log" 2>&1; then \
+        printf 'ERROR: OpenSSL build command failed: %s\\n' "$*" >&2; \
+        tail -n 250 "$log" >&2; \
+        exit 1; \
+      fi; \
+    }; \
+    printf '%s  %s\n' "$OPENSSL_SOURCE_SHA256" /tmp/openssl-3.1.2.tar.gz \
+      | sha256sum --check --strict; \
+    tar --extract --gzip --file /tmp/openssl-3.1.2.tar.gz --directory /tmp; \
+    cd "/tmp/openssl-$OPENSSL_VERSION"; \
+    run_logged /tmp/openssl-fips-configure.log ./Configure \
+      enable-fips \
+      --prefix=/opt/openssl \
+      --openssldir=/opt/openssl/ssl \
+      --libdir=lib; \
+    run_logged /tmp/openssl-fips-build.log make -j2; \
+    run_logged /tmp/openssl-fips-install.log make install; \
+    install -d -m 0755 /opt/openssl/share/licenses/openssl; \
+    install -m 0644 LICENSE.txt /opt/openssl/share/licenses/openssl/LICENSE.txt; \
+    printf 'OpenSSL FIPS Provider %s build and installation completed.\n' "$OPENSSL_VERSION"
+
+# The validated provider is copied unchanged into a separately built,
+# supported OpenSSL base library. The provider and base library have distinct
+# support and validation identities; the base build must not create or use its
+# own, non-validated FIPS provider.
+FROM ${FIPS_BUILDER} AS openssl-supported-base-build
+
+# Selected Hardened retains this material without running FIPS qualification probes.
+ARG IHL_FIPS_BUILD_VALIDATION=true
+
+ARG FIPS_BUILDER
+ARG OPENSSL_BASE_VERSION=3.5.9
+ARG OPENSSL_BASE_SOURCE_SHA256=603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a
+
+ADD --checksum=sha256:603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a \
+    https://www.openssl.org/source/openssl-3.5.9.tar.gz \
+    /tmp/openssl-3.5.9.tar.gz
+
+RUN set -eu; \
+    run_logged() { \
+      log="$1"; shift; \
+      if ! "$@" >"$log" 2>&1; then \
+        printf 'ERROR: OpenSSL build command failed: %s\\n' "$*" >&2; \
+        tail -n 250 "$log" >&2; \
+        exit 1; \
+      fi; \
+    }; \
+    printf '%s  %s\n' "$OPENSSL_BASE_SOURCE_SHA256" /tmp/openssl-3.5.9.tar.gz \
+      | sha256sum --check --strict; \
+    tar --extract --gzip --file /tmp/openssl-3.5.9.tar.gz --directory /tmp; \
+    cd "/tmp/openssl-$OPENSSL_BASE_VERSION"; \
+    run_logged /tmp/openssl-base-configure.log ./Configure \
+      no-fips \
+      --prefix=/opt/openssl \
+      --openssldir=/opt/openssl/ssl \
+      --libdir=lib; \
+    run_logged /tmp/openssl-base-build.log make -j2; \
+    run_logged /tmp/openssl-base-install.log make install_sw install_ssldirs; \
+    install -d -m 0755 /opt/openssl/share/licenses/openssl; \
+    install -m 0644 LICENSE.txt /opt/openssl/share/licenses/openssl/LICENSE.txt; \
+    printf 'OpenSSL base library %s build and installation completed.\n' "$OPENSSL_BASE_VERSION"
+
+COPY --from=openssl-fips-module-build \
+    /opt/openssl/lib/ossl-modules/fips.so \
+    /opt/openssl/lib/ossl-modules/fips.so
+
+# Generate the integrity configuration with the supported base library and the
+# unchanged validated provider. Omitting the installation-status fields forces
+# the KATs to run every time the provider is loaded.
+RUN set -eu; \
+    LD_LIBRARY_PATH=/opt/openssl/lib \
+      /opt/openssl/bin/openssl fipsinstall \
+        -module /opt/openssl/lib/ossl-modules/fips.so \
+        -out /opt/openssl/ssl/fipsmodule.cnf \
+        -provider_name fips \
+        -section_name fips_sect \
+        -pedantic \
+        -self_test_onload; \
+    ! grep -Eq '^(install-status|install-mac)[[:space:]]*=' \
+      /opt/openssl/ssl/fipsmodule.cnf
+
+COPY images/aspnet/config/fips/openssl-fips.cnf /opt/openssl/ssl/openssl-fips.cnf
+
+# Explicit Validated builds also require provider self-tests, approved SHA-256,
+# and MD5 rejection. The selected Hardened build retains configuration and
+# provenance without using these checks as an assessment gate.
+RUN set -eu; \
+    export LD_LIBRARY_PATH=/opt/openssl/lib; \
+    export OPENSSL_CONF=/opt/openssl/ssl/openssl-fips.cnf; \
+    export OPENSSL_MODULES=/opt/openssl/lib/ossl-modules; \
+    case "$IHL_FIPS_BUILD_VALIDATION" in true|false) ;; *) \
+      echo 'ERROR: IHL_FIPS_BUILD_VALIDATION must be true or false.' >&2; exit 1 ;; esac; \
+    if [ "$IHL_FIPS_BUILD_VALIDATION" = true ]; then \
+      /opt/openssl/bin/openssl fipsinstall -config "$OPENSSL_CONF"; \
+      /opt/openssl/bin/openssl list -providers -verbose \
+        | grep -Eq 'OpenSSL FIPS Provider'; \
+      printf 'Indian Hill Labs FIPS build probe\n' \
+        | /opt/openssl/bin/openssl dgst -sha256 > /dev/null; \
+      if printf 'prohibited algorithm probe\n' \
+        | /opt/openssl/bin/openssl dgst -md5 > /dev/null 2>&1; then \
+          echo 'ERROR: MD5 resolved while fips=yes was enforced.' >&2; \
+          exit 1; \
+      fi; \
+    fi; \
+    install -d -m 0755 /opt/openssl/share/indianhilllabs; \
+    { \
+      printf 'fipsBuildValidation=%s\n' "$IHL_FIPS_BUILD_VALIDATION"; \
+      printf 'builder=%s\n' "$FIPS_BUILDER"; \
+      printf 'moduleSourceVersion=3.1.2\n'; \
+      printf 'moduleSourceArchiveSha256=a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539\n'; \
+      printf 'baseLibrarySourceVersion=%s\n' "$OPENSSL_BASE_VERSION"; \
+      printf 'baseLibrarySourceArchiveSha256=%s\n' "$OPENSSL_BASE_SOURCE_SHA256"; \
+      gcc --version | sed -n '1p'; \
+      perl -v | sed -n '2p'; \
+      make --version | sed -n '1p'; \
+      /opt/openssl/bin/openssl version -a; \
+      sha256sum /opt/openssl/lib/ossl-modules/fips.so; \
+      sha256sum /opt/openssl/ssl/fipsmodule.cnf; \
+      sha256sum /opt/openssl/ssl/openssl-fips.cnf; \
+    } > /opt/openssl/share/indianhilllabs/fips-build-info.txt
+
+# The Validated runtime is an additive child of the exact Hardened runtime
+# produced and digest-bound in the same pipeline.
+FROM ${HARDENED_BASE}
+
+ARG ASPNET_VERSION=10.0.14
+ARG ASPNET_VERSION_LINE=10
+ARG ASPNET_ARTIFACT_ID=IHL-CTR-0001
+ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
+ARG OCI_REVISION="manual-build"
+ARG OCI_CREATED="1970-01-01T00:00:00Z"
+
+LABEL org.opencontainers.image.title="Indian Hill Validated ASP.NET ${ASPNET_VERSION_LINE} Runtime" \
+      org.opencontainers.image.description="Hardened ASP.NET ${ASPNET_VERSION_LINE} runtime with the validated OpenSSL FIPS Provider 3.1.2 and supported OpenSSL 3.5.9 LTS base library" \
+      org.opencontainers.image.version="${ASPNET_VERSION}-validated-lab.1" \
+      org.opencontainers.image.vendor="Indian Hill Labs" \
+      org.opencontainers.image.licenses="MIT AND Apache-2.0" \
+      org.opencontainers.image.source="${OCI_SOURCE}" \
+      org.opencontainers.image.revision="${OCI_REVISION}" \
+      org.opencontainers.image.created="${OCI_CREATED}" \
+      com.indianhilllabs.artifact.id="${ASPNET_ARTIFACT_ID}" \
+      com.indianhilllabs.standard="IHL-SCS-001-v0.1-draft" \
+      com.indianhilllabs.assurance.level="validated" \
+      com.indianhilllabs.assurance.inherits="hardened" \
+      com.indianhilllabs.assurance.cis-profile="ihl-ubuntu2404-chiseled-cis-level1-tailored" \
+      com.indianhilllabs.assurance.stig-profile="ihl-ubuntu2404-chiseled-stig-tailored" \
+      com.indianhilllabs.crypto.standard="FIPS 140-3" \
+      com.indianhilllabs.crypto.module="OpenSSL FIPS Provider 3.1.2" \
+      com.indianhilllabs.crypto.cmvp-certificate="4985" \
+      com.indianhilllabs.crypto.base-library="OpenSSL 3.5.9"
+
+COPY --from=openssl-supported-base-build /opt/openssl/lib/libcrypto.so.3 /opt/openssl/lib/libcrypto.so.3
+COPY --from=openssl-supported-base-build /opt/openssl/lib/libssl.so.3 /opt/openssl/lib/libssl.so.3
+COPY --from=openssl-supported-base-build /opt/openssl/lib/ossl-modules/fips.so /opt/openssl/lib/ossl-modules/fips.so
+COPY --from=openssl-supported-base-build /opt/openssl/ssl/fipsmodule.cnf /opt/openssl/ssl/fipsmodule.cnf
+COPY --from=openssl-supported-base-build /opt/openssl/ssl/openssl-fips.cnf /opt/openssl/ssl/openssl-fips.cnf
+COPY --from=openssl-supported-base-build /opt/openssl/share/indianhilllabs/fips-build-info.txt /opt/openssl/share/indianhilllabs/fips-build-info.txt
+COPY --from=openssl-supported-base-build /opt/openssl/share/licenses/openssl/LICENSE.txt /opt/openssl/share/licenses/openssl/LICENSE.txt
+
+ENV IHL_ASSURANCE_LEVEL="validated" \
+    IHL_FIPS_STANDARD="FIPS 140-3" \
+    IHL_FIPS_MODULE_NAME="OpenSSL FIPS Provider" \
+    IHL_FIPS_MODULE_VERSION="3.1.2" \
+    IHL_FIPS_CMVP_CERTIFICATE="4985" \
+    IHL_FIPS_SOURCE_SHA256="a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539" \
+    IHL_OPENSSL_BASE_NAME="OpenSSL" \
+    IHL_OPENSSL_BASE_VERSION="3.5.9" \
+    IHL_OPENSSL_BASE_SOURCE_SHA256="603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a" \
+    LD_LIBRARY_PATH="/opt/openssl/lib" \
+    OPENSSL_CONF="/opt/openssl/ssl/openssl-fips.cnf" \
+    OPENSSL_MODULES="/opt/openssl/lib/ossl-modules"
+
+# Repeat the inherited runtime contract so the Validated definition remains
+# reviewable without relying on implicit parent metadata.
+USER 1654:1654
+WORKDIR /app
+EXPOSE 8080
+ENTRYPOINT ["/usr/bin/dotnet"]
+CMD ["--info"]
+STOPSIGNAL SIGTERM

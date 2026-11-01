@@ -2,6 +2,11 @@
   "platform": "linux/amd64",
   "products": [
     {
+      "assessmentTiers": [
+        "secure",
+        "hardened",
+        "validated"
+      ],
       "family": "aspnet",
       "id": "IHL-CTR-0001",
       "image": {
@@ -12,6 +17,9 @@
           },
           "secure": {
             "dockerfile": "images/aspnet/config/Dockerfile"
+          },
+          "validated": {
+            "dockerfile": "images/aspnet/config/Dockerfile.validated"
           }
         }
       },
@@ -34,7 +42,8 @@
     {
       "assessmentTiers": [
         "secure",
-        "hardened"
+        "hardened",
+        "validated"
       ],
       "family": "aspnet",
       "id": "IHL-CTR-0012",
@@ -57,6 +66,14 @@
               "ASPNET_VERSION_LINE": "8"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
+          },
+          "validated": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
+              "ASPNET_VERSION": "8.0.33",
+              "ASPNET_VERSION_LINE": "8"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile.validated"
           }
         }
       },
@@ -79,7 +96,8 @@
     {
       "assessmentTiers": [
         "secure",
-        "hardened"
+        "hardened",
+        "validated"
       ],
       "family": "aspnet",
       "id": "IHL-CTR-0013",
@@ -102,6 +120,14 @@
               "ASPNET_VERSION_LINE": "9"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
+          },
+          "validated": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
+              "ASPNET_VERSION": "9.0.22",
+              "ASPNET_VERSION_LINE": "9"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile.validated"
           }
         }
       },
@@ -1867,6 +1893,7 @@
   "schemaVersion": 1,
   "tiers": [
     "secure",
-    "hardened"
+    "hardened",
+    "validated"
   ]
 }

@@ -57,8 +57,8 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "97e536719ef3106554108f052b8ca2476f3ffa8313c9760bfec667099729470c",
-      "size": 23017
+      "sha256": "6cafd7ba373947d38fcc8df5cfa4f053e19e265cfea6cbe8d61c0b6b1e40dd13",
+      "size": 23286
     },
     {
       "mode": "100644",
@@ -98,9 +98,27 @@
     },
     {
       "mode": "100644",
+      "path": "cis-reports/823e9b115f0be79f8cc58065e3aceb247d13d7f54f45043e4145eb69c64fb0ff.json",
+      "sha256": "82479b85fc98de55584b284873a2977d7ce94e3095a12e99fb758102d0f3d9ec",
+      "size": 363596
+    },
+    {
+      "mode": "100644",
       "path": "cis-reports/ad62246ed125addb007c3a3d13dda3591f196eed4f79d1b2272fd006de557d79.json",
       "sha256": "90a647779944f06492ef1a44156a16fd652b5a6dcb12eda6b50f09e2e36ea64c",
       "size": 363668
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/c79e295f66fcd8d8fd565dd71b2c7d9a2118e79abb6fec96e9e9975e736555ee.json",
+      "sha256": "cd5b75363f01459f558e983df8055aa73a6866a7812e6f62c6859f568d837218",
+      "size": 363621
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/fa1df21f9ddd922fd6e3ed9ce6311dcca90a06a91829cd500041e1f79e22c0a4.json",
+      "sha256": "4f568e1f3a91f9f337acd5f6de29374b5b918a604c7a5ef4c0700069ea774b82",
+      "size": 363621
     },
     {
       "mode": "100644",
@@ -119,6 +137,18 @@
       "path": "images/aspnet/config/Dockerfile.hardened",
       "sha256": "f2f040bd1de8ce34faabfd41cfc1d7f84d3837ec377f082ac8083fca4c50b002",
       "size": 2156
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/config/Dockerfile.validated",
+      "sha256": "8fc0b391f3f0a141e8dcb1ae5e6d0e8d3c34ba264093def2b0c6f43be4db20db",
+      "size": 9972
+    },
+    {
+      "mode": "100644",
+      "path": "images/aspnet/config/fips/openssl-fips.cnf",
+      "sha256": "46b1cc46a9705ea58265780be81e77e63e808f5ddc0ecc5972dc0cbcb74bfeb1",
+      "size": 289
     },
     {
       "mode": "100644",
@@ -771,20 +801,20 @@
     {
       "mode": "100644",
       "path": "public-products.json",
-      "sha256": "14de2fbfdecd0ccb35618bd0db25f4b0148f8b08808a32fa680646940dc3e574",
-      "size": 61506
+      "sha256": "98c92c40f7f0584ce9fd9a2af3a25b544a857a545732b7a2785be9ef4265052a",
+      "size": 62337
     },
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "bdf447e550e0c596cbe1e2d82b373ac67ff447395fd2dd948025a7a97ba55a1c",
-      "size": 468899
+      "sha256": "f0d99b6c11a853ce2648695820c590627a6586cb666d719c41568e67667ea693",
+      "size": 469428
     },
     {
       "mode": "100755",
       "path": "tools/build.py",
-      "sha256": "f2c448a5511ece46c8823a12297c0a05e444860feecd8045546b4ce2497dc503",
-      "size": 16566
+      "sha256": "510cfb01b368df429ab9c4d27e95838e460688912409c97262c4fcf99d41a611",
+      "size": 17562
     },
     {
       "mode": "100644",
@@ -795,9 +825,14 @@
   ],
   "license": "Apache-2.0",
   "platform": "linux/amd64",
-  "policySha256": "3b69e803483e5fcd6d5786a2f784d1b63d87f665b20bea0670d2e1b0a1aa2245",
+  "policySha256": "fae339845e0b8bf1a3d692d038abf28a954dc3552ca244b0bef697e878cffbb5",
   "products": [
     {
+      "assessmentTiers": [
+        "secure",
+        "hardened",
+        "validated"
+      ],
       "family": "aspnet",
       "id": "IHL-CTR-0001",
       "image": {
@@ -808,6 +843,9 @@
           },
           "secure": {
             "dockerfile": "images/aspnet/config/Dockerfile"
+          },
+          "validated": {
+            "dockerfile": "images/aspnet/config/Dockerfile.validated"
           }
         }
       },
@@ -830,7 +868,8 @@
     {
       "assessmentTiers": [
         "secure",
-        "hardened"
+        "hardened",
+        "validated"
       ],
       "family": "aspnet",
       "id": "IHL-CTR-0012",
@@ -853,6 +892,14 @@
               "ASPNET_VERSION_LINE": "8"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
+          },
+          "validated": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
+              "ASPNET_VERSION": "8.0.33",
+              "ASPNET_VERSION_LINE": "8"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile.validated"
           }
         }
       },
@@ -875,7 +922,8 @@
     {
       "assessmentTiers": [
         "secure",
-        "hardened"
+        "hardened",
+        "validated"
       ],
       "family": "aspnet",
       "id": "IHL-CTR-0013",
@@ -898,6 +946,14 @@
               "ASPNET_VERSION_LINE": "9"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
+          },
+          "validated": {
+            "buildArgs": {
+              "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
+              "ASPNET_VERSION": "9.0.22",
+              "ASPNET_VERSION_LINE": "9"
+            },
+            "dockerfile": "images/aspnet/config/Dockerfile.validated"
           }
         }
       },
@@ -2664,9 +2720,10 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "f89e1b7ac5396455f0ce8e395cb6ee0810adc05a",
+  "sourceRevision": "1c3ffec473e93d8a730c7653fd8f32c2c31548b3",
   "tiers": [
     "secure",
-    "hardened"
+    "hardened",
+    "validated"
   ]
 }

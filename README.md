@@ -1,8 +1,8 @@
 # Indian Hill Labs Secure Containers
 
-Public source snapshots for Indian Hill Labs Secure and Hardened container engineering previews. The ten families are ASP.NET, NGINX, Python, PostgreSQL, Node.js, Java, Redis, Apache Tomcat, Elasticsearch, and Go static runtime bases. The catalog includes each supported version and exact build target. Go includes only its bare runtime Dockerfiles; its compiler, transient test probes, and private CI remain outside this snapshot.
+Public source snapshots for Indian Hill Labs Secure and Hardened container engineering previews, plus the Validated image recipes for ASP.NET 8, 9, and 10. The ten families are ASP.NET, NGINX, Python, PostgreSQL, Node.js, Java, Redis, Apache Tomcat, Elasticsearch, and Go static runtime bases. The catalog includes each supported version and exact build target. Go includes only its bare runtime Dockerfiles; its compiler, transient test probes, and private CI remain outside this snapshot.
 
-**These sources are engineering previews. A successful local build does not qualify an image as Secure or Hardened and does not create a supported, generally available release.** The tier names describe the build definitions. Qualification requires the authoritative GitLab factory's exact digest, policy, tests, and retained evidence. No Validated sources or qualification workflows are included here.
+**These sources are engineering previews. A successful local build does not qualify an image and does not create a supported, generally available release.** The tier names describe the build definitions. Qualification requires the authoritative GitLab factory's exact digest, policy, tests, and retained evidence. ASP.NET Validated records qualify the published image only; they do not certify the container or .NET itself, or qualify a customer's deployment, operating environment, hardware, or entropy source. Private qualification workflows are excluded.
 
 ## Source and image distribution
 
@@ -58,9 +58,9 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 | Family and version | Repository | Secure tag | Hardened tag |
 | --- | --- | --- | --- |
-| ASP.NET 10.0.13 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-10.0.13-20261016T002432Z` | `IHL-ASPNet-10.0.13-20261018T224842Z-Hardened` |
-| ASP.NET 8.0.32 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-8.0.32-20261017T182823Z` | `IHL-ASPNet-8.0.32-20261018T234555Z-Hardened` |
-| ASP.NET 9.0.21 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `IHL-ASPNet-9.0.21-20261017T184043Z` | `IHL-ASPNet-9.0.21-20261018T234719Z-Hardened` |
+| ASP.NET 10.0.14 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-10.0.14-secure-bc242746ae30` | `ihl-aspnet-10.0.14-hardened-bc242746ae30` |
+| ASP.NET 8.0.33 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-8.0.33-secure-bc242746ae30` | `ihl-aspnet-8.0.33-hardened-bc242746ae30` |
+| ASP.NET 9.0.22 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-9.0.22-secure-bc242746ae30` | `ihl-aspnet-9.0.22-hardened-bc242746ae30` |
 | Elasticsearch 9.5.5 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.5-20261017T200335Z` | Not listed |
 | Elasticsearch 8.19.23 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-8.19.23-20261017T194104Z` | Not listed |
 | Elasticsearch 9.4.8 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.4.8-20261017T195103Z` | Not listed |
@@ -128,6 +128,7 @@ python tools/build.py nginx --tier secure --dry-run
 python tools/build.py nginx --tier secure
 python tools/build.py nginx --tier hardened
 python tools/build.py aspnet --tier hardened --with-example
+python tools/build.py aspnet-8 --tier validated --dry-run
 python tools/build.py java --tier hardened --dry-run
 ```
 
