@@ -1,0 +1,52 @@
+{
+  "assessmentTiers": [
+    "secure",
+    "hardened",
+    "validated"
+  ],
+  "family": "aspnet",
+  "id": "IHL-CTR-0012",
+  "image": {
+    "repository": "aspnet-runtime",
+    "tiers": {
+      "hardened": {
+        "buildArgs": {
+          "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
+          "ASPNET_VERSION": "8.0.33",
+          "ASPNET_VERSION_LINE": "8"
+        },
+        "dockerfile": "images/aspnet/config/Dockerfile.hardened"
+      },
+      "secure": {
+        "buildArgs": {
+          "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
+          "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.33-noble-chiseled-amd64@sha256:621fd26ffc92301da83654be81d0a18b709d5399a0070a330edf331f1897904b",
+          "ASPNET_VERSION": "8.0.33",
+          "ASPNET_VERSION_LINE": "8"
+        },
+        "dockerfile": "images/aspnet/config/Dockerfile"
+      },
+      "validated": {
+        "buildArgs": {
+          "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
+          "ASPNET_VERSION": "8.0.33",
+          "ASPNET_VERSION_LINE": "8"
+        },
+        "dockerfile": "images/aspnet/config/Dockerfile.validated"
+      }
+    }
+  },
+  "key": "aspnet-8",
+  "productVersion": "8.0.33",
+  "targetId": "aspnet-8",
+  "title": "Indian Hill ASP.NET 8 Runtime",
+  "versionLine": "8",
+  "workloads": [
+    {
+      "dockerfile": "images/aspnet/examples/reference-api/8/Dockerfile",
+      "id": "IHL-APP-0001",
+      "key": "aspnet-8-reference-api",
+      "repository": "aspnet-8-reference-api"
+    }
+  ]
+}
