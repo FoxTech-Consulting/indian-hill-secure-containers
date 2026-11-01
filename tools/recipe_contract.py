@@ -35,6 +35,8 @@ def image_build_args(product: dict, tier: str, recipe: dict | None = None) -> di
             raise ValueError("Go image buildArgs must contain exactly the reviewed version and identity pins")
         return dict(args)
     if not args:
+        if family == 'aspnet' and product.get('key') in {'aspnet-8', 'aspnet-9'}:
+            raise ValueError('Versioned ASP.NET recipes require explicit identity pins in every tier')
         if family in PREFIXES and tier == "secure" and (product.get("key") == "nginx-mainline"
                 or product.get("assessmentTiers") in (["secure"], ["secure", "hardened"])):
             raise ValueError("Versioned Secure image buildArgs require exact version, source and identity pins")
@@ -42,7 +44,7 @@ def image_build_args(product: dict, tier: str, recipe: dict | None = None) -> di
             raise ValueError("Hardened image buildArgs require exact version and identity pins")
         return {}
     prefix = PREFIXES.get(family)
-    if (tier not in {"secure", "hardened"} and not (family == "python" and tier == "validated")) or not prefix:
+    if (tier not in {"secure", "hardened"} and not (family in {"python", "aspnet"} and tier == "validated")) or not prefix:
         raise ValueError("image buildArgs are restricted to reviewed Secure/Hardened family recipes")
     required = {prefix + suffix for suffix in ("_VERSION", "_VERSION_LINE", "_ARTIFACT_ID")}
     if tier == "secure":

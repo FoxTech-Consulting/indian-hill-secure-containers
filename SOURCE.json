@@ -789,8 +789,8 @@
     {
       "mode": "100644",
       "path": "tools/recipe_contract.py",
-      "sha256": "c3c019c51504ff58d717b8f51c87c800f17744a5e20a73611b65d7c1767176da",
-      "size": 6067
+      "sha256": "d2adc2cd0236d0ffc4db358aff1300eefc4c493d8772e57ecb0e7d82e6331de3",
+      "size": 6264
     }
   ],
   "license": "Apache-2.0",
@@ -2664,7 +2664,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "2ec5beaaf340af6d9fbad88cc90392f23e93a3fd",
+  "sourceRevision": "b44686a96a2c720f807dd2bf3bdf6546ec825050",
   "tiers": [
     "secure",
     "hardened"
