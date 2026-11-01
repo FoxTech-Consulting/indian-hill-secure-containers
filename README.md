@@ -52,7 +52,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ca630
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-11-01 20:35 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-11-01 20:38 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -79,7 +79,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261101T202846Z` | `IHL-Java-27-20261019T033821Z-Hardened` |
 | Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261101T202617Z` | `IHL-Java-27-20261018T234334Z-Hardened` |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261101T203255Z` | `IHL-Java-8.0.504-20261019T033111Z-Hardened` |
-| Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261010T221631Z` | `IHL-Java-8.0.504-20261018T233614Z-Hardened` |
+| Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261101T203512Z` | `IHL-Java-8.0.504-20261018T233614Z-Hardened` |
 | NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261101T100315Z` | `IHL-NGINX-1.30.6-20261101T100315Z-Hardened` |
 | NGINX 1.31.8 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.8-20261101T100315Z` | `IHL-NGINX-1.31.8-20261101T100315Z-Hardened` |
 | Node.js 24.22.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.22.0-20261018T120226Z` | `IHL-Node-24.22.0-20261019T032957Z-Hardened` |
@@ -109,7 +109,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 "Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
-88 runtime records include signed public source bindings; 3 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+89 runtime records include signed public source bindings; 2 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
