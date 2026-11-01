@@ -57,7 +57,7 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "6e41acf8fc7f0c7149abb91eae597de3d711ac7d4407c31640c2de0d3da012e3",
+      "sha256": "cf31c785dffbf67ab65ebccb96ddd6a8cd80184d6768fb8ea8c75a0c2ed317bc",
       "size": 23018
     },
     {
@@ -86,15 +86,15 @@
     },
     {
       "mode": "100644",
-      "path": "cis-reports/7efb4017769b20b7e8064da53fa787b0336390a02b937ee30269896746fcdecd.json",
-      "sha256": "bf81c51837bd29210ff85ad23fc0d0108fc9a706270fe574a2a883842266052d",
-      "size": 363564
-    },
-    {
-      "mode": "100644",
       "path": "cis-reports/ad62246ed125addb007c3a3d13dda3591f196eed4f79d1b2272fd006de557d79.json",
       "sha256": "90a647779944f06492ef1a44156a16fd652b5a6dcb12eda6b50f09e2e36ea64c",
       "size": 363668
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/c8a17e2a92e03b45edb36f62c6b514b50e950000beded75ff15a48d1b12c0c9f.json",
+      "sha256": "a72c5ab8963a9c51df5a305a834c1f48e9d4e91e1aa3296361c57abf73b9db7f",
+      "size": 363564
     },
     {
       "mode": "100644",
@@ -777,8 +777,8 @@
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "a215cde1333f2dad973acb453511427f41d5f527f36037ee9ddaa9bc5e94b4ad",
-      "size": 400116
+      "sha256": "18eda3aa291c8f718baf34c08ede0af95c2f1e195044019e263159702e83fcf0",
+      "size": 400112
     },
     {
       "mode": "100755",
@@ -2664,7 +2664,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "61ac95657224ee444c3da412de51ebc2682540d3",
+  "sourceRevision": "80917dd79eaa36e1d581bf8026de148345285a21",
   "tiers": [
     "secure",
     "hardened"
