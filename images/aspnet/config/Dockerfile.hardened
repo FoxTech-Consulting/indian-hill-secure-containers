@@ -1,9 +1,9 @@
 # The Hardened runtime is an additive layer over the exact Secure runtime
 # produced and digest-bound in the same pipeline.
-ARG SECURE_BASE=ihl/aspnet-runtime:10.0.13-secure-lab.1
+ARG SECURE_BASE=ihl/aspnet-runtime:10.0.14-secure-lab.1
 FROM ${SECURE_BASE}
 
-ARG ASPNET_VERSION=10.0.13
+ARG ASPNET_VERSION=10.0.14
 ARG ASPNET_VERSION_LINE=10
 ARG ASPNET_ARTIFACT_ID=IHL-CTR-0001
 

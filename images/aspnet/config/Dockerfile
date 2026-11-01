@@ -1,9 +1,9 @@
 # A digest pin makes the input immutable. The readable tag documents what the
 # digest represented when this lab build was authored.
-ARG ASPNET_BASE=mcr.microsoft.com/dotnet/aspnet:10.0.13-noble-chiseled-amd64@sha256:f9d8d2664e0a80931b3db97401824b0721819eedee54aeda15bf8bb7a4306738
+ARG ASPNET_BASE=mcr.microsoft.com/dotnet/aspnet:10.0.14-noble-chiseled-amd64@sha256:d61ce937bd9086eed359ca83bfa178f8392637f78f6f88ca9e7b354413b98beb
 FROM ${ASPNET_BASE}
 
-ARG ASPNET_VERSION=10.0.13
+ARG ASPNET_VERSION=10.0.14
 ARG ASPNET_VERSION_LINE=10
 ARG ASPNET_ARTIFACT_ID=IHL-CTR-0001
 

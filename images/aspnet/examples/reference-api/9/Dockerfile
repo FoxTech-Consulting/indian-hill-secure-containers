@@ -1,7 +1,7 @@
 # The SDK exists only in this disposable build stage. It never becomes part of
 # the final application image.
-ARG SDK_BASE=mcr.microsoft.com/dotnet/sdk:9.0.319-noble-amd64@sha256:d8d64cf06597c54786cf5a2366fd78e45e9f6cf7f5da94c376e5be0b84aa872d
-ARG RUNTIME_BASE=ihl/aspnet-runtime:9.0.21-secure-lab.1
+ARG SDK_BASE=mcr.microsoft.com/dotnet/sdk:9.0.320-noble-amd64@sha256:5e434b17f56d1d21f1fa9919914a0b451adc01b58e26d6e4b68e4a9d46c69a37
+ARG RUNTIME_BASE=ihl/aspnet-runtime:9.0.22-secure-lab.1
 ARG ASSURANCE_LEVEL=secure
 FROM ${SDK_BASE} AS build
 WORKDIR /src

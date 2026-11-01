@@ -111,37 +111,37 @@
     {
       "mode": "100644",
       "path": "images/aspnet/config/Dockerfile",
-      "sha256": "1b0c0936d1c2ccdd2f38ef37438eb108f6b54ad752e91e248336cf31ef520af8",
+      "sha256": "e2c8ef1312009c73ea81429a962bd087a38006414207c4c8855d0a308177db45",
       "size": 1871
     },
     {
       "mode": "100644",
       "path": "images/aspnet/config/Dockerfile.hardened",
-      "sha256": "d52145872b7f3f100177dd746e9006b74b676448dfe96580035f228dffe2f8dc",
+      "sha256": "f2f040bd1de8ce34faabfd41cfc1d7f84d3837ec377f082ac8083fca4c50b002",
       "size": 2156
     },
     {
       "mode": "100644",
       "path": "images/aspnet/config/source-releases.json",
-      "sha256": "77fd1a3ef951f4fbfaa47297a65b9bbb28cb50be88ffbd6994ae9648672df3ef",
-      "size": 1971
+      "sha256": "26a9485d2422de8f49b997e39e25929ab5ebcb5e0b9d8605e0d311c509cae221",
+      "size": 2029
     },
     {
       "mode": "100644",
       "path": "images/aspnet/examples/reference-api/8/Dockerfile",
-      "sha256": "271dc81af6164c3eba60aeb457f29760144a9c67a1a6448c2c811f451294bbd7",
+      "sha256": "dad6ba524e50ffa396058eb6b747d416e1936f20f946a69b4f3542e54d5666cd",
       "size": 1740
     },
     {
       "mode": "100644",
       "path": "images/aspnet/examples/reference-api/9/Dockerfile",
-      "sha256": "617596307e1cb7adbbe80e643b3c1f537b0575d4b83cb8947c3342afed5cb72c",
+      "sha256": "31f6c5640727fe051615b0d8e59969c45faaa0774072ab64e5e5d4cde1a5f97c",
       "size": 1740
     },
     {
       "mode": "100644",
       "path": "images/aspnet/examples/reference-api/Dockerfile",
-      "sha256": "8d706af99c382f16c5473c6d3a12c671c36a12908a2f02c044345540e73ee046",
+      "sha256": "c5cc0c5e519c4f28c3805a39107043babebaa592278b6f61bfc56d8996e2e5cf",
       "size": 1685
     },
     {
@@ -771,7 +771,7 @@
     {
       "mode": "100644",
       "path": "public-products.json",
-      "sha256": "9b7397d94c7a3d823cf4542b17ad458f7a6b724bdf2556c5fc59b5783a895dc1",
+      "sha256": "14de2fbfdecd0ccb35618bd0db25f4b0148f8b08808a32fa680646940dc3e574",
       "size": 61506
     },
     {
@@ -813,7 +813,7 @@
       },
       "key": "aspnet",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "10.0.13",
+      "productVersion": "10.0.14",
       "status": "candidate",
       "targetId": "aspnet-10",
       "title": "Indian Hill ASP.NET 10 Runtime",
@@ -840,7 +840,7 @@
           "hardened": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
-              "ASPNET_VERSION": "8.0.32",
+              "ASPNET_VERSION": "8.0.33",
               "ASPNET_VERSION_LINE": "8"
             },
             "dockerfile": "images/aspnet/config/Dockerfile.hardened"
@@ -848,8 +848,8 @@
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
-              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.32-noble-chiseled-amd64@sha256:ff6b559786349848422eacb6e44f067709456c98119bb739655bcb4eeb6d2568",
-              "ASPNET_VERSION": "8.0.32",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.33-noble-chiseled-amd64@sha256:621fd26ffc92301da83654be81d0a18b709d5399a0070a330edf331f1897904b",
+              "ASPNET_VERSION": "8.0.33",
               "ASPNET_VERSION_LINE": "8"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
@@ -858,7 +858,7 @@
       },
       "key": "aspnet-8",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "8.0.32",
+      "productVersion": "8.0.33",
       "status": "candidate",
       "targetId": "aspnet-8",
       "title": "Indian Hill ASP.NET 8 Runtime",
@@ -885,7 +885,7 @@
           "hardened": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
-              "ASPNET_VERSION": "9.0.21",
+              "ASPNET_VERSION": "9.0.22",
               "ASPNET_VERSION_LINE": "9"
             },
             "dockerfile": "images/aspnet/config/Dockerfile.hardened"
@@ -893,8 +893,8 @@
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
-              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.21-noble-chiseled-amd64@sha256:9a7a9cf1bfd0ad64df17fd156345e3a36df1be26d92c8230bfc212f6627a6b41",
-              "ASPNET_VERSION": "9.0.21",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.22-noble-chiseled-amd64@sha256:484d0a0cec19bfa00dd6019064591bf69f68a92dd641b36a1e07f5d669154ba1",
+              "ASPNET_VERSION": "9.0.22",
               "ASPNET_VERSION_LINE": "9"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
@@ -903,7 +903,7 @@
       },
       "key": "aspnet-9",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "9.0.21",
+      "productVersion": "9.0.22",
       "status": "candidate",
       "targetId": "aspnet-9",
       "title": "Indian Hill ASP.NET 9 Runtime",
@@ -2664,7 +2664,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "4f8fcd0e69e00b4ee4cca7a952b3cb436b8088ed",
+  "sourceRevision": "2ec5beaaf340af6d9fbad88cc90392f23e93a3fd",
   "tiers": [
     "secure",
     "hardened"

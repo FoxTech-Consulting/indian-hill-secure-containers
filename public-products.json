@@ -17,7 +17,7 @@
       },
       "key": "aspnet",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "10.0.13",
+      "productVersion": "10.0.14",
       "status": "candidate",
       "targetId": "aspnet-10",
       "title": "Indian Hill ASP.NET 10 Runtime",
@@ -44,7 +44,7 @@
           "hardened": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
-              "ASPNET_VERSION": "8.0.32",
+              "ASPNET_VERSION": "8.0.33",
               "ASPNET_VERSION_LINE": "8"
             },
             "dockerfile": "images/aspnet/config/Dockerfile.hardened"
@@ -52,8 +52,8 @@
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0012",
-              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.32-noble-chiseled-amd64@sha256:ff6b559786349848422eacb6e44f067709456c98119bb739655bcb4eeb6d2568",
-              "ASPNET_VERSION": "8.0.32",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:8.0.33-noble-chiseled-amd64@sha256:621fd26ffc92301da83654be81d0a18b709d5399a0070a330edf331f1897904b",
+              "ASPNET_VERSION": "8.0.33",
               "ASPNET_VERSION_LINE": "8"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
@@ -62,7 +62,7 @@
       },
       "key": "aspnet-8",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "8.0.32",
+      "productVersion": "8.0.33",
       "status": "candidate",
       "targetId": "aspnet-8",
       "title": "Indian Hill ASP.NET 8 Runtime",
@@ -89,7 +89,7 @@
           "hardened": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
-              "ASPNET_VERSION": "9.0.21",
+              "ASPNET_VERSION": "9.0.22",
               "ASPNET_VERSION_LINE": "9"
             },
             "dockerfile": "images/aspnet/config/Dockerfile.hardened"
@@ -97,8 +97,8 @@
           "secure": {
             "buildArgs": {
               "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
-              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.21-noble-chiseled-amd64@sha256:9a7a9cf1bfd0ad64df17fd156345e3a36df1be26d92c8230bfc212f6627a6b41",
-              "ASPNET_VERSION": "9.0.21",
+              "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.22-noble-chiseled-amd64@sha256:484d0a0cec19bfa00dd6019064591bf69f68a92dd641b36a1e07f5d669154ba1",
+              "ASPNET_VERSION": "9.0.22",
               "ASPNET_VERSION_LINE": "9"
             },
             "dockerfile": "images/aspnet/config/Dockerfile"
@@ -107,7 +107,7 @@
       },
       "key": "aspnet-9",
       "kind": "runtime-with-reference-workload",
-      "productVersion": "9.0.21",
+      "productVersion": "9.0.22",
       "status": "candidate",
       "targetId": "aspnet-9",
       "title": "Indian Hill ASP.NET 9 Runtime",
