@@ -1,0 +1,52 @@
+{
+  "assessmentTiers": [
+    "secure",
+    "hardened",
+    "validated"
+  ],
+  "family": "aspnet",
+  "id": "IHL-CTR-0013",
+  "image": {
+    "repository": "aspnet-runtime",
+    "tiers": {
+      "hardened": {
+        "buildArgs": {
+          "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
+          "ASPNET_VERSION": "9.0.22",
+          "ASPNET_VERSION_LINE": "9"
+        },
+        "dockerfile": "images/aspnet/config/Dockerfile.hardened"
+      },
+      "secure": {
+        "buildArgs": {
+          "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
+          "ASPNET_BASE": "mcr.microsoft.com/dotnet/aspnet:9.0.22-noble-chiseled-amd64@sha256:484d0a0cec19bfa00dd6019064591bf69f68a92dd641b36a1e07f5d669154ba1",
+          "ASPNET_VERSION": "9.0.22",
+          "ASPNET_VERSION_LINE": "9"
+        },
+        "dockerfile": "images/aspnet/config/Dockerfile"
+      },
+      "validated": {
+        "buildArgs": {
+          "ASPNET_ARTIFACT_ID": "IHL-CTR-0013",
+          "ASPNET_VERSION": "9.0.22",
+          "ASPNET_VERSION_LINE": "9"
+        },
+        "dockerfile": "images/aspnet/config/Dockerfile.validated"
+      }
+    }
+  },
+  "key": "aspnet-9",
+  "productVersion": "9.0.22",
+  "targetId": "aspnet-9",
+  "title": "Indian Hill ASP.NET 9 Runtime",
+  "versionLine": "9",
+  "workloads": [
+    {
+      "dockerfile": "images/aspnet/examples/reference-api/9/Dockerfile",
+      "id": "IHL-APP-0001",
+      "key": "aspnet-9-reference-api",
+      "repository": "aspnet-9-reference-api"
+    }
+  ]
+}
