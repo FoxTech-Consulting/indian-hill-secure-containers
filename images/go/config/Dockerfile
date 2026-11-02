@@ -4,11 +4,12 @@ FROM mcr.microsoft.com/dotnet/runtime-deps:10.0.11-noble-chiseled-amd64@sha256:8
 FROM scratch
 ARG GO_PRODUCT_VERSION=1.27.3
 ARG GO_ARTIFACT_ID=IHL-CTR-0010
+ARG OCI_SOURCE=https://gitlab.com/indianhilllabs/containers/go
 ARG OCI_REVISION
 ARG OCI_CREATED
 LABEL org.opencontainers.image.title="Indian Hill Go Static Runtime Base" \
       org.opencontainers.image.version="${GO_PRODUCT_VERSION}" \
-      org.opencontainers.image.source="https://gitlab.com/indianhilllabs/indian-hill-secure-containers" \
+      org.opencontainers.image.source="${OCI_SOURCE}" \
       org.opencontainers.image.revision="${OCI_REVISION}" \
       org.opencontainers.image.created="${OCI_CREATED}" \
       com.indianhilllabs.artifact.id="${GO_ARTIFACT_ID}" \
