@@ -58,9 +58,9 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 | Family and version | Repository | Secure tag | Hardened tag |
 | --- | --- | --- | --- |
-| ASP.NET 10.0.14 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-10.0.14-secure-bc242746ae30` | `ihl-aspnet-10.0.14-hardened-bc242746ae30` |
-| ASP.NET 8.0.33 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-8.0.33-secure-bc242746ae30` | `ihl-aspnet-8.0.33-hardened-bc242746ae30` |
-| ASP.NET 9.0.22 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-9.0.22-secure-bc242746ae30` | `ihl-aspnet-9.0.22-hardened-bc242746ae30` |
+| ASP.NET 10.0.14 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-10.0.14-secure-d798a5b9375a` | `ihl-aspnet-10.0.14-hardened-d798a5b9375a` |
+| ASP.NET 8.0.33 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-8.0.33-secure-d798a5b9375a` | `ihl-aspnet-8.0.33-hardened-d798a5b9375a` |
+| ASP.NET 9.0.22 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-9.0.22-secure-d798a5b9375a` | `ihl-aspnet-9.0.22-hardened-d798a5b9375a` |
 | Elasticsearch 9.5.5 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.5-20261017T200335Z` | Not listed |
 | Elasticsearch 8.19.23 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-8.19.23-20261017T194104Z` | Not listed |
 | Elasticsearch 9.4.8 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.4.8-20261017T195103Z` | Not listed |
