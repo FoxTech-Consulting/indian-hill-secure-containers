@@ -52,7 +52,7 @@ docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:26932
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-11-02 05:46 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-11-02 05:46 UTC**: **48 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
@@ -64,8 +64,8 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Elasticsearch 9.5.5 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.5-20261017T200335Z` | Not listed |
 | Elasticsearch 8.19.23 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-8.19.23-20261017T194104Z` | Not listed |
 | Elasticsearch 9.4.8 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.4.8-20261017T195103Z` | Not listed |
-| Go 1.27.2 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | Not listed | `IHL-Go-1.27.2-20261019T035241Z-Hardened` |
-| Go 1.26.9 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | Not listed | `IHL-Go-1.26.9-20261019T035043Z-Hardened` |
+| Go 1.27.3 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | `ihl-go-1.27.3-secure-4a7b77c395ed` | `ihl-go-1.27.3-hardened-4a7b77c395ed` |
+| Go 1.26.10 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | `ihl-go-1.26.10-secure-4a7b77c395ed` | `ihl-go-1.26.10-hardened-4a7b77c395ed` |
 | Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261101T193505Z` | `IHL-Java-21.0.12.1-20261018T233231Z-Hardened` |
 | Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261101T200541Z` | `IHL-Java-11.0.32.1-20261019T033233Z-Hardened` |
 | Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261101T200751Z` | `IHL-Java-11.0.32.1-20261018T233752Z-Hardened` |
@@ -109,7 +109,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 "Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
-89 runtime records include signed public source bindings; 2 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+91 runtime records include signed public source bindings; 2 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
