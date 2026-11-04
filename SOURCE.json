@@ -57,7 +57,7 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "918c4b788c17910ed9e2baf17b1e568ad15d29f11cdb6e2953589d193be47001",
+      "sha256": "e3cc9f7acc9fe867119ff9b1923e2ddc17cbda8229e4b43ff2545d1863da931d",
       "size": 23331
     },
     {
@@ -68,15 +68,15 @@
     },
     {
       "mode": "100644",
-      "path": "cis-reports/0e9bdc74f241c79e3ec69168740e2fa1869713a0b40d308bf51a83d73ddb4a9d.json",
-      "sha256": "417e7a9e20e162185d0bf4121eb7779911c34055f9f20b88efadae772606fe29",
-      "size": 363564
-    },
-    {
-      "mode": "100644",
       "path": "cis-reports/3ee43b0466132f794112026ba5c923348c57f2735c1a214538a4d605516fab10.json",
       "sha256": "c418fe44302a2548149bd9044576893fe048a85034a934a392377cb282d5f91c",
       "size": 363621
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/4a497007fc1b77f5f27d4a1299fe69b97003dfa427a968c80a7c695871ab0b68.json",
+      "sha256": "9accc509a5ff3a894a1fef926eb3688f8185e3fb9456e64b95b02ffdb53bb379",
+      "size": 363564
     },
     {
       "mode": "100644",
@@ -122,15 +122,15 @@
     },
     {
       "mode": "100644",
-      "path": "cis-reports/e454c5e0fda4f230bbe445ae2edb8c48188011755199cf64269ac4375dd0e805.json",
-      "sha256": "2b48fd07802ced848a90b75f1c137dec0ce728aafb39e43eb57ffb95a2493b95",
-      "size": 363621
+      "path": "cis-reports/d4e73a747331f80ae69c3bfdd449ca34091e6e200bb18add2755fa5ef493c96a.json",
+      "sha256": "244a2e79595c44f6f612aab291ca3840377377308ddc7ee784a900a40c2eeeca",
+      "size": 363690
     },
     {
       "mode": "100644",
-      "path": "cis-reports/f201924642c92b3462561829a981da544e92cfaa8c41121073e7e808b4f3d4d9.json",
-      "sha256": "157b4211820fa3d34046da1e5e9d7d4c01c4b580baf2a481b6402da454033f27",
-      "size": 363690
+      "path": "cis-reports/e454c5e0fda4f230bbe445ae2edb8c48188011755199cf64269ac4375dd0e805.json",
+      "sha256": "2b48fd07802ced848a90b75f1c137dec0ce728aafb39e43eb57ffb95a2493b95",
+      "size": 363621
     },
     {
       "mode": "100644",
@@ -819,7 +819,7 @@
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "6956c8ec3fa172122c2b7a4ed535d4482529c767f9ee01c90a2539fb2a7fa1b4",
+      "sha256": "743f9fd962d59efed9c872dc2533e012e919e1970210b153195b03a15faa63da",
       "size": 477522
     },
     {
@@ -2732,7 +2732,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "dfa6da6d117e08650937a186085cd6e4d3a69a1f",
+  "sourceRevision": "15a31c17089a69db31c5ea84608d7a14c5ccd91f",
   "tiers": [
     "secure",
     "hardened",
