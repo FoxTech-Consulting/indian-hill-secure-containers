@@ -25,7 +25,6 @@ NGINX_IDENTITIES = {
 }
 PLATFORM = "linux/amd64"
 TIERS = ("secure", "hardened")
-IMAGE_TIERS = (*TIERS, 'validated')
 SHA256 = re.compile(r"[0-9a-f]{64}")
 REVISION = re.compile(r"[0-9a-f]{40}")
 NAME = re.compile(r"[a-z0-9]+(?:[._-][a-z0-9]+)*")
@@ -96,10 +95,10 @@ def verify_snapshot(root: Path) -> dict[str, Any]:
     return source
 
 
-def recipe_path(root: Path, value: Any, *, aspnet_validated=False) -> str:
+def recipe_path(root: Path, value: Any) -> str:
     if not isinstance(value, str) or not value.startswith("images/"):
         raise ValueError("Public build recipes must be under images/")
-    if "validated" in value.lower() and not (aspnet_validated and value == 'images/aspnet/config/Dockerfile.validated'):
+    if "validated" in value.lower():
         raise ValueError("Validated build recipes are outside this public source snapshot")
     snapshot_path(root, value)
     return value
@@ -108,8 +107,7 @@ def recipe_path(root: Path, value: Any, *, aspnet_validated=False) -> str:
 def product_tiers(product: dict[str, Any]) -> tuple[str, ...]:
     declared = product.get("assessmentTiers", list(TIERS))
     tiers = product.get("image", {}).get("tiers", {})
-    aspnet = (product.get('family') == 'aspnet' and product.get('key') in {'aspnet', 'aspnet-8', 'aspnet-9'})
-    if (not (declared in (["secure"], list(TIERS)) or aspnet and declared == list(IMAGE_TIERS)) or not isinstance(tiers, dict)
+    if (declared not in (["secure"], list(TIERS)) or not isinstance(tiers, dict)
             or set(tiers) != set(declared)):
         raise ValueError(f"Public product recipes differ from supported assessment tiers: {product.get('key')}")
     return tuple(declared)
@@ -129,13 +127,11 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
     catalog = json.loads(snapshot_path(root, "public-products.json").read_text(encoding="utf-8"))
     if not isinstance(catalog, dict) or catalog.get("schemaVersion") != 1:
         raise ValueError("Unsupported public-products.json schema")
-    if catalog.get("platform") != PLATFORM or catalog.get("tiers") not in (list(TIERS), list(IMAGE_TIERS)):
+    if catalog.get("platform") != PLATFORM or catalog.get("tiers") != list(TIERS):
         raise ValueError("Public builds support only linux/amd64 Secure/Hardened recipes")
     products = catalog.get("products")
     if not isinstance(products, list) or not products:
         raise ValueError("Public catalog has no products")
-    if catalog['tiers'] == list(IMAGE_TIERS) and not any(p.get('family') == 'aspnet' and 'validated' in product_tiers(p) for p in products):
-        raise ValueError('Validated source admission requires an ASP.NET image recipe')
     covered = {entry["path"] for entry in source["files"]}
     keys: set[str] = set()
     for product in products:
@@ -155,7 +151,7 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
             recipe = tiers[tier]
             if not isinstance(recipe, dict):
                 raise ValueError(f"Invalid public recipe: {key}")
-            recipes.append(recipe_path(root, recipe.get("dockerfile"), aspnet_validated=product.get('family') == 'aspnet' and tier == 'validated'))
+            recipes.append(recipe_path(root, recipe.get("dockerfile")))
             java_hardened = product.get("family") == "java" and tier == "hardened"
             if java_hardened or "materialDockerfile" in recipe or "javaMaterialProfile" in recipe:
                 # Both fields are mandatory for Java H. A self-consistent
@@ -200,8 +196,8 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
                nonce: str | None = None,
                source_repository: str = SOURCE_REPOSITORY) -> list[dict[str, Any]]:
     source_repository = require_source_context(source_repository, product)
-    if tier not in IMAGE_TIERS or not REVISION.fullmatch(revision):
-        raise ValueError("Local builds require a supported image tier and full source revision")
+    if tier not in TIERS or not REVISION.fullmatch(revision):
+        raise ValueError("Local builds require a Secure/Hardened tier and full source revision")
     if tier not in product_tiers(product):
         raise ValueError(f"Unsupported assessment tier for {product['key']}: {tier}")
     check_tag_prefix(tag_prefix)
@@ -239,21 +235,17 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
     recipes = product["image"]["tiers"]
     steps = [command(recipes["secure"]["dockerfile"], secure, "secure",
                      public_build_args(product, "secure", recipes["secure"]),
-                     (parent,) if tier in ('hardened', 'validated') else ())]
+                     (parent,) if tier == "hardened" else ())]
     runtime = secure
-    if tier in ('hardened', 'validated'):
+    if tier == "hardened":
         runtime = f"{repository}:{version}-hardened-local"
         args = public_build_args(product, "hardened", recipes["hardened"])
         material = recipes["hardened"].get("materialDockerfile")
-        additive = f"{repository}:{version}-hardened-local-parent-{nonce}" if material or tier == 'validated' else runtime
+        additive = f"{repository}:{version}-hardened-local-parent-{nonce}" if material else runtime
         steps.append(command(recipes["hardened"]["dockerfile"], additive, "hardened", {**args, "SECURE_BASE": parent}))
         if material:
             steps.append(command(material, runtime, "hardened", {"HARDENED_BASE": additive,
                 "IHL_FIPS_BUILD_VALIDATION": "false"}))
-        if tier == 'validated':
-            runtime = f'{repository}:{version}-validated-local'
-            steps.append(command(recipes['validated']['dockerfile'], runtime, 'validated',
-                {**public_build_args(product, 'validated', recipes['validated']), 'HARDENED_BASE': additive}))
     if with_example:
         for workload in workloads:
             image = f"{tag_prefix}/{key}-{workload['repository']}:{version}-{tier}-local"
@@ -265,7 +257,7 @@ def build_plan(product: dict[str, Any], revision: str, tier: str, *,
 def main(argv: list[str] | None = None, *, root: Path | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("product", nargs="?", help="Product key from public-products.json")
-    parser.add_argument("--tier", choices=IMAGE_TIERS, default="secure")
+    parser.add_argument("--tier", choices=TIERS, default="secure")
     parser.add_argument("--with-example", action="store_true", help="Also build the registered public reference workload")
     parser.add_argument("--tag-prefix", default="local/ihl", help="Local image name prefix (default: local/ihl)")
     parser.add_argument("--dry-run", action="store_true", help="Print command argument arrays without running Docker")
