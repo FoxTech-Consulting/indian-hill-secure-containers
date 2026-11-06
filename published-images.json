@@ -16,10 +16,10 @@
     "recordsWithAnonymousByteProofCount": 93,
     "freshness": "checkedAt is the catalog reconciliation time. It does not refresh unchanged records; use each anonymousDownload.verifiedAt.",
     "latestReconciliation": {
-      "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+      "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
       "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
       "proofAccess": "Retained GitLab artifact; project access may be required",
-      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386",
+      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483",
       "proofCoreFields": [
         "schemaVersion",
         "reportType",
@@ -5513,11 +5513,11 @@
       "digest": "sha256:b91aad5f923ea04a3ff4434496a001ccd8a708dc797fdbeed37b0b927dc6ff43",
       "image": "ghcr.io/foxtech-consulting/python@sha256:b91aad5f923ea04a3ff4434496a001ccd8a708dc797fdbeed37b0b927dc6ff43",
       "sourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
-      "publishedAt": "2026-11-06T06:21:28.872Z",
+      "publishedAt": "2026-11-06T08:42:28.703Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
@@ -5526,11 +5526,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "dafbc601c390831f6359817d8f821797d14a6a1bdc53c4b42ed995b68d4afb3f",
-      "signatureManifestSha256": "a19da25ce88de86fb6c77f5860bb525f23432a4d84b38bfcb8e3ac4cac7c9e40",
+      "signatureManifestSha256": "96f650e5f7861fc754823d3f4d78e62b54ca34def888d19bd8065bfab8009d71",
       "publicSourceBinding": {
         "sourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
         "sourceCommit": "464895a1e62cf76ff9b9bcc58d79084b15a00674",
@@ -5549,8 +5549,8 @@
         "signedAnnotations": {
           "assurance-tier": "secure",
           "source-revision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
-          "assurance-manifest-sha256": "a19da25ce88de86fb6c77f5860bb525f23432a4d84b38bfcb8e3ac4cac7c9e40",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "96f650e5f7861fc754823d3f4d78e62b54ca34def888d19bd8065bfab8009d71",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "464895a1e62cf76ff9b9bcc58d79084b15a00674",
           "public-source-manifest-sha256": "e9ad4de16ef68913567fcb697a0065af4db0831196e3ba851174dfa3850c3f7c",
           "publication-context": "protected-release",
@@ -5563,13 +5563,13 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:46:48.259340+00:00",
+        "verifiedAt": "2026-11-06T09:05:58.227240+00:00",
         "configCount": 1,
         "layerCount": 20,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:b91aad5f923ea04a3ff4434496a001ccd8a708dc797fdbeed37b0b927dc6ff43"
@@ -5587,11 +5587,11 @@
       "digest": "sha256:cfd9cc05533b89436c8c0fc5debc70d16dc36f373d3e665f95e50f69fe540b7a",
       "image": "ghcr.io/foxtech-consulting/python@sha256:cfd9cc05533b89436c8c0fc5debc70d16dc36f373d3e665f95e50f69fe540b7a",
       "sourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
-      "publishedAt": "2026-11-06T06:39:32.617Z",
+      "publishedAt": "2026-11-06T08:56:32.958Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
@@ -5600,11 +5600,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "6aeca2d33af8e6e3fab82219922d4a6d087bba27394bdee8f9fbcd039099e2c6",
-      "signatureManifestSha256": "adeaec4f2703ccfe22ea3f7c495c9b2431078bd462f583d4f0444528f0170327",
+      "signatureManifestSha256": "2ec91c1674d467fae70daeab8e8c5045e05672c188cb8a8cb3ae890bbf5b7b83",
       "publicSourceBinding": {
         "sourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
         "sourceCommit": "464895a1e62cf76ff9b9bcc58d79084b15a00674",
@@ -5623,8 +5623,8 @@
         "signedAnnotations": {
           "assurance-tier": "hardened",
           "source-revision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
-          "assurance-manifest-sha256": "adeaec4f2703ccfe22ea3f7c495c9b2431078bd462f583d4f0444528f0170327",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "2ec91c1674d467fae70daeab8e8c5045e05672c188cb8a8cb3ae890bbf5b7b83",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "464895a1e62cf76ff9b9bcc58d79084b15a00674",
           "public-source-manifest-sha256": "e9ad4de16ef68913567fcb697a0065af4db0831196e3ba851174dfa3850c3f7c",
           "publication-context": "protected-release",
@@ -5637,20 +5637,20 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:47:26.901385+00:00",
+        "verifiedAt": "2026-11-06T09:07:21.526673+00:00",
         "configCount": 1,
         "layerCount": 28,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:cfd9cc05533b89436c8c0fc5debc70d16dc36f373d3e665f95e50f69fe540b7a",
       "cisReport": {
         "schemaVersion": 1,
         "path": "cis-reports/6aeca2d33af8e6e3fab82219922d4a6d087bba27394bdee8f9fbcd039099e2c6.json",
-        "sha256": "4d740a57e3cf49a6e816b40ca2fd5dec660f15a686499f68927df2ab969b0191",
+        "sha256": "7411729655dbde92ede309de360bb3c5278b72136f5d0911c6b031660fdccea1",
         "sizeBytes": 363598
       }
     },
@@ -5667,11 +5667,11 @@
       "digest": "sha256:a7819d0380ccbc5ca32055c52cd1e2fdfc2ec4bd3f4f852234270eed4c005343",
       "image": "ghcr.io/foxtech-consulting/python@sha256:a7819d0380ccbc5ca32055c52cd1e2fdfc2ec4bd3f4f852234270eed4c005343",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:21:28.872Z",
+      "publishedAt": "2026-11-06T08:42:28.703Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -5680,11 +5680,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "4f42f39ea906a5b67605893f9d1fcf85d0ea8a0bd716ad62a9ebbee210d2bad2",
-      "signatureManifestSha256": "b95cf86534cfd38c81827067b008c88b0e87f9c029efcc47a18ce669e98a779b",
+      "signatureManifestSha256": "8473b854e2cb6b2e531e594b8ded8fe600f9253973aa97e18138ed8515af7626",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -5703,8 +5703,8 @@
         "signedAnnotations": {
           "assurance-tier": "secure",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "b95cf86534cfd38c81827067b008c88b0e87f9c029efcc47a18ce669e98a779b",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "8473b854e2cb6b2e531e594b8ded8fe600f9253973aa97e18138ed8515af7626",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -5717,13 +5717,13 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:46:29.474281+00:00",
+        "verifiedAt": "2026-11-06T09:05:39.325658+00:00",
         "configCount": 1,
         "layerCount": 20,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:a7819d0380ccbc5ca32055c52cd1e2fdfc2ec4bd3f4f852234270eed4c005343"
@@ -5741,11 +5741,11 @@
       "digest": "sha256:37ed3441c9c6a2e4d8a393ec110fdd3e6789b2c9e917ce9d3fb125235236c057",
       "image": "ghcr.io/foxtech-consulting/python@sha256:37ed3441c9c6a2e4d8a393ec110fdd3e6789b2c9e917ce9d3fb125235236c057",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:39:32.617Z",
+      "publishedAt": "2026-11-06T08:56:32.958Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -5754,11 +5754,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "4cc5f0aa247ecb480a3574b2f662e7d5b5e5953cc809fc6f7eea0f280767b396",
-      "signatureManifestSha256": "60e16377ae458e90070ce50e2af492eaeefc486d4f6795fd5636383f06f42521",
+      "signatureManifestSha256": "a6338b5472797d189c2c1576171b45cd737f4f04d28095837df6197ed1609a3b",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -5777,8 +5777,8 @@
         "signedAnnotations": {
           "assurance-tier": "hardened",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "60e16377ae458e90070ce50e2af492eaeefc486d4f6795fd5636383f06f42521",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "a6338b5472797d189c2c1576171b45cd737f4f04d28095837df6197ed1609a3b",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -5791,20 +5791,20 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:47:17.852741+00:00",
+        "verifiedAt": "2026-11-06T09:06:42.681697+00:00",
         "configCount": 1,
         "layerCount": 28,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:37ed3441c9c6a2e4d8a393ec110fdd3e6789b2c9e917ce9d3fb125235236c057",
       "cisReport": {
         "schemaVersion": 1,
         "path": "cis-reports/4cc5f0aa247ecb480a3574b2f662e7d5b5e5953cc809fc6f7eea0f280767b396.json",
-        "sha256": "a751c6f48f5762e2c531ab645a1c2ca1458133c566f88d9ed195b1ab70b78d76",
+        "sha256": "1a6df1b56be46f0d143c959fb282698264383a415e3937089fae571a6c8fe9de",
         "sizeBytes": 363668
       }
     },
@@ -5821,11 +5821,11 @@
       "digest": "sha256:25441d9ff5a18c70c3a134009c5ea1622275c83dd0e7d749d656a337cfde42ba",
       "image": "ghcr.io/foxtech-consulting/python@sha256:25441d9ff5a18c70c3a134009c5ea1622275c83dd0e7d749d656a337cfde42ba",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:21:28.872Z",
+      "publishedAt": "2026-11-06T08:42:28.703Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -5834,11 +5834,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "3d0b80375270b71da354290b01259973879e87fc099c826c465bdb68ccbe3698",
-      "signatureManifestSha256": "ee30c240db997d0c2141422d9aaee66340b134dceb7cb61eee42a8dfb7c46659",
+      "signatureManifestSha256": "5a2ead9d013aa8ac88b254d21c45f979ef506182e0df71bc278544dd77cfac3c",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -5857,8 +5857,8 @@
         "signedAnnotations": {
           "assurance-tier": "secure",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "ee30c240db997d0c2141422d9aaee66340b134dceb7cb61eee42a8dfb7c46659",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "5a2ead9d013aa8ac88b254d21c45f979ef506182e0df71bc278544dd77cfac3c",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -5871,13 +5871,13 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:46:39.259213+00:00",
+        "verifiedAt": "2026-11-06T09:05:48.958143+00:00",
         "configCount": 1,
         "layerCount": 20,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:25441d9ff5a18c70c3a134009c5ea1622275c83dd0e7d749d656a337cfde42ba"
@@ -5895,11 +5895,11 @@
       "digest": "sha256:b3948c66bbaa7d8871ae212df951cd37aa346611d288b108cc7cab0bb53d14ce",
       "image": "ghcr.io/foxtech-consulting/python@sha256:b3948c66bbaa7d8871ae212df951cd37aa346611d288b108cc7cab0bb53d14ce",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:39:32.617Z",
+      "publishedAt": "2026-11-06T08:56:32.958Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -5908,11 +5908,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "fee3bb848ec295924b62d585368c7d5a03c0461c53b3c01bac2ebd5c741dd940",
-      "signatureManifestSha256": "f1335ba87f6f86563f531f19a7b91d8be6d48df39011135e9aadb7070834ab34",
+      "signatureManifestSha256": "0b022a14a9e871c2ee932c868bddeaf19da701dda6650f6703fe41cedca06bdd",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -5931,8 +5931,8 @@
         "signedAnnotations": {
           "assurance-tier": "hardened",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "f1335ba87f6f86563f531f19a7b91d8be6d48df39011135e9aadb7070834ab34",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "0b022a14a9e871c2ee932c868bddeaf19da701dda6650f6703fe41cedca06bdd",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -5945,20 +5945,20 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:47:22.415274+00:00",
+        "verifiedAt": "2026-11-06T09:07:03.641881+00:00",
         "configCount": 1,
         "layerCount": 28,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:b3948c66bbaa7d8871ae212df951cd37aa346611d288b108cc7cab0bb53d14ce",
       "cisReport": {
         "schemaVersion": 1,
         "path": "cis-reports/fee3bb848ec295924b62d585368c7d5a03c0461c53b3c01bac2ebd5c741dd940.json",
-        "sha256": "55e3646d76d23faf33d92cf2f6dea185a49b64f9c3e455b3bce34097061d1701",
+        "sha256": "0faa4016777a0ce5784e62a94dfe873432c87d4c2d3a1305727ba7b0782a5e52",
         "sizeBytes": 363668
       }
     },
@@ -5975,11 +5975,11 @@
       "digest": "sha256:835f062b6e095b92a5d62c7673bd1236bb3c4e8c5285948a8f2f5afd2fb73d9f",
       "image": "ghcr.io/foxtech-consulting/python@sha256:835f062b6e095b92a5d62c7673bd1236bb3c4e8c5285948a8f2f5afd2fb73d9f",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:21:28.872Z",
+      "publishedAt": "2026-11-06T08:42:28.703Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -5988,11 +5988,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "5e4890fb7310ea2feae55614347f59118e15e299996282c1fd3b26d5590ea5e4",
-      "signatureManifestSha256": "40669ec134b7c3696aa9cf6a3d4cddb24e796905ebdb8ccb362a9e03c974b895",
+      "signatureManifestSha256": "eee3a11461705bbb7d5d65752934353bdd6572a7d848821047be1f641940bc9e",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -6011,8 +6011,8 @@
         "signedAnnotations": {
           "assurance-tier": "secure",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "40669ec134b7c3696aa9cf6a3d4cddb24e796905ebdb8ccb362a9e03c974b895",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "eee3a11461705bbb7d5d65752934353bdd6572a7d848821047be1f641940bc9e",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -6025,13 +6025,13 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:46:57.866255+00:00",
+        "verifiedAt": "2026-11-06T09:06:23.210248+00:00",
         "configCount": 1,
         "layerCount": 20,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:835f062b6e095b92a5d62c7673bd1236bb3c4e8c5285948a8f2f5afd2fb73d9f"
@@ -6049,11 +6049,11 @@
       "digest": "sha256:21a002aed4b2ab8e0db62754dae92e73d436e73a432e7b3a4357c68b98077240",
       "image": "ghcr.io/foxtech-consulting/python@sha256:21a002aed4b2ab8e0db62754dae92e73d436e73a432e7b3a4357c68b98077240",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:39:32.617Z",
+      "publishedAt": "2026-11-06T08:56:32.958Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -6062,11 +6062,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "ad62246ed125addb007c3a3d13dda3591f196eed4f79d1b2272fd006de557d79",
-      "signatureManifestSha256": "646b7aa85508e79c64aac0ea598ad51e6a76a7a433a134b09706ff5aee8196a3",
+      "signatureManifestSha256": "ccb66e24f52968be8003fec146d9522e62ea03d0144000b01b842bf8046ac0f4",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -6085,8 +6085,8 @@
         "signedAnnotations": {
           "assurance-tier": "hardened",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "646b7aa85508e79c64aac0ea598ad51e6a76a7a433a134b09706ff5aee8196a3",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "ccb66e24f52968be8003fec146d9522e62ea03d0144000b01b842bf8046ac0f4",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -6099,20 +6099,20 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:47:31.438410+00:00",
+        "verifiedAt": "2026-11-06T09:07:26.352490+00:00",
         "configCount": 1,
         "layerCount": 28,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:21a002aed4b2ab8e0db62754dae92e73d436e73a432e7b3a4357c68b98077240",
       "cisReport": {
         "schemaVersion": 1,
         "path": "cis-reports/ad62246ed125addb007c3a3d13dda3591f196eed4f79d1b2272fd006de557d79.json",
-        "sha256": "7d3b060ffc0a7674aa2053ecbb5e97324e5a43a1c8f44b97c6e74952a3c1ce5a",
+        "sha256": "168a2e2d0f9411c487e0b6bb12b05e70123f749508293278b59307b80c9b1712",
         "sizeBytes": 363668
       }
     },
@@ -6129,11 +6129,11 @@
       "digest": "sha256:76ca83c10d7fde87b377087a23cf1e0201d17b0142571ac7228472e79e9239fc",
       "image": "ghcr.io/foxtech-consulting/python@sha256:76ca83c10d7fde87b377087a23cf1e0201d17b0142571ac7228472e79e9239fc",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:21:28.872Z",
+      "publishedAt": "2026-11-06T08:42:28.703Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -6142,11 +6142,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557552",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667767",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "4059a7eead5eeb53de7d66d47eaa5253d687256d870e94d4263a09766866fd40",
-      "signatureManifestSha256": "082a2bc9ccc5287d1120874ed6b5e65fb7f272e3e00c6b00d224b6da01634248",
+      "signatureManifestSha256": "a7bac2d1eaf955cb8405ed77625e4bee2b2f5b906a7da83bb88745bf4c38ea36",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -6165,8 +6165,8 @@
         "signedAnnotations": {
           "assurance-tier": "secure",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "082a2bc9ccc5287d1120874ed6b5e65fb7f272e3e00c6b00d224b6da01634248",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "a7bac2d1eaf955cb8405ed77625e4bee2b2f5b906a7da83bb88745bf4c38ea36",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -6179,13 +6179,13 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:47:08.138878+00:00",
+        "verifiedAt": "2026-11-06T09:06:32.446571+00:00",
         "configCount": 1,
         "layerCount": 20,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:76ca83c10d7fde87b377087a23cf1e0201d17b0142571ac7228472e79e9239fc"
@@ -6203,11 +6203,11 @@
       "digest": "sha256:200e7982e8896910205af876dd2a97ecb97ec6cd4cc0faf2ba851c8b4b893ca5",
       "image": "ghcr.io/foxtech-consulting/python@sha256:200e7982e8896910205af876dd2a97ecb97ec6cd4cc0faf2ba851c8b4b893ca5",
       "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-      "publishedAt": "2026-11-06T06:39:32.617Z",
+      "publishedAt": "2026-11-06T08:56:32.958Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "producer": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
@@ -6216,11 +6216,11 @@
       },
       "publisher": {
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557553",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667768",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880"
       },
       "candidateManifestSha256": "69c85ae8d064ff9a24701b45cc8225e078f99bede927ab9b849b788111062927",
-      "signatureManifestSha256": "81662bc8dca00a43f6dac1d40b2b565ad3c440e7a2d70310618660a1d6635a86",
+      "signatureManifestSha256": "7f92d87bc4a004876dcd9c7e98cfe8d0daa1b8ebb7923f5ae7c3b739e22eedfa",
       "publicSourceBinding": {
         "sourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
         "sourceCommit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
@@ -6239,8 +6239,8 @@
         "signedAnnotations": {
           "assurance-tier": "hardened",
           "source-revision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assurance-manifest-sha256": "81662bc8dca00a43f6dac1d40b2b565ad3c440e7a2d70310618660a1d6635a86",
-          "python-ghcr-policy-sha256": "11726f4e6a645ab048cf61c195538c37ab9fd95290d798fe3aab97bd48fb23f8",
+          "assurance-manifest-sha256": "7f92d87bc4a004876dcd9c7e98cfe8d0daa1b8ebb7923f5ae7c3b739e22eedfa",
+          "python-ghcr-policy-sha256": "1c5280536712c7955a721bd6c18461b632731b559f5d08aa91f13e238d4bf089",
           "public-source-commit": "2109b64045aeeba478563f7c0538f422a8e5d12e",
           "public-source-manifest-sha256": "729982e585d835cc95410d5e8368274ccfe3dbd7cf66dc3f7849ff58e8da56de",
           "publication-context": "protected-release",
@@ -6253,20 +6253,20 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-06T06:47:35.923713+00:00",
+        "verifiedAt": "2026-11-06T09:07:30.834678+00:00",
         "configCount": 1,
         "layerCount": 28,
-        "proofCoreSha256": "4f384942ae5f86fc06d18cd1fdc3bf39eeda54833a615aab228165fbb3bf3f54",
+        "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17796127386"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/python",
       "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/python@sha256:200e7982e8896910205af876dd2a97ecb97ec6cd4cc0faf2ba851c8b4b893ca5",
       "cisReport": {
         "schemaVersion": 1,
         "path": "cis-reports/69c85ae8d064ff9a24701b45cc8225e078f99bede927ab9b849b788111062927.json",
-        "sha256": "9fdbdb20ce8230b1c5d64db1ad6714dbca021f3b6c40dfd0dec592634aa84aea",
+        "sha256": "ee06523aae20b8b7635c76408dc5c7ee064ed89397ac83b649ef83309b814d77",
         "sizeBytes": 363666
       }
     },
@@ -8355,18 +8355,18 @@
       "status": "complete",
       "family": "python",
       "platform": "linux/amd64",
-      "completedAt": "2026-11-06T06:03:14.667Z",
+      "completedAt": "2026-11-06T08:26:32.354Z",
       "source": {
         "projectId": "88218569",
         "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009",
-        "pipelineId": "3034819102",
-        "jobId": "17793557550",
+        "pipelineId": "3035142880",
+        "jobId": "17795667765",
         "ref": "main",
         "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034819102",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793557550"
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035142880",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795667765"
       },
-      "receiptSha256": "c531b4f44480549f38729f64d8ab1c7f64c246238d23514fb60367ddc0b37d9c",
+      "receiptSha256": "6c35df353bb486a22864488c54f13bed4ac67b52f037deeda62b22b17ffd491e",
       "buildInputsSha256": "5a90ecf4f71d9e519c462c7a175063ce99d05ed72282b7347ade309695ca086f",
       "imageBuildPerformed": false,
       "qualificationGranted": false,
@@ -8381,18 +8381,18 @@
           "runtimeDigest": "sha256:cfd9cc05533b89436c8c0fc5debc70d16dc36f373d3e665f95e50f69fe540b7a",
           "referenceDigest": "sha256:4c4848de729018b473e23f6226efd418016d83d92ea357bc8fe779ec8eb2954a",
           "imageBuildSourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
-          "assessedAt": "2026-11-06T04:27:35.154171Z",
+          "assessedAt": "2026-11-06T07:28:29.163989Z",
           "source": {
-            "jobId": "17794241770",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794241770",
-            "pipelineId": "3034924413",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034924413",
+            "jobId": "17797496008",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17797496008",
+            "pipelineId": "3035437862",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035437862",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "d13b4992cf2769d44eb4743f35f68781449da84bacb4792a639978d53a8c2cc2",
+          "manifestSha256": "8df6e1a3d9578766226206a32e1c8231eb1a241cf9422baeddc5d1da69d19a44",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8401,33 +8401,33 @@
             "image-compliance"
           ],
           "runtimeVulnerabilities": {
-            "matches": 11,
+            "matches": 12,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 9,
+              "medium": 10,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 11,
+            "matches": 12,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 9,
+              "medium": 10,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         },
@@ -8439,18 +8439,18 @@
           "runtimeDigest": "sha256:b91aad5f923ea04a3ff4434496a001ccd8a708dc797fdbeed37b0b927dc6ff43",
           "referenceDigest": "sha256:0ea789605a52a37912c8aa3221d39e45d63eb784e99a91d65e6d3cc54850fc82",
           "imageBuildSourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
-          "assessedAt": "2026-11-06T03:48:57.691341Z",
+          "assessedAt": "2026-11-06T06:48:05.621766Z",
           "source": {
-            "jobId": "17793690377",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793690377",
-            "pipelineId": "3034839133",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034839133",
+            "jobId": "17796173350",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17796173350",
+            "pipelineId": "3035219512",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035219512",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "13c61bc747a88a6c93609809ae5072c0ba3279852d3ce54f4084509c25001b33",
+          "manifestSha256": "d635297efa595e95f2f4befc85fb28f1591ff3613fc74d6faa60e53816d36e18",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8496,18 +8496,18 @@
           "runtimeDigest": "sha256:cfd9cc05533b89436c8c0fc5debc70d16dc36f373d3e665f95e50f69fe540b7a",
           "referenceDigest": "sha256:4c4848de729018b473e23f6226efd418016d83d92ea357bc8fe779ec8eb2954a",
           "imageBuildSourceRevision": "e50c9478effb5d77c622ff83c17feaa1a10e547e",
-          "assessedAt": "2026-11-06T05:43:13.493311Z",
+          "assessedAt": "2026-11-06T08:07:19.242688Z",
           "source": {
-            "jobId": "17795197655",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795197655",
-            "pipelineId": "3035070594",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035070594",
+            "jobId": "17798407442",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17798407442",
+            "pipelineId": "3035565429",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035565429",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "3779eac28a5c207dd5b0f9069c917a773b70e83ddedd56543229378a1d65f9fb",
+          "manifestSha256": "66f2d6f685f85aa00b873f6af6e245118e0e11579a06822c3e81758779178190",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8517,33 +8517,33 @@
             "provider-approved-mode"
           ],
           "runtimeVulnerabilities": {
-            "matches": 11,
+            "matches": 12,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 9,
+              "medium": 10,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 11,
+            "matches": 12,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 9,
+              "medium": 10,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         },
@@ -8555,18 +8555,18 @@
           "runtimeDigest": "sha256:37ed3441c9c6a2e4d8a393ec110fdd3e6789b2c9e917ce9d3fb125235236c057",
           "referenceDigest": "sha256:b46b11e17ee7fc705112cf7dbee25c9a0d967fcb630e510a45688614adf20c7c",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T04:37:05.076438Z",
+          "assessedAt": "2026-11-06T07:13:18.636988Z",
           "source": {
-            "jobId": "17794325499",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794325499",
-            "pipelineId": "3034936624",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034936624",
+            "jobId": "17796898841",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17796898841",
+            "pipelineId": "3035334675",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035334675",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "42df96a0d1775bb7af113429012fed93c6beb0727f85c206dbdbc8d1b83ea74f",
+          "manifestSha256": "262a584bfc74ef70f4ed842c7bbe8c52c05fa2a79f3bb3477f0f7a174b3e4372",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8575,33 +8575,33 @@
             "image-compliance"
           ],
           "runtimeVulnerabilities": {
-            "matches": 17,
+            "matches": 18,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 14,
+              "medium": 15,
               "negligible": 2,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 17,
+            "matches": 18,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 14,
+              "medium": 15,
               "negligible": 2,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         },
@@ -8613,18 +8613,18 @@
           "runtimeDigest": "sha256:a7819d0380ccbc5ca32055c52cd1e2fdfc2ec4bd3f4f852234270eed4c005343",
           "referenceDigest": "sha256:3ba4c38c6c24795ef5afb35fb344afef841d17f1ef78de037c2d437dbf64b118",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T04:06:45.212616Z",
+          "assessedAt": "2026-11-06T06:18:50.031690Z",
           "source": {
-            "jobId": "17793912984",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793912984",
-            "pipelineId": "3034872996",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034872996",
+            "jobId": "17795695213",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795695213",
+            "pipelineId": "3035146700",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035146700",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "6b8b204d9029e7b455e8b6729c4f0749f2619559a9200b0931a98cf456d269eb",
+          "manifestSha256": "693e86a9c0557cacc231bb68afcb59ac6c0e16c3b2df14c124026eff299ae507",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8670,18 +8670,18 @@
           "runtimeDigest": "sha256:37ed3441c9c6a2e4d8a393ec110fdd3e6789b2c9e917ce9d3fb125235236c057",
           "referenceDigest": "sha256:b46b11e17ee7fc705112cf7dbee25c9a0d967fcb630e510a45688614adf20c7c",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T05:35:09.967586Z",
+          "assessedAt": "2026-11-06T07:43:11.869680Z",
           "source": {
-            "jobId": "17795090292",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795090292",
-            "pipelineId": "3035054698",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035054698",
+            "jobId": "17797898458",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17797898458",
+            "pipelineId": "3035483040",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035483040",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "b802f684e391e0e3be0a56006718467207e695834a440f3eab4cd4bb1c63686d",
+          "manifestSha256": "596c298f6a836fcc537b47bfc9922906e5ec448ba09d0641467269c9e3fb4c8e",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8691,33 +8691,33 @@
             "provider-approved-mode"
           ],
           "runtimeVulnerabilities": {
-            "matches": 17,
+            "matches": 18,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 14,
+              "medium": 15,
               "negligible": 2,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 17,
+            "matches": 18,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 14,
+              "medium": 15,
               "negligible": 2,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         },
@@ -8729,18 +8729,18 @@
           "runtimeDigest": "sha256:b3948c66bbaa7d8871ae212df951cd37aa346611d288b108cc7cab0bb53d14ce",
           "referenceDigest": "sha256:446bb24f84041b9ebb1495e4a9c0088c882064f8bd2b66445de6cce6c6007a71",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T05:01:08.966141Z",
+          "assessedAt": "2026-11-06T07:06:15.634577Z",
           "source": {
-            "jobId": "17794630713",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794630713",
-            "pipelineId": "3034982752",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034982752",
+            "jobId": "17796644254",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17796644254",
+            "pipelineId": "3035295226",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035295226",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "16adc8a1e9743ebdf77a8e7678b9ae295dddc2e9775908b68b017f8c174fdd9a",
+          "manifestSha256": "db6f98ff85651877e2c2c241f036227f07fa80aae6511996b36f330951cdd700",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8787,18 +8787,18 @@
           "runtimeDigest": "sha256:25441d9ff5a18c70c3a134009c5ea1622275c83dd0e7d749d656a337cfde42ba",
           "referenceDigest": "sha256:ab6f17a6ecfea47b706facaabbdd4e5b65163beae2273c4cb080ef905c3503e7",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T03:58:52.408643Z",
+          "assessedAt": "2026-11-06T06:26:20.985008Z",
           "source": {
-            "jobId": "17793807146",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793807146",
-            "pipelineId": "3034856824",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034856824",
+            "jobId": "17795815470",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795815470",
+            "pipelineId": "3035163996",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035163996",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "5e91b20c91433173b9b6a48e46b332be8ad665369eec795c45e3ea225ad1c1e4",
+          "manifestSha256": "3f3ac4de927abd8551f0397807e191ac2906bfba0390e885417048dc32613ab7",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8844,18 +8844,18 @@
           "runtimeDigest": "sha256:b3948c66bbaa7d8871ae212df951cd37aa346611d288b108cc7cab0bb53d14ce",
           "referenceDigest": "sha256:446bb24f84041b9ebb1495e4a9c0088c882064f8bd2b66445de6cce6c6007a71",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T05:18:58.671938Z",
+          "assessedAt": "2026-11-06T07:50:56.214419Z",
           "source": {
-            "jobId": "17794853003",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794853003",
-            "pipelineId": "3035020022",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035020022",
+            "jobId": "17798054994",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17798054994",
+            "pipelineId": "3035518490",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035518490",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "a0774818bfd250e16ce71750002f29cb700cce27e4aa0856ec3fdf0114a68a10",
+          "manifestSha256": "2f1bec61d3ce55757ea5cd8a013da7e8a5ec02f0aa4b725cd7b6c44a72b594ca",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8865,33 +8865,33 @@
             "provider-approved-mode"
           ],
           "runtimeVulnerabilities": {
-            "matches": 16,
+            "matches": 17,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 13,
+              "medium": 14,
               "negligible": 2,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 16,
+            "matches": 17,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 13,
+              "medium": 14,
               "negligible": 2,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         },
@@ -8903,18 +8903,18 @@
           "runtimeDigest": "sha256:21a002aed4b2ab8e0db62754dae92e73d436e73a432e7b3a4357c68b98077240",
           "referenceDigest": "sha256:47b6295c1e6a924bbfa61ddd5cb94720d51ee1ac1c9a9d01e60566d085699785",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T04:53:45.553386Z",
+          "assessedAt": "2026-11-06T06:58:40.408561Z",
           "source": {
-            "jobId": "17794531955",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794531955",
-            "pipelineId": "3034967997",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034967997",
+            "jobId": "17796450152",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17796450152",
+            "pipelineId": "3035262656",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035262656",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "d54beba6b745575f7cbb6fc514b764a432bc18be2b14e42bd6d3fc13ae316407",
+          "manifestSha256": "89dd9bc747cff3cf00ed68e6258fd19390bdaef0bc22514d25d78305b5f8b283",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -8961,18 +8961,18 @@
           "runtimeDigest": "sha256:835f062b6e095b92a5d62c7673bd1236bb3c4e8c5285948a8f2f5afd2fb73d9f",
           "referenceDigest": "sha256:d0fa880aac6a9c4d859abd8abd8e9794daa178a44f6b0c19c944b20007787c74",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T03:38:30.978432Z",
+          "assessedAt": "2026-11-06T06:34:18.469088Z",
           "source": {
-            "jobId": "17793591521",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17793591521",
-            "pipelineId": "3034824285",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034824285",
+            "jobId": "17795928419",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795928419",
+            "pipelineId": "3035180262",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035180262",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "00dac32ec8d5664aa99acd49037f4aa2a1b49fc95abd00011fe5d9c57fb075bd",
+          "manifestSha256": "0b2164af385d99128a241a0bcabfb638f5d2e05133ba96b134dd016317117dda",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -9018,18 +9018,18 @@
           "runtimeDigest": "sha256:21a002aed4b2ab8e0db62754dae92e73d436e73a432e7b3a4357c68b98077240",
           "referenceDigest": "sha256:47b6295c1e6a924bbfa61ddd5cb94720d51ee1ac1c9a9d01e60566d085699785",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T05:52:20.096598Z",
+          "assessedAt": "2026-11-06T08:15:15.664511Z",
           "source": {
-            "jobId": "17795298583",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17795298583",
-            "pipelineId": "3035084580",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035084580",
+            "jobId": "17798630416",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17798630416",
+            "pipelineId": "3035601954",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035601954",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "ec32225ff47931bf92c34878cc6b8ca8b14f8dc19921565a56b8252245b84414",
+          "manifestSha256": "0a472f8d51452d1aedee53a9c50196d78e7828631b3f2bf907f0ad7490373227",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -9039,33 +9039,33 @@
             "provider-approved-mode"
           ],
           "runtimeVulnerabilities": {
-            "matches": 11,
+            "matches": 12,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 9,
+              "medium": 10,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 11,
+            "matches": 12,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 9,
+              "medium": 10,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         },
@@ -9077,18 +9077,18 @@
           "runtimeDigest": "sha256:200e7982e8896910205af876dd2a97ecb97ec6cd4cc0faf2ba851c8b4b893ca5",
           "referenceDigest": "sha256:f471ed6eece959333d5d50c0c2aef5628fb716433f8ca6305d7d51e8db1bae56",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T04:44:41.931534Z",
+          "assessedAt": "2026-11-06T07:21:24.718532Z",
           "source": {
-            "jobId": "17794443790",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794443790",
-            "pipelineId": "3034955205",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034955205",
+            "jobId": "17797234890",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17797234890",
+            "pipelineId": "3035399996",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035399996",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "3b92d694b744150f1821a5d8f5ea658b9405a6f365a047f609afaa3dfd49306e",
+          "manifestSha256": "9c6068130afdde0664008febee04fb001c13a2a087e2bdb8b93c8e300b351633",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -9097,33 +9097,33 @@
             "image-compliance"
           ],
           "runtimeVulnerabilities": {
-            "matches": 10,
+            "matches": 11,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 8,
+              "medium": 9,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 10,
+            "matches": 11,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 8,
+              "medium": 9,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         },
@@ -9135,18 +9135,18 @@
           "runtimeDigest": "sha256:76ca83c10d7fde87b377087a23cf1e0201d17b0142571ac7228472e79e9239fc",
           "referenceDigest": "sha256:9cc777eb11454b4fb4e3464df86c81e47ca69971e02aebd1e357cd63887ad75f",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T04:16:53.733508Z",
+          "assessedAt": "2026-11-06T06:41:35.414739Z",
           "source": {
-            "jobId": "17794041375",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794041375",
-            "pipelineId": "3034892900",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3034892900",
+            "jobId": "17796041910",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17796041910",
+            "pipelineId": "3035197102",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035197102",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "3f39bd35290a33374a55fbead3debbe7185d791be384675efe5e0404ec862c56",
+          "manifestSha256": "59c078c52137a0915812c1a33b41e43c3295b73ec84fbe758a4f9f888b8ce035",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -9192,18 +9192,18 @@
           "runtimeDigest": "sha256:200e7982e8896910205af876dd2a97ecb97ec6cd4cc0faf2ba851c8b4b893ca5",
           "referenceDigest": "sha256:f471ed6eece959333d5d50c0c2aef5628fb716433f8ca6305d7d51e8db1bae56",
           "imageBuildSourceRevision": "6b02bffc537c563ffb3bd4ef730ea5b852b1ce9f",
-          "assessedAt": "2026-11-06T05:27:12.773177Z",
+          "assessedAt": "2026-11-06T07:59:20.281634Z",
           "source": {
-            "jobId": "17794989768",
-            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17794989768",
-            "pipelineId": "3035039679",
-            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035039679",
+            "jobId": "17798208883",
+            "jobUrl": "https://gitlab.com/indianhilllabs/containers/python/-/jobs/17798208883",
+            "pipelineId": "3035539477",
+            "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/python/-/pipelines/3035539477",
             "projectId": "88218569",
             "projectUrl": "https://gitlab.com/indianhilllabs/containers/python",
             "ref": "main",
             "sourceRevision": "6e84e03bdbad875cbd0df88421296f88746f1009"
           },
-          "manifestSha256": "96237930c0bd6998777f647819e3096b034e39435bc2eb4d34d9456e78a7711a",
+          "manifestSha256": "eeb9b2fb5aad184cd785b50a581b2ea112308aa2e7414661515eaec05c878ca4",
           "checks": [
             "runtime",
             "oci-lineage",
@@ -9213,33 +9213,33 @@
             "provider-approved-mode"
           ],
           "runtimeVulnerabilities": {
-            "matches": 10,
+            "matches": 11,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 8,
+              "medium": 9,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           },
           "referenceVulnerabilities": {
-            "matches": 10,
+            "matches": 11,
             "severity": {
               "critical": 0,
               "high": 0,
               "low": 1,
-              "medium": 8,
+              "medium": 9,
               "negligible": 1,
               "unknown": 0
             },
             "cisaKevMatches": 0,
             "scanner": "grype/0.116.1",
-            "databaseBuilt": "2026-11-05T06:21:06Z",
+            "databaseBuilt": "2026-11-06T06:21:59Z",
             "kevDateReleased": "2026-11-04T20:00:05.774Z"
           }
         }
