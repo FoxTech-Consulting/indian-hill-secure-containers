@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import re
+import shlex
 import subprocess
 import sys
 import uuid
@@ -30,6 +31,80 @@ SHA256 = re.compile(r"[0-9a-f]{64}")
 REVISION = re.compile(r"[0-9a-f]{40}")
 NAME = re.compile(r"[a-z0-9]+(?:[._-][a-z0-9]+)*")
 VERSION = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,63}")
+POSTGRES_MATERIAL = "images/postgres/config/Dockerfile.hardened-material"
+POSTGRES_MATERIAL_INPUTS = (
+    "images/postgres/config/Dockerfile", "images/postgres/config/Dockerfile.hardened", POSTGRES_MATERIAL,
+    "images/postgres/config/postgresql.validated.conf", "images/postgres/config/openssl-fips.cnf")
+
+
+def postgres_material_profile(product: dict, files: dict[str, bytes]) -> dict:
+    """Describe PG16 H source material; this never qualifies the local build.
+
+    The original provider recipe is exported byte-for-byte under an H alias.
+    Only its two reviewed context files cross the ordinary private-path filter.
+    A new recipe, provider, source pin or COPY requires a separate review.
+    """
+    if (any(product.get(key) != value for key, value in {
+            "family": "postgres", "key": "postgres", "targetId": "postgres-16",
+            "id": "IHL-CTR-0004", "versionLine": "16"}.items())
+            or not re.fullmatch(r"16\.[0-9]+", str(product.get("productVersion", "")))
+            or set(files) != set(POSTGRES_MATERIAL_INPUTS)
+            or any(not isinstance(raw, bytes) or not raw or len(raw) > 1024 * 1024 for raw in files.values())):
+        raise ValueError("Public PostgreSQL material is limited to the exact PG16 Hardened source closure")
+
+    builder = "docker.io/library/gcc:11.2.0@sha256:2c5cae6b84598eb6865d6c7b340deef80e8834a4c4037a5cbba755a5258809d4"
+    module_sha = "a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539"
+    base_sha = "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a"
+    instructions, pending = [], ""
+    for raw in files[POSTGRES_MATERIAL].decode("utf-8").splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        pending += line[:-1] + " " if line.endswith("\\") else line
+        if line.endswith("\\"):
+            continue
+        name, separator, arguments = pending.partition(" ")
+        if not separator:
+            raise ValueError("Malformed PostgreSQL material recipe")
+        instructions.append((name.upper(), arguments.strip()))
+        pending = ""
+    if pending:
+        raise ValueError("Incomplete PostgreSQL material recipe")
+    defaults = [args for instruction, args in instructions if instruction == "ARG"]
+    copies = [shlex.split(args) for instruction, args in instructions if instruction == "COPY"]
+    expected_copies = [
+        ["--from=openssl-fips-module-build", "/opt/openssl/" + source, "/opt/openssl/" + source]
+        for source in ("lib/ossl-modules/fips.so", "ssl/fipsmodule.cnf", "share/indianhilllabs/fips-module.sha256")]
+    expected_copies += [
+        ["--chown=1654:1654", POSTGRES_MATERIAL_INPUTS[3], "/opt/ihl/postgresql/postgresql.conf"],
+        [POSTGRES_MATERIAL_INPUTS[4], "/opt/openssl/ssl/openssl-fips.cnf"]]
+    secure = files[POSTGRES_MATERIAL_INPUTS[0]].decode("utf-8").replace("\r\n", "\n")
+    additive = files[POSTGRES_MATERIAL_INPUTS[1]].decode("utf-8").replace("\r\n", "\n")
+    if ([args for instruction, args in instructions if instruction == "FROM"] != [
+            "${FIPS_BUILDER} AS openssl-fips-module-build", "${HARDENED_BASE}"]
+            or defaults.count("FIPS_BUILDER=" + builder) != 1
+            or defaults.count("OPENSSL_VERSION=3.1.2") != 1
+            or defaults.count("OPENSSL_SOURCE_SHA256=" + module_sha) != 1
+            or [args for instruction, args in instructions if instruction == "ADD"] != [
+                "--checksum=sha256:" + module_sha + " https://www.openssl.org/source/openssl-3.1.2.tar.gz /tmp/openssl.tar.gz"]
+            or copies != expected_copies
+            or re.findall(r"(?m)^ARG OPENSSL_BASE_VERSION=(\S+)$", secure) != ["3.5.9"]
+            or re.findall(r"(?m)^ARG OPENSSL_BASE_SOURCE_SHA256=(\S+)$", secure) != [base_sha]
+            or re.findall(r"(?m)^FROM (.+)$", additive) != ["${SECURE_BASE}"]):
+        raise ValueError("Public PostgreSQL selected recipes, provider pins or COPY closure require review")
+
+    def record(path):
+        raw = files[path]
+        return {"path": path, "sha256": hashlib.sha256(raw).hexdigest(), "sizeBytes": len(raw)}
+
+    return {"schemaVersion": 1, "targetId": "postgres-16", "assessmentTier": "hardened",
+        "materialAssuranceLevel": "validated", "builderImage": builder,
+        "module": {"name": "OpenSSL FIPS Provider", "version": "3.1.2", "cmvpCertificate": "4985",
+            "sourceArchiveSha256": module_sha},
+        "baseLibrary": {"name": "OpenSSL", "version": "3.5.9", "sourceArchiveSha256": base_sha},
+        "secureRecipe": record(POSTGRES_MATERIAL_INPUTS[0]), "additiveRecipe": record(POSTGRES_MATERIAL_INPUTS[1]),
+        "recipe": record(POSTGRES_MATERIAL), "contextInputs": [record(path) for path in POSTGRES_MATERIAL_INPUTS[3:]],
+        "qualificationGranted": False, "validatedExecutionAuthorized": False}
 
 
 def require_source_context(repository: object, product: dict[str, Any] | None = None) -> str:
@@ -157,7 +232,22 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
                 raise ValueError(f"Invalid public recipe: {key}")
             recipes.append(recipe_path(root, recipe.get("dockerfile"), aspnet_validated=product.get('family') == 'aspnet' and tier == 'validated'))
             java_hardened = product.get("family") == "java" and tier == "hardened"
-            if java_hardened or "materialDockerfile" in recipe or "javaMaterialProfile" in recipe:
+            postgres_hardened = product.get("key") == "postgres" and product.get("family") == "postgres" and tier == "hardened"
+            if postgres_hardened or "postgresMaterialProfile" in recipe:
+                actual = recipe_path(root, recipe.get("materialDockerfile"))
+                profile = postgres_material_profile(product, {name: snapshot_path(root, name).read_bytes()
+                    for name in POSTGRES_MATERIAL_INPUTS})
+                material = recipe.get("postgresMaterialProfile")
+                if (not postgres_hardened or actual != POSTGRES_MATERIAL
+                        or tiers['secure'].get('dockerfile') != POSTGRES_MATERIAL_INPUTS[0]
+                        or recipe.get('dockerfile') != POSTGRES_MATERIAL_INPUTS[1]
+                        or not isinstance(material, dict) or material != profile
+                        or material.get('qualificationGranted') is not False
+                        or material.get('validatedExecutionAuthorized') is not False
+                        or 'javaMaterialProfile' in recipe):
+                    raise ValueError("Public PG16 Hardened material differs from its reviewed source profile")
+                recipes.extend(POSTGRES_MATERIAL_INPUTS)
+            elif java_hardened or "materialDockerfile" in recipe or "javaMaterialProfile" in recipe:
                 # Both fields are mandatory for Java H. A self-consistent
                 # snapshot must not silently fall back to its additive parent.
                 material = recipe.get("javaMaterialProfile")

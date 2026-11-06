@@ -1,0 +1,62 @@
+# The final Hardened PostgreSQL artifact adds the verified OpenSSL FIPS provider
+# and binds Validated qualification to that exact same digest.
+ARG FIPS_BUILDER=docker.io/library/gcc:11.2.0@sha256:2c5cae6b84598eb6865d6c7b340deef80e8834a4c4037a5cbba755a5258809d4
+ARG HARDENED_BASE=ihl/postgres:16.15-hardened-candidate.1
+FROM ${FIPS_BUILDER} AS openssl-fips-module-build
+ARG OPENSSL_VERSION=3.1.2
+ARG OPENSSL_SOURCE_SHA256=a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539
+ADD --checksum=sha256:a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539 https://www.openssl.org/source/openssl-3.1.2.tar.gz /tmp/openssl.tar.gz
+RUN set -eu; \
+    printf '%s  %s\n' "$OPENSSL_SOURCE_SHA256" /tmp/openssl.tar.gz | sha256sum --check --strict; \
+    tar -xzf /tmp/openssl.tar.gz -C /tmp; \
+    cd "/tmp/openssl-$OPENSSL_VERSION"; \
+    ./Configure enable-fips --prefix=/opt/openssl --openssldir=/opt/openssl/ssl --libdir=lib; \
+    make -s -j2; make -s install; \
+    export LD_LIBRARY_PATH=/opt/openssl/lib; \
+    export OPENSSL_MODULES=/opt/openssl/lib/ossl-modules; \
+    unset OPENSSL_CONF; \
+    /opt/openssl/bin/openssl fipsinstall -module /opt/openssl/lib/ossl-modules/fips.so -out /opt/openssl/ssl/fipsmodule.cnf -provider_name fips -section_name fips_sect -pedantic -self_test_onload; \
+    ! grep -Eq '^(install-status|install-mac)[[:space:]]*=' /opt/openssl/ssl/fipsmodule.cnf; \
+    install -d -m 0755 /opt/openssl/share/indianhilllabs; \
+    sha256sum /opt/openssl/lib/ossl-modules/fips.so > /opt/openssl/share/indianhilllabs/fips-module.sha256
+FROM ${HARDENED_BASE}
+ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
+ARG OCI_REVISION="manual-build"
+ARG OCI_CREATED="1970-01-01T00:00:00Z"
+LABEL org.opencontainers.image.title="Indian Hill Validated PostgreSQL 16" \
+      org.opencontainers.image.description="Hardened PostgreSQL 16 linked to the OpenSSL FIPS Provider 3.1.2" \
+      org.opencontainers.image.version="16.15-validated-candidate.1" \
+      org.opencontainers.image.vendor="Indian Hill Labs" \
+      org.opencontainers.image.source="${OCI_SOURCE}" \
+      org.opencontainers.image.revision="${OCI_REVISION}" \
+      org.opencontainers.image.created="${OCI_CREATED}" \
+      com.indianhilllabs.artifact.id="IHL-CTR-0004" \
+      com.indianhilllabs.assurance.level="validated" \
+      com.indianhilllabs.assurance.inherits="hardened" \
+      com.indianhilllabs.assurance.stig-profile="ihl-crunchy-data-postgres-16-v1r3-container" \
+      com.indianhilllabs.crypto.standard="FIPS 140-3" \
+      com.indianhilllabs.crypto.module="OpenSSL FIPS Provider 3.1.2" \
+      com.indianhilllabs.crypto.cmvp-certificate="4985" \
+      com.indianhilllabs.crypto.base-library="OpenSSL 3.5.9"
+COPY --from=openssl-fips-module-build /opt/openssl/lib/ossl-modules/fips.so /opt/openssl/lib/ossl-modules/fips.so
+COPY --from=openssl-fips-module-build /opt/openssl/ssl/fipsmodule.cnf /opt/openssl/ssl/fipsmodule.cnf
+COPY --from=openssl-fips-module-build /opt/openssl/share/indianhilllabs/fips-module.sha256 /opt/openssl/share/indianhilllabs/fips-module.sha256
+COPY --chown=1654:1654 images/postgres/config/postgresql.validated.conf /opt/ihl/postgresql/postgresql.conf
+COPY images/postgres/config/openssl-fips.cnf /opt/openssl/ssl/openssl-fips.cnf
+ENV IHL_ASSURANCE_LEVEL="validated" \
+    IHL_FIPS_STANDARD="FIPS 140-3" \
+    IHL_FIPS_MODULE_NAME="OpenSSL FIPS Provider" \
+    IHL_FIPS_MODULE_VERSION="3.1.2" \
+    IHL_FIPS_CMVP_CERTIFICATE="4985" \
+    IHL_FIPS_SOURCE_SHA256="a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539" \
+    IHL_OPENSSL_BASE_NAME="OpenSSL" \
+    IHL_OPENSSL_BASE_VERSION="3.5.9" \
+    IHL_OPENSSL_BASE_SOURCE_SHA256="603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a" \
+    LD_LIBRARY_PATH="/opt/openssl/lib" \
+    OPENSSL_CONF="/opt/openssl/ssl/openssl-fips.cnf" \
+    OPENSSL_MODULES="/opt/openssl/lib/ossl-modules"
+USER 1654:1654
+WORKDIR /var/lib/postgresql/data
+EXPOSE 5432
+ENTRYPOINT ["/usr/local/bin/ihl-postgres-entrypoint"]
+STOPSIGNAL SIGINT

@@ -42,30 +42,30 @@ For example, pull the verified NGINX previews by immutable digest:
 <!-- BEGIN VERIFIED PULL EXAMPLES -->
 ```console
 # Secure NGINX
-docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:2ed7f34d286e3fde4820f57f63602b98f04ce9a332421c0dc67da35bdf5e428a
+docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:2d2b891b04eb8681724d6575f653ef91c37f26ca58062e7226abbcc06ad9eb0b
 
 # Hardened NGINX
-docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:14735457c5a2cc686a24369c00501c2f04268b181487ff657edb1237e1849648
+docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/nginx@sha256:ca630ca97ebbd48e8bead9d7aeb21282a17a818a215315acbf38756cb3d60b0c
 ```
 <!-- END VERIFIED PULL EXAMPLES -->
 
 Keep the `@sha256:...` digest when pinning an image in Docker Compose or Kubernetes. A timestamped tag is useful for discovery; the digest selects the exact artifact. The published image's source revision can differ from this README's `SOURCE.json`, because documentation and the download catalog can be updated independently of the image's original build.
 
 <!-- BEGIN VERIFIED IMAGE TABLE -->
-Verified download inventory updated **2026-11-05 06:29 UTC**: **48 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
+Verified download inventory updated **2026-11-01 20:38 UTC**: **46 Secure and 45 Hardened runtime previews**. Individual download-check timestamps are recorded in the catalog.
 
 All images below are engineering previews for Linux/AMD64. Copy exact digest-pinned commands from [published-images.json](published-images.json).
 
 | Family and version | Repository | Secure tag | Hardened tag |
 | --- | --- | --- | --- |
-| ASP.NET 10.0.14 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-10.0.14-secure-d798a5b9375a` | `ihl-aspnet-10.0.14-hardened-d798a5b9375a` |
-| ASP.NET 8.0.33 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-8.0.33-secure-d798a5b9375a` | `ihl-aspnet-8.0.33-hardened-d798a5b9375a` |
-| ASP.NET 9.0.22 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-9.0.22-secure-d798a5b9375a` | `ihl-aspnet-9.0.22-hardened-d798a5b9375a` |
+| ASP.NET 10.0.14 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-10.0.14-secure-bc242746ae30` | `ihl-aspnet-10.0.14-hardened-bc242746ae30` |
+| ASP.NET 8.0.33 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-8.0.33-secure-bc242746ae30` | `ihl-aspnet-8.0.33-hardened-bc242746ae30` |
+| ASP.NET 9.0.22 | [`aspnet`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet) | `ihl-aspnet-9.0.22-secure-bc242746ae30` | `ihl-aspnet-9.0.22-hardened-bc242746ae30` |
 | Elasticsearch 9.5.5 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.5.5-20261017T200335Z` | Not listed |
 | Elasticsearch 8.19.23 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-8.19.23-20261017T194104Z` | Not listed |
 | Elasticsearch 9.4.8 | [`elasticsearch`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/elasticsearch) | `IHL-Elasticsearch-9.4.8-20261017T195103Z` | Not listed |
-| Go 1.27.3 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | `ihl-go-1.27.3-secure-4a7b77c395ed` | `ihl-go-1.27.3-hardened-4a7b77c395ed` |
-| Go 1.26.10 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | `ihl-go-1.26.10-secure-4a7b77c395ed` | `ihl-go-1.26.10-hardened-4a7b77c395ed` |
+| Go 1.27.2 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | Not listed | `IHL-Go-1.27.2-20261019T035241Z-Hardened` |
+| Go 1.26.9 | [`go`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/go) | Not listed | `IHL-Go-1.26.9-20261019T035043Z-Hardened` |
 | Java 21.0.12.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-21.0.12.1-20261101T193505Z` | `IHL-Java-21.0.12.1-20261018T233231Z-Hardened` |
 | Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261101T200541Z` | `IHL-Java-11.0.32.1-20261019T033233Z-Hardened` |
 | Java 11.0.32.1 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-11.0.32.1-20261101T200751Z` | `IHL-Java-11.0.32.1-20261018T233752Z-Hardened` |
@@ -80,8 +80,8 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 | Java 27 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-27-20261101T202617Z` | `IHL-Java-27-20261018T234334Z-Hardened` |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261101T203255Z` | `IHL-Java-8.0.504-20261019T033111Z-Hardened` |
 | Java 8.0.504 | [`java`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/java) | `IHL-Java-8.0.504-20261101T203512Z` | `IHL-Java-8.0.504-20261018T233614Z-Hardened` |
-| NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261104T171946Z` | `IHL-NGINX-1.30.6-20261104T171946Z-Hardened` |
-| NGINX 1.31.8 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.8-20261104T171946Z` | `IHL-NGINX-1.31.8-20261104T171946Z-Hardened` |
+| NGINX 1.30.6 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.30.6-20261101T100315Z` | `IHL-NGINX-1.30.6-20261101T100315Z-Hardened` |
+| NGINX 1.31.8 | [`nginx`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/nginx) | `IHL-NGINX-1.31.8-20261101T100315Z` | `IHL-NGINX-1.31.8-20261101T100315Z-Hardened` |
 | Node.js 24.22.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-24.22.0-20261018T120226Z` | `IHL-Node-24.22.0-20261019T032957Z-Hardened` |
 | Node.js 22.23.3 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-22.23.3-20261018T084620Z` | `IHL-Node-22.23.3-20261018T235447Z-Hardened` |
 | Node.js 26.12.0 | [`node`](https://github.com/orgs/FoxTech-Consulting/packages/container/package/node) | `IHL-Node-26.12.0-20261018T160236Z` | `IHL-Node-26.12.0-20261018T235608Z-Hardened` |
@@ -109,7 +109,7 @@ All images below are engineering previews for Linux/AMD64. Copy exact digest-pin
 
 "Not listed" means no verified download for that exact target and tier is advertised. Separate build selections retain separate rows, even when their family and version display names match. Canonical build keys and technical identities remain in the JSON catalogs.
 
-91 runtime records include signed public source bindings; 2 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
+89 runtime records include signed public source bindings; 2 retain their original legacy binding status. The image producer revision and publisher revision remain distinct. A newer source snapshot cannot replace an image's original source binding.
 
 Recorded findings remain attached to the publication. Missing findings or annotation values do not mean zero findings or absent annotations. Anonymous byte checks do not repeat cryptographic signature verification or execute the runtime.
 <!-- END VERIFIED IMAGE TABLE -->
