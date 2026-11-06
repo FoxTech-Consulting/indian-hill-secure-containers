@@ -1,0 +1,36 @@
+{
+  "assessmentTiers": [
+    "secure",
+    "hardened",
+    "validated"
+  ],
+  "family": "aspnet",
+  "id": "IHL-CTR-0001",
+  "image": {
+    "repository": "aspnet-runtime",
+    "tiers": {
+      "hardened": {
+        "dockerfile": "images/aspnet/config/Dockerfile.hardened"
+      },
+      "secure": {
+        "dockerfile": "images/aspnet/config/Dockerfile"
+      },
+      "validated": {
+        "dockerfile": "images/aspnet/config/Dockerfile.validated"
+      }
+    }
+  },
+  "key": "aspnet",
+  "productVersion": "10.0.14",
+  "targetId": "aspnet-10",
+  "title": "Indian Hill ASP.NET 10 Runtime",
+  "versionLine": "10",
+  "workloads": [
+    {
+      "dockerfile": "images/aspnet/examples/reference-api/Dockerfile",
+      "id": "IHL-APP-0001",
+      "key": "reference-api",
+      "repository": "reference-api"
+    }
+  ]
+}
