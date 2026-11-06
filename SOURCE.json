@@ -1,0 +1,24 @@
+{
+  "catalogJobId": 17793837836,
+  "catalogPipelineId": 3034861904,
+  "files": [
+    {
+      "mode": "100644",
+      "path": "cis-reports/ead3760abac662be303cadb227f799ad83f2ddc271548d04892155ee90128404.json",
+      "sha256": "9b8944f47fe60d05c92b62111653362faeb639d0f33d11f1e878378c7e603630",
+      "size": 363559
+    },
+    {
+      "mode": "100644",
+      "path": "postgres-published-images.json",
+      "sha256": "3be074193f41c12b00af9d5c3ca541c4f05ea4e9683f727a9063471e4d327b53",
+      "size": 25492
+    }
+  ],
+  "license": "Apache-2.0",
+  "productionQualified": false,
+  "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
+  "reportType": "ihl-postgres-catalog-source",
+  "schemaVersion": 1,
+  "sourceRevision": "31c5007a9add2c1d2ea596ff9d60c6f99ce91695"
+}
