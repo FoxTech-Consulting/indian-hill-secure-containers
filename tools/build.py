@@ -19,6 +19,13 @@ from typing import Any
 
 SOURCE_REPOSITORY = "https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
 NGINX_SOURCE_REPOSITORY = "https://gitlab.com/indianhilllabs/containers/nginx"
+REDIS_SOURCE_REPOSITORY = 'https://gitlab.com/indianhilllabs/containers/redis'
+REDIS_IDENTITIES = {
+    'redis-6-2': ('6.2', 'IHL-CTR-0024'), 'redis-7-2': ('7.2', 'IHL-CTR-0025'),
+    'redis-7-4': ('7.4', 'IHL-CTR-0026'), 'redis': ('8.2', 'IHL-CTR-0007'),
+    'redis-8-4': ('8.4', 'IHL-CTR-0027'), 'redis-8-6': ('8.6', 'IHL-CTR-0028'),
+    'redis-8-8': ('8.8', 'IHL-CTR-0029'), 'redis-8-10': ('8.10', 'IHL-CTR-0030')}
+REDIS_MATERIAL_ALIAS = 'images/redis/config/Dockerfile.hardened-material'
 NGINX_IDENTITIES = {
     "nginx": {"family": "nginx", "id": "IHL-CTR-0002", "targetId": "nginx-1.30", "versionLine": "1.30"},
     "nginx-mainline": {"family": "nginx", "id": "IHL-CTR-0011", "targetId": "nginx-1.31", "versionLine": "1.31"},
@@ -34,12 +41,17 @@ VERSION = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,63}")
 
 def require_source_context(repository: object, product: dict[str, Any] | None = None) -> str:
     """Constrain labels to reviewed origins; checksums alone do not authenticate."""
-    if repository not in (SOURCE_REPOSITORY, NGINX_SOURCE_REPOSITORY):
+    if repository not in (SOURCE_REPOSITORY, NGINX_SOURCE_REPOSITORY, REDIS_SOURCE_REPOSITORY):
         raise ValueError("SOURCE.json must identify an exact approved sourceRepository")
     if repository == NGINX_SOURCE_REPOSITORY and product is not None:
         identity = NGINX_IDENTITIES.get(product.get("key"))
         if identity is None or any(product.get(field) != value for field, value in identity.items()):
             raise ValueError("NGINX source context cannot identify another family or target")
+    if repository == REDIS_SOURCE_REPOSITORY and product is not None:
+        identity = REDIS_IDENTITIES.get(product.get('key'))
+        if (identity is None or product.get('family') != 'redis' or product.get('versionLine') != identity[0]
+                or product.get('targetId') != 'redis-' + identity[0] or product.get('id') != identity[1]):
+            raise ValueError('Redis source context cannot identify another family or target')
     return repository
 
 
@@ -157,7 +169,7 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
                 raise ValueError(f"Invalid public recipe: {key}")
             recipes.append(recipe_path(root, recipe.get("dockerfile"), aspnet_validated=product.get('family') == 'aspnet' and tier == 'validated'))
             java_hardened = product.get("family") == "java" and tier == "hardened"
-            if java_hardened or "materialDockerfile" in recipe or "javaMaterialProfile" in recipe:
+            if java_hardened or "javaMaterialProfile" in recipe:
                 # Both fields are mandatory for Java H. A self-consistent
                 # snapshot must not silently fall back to its additive parent.
                 material = recipe.get("javaMaterialProfile")
@@ -173,6 +185,19 @@ def read_catalog(root: Path, source: dict[str, Any]) -> list[dict[str, Any]]:
                         or material.get("qualificationGranted") is not False):
                     raise ValueError("Public Java Hardened material differs from its reviewed recipe and provider pins")
                 recipes.append(actual)
+            redis_hardened = (product.get('family') == 'redis' and product.get('key') == 'redis' and tier == 'hardened')
+            if redis_hardened or 'redisMaterialProfile' in recipe:
+                actual = recipe_path(root, recipe.get('materialDockerfile'))
+                expected = {'recipe': {'path': actual, 'sha256': hashlib.sha256(snapshot_path(root, actual).read_bytes()).hexdigest()},
+                    'buildArgs': {'IHL_FIPS_BUILD_VALIDATION': 'false'}, 'materialAssuranceLevel': 'validated',
+                    'qualificationGranted': False, 'validatedReleaseEligible': False}
+                if (not redis_hardened or product.get('targetId') != 'redis-8.2' or product.get('id') != 'IHL-CTR-0007'
+                        or product.get('versionLine') != '8.2' or product.get('productVersion') != '8.2.10'
+                        or actual != REDIS_MATERIAL_ALIAS or recipe.get('redisMaterialProfile') != expected):
+                    raise ValueError('Public Redis Hardened material differs from its exact assembly and false validation fence')
+                recipes.append(actual)
+            if 'materialDockerfile' in recipe and not (java_hardened or redis_hardened):
+                raise ValueError('Unreviewed additive material recipe')
             public_build_args(product, tier, recipe)
         workloads = product.get("workloads", [])
         if not isinstance(workloads, list):

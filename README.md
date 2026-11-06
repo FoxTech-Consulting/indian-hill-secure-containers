@@ -14,6 +14,8 @@ GitLab remains the authoritative build and qualification system. This repository
 
 `public-products.json` lists the exact versions and build paths in this snapshot. Current sources target **Linux on AMD64 (`linux/amd64`)**. They do not establish ARM64 support. Java's private qualification sample is omitted; its runtime sources remain available.
 
+Redis 8.2 Hardened includes the historical additional crypto assembly after its Secure and additive Hardened builds. Its byte-identical recipe is exported as `images/redis/config/Dockerfile.hardened-material`, with the recipe SHA-256 recorded in `redisMaterialProfile`. The local builder passes `IHL_FIPS_BUILD_VALIDATION=false`, matching the Hardened factory assembly. This source availability does not grant Redis Validated qualification or publication; Redis public builds remain Secure/Hardened only. The included `ci/test_redis_startup.py` is a required build-time source regression fixture, not a public CI workflow.
+
 Container families can publish independently from their own GitLab repositories.
 The shared catalog accepts their verified publication receipts and preserves each
 image's original producer, source revision, qualification evidence, and digest.

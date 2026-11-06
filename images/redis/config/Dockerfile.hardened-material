@@ -1,0 +1,71 @@
+# Engineering candidate only: deployment/module/STIG qualification is pending.
+# Provider and Redis changes are confined to this Redis tier.
+ARG REDIS_BUILDER=docker.io/library/gcc:11.2.0@sha256:2c5cae6b84598eb6865d6c7b340deef80e8834a4c4037a5cbba755a5258809d4
+ARG HARDENED_BASE
+FROM ${HARDENED_BASE} AS hardened-runtime
+
+FROM ${REDIS_BUILDER} AS provider-build
+ADD --checksum=sha256:a0ce69b8b97ea6a35b96875235aa453b966ba3cba8af2de23657d8b6767d6539 https://www.openssl.org/source/openssl-3.1.2.tar.gz /tmp/provider.tar.gz
+RUN set -eu; \
+    tar -xzf /tmp/provider.tar.gz -C /tmp; cd /tmp/openssl-3.1.2; \
+    ./Configure enable-fips --prefix=/opt/openssl --openssldir=/opt/openssl/ssl --libdir=lib; \
+    make -s -j2; make -s install_fips; \
+    install -d /out; cp /opt/openssl/lib/ossl-modules/fips.so /out/fips.so; \
+    cp LICENSE.txt /out/provider-LICENSE.txt
+
+FROM ${REDIS_BUILDER} AS redis-crypto-build
+ARG IHL_FIPS_BUILD_VALIDATION=true
+COPY --from=hardened-runtime /opt/openssl /opt/openssl
+COPY --from=provider-build /out/fips.so /opt/openssl/lib/ossl-modules/fips.so
+COPY images/redis/config/crypto/redis-fips.cnf /opt/openssl/ssl/redis-fips.cnf
+COPY images/redis/config/crypto/ /tmp/ihl-crypto/
+COPY ci/test_redis_startup.py /tmp/ihl-crypto/test_redis_startup.py
+RUN python3 /tmp/ihl-crypto/test_redis_startup.py
+ADD --checksum=sha256:d33935732f7fc15476295fe05f5ce740927bc14847798e47b3f67b4f27b8b478 https://download.redis.io/releases/redis-8.2.10.tar.gz /tmp/redis.tar.gz
+RUN set -eu; \
+    case "$IHL_FIPS_BUILD_VALIDATION" in true|false) ;; *) echo "Invalid IHL_FIPS_BUILD_VALIDATION" >&2; exit 1 ;; esac; \
+    export LD_LIBRARY_PATH=/opt/openssl/lib; \
+    /opt/openssl/bin/openssl fipsinstall -module /opt/openssl/lib/ossl-modules/fips.so \
+      -out /opt/openssl/ssl/fipsmodule.cnf -provider_name fips -section_name fips_sect \
+      -pedantic -self_test_onload; \
+    ! grep -Eq '^(install-status|install-mac)[[:space:]]*=' /opt/openssl/ssl/fipsmodule.cnf; \
+    tar -xzf /tmp/redis.tar.gz -C /tmp; \
+    python3 /tmp/ihl-crypto/patch_source.py /tmp/redis-8.2.10; \
+    cd /tmp/redis-8.2.10; \
+    startup_validation=1; \
+    if [ "$IHL_FIPS_BUILD_VALIDATION" = "false" ]; then startup_validation=0; fi; \
+    make -j2 BUILD_TLS=yes USE_SYSTEMD=no MALLOC=libc OPENSSL_PREFIX=/opt/openssl \
+      OPTIMIZATION=-O2 CFLAGS="-fstack-protector-strong -D_FORTIFY_SOURCE=2 -fPIE -DIHL_REDIS_FIPS_VALIDATION=$startup_validation" \
+      LDFLAGS='-pie -Wl,-z,relro,-z,now -Wl,-rpath,/opt/openssl/lib'; \
+    src/redis-server --version; \
+    if [ "$IHL_FIPS_BUILD_VALIDATION" = "true" ]; then \
+      src/redis-server --ihl-crypto-check; \
+      if OPENSSL_CONF=/dev/null src/redis-server --ihl-crypto-check; then exit 1; fi; \
+    fi; \
+    install -d /out; cp src/redis-server /out/redis-server; \
+    cp ihl-crypto-patch.json /out/; \
+    printf 'fipsBuildValidation=%s\n' "$IHL_FIPS_BUILD_VALIDATION" > /out/crypto-build-validation.txt; \
+    sha256sum /opt/openssl/lib/ossl-modules/fips.so /opt/openssl/ssl/fipsmodule.cnf \
+      /opt/openssl/ssl/redis-fips.cnf src/redis-server > /out/crypto-build.sha256
+
+FROM hardened-runtime
+ARG OCI_SOURCE="https://gitlab.com/indianhilllabs/indian-hill-secure-containers"
+ARG OCI_REVISION="manual-build"
+ARG OCI_CREATED="1970-01-01T00:00:00Z"
+LABEL org.opencontainers.image.source="${OCI_SOURCE}" \
+      org.opencontainers.image.revision="${OCI_REVISION}" \
+      org.opencontainers.image.created="${OCI_CREATED}" \
+      com.indianhilllabs.assurance.level="validated" \
+      com.indianhilllabs.assurance.qualification="pending-external-evidence" \
+      com.indianhilllabs.redis.crypto-integration="provider-candidate-v1" \
+      com.indianhilllabs.assurance.stig-profile="ihl-redis-oss-enterprise-v2r2-tailored"
+COPY --from=redis-crypto-build /out/redis-server /opt/redis/bin/redis-server
+COPY --from=redis-crypto-build /opt/openssl/lib/ossl-modules/fips.so /opt/openssl/lib/ossl-modules/fips.so
+COPY --from=redis-crypto-build /opt/openssl/ssl/fipsmodule.cnf /opt/openssl/ssl/fipsmodule.cnf
+COPY --from=redis-crypto-build /opt/openssl/ssl/redis-fips.cnf /opt/openssl/ssl/redis-fips.cnf
+COPY --from=redis-crypto-build /out/ihl-crypto-patch.json /out/crypto-build.sha256 /out/crypto-build-validation.txt /opt/ihl/redis/
+COPY --from=provider-build /out/provider-LICENSE.txt /opt/redis/licenses/
+ENV IHL_ASSURANCE_LEVEL="validated" \
+    OPENSSL_CONF="/opt/openssl/ssl/redis-fips.cnf" \
+    OPENSSL_MODULES="/opt/openssl/lib/ossl-modules"
+USER 1654:1654

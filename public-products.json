@@ -1457,7 +1457,26 @@
         "repository": "redis",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/redis/config/Dockerfile.hardened"
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0007",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "8.2.10",
+              "REDIS_VERSION_LINE": "8.2"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened",
+            "materialDockerfile": "images/redis/config/Dockerfile.hardened-material",
+            "redisMaterialProfile": {
+              "buildArgs": {
+                "IHL_FIPS_BUILD_VALIDATION": "false"
+              },
+              "materialAssuranceLevel": "validated",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/redis/config/Dockerfile.hardened-material",
+                "sha256": "1467b98c5c2c8be212b62403225903d9f6996b64058aa5da37610c0998de07e4"
+              },
+              "validatedReleaseEligible": false
+            }
           },
           "secure": {
             "buildArgs": {

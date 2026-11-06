@@ -1,0 +1,17 @@
+config_diagnostics = 1
+openssl_conf = redis_init
+.include /opt/openssl/ssl/fipsmodule.cnf
+
+[redis_init]
+providers = redis_providers
+alg_section = redis_properties
+
+[redis_providers]
+fips = fips_sect
+base = base_sect
+
+[base_sect]
+activate = 1
+
+[redis_properties]
+default_properties = fips=yes

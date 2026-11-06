@@ -57,14 +57,20 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "eeadc14c1aa7820603317bf3896bb18b27efdc70240f28e53f1a2ab5580f816c",
-      "size": 23433
+      "sha256": "878000a0607a72480066fedaef9f14523780f4e962debf2e4ab2a01b403e5373",
+      "size": 24057
     },
     {
       "mode": "100644",
       "path": "SECURITY.md",
       "sha256": "f0cacb752d0435d3f93c8d14820997a48ebd17bc9094fa420b77ce4d654539b5",
       "size": 1898
+    },
+    {
+      "mode": "100644",
+      "path": "ci/test_redis_startup.py",
+      "sha256": "8bcc5a97bf2fe1bc615738b002c54ea51aebd6b8104ff0605ce064699daa6f38",
+      "size": 11487
     },
     {
       "mode": "100644",
@@ -728,6 +734,30 @@
     },
     {
       "mode": "100644",
+      "path": "images/redis/config/Dockerfile.hardened-material",
+      "sha256": "1467b98c5c2c8be212b62403225903d9f6996b64058aa5da37610c0998de07e4",
+      "size": 4508
+    },
+    {
+      "mode": "100644",
+      "path": "images/redis/config/crypto/ihl_crypto.h",
+      "sha256": "4b13cfae29c4ca217f8b687d292b7d88fd59f8b504862cce1f9148a59f6ad842",
+      "size": 3561
+    },
+    {
+      "mode": "100644",
+      "path": "images/redis/config/crypto/patch_source.py",
+      "sha256": "fbed4e7b45ebd4bd1171f37a13f43f0a7e1cc969cd98832dddbd4cb7b6d0e283",
+      "size": 2994
+    },
+    {
+      "mode": "100644",
+      "path": "images/redis/config/crypto/redis-fips.cnf",
+      "sha256": "9256e85141d93ac417abdcba71afb2b503f073ad3b20e105d5c49f741955cb34",
+      "size": 292
+    },
+    {
+      "mode": "100644",
       "path": "images/redis/config/redis.hardened-6.2.conf",
       "sha256": "d873a69d2786b72aced5fa8416e16572b6ed70efddddea39e00ada7ba64ba5fd",
       "size": 854
@@ -813,8 +843,8 @@
     {
       "mode": "100644",
       "path": "public-products.json",
-      "sha256": "98c92c40f7f0584ce9fd9a2af3a25b544a857a545732b7a2785be9ef4265052a",
-      "size": 62337
+      "sha256": "c5ce2471668b26de2a7a6ddd39d72be9665e417d1ace36db422e8f0e8d602b05",
+      "size": 63187
     },
     {
       "mode": "100644",
@@ -825,8 +855,8 @@
     {
       "mode": "100755",
       "path": "tools/build.py",
-      "sha256": "510cfb01b368df429ab9c4d27e95838e460688912409c97262c4fcf99d41a611",
-      "size": 17562
+      "sha256": "696889ddccf5a76bc21af41a17918082c8f6307de0f5790b8e86ce980c93ac89",
+      "size": 19753
     },
     {
       "mode": "100644",
@@ -837,7 +867,7 @@
   ],
   "license": "Apache-2.0",
   "platform": "linux/amd64",
-  "policySha256": "fae339845e0b8bf1a3d692d038abf28a954dc3552ca244b0bef697e878cffbb5",
+  "policySha256": "3d18763f205746c25be2d7a4d44996d642d96a48dcf5ea59955b8e36b25f5499",
   "products": [
     {
       "assessmentTiers": [
@@ -2295,7 +2325,26 @@
         "repository": "redis",
         "tiers": {
           "hardened": {
-            "dockerfile": "images/redis/config/Dockerfile.hardened"
+            "buildArgs": {
+              "REDIS_ARTIFACT_ID": "IHL-CTR-0007",
+              "REDIS_CONFIG_FILE": "images/redis/config/redis.hardened.conf",
+              "REDIS_VERSION": "8.2.10",
+              "REDIS_VERSION_LINE": "8.2"
+            },
+            "dockerfile": "images/redis/config/Dockerfile.hardened",
+            "materialDockerfile": "images/redis/config/Dockerfile.hardened-material",
+            "redisMaterialProfile": {
+              "buildArgs": {
+                "IHL_FIPS_BUILD_VALIDATION": "false"
+              },
+              "materialAssuranceLevel": "validated",
+              "qualificationGranted": false,
+              "recipe": {
+                "path": "images/redis/config/Dockerfile.hardened-material",
+                "sha256": "1467b98c5c2c8be212b62403225903d9f6996b64058aa5da37610c0998de07e4"
+              },
+              "validatedReleaseEligible": false
+            }
           },
           "secure": {
             "buildArgs": {
@@ -2732,7 +2781,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "e25f04c59fd88b4b441085233212b56d57bf51b1",
+  "sourceRevision": "c3d54d7fd9072603787d4be3677e046c286da8f6",
   "tiers": [
     "secure",
     "hardened",
