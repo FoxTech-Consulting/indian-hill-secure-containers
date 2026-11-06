@@ -16,10 +16,10 @@
     "recordsWithAnonymousByteProofCount": 93,
     "freshness": "checkedAt is the catalog reconciliation time. It does not refresh unchanged records; use each anonymousDownload.verifiedAt.",
     "latestReconciliation": {
-      "proofCoreSha256": "5857a87b3664687f947ac43984379a50f3799f6d33443e35d7dbe49d62c5e97f",
+      "proofCoreSha256": "03c202381956e1cf1e11288f67fbaf347dfb8b2ba62daccda36decdeb3c58e1c",
       "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
       "proofAccess": "Retained GitLab artifact; project access may be required",
-      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17799983483",
+      "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17813568728",
       "proofCoreFields": [
         "schemaVersion",
         "reportType",
@@ -38,10 +38,10 @@
         "cryptographicSignatureVerification",
         "independentCryptographicSignatureVerification"
       ],
-      "verifiedArtifactCount": 20,
-      "verifiedRuntimeArtifactCount": 10,
-      "verifiedCompanionArtifactCount": 10,
-      "importedRuntimeRecordCount": 10
+      "verifiedArtifactCount": 12,
+      "verifiedRuntimeArtifactCount": 6,
+      "verifiedCompanionArtifactCount": 6,
+      "importedRuntimeRecordCount": 6
     }
   },
   "signatureProvenance": "Signature status comes from the original GitLab publication CI records and their hash-checked verification outputs. 91 listed runtime records contain complete recorded signed annotation values; 2 lack complete values and require the linked original publication record. Anonymous OCI byte verification does not repeat cryptographic signature verification or execute images.",
@@ -56,37 +56,37 @@
       "platform": "linux/amd64",
       "status": "engineering-preview",
       "repository": "ghcr.io/foxtech-consulting/aspnet",
-      "tag": "ihl-aspnet-10.0.14-secure-d798a5b9375a",
-      "digest": "sha256:09d7d6578a8c1da21ecfc34420fea58690550cbd1493b7363cea8645c6a984a5",
-      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:09d7d6578a8c1da21ecfc34420fea58690550cbd1493b7363cea8645c6a984a5",
-      "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-      "publishedAt": "2026-11-02T23:27:48.797Z",
+      "tag": "ihl-aspnet-10.0.14-secure-ce510b802716-daily-3036743054",
+      "digest": "sha256:99eaf42935bf5aeaef2013c9692b8cce947b3cd4ef8dacb1f04748d65aaed142",
+      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:99eaf42935bf5aeaef2013c9692b8cce947b3cd4ef8dacb1f04748d65aaed142",
+      "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+      "publishedAt": "2026-11-06T16:23:53.740Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899159",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17813284510",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
       "producer": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17680747900",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3019895746"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807743947",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036808864"
       },
       "publisher": {
-        "sourceRevision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899159",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17813284510",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
-      "candidateManifestSha256": "26a092f41df6a7b39dcec881c25045c86d1e75a58a3bc9568b3a8ab6c1a52b30",
-      "signatureManifestSha256": "26a092f41df6a7b39dcec881c25045c86d1e75a58a3bc9568b3a8ab6c1a52b30",
+      "candidateManifestSha256": "4fcef44d6a222310ffa7b8f8bc7b79c8154c4621a3cb73886582faf4b00cded5",
+      "signatureManifestSha256": "4fcef44d6a222310ffa7b8f8bc7b79c8154c4621a3cb73886582faf4b00cded5",
       "claimScope": "qualified-container-image-not-customer-environment-validation",
       "customerEnvironmentQualified": false,
       "deploymentAuthorized": false,
       "publicSourceBinding": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceCommit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-        "sourceManifestSha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
-        "sourceTag": "aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceCommit": "407dd255b24d636e304028b28eaa9bb560249860",
+        "sourceManifestSha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
+        "sourceTag": "aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
         "status": "verified-by-original-publication-ci"
       },
       "signatureVerification": {
@@ -98,15 +98,15 @@
         "signedAnnotationsComplete": true,
         "signedAnnotations": {
           "assurance-tier": "secure",
-          "source-revision": "d798a5b9375a2484b479f889f5e61439debcf426",
-          "assurance-manifest-sha256": "26a092f41df6a7b39dcec881c25045c86d1e75a58a3bc9568b3a8ab6c1a52b30",
-          "aspnet-image-policy-sha256": "a5c1e2598cf38438fb1fe70077ae33390646fd7a89a5a07ca4e66d5d0b123e22",
+          "source-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+          "assurance-manifest-sha256": "4fcef44d6a222310ffa7b8f8bc7b79c8154c4621a3cb73886582faf4b00cded5",
+          "aspnet-image-policy-sha256": "271dbbdddb0ec462b6d61e9bfdd2dc70f4ddb6ef3fee5b69d4fa95412bdf6d52",
           "claim-scope": "qualified-container-image-not-customer-environment-validation",
-          "public-source-commit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-          "public-source-manifest-sha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
+          "public-source-commit": "407dd255b24d636e304028b28eaa9bb560249860",
+          "public-source-manifest-sha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
           "publication-context": "protected-release",
           "release-registry": "github-container-registry",
-          "publisher-revision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5"
+          "publisher-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa"
         }
       },
       "anonymousDownload": {
@@ -114,16 +114,16 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-02T23:45:08.866971+00:00",
+        "verifiedAt": "2026-11-06T16:31:25.955128+00:00",
         "configCount": 1,
         "layerCount": 6,
-        "proofCoreSha256": "693bc2fea2337cb1012c5ed34a098715c534564a5a0aff0625c0de8f059195e9",
+        "proofCoreSha256": "03c202381956e1cf1e11288f67fbaf347dfb8b2ba62daccda36decdeb3c58e1c",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17682249625"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17813568728"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet",
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:09d7d6578a8c1da21ecfc34420fea58690550cbd1493b7363cea8645c6a984a5"
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:99eaf42935bf5aeaef2013c9692b8cce947b3cd4ef8dacb1f04748d65aaed142"
     },
     {
       "key": "aspnet",
@@ -134,37 +134,37 @@
       "platform": "linux/amd64",
       "status": "engineering-preview",
       "repository": "ghcr.io/foxtech-consulting/aspnet",
-      "tag": "ihl-aspnet-10.0.14-hardened-d798a5b9375a",
-      "digest": "sha256:3173cd87605096cf3e77dfbc592895373c20566ccd9a802e9db44261e1e3a520",
-      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:3173cd87605096cf3e77dfbc592895373c20566ccd9a802e9db44261e1e3a520",
-      "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-      "publishedAt": "2026-11-02T23:31:17.860Z",
+      "tag": "ihl-aspnet-10.0.14-hardened-ce510b802716-daily-3036743054",
+      "digest": "sha256:17b72a5783b775f2d06d4db19ac6ebf87d3d9b271946d8ede87eeedaea0e379b",
+      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:17b72a5783b775f2d06d4db19ac6ebf87d3d9b271946d8ede87eeedaea0e379b",
+      "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+      "publishedAt": "2026-11-06T16:27:30.438Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899160",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807230560",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
       "producer": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17680890803",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3019912984"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17808512537",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036904654"
       },
       "publisher": {
-        "sourceRevision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899160",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807230560",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
-      "candidateManifestSha256": "a75730fc0bb398ba70fdca548409d8c040657b270f32ad221332a56a1fd18f29",
-      "signatureManifestSha256": "a75730fc0bb398ba70fdca548409d8c040657b270f32ad221332a56a1fd18f29",
+      "candidateManifestSha256": "11d6a370742be204c12e0dd2a981b0d39ddd63c10ccb089de5243f7eb6eb44c5",
+      "signatureManifestSha256": "11d6a370742be204c12e0dd2a981b0d39ddd63c10ccb089de5243f7eb6eb44c5",
       "claimScope": "qualified-container-image-not-customer-environment-validation",
       "customerEnvironmentQualified": false,
       "deploymentAuthorized": false,
       "publicSourceBinding": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceCommit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-        "sourceManifestSha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
-        "sourceTag": "aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceCommit": "407dd255b24d636e304028b28eaa9bb560249860",
+        "sourceManifestSha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
+        "sourceTag": "aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
         "status": "verified-by-original-publication-ci"
       },
       "signatureVerification": {
@@ -176,15 +176,15 @@
         "signedAnnotationsComplete": true,
         "signedAnnotations": {
           "assurance-tier": "hardened",
-          "source-revision": "d798a5b9375a2484b479f889f5e61439debcf426",
-          "assurance-manifest-sha256": "a75730fc0bb398ba70fdca548409d8c040657b270f32ad221332a56a1fd18f29",
-          "aspnet-image-policy-sha256": "a5c1e2598cf38438fb1fe70077ae33390646fd7a89a5a07ca4e66d5d0b123e22",
+          "source-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+          "assurance-manifest-sha256": "11d6a370742be204c12e0dd2a981b0d39ddd63c10ccb089de5243f7eb6eb44c5",
+          "aspnet-image-policy-sha256": "271dbbdddb0ec462b6d61e9bfdd2dc70f4ddb6ef3fee5b69d4fa95412bdf6d52",
           "claim-scope": "qualified-container-image-not-customer-environment-validation",
-          "public-source-commit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-          "public-source-manifest-sha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
+          "public-source-commit": "407dd255b24d636e304028b28eaa9bb560249860",
+          "public-source-manifest-sha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
           "publication-context": "protected-release",
           "release-registry": "github-container-registry",
-          "publisher-revision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5"
+          "publisher-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa"
         }
       },
       "anonymousDownload": {
@@ -192,21 +192,21 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-02T23:45:28.881761+00:00",
+        "verifiedAt": "2026-11-06T16:29:38.172770+00:00",
         "configCount": 1,
         "layerCount": 14,
-        "proofCoreSha256": "693bc2fea2337cb1012c5ed34a098715c534564a5a0aff0625c0de8f059195e9",
+        "proofCoreSha256": "03c202381956e1cf1e11288f67fbaf347dfb8b2ba62daccda36decdeb3c58e1c",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17682249625"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17813568728"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet",
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:3173cd87605096cf3e77dfbc592895373c20566ccd9a802e9db44261e1e3a520",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:17b72a5783b775f2d06d4db19ac6ebf87d3d9b271946d8ede87eeedaea0e379b",
       "cisReport": {
         "schemaVersion": 1,
-        "path": "cis-reports/a75730fc0bb398ba70fdca548409d8c040657b270f32ad221332a56a1fd18f29.json",
-        "sha256": "121d9f88e1d8d5b63517559639b34db4ddd7d21ae1787737b44ac37d16ba39e0",
-        "sizeBytes": 363596
+        "path": "cis-reports/11d6a370742be204c12e0dd2a981b0d39ddd63c10ccb089de5243f7eb6eb44c5.json",
+        "sha256": "b1a3d7b18ac422398cc83028a40b02d396e7793850bcb4e30ead3bf226f97806",
+        "sizeBytes": 363613
       }
     },
     {
@@ -218,37 +218,37 @@
       "platform": "linux/amd64",
       "status": "engineering-preview",
       "repository": "ghcr.io/foxtech-consulting/aspnet",
-      "tag": "ihl-aspnet-8.0.33-secure-d798a5b9375a",
-      "digest": "sha256:0ca3cd635f2ba535a5e25b7349a31b32206365f3878fab4033ef17b98f955dc1",
-      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:0ca3cd635f2ba535a5e25b7349a31b32206365f3878fab4033ef17b98f955dc1",
-      "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-      "publishedAt": "2026-11-02T23:27:48.797Z",
+      "tag": "ihl-aspnet-8.0.33-secure-ce510b802716-daily-3036743054",
+      "digest": "sha256:3130e62bb14f261d42abe4c71bbfd2ef24ce52ccbc6446a07b7429191f770b50",
+      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:3130e62bb14f261d42abe4c71bbfd2ef24ce52ccbc6446a07b7429191f770b50",
+      "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+      "publishedAt": "2026-11-06T16:23:53.740Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899159",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17813284510",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
       "producer": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17680793276",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3019901399"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807283823",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036749807"
       },
       "publisher": {
-        "sourceRevision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899159",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17813284510",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
-      "candidateManifestSha256": "3b47eaa0212e71447fc71851bd9df8fb996b570cf548890fd5c5316ebb94c1e4",
-      "signatureManifestSha256": "3b47eaa0212e71447fc71851bd9df8fb996b570cf548890fd5c5316ebb94c1e4",
+      "candidateManifestSha256": "29fad194486f430487b5d263b7e602156f3ae149e0a251cd6d5bf6936ba76e17",
+      "signatureManifestSha256": "29fad194486f430487b5d263b7e602156f3ae149e0a251cd6d5bf6936ba76e17",
       "claimScope": "qualified-container-image-not-customer-environment-validation",
       "customerEnvironmentQualified": false,
       "deploymentAuthorized": false,
       "publicSourceBinding": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceCommit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-        "sourceManifestSha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
-        "sourceTag": "aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceCommit": "407dd255b24d636e304028b28eaa9bb560249860",
+        "sourceManifestSha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
+        "sourceTag": "aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
         "status": "verified-by-original-publication-ci"
       },
       "signatureVerification": {
@@ -260,15 +260,15 @@
         "signedAnnotationsComplete": true,
         "signedAnnotations": {
           "assurance-tier": "secure",
-          "source-revision": "d798a5b9375a2484b479f889f5e61439debcf426",
-          "assurance-manifest-sha256": "3b47eaa0212e71447fc71851bd9df8fb996b570cf548890fd5c5316ebb94c1e4",
-          "aspnet-image-policy-sha256": "a5c1e2598cf38438fb1fe70077ae33390646fd7a89a5a07ca4e66d5d0b123e22",
+          "source-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+          "assurance-manifest-sha256": "29fad194486f430487b5d263b7e602156f3ae149e0a251cd6d5bf6936ba76e17",
+          "aspnet-image-policy-sha256": "271dbbdddb0ec462b6d61e9bfdd2dc70f4ddb6ef3fee5b69d4fa95412bdf6d52",
           "claim-scope": "qualified-container-image-not-customer-environment-validation",
-          "public-source-commit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-          "public-source-manifest-sha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
+          "public-source-commit": "407dd255b24d636e304028b28eaa9bb560249860",
+          "public-source-manifest-sha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
           "publication-context": "protected-release",
           "release-registry": "github-container-registry",
-          "publisher-revision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5"
+          "publisher-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa"
         }
       },
       "anonymousDownload": {
@@ -276,16 +276,16 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-02T23:44:56.748192+00:00",
+        "verifiedAt": "2026-11-06T16:31:29.756201+00:00",
         "configCount": 1,
         "layerCount": 6,
-        "proofCoreSha256": "693bc2fea2337cb1012c5ed34a098715c534564a5a0aff0625c0de8f059195e9",
+        "proofCoreSha256": "03c202381956e1cf1e11288f67fbaf347dfb8b2ba62daccda36decdeb3c58e1c",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17682249625"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17813568728"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet",
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:0ca3cd635f2ba535a5e25b7349a31b32206365f3878fab4033ef17b98f955dc1"
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:3130e62bb14f261d42abe4c71bbfd2ef24ce52ccbc6446a07b7429191f770b50"
     },
     {
       "key": "aspnet-8",
@@ -296,37 +296,37 @@
       "platform": "linux/amd64",
       "status": "engineering-preview",
       "repository": "ghcr.io/foxtech-consulting/aspnet",
-      "tag": "ihl-aspnet-8.0.33-hardened-d798a5b9375a",
-      "digest": "sha256:28b2e58201d5c04087687d93fe9536a5b862f9cb87a97e6fadb6d7557e0d7bb5",
-      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:28b2e58201d5c04087687d93fe9536a5b862f9cb87a97e6fadb6d7557e0d7bb5",
-      "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-      "publishedAt": "2026-11-02T23:31:17.860Z",
+      "tag": "ihl-aspnet-8.0.33-hardened-ce510b802716-daily-3036743054",
+      "digest": "sha256:c340c8d4278095a3d0c9539d2bb76b81186c43c08da401d712577c9be3ee5178",
+      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:c340c8d4278095a3d0c9539d2bb76b81186c43c08da401d712577c9be3ee5178",
+      "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+      "publishedAt": "2026-11-06T16:27:30.438Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899160",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807230560",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
       "producer": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681218936",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3019964008"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17808065850",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036849436"
       },
       "publisher": {
-        "sourceRevision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899160",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807230560",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
-      "candidateManifestSha256": "e454c5e0fda4f230bbe445ae2edb8c48188011755199cf64269ac4375dd0e805",
-      "signatureManifestSha256": "e454c5e0fda4f230bbe445ae2edb8c48188011755199cf64269ac4375dd0e805",
+      "candidateManifestSha256": "2bc071221f7418d0e21be8e8d225113ab261fd0db043e396664b6ee727940c9d",
+      "signatureManifestSha256": "2bc071221f7418d0e21be8e8d225113ab261fd0db043e396664b6ee727940c9d",
       "claimScope": "qualified-container-image-not-customer-environment-validation",
       "customerEnvironmentQualified": false,
       "deploymentAuthorized": false,
       "publicSourceBinding": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceCommit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-        "sourceManifestSha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
-        "sourceTag": "aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceCommit": "407dd255b24d636e304028b28eaa9bb560249860",
+        "sourceManifestSha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
+        "sourceTag": "aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
         "status": "verified-by-original-publication-ci"
       },
       "signatureVerification": {
@@ -338,15 +338,15 @@
         "signedAnnotationsComplete": true,
         "signedAnnotations": {
           "assurance-tier": "hardened",
-          "source-revision": "d798a5b9375a2484b479f889f5e61439debcf426",
-          "assurance-manifest-sha256": "e454c5e0fda4f230bbe445ae2edb8c48188011755199cf64269ac4375dd0e805",
-          "aspnet-image-policy-sha256": "a5c1e2598cf38438fb1fe70077ae33390646fd7a89a5a07ca4e66d5d0b123e22",
+          "source-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+          "assurance-manifest-sha256": "2bc071221f7418d0e21be8e8d225113ab261fd0db043e396664b6ee727940c9d",
+          "aspnet-image-policy-sha256": "271dbbdddb0ec462b6d61e9bfdd2dc70f4ddb6ef3fee5b69d4fa95412bdf6d52",
           "claim-scope": "qualified-container-image-not-customer-environment-validation",
-          "public-source-commit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-          "public-source-manifest-sha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
+          "public-source-commit": "407dd255b24d636e304028b28eaa9bb560249860",
+          "public-source-manifest-sha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
           "publication-context": "protected-release",
           "release-registry": "github-container-registry",
-          "publisher-revision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5"
+          "publisher-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa"
         }
       },
       "anonymousDownload": {
@@ -354,21 +354,21 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-02T23:45:16.284364+00:00",
+        "verifiedAt": "2026-11-06T16:29:47.845944+00:00",
         "configCount": 1,
         "layerCount": 14,
-        "proofCoreSha256": "693bc2fea2337cb1012c5ed34a098715c534564a5a0aff0625c0de8f059195e9",
+        "proofCoreSha256": "03c202381956e1cf1e11288f67fbaf347dfb8b2ba62daccda36decdeb3c58e1c",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17682249625"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17813568728"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet",
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:28b2e58201d5c04087687d93fe9536a5b862f9cb87a97e6fadb6d7557e0d7bb5",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:c340c8d4278095a3d0c9539d2bb76b81186c43c08da401d712577c9be3ee5178",
       "cisReport": {
         "schemaVersion": 1,
-        "path": "cis-reports/e454c5e0fda4f230bbe445ae2edb8c48188011755199cf64269ac4375dd0e805.json",
-        "sha256": "2b48fd07802ced848a90b75f1c137dec0ce728aafb39e43eb57ffb95a2493b95",
-        "sizeBytes": 363621
+        "path": "cis-reports/2bc071221f7418d0e21be8e8d225113ab261fd0db043e396664b6ee727940c9d.json",
+        "sha256": "d4d2f1973ab2ffdf88ba033f49febd5276e1d1f287aebd0966ecfc1a229517e6",
+        "sizeBytes": 363638
       }
     },
     {
@@ -380,37 +380,37 @@
       "platform": "linux/amd64",
       "status": "engineering-preview",
       "repository": "ghcr.io/foxtech-consulting/aspnet",
-      "tag": "ihl-aspnet-9.0.22-secure-d798a5b9375a",
-      "digest": "sha256:ca8f69fbcc55611a9b7819b4bf0d9567d9e9507ab7088744e87faa0a50432e70",
-      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:ca8f69fbcc55611a9b7819b4bf0d9567d9e9507ab7088744e87faa0a50432e70",
-      "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-      "publishedAt": "2026-11-02T23:27:48.797Z",
+      "tag": "ihl-aspnet-9.0.22-secure-ce510b802716-daily-3036743054",
+      "digest": "sha256:c5d3b3dc6ca171a15a1dd726498b4a8ea18272c65bc5e966a04f5c72c466e1cf",
+      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:c5d3b3dc6ca171a15a1dd726498b4a8ea18272c65bc5e966a04f5c72c466e1cf",
+      "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+      "publishedAt": "2026-11-06T16:23:53.740Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899159",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17813284510",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
       "producer": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17680835235",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3019906372"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807507352",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036779214"
       },
       "publisher": {
-        "sourceRevision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899159",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17813284510",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
-      "candidateManifestSha256": "d35b00356f2b98d1b0cb22a625445ae5611953611d4335efab8232f1314d3e93",
-      "signatureManifestSha256": "d35b00356f2b98d1b0cb22a625445ae5611953611d4335efab8232f1314d3e93",
+      "candidateManifestSha256": "f4203ccd0cbbfbc05216ce67036687ddec57cd1e9174292ed120f2d483438c11",
+      "signatureManifestSha256": "f4203ccd0cbbfbc05216ce67036687ddec57cd1e9174292ed120f2d483438c11",
       "claimScope": "qualified-container-image-not-customer-environment-validation",
       "customerEnvironmentQualified": false,
       "deploymentAuthorized": false,
       "publicSourceBinding": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceCommit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-        "sourceManifestSha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
-        "sourceTag": "aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceCommit": "407dd255b24d636e304028b28eaa9bb560249860",
+        "sourceManifestSha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
+        "sourceTag": "aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
         "status": "verified-by-original-publication-ci"
       },
       "signatureVerification": {
@@ -422,15 +422,15 @@
         "signedAnnotationsComplete": true,
         "signedAnnotations": {
           "assurance-tier": "secure",
-          "source-revision": "d798a5b9375a2484b479f889f5e61439debcf426",
-          "assurance-manifest-sha256": "d35b00356f2b98d1b0cb22a625445ae5611953611d4335efab8232f1314d3e93",
-          "aspnet-image-policy-sha256": "a5c1e2598cf38438fb1fe70077ae33390646fd7a89a5a07ca4e66d5d0b123e22",
+          "source-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+          "assurance-manifest-sha256": "f4203ccd0cbbfbc05216ce67036687ddec57cd1e9174292ed120f2d483438c11",
+          "aspnet-image-policy-sha256": "271dbbdddb0ec462b6d61e9bfdd2dc70f4ddb6ef3fee5b69d4fa95412bdf6d52",
           "claim-scope": "qualified-container-image-not-customer-environment-validation",
-          "public-source-commit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-          "public-source-manifest-sha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
+          "public-source-commit": "407dd255b24d636e304028b28eaa9bb560249860",
+          "public-source-manifest-sha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
           "publication-context": "protected-release",
           "release-registry": "github-container-registry",
-          "publisher-revision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5"
+          "publisher-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa"
         }
       },
       "anonymousDownload": {
@@ -438,16 +438,16 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-02T23:45:02.868303+00:00",
+        "verifiedAt": "2026-11-06T16:31:33.066210+00:00",
         "configCount": 1,
         "layerCount": 6,
-        "proofCoreSha256": "693bc2fea2337cb1012c5ed34a098715c534564a5a0aff0625c0de8f059195e9",
+        "proofCoreSha256": "03c202381956e1cf1e11288f67fbaf347dfb8b2ba62daccda36decdeb3c58e1c",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17682249625"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17813568728"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet",
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:ca8f69fbcc55611a9b7819b4bf0d9567d9e9507ab7088744e87faa0a50432e70"
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:c5d3b3dc6ca171a15a1dd726498b4a8ea18272c65bc5e966a04f5c72c466e1cf"
     },
     {
       "key": "aspnet-9",
@@ -458,37 +458,37 @@
       "platform": "linux/amd64",
       "status": "engineering-preview",
       "repository": "ghcr.io/foxtech-consulting/aspnet",
-      "tag": "ihl-aspnet-9.0.22-hardened-d798a5b9375a",
-      "digest": "sha256:1ea1999fde133ba6661bbdb98a5aa654aaf1b3615d2aba62ecf2924068ec6470",
-      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:1ea1999fde133ba6661bbdb98a5aa654aaf1b3615d2aba62ecf2924068ec6470",
-      "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-      "publishedAt": "2026-11-02T23:31:17.860Z",
+      "tag": "ihl-aspnet-9.0.22-hardened-ce510b802716-daily-3036743054",
+      "digest": "sha256:4d2ffa7d84da7e5dc466dd9f1b5801169c451a5d62637ee3bcd08bb64f09ed90",
+      "image": "ghcr.io/foxtech-consulting/aspnet@sha256:4d2ffa7d84da7e5dc466dd9f1b5801169c451a5d62637ee3bcd08bb64f09ed90",
+      "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+      "publishedAt": "2026-11-06T16:27:30.438Z",
       "publicationContext": "protected-release",
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899160",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807230560",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
       "producer": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681078751",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3019942155"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17810131034",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036962489"
       },
       "publisher": {
-        "sourceRevision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5",
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17681899160",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3020056581"
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/jobs/17807230560",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/aspnet/-/pipelines/3036743054"
       },
-      "candidateManifestSha256": "3ee43b0466132f794112026ba5c923348c57f2735c1a214538a4d605516fab10",
-      "signatureManifestSha256": "3ee43b0466132f794112026ba5c923348c57f2735c1a214538a4d605516fab10",
+      "candidateManifestSha256": "a8154d0a365f21b5c1adb526af477c3cc937241793188f3708db73a9e756a8fd",
+      "signatureManifestSha256": "a8154d0a365f21b5c1adb526af477c3cc937241793188f3708db73a9e756a8fd",
       "claimScope": "qualified-container-image-not-customer-environment-validation",
       "customerEnvironmentQualified": false,
       "deploymentAuthorized": false,
       "publicSourceBinding": {
-        "sourceRevision": "d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceCommit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-        "sourceManifestSha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
-        "sourceTag": "aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
-        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-d798a5b9375a2484b479f889f5e61439debcf426",
+        "sourceRevision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceCommit": "407dd255b24d636e304028b28eaa9bb560249860",
+        "sourceManifestSha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
+        "sourceTag": "aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+        "sourceUrl": "https://github.com/foxtech-consulting/indian-hill-secure-containers/tree/aspnet-source-ce510b802716e8e81e9deeeb60fe3a34590d67fa",
         "status": "verified-by-original-publication-ci"
       },
       "signatureVerification": {
@@ -500,15 +500,15 @@
         "signedAnnotationsComplete": true,
         "signedAnnotations": {
           "assurance-tier": "hardened",
-          "source-revision": "d798a5b9375a2484b479f889f5e61439debcf426",
-          "assurance-manifest-sha256": "3ee43b0466132f794112026ba5c923348c57f2735c1a214538a4d605516fab10",
-          "aspnet-image-policy-sha256": "a5c1e2598cf38438fb1fe70077ae33390646fd7a89a5a07ca4e66d5d0b123e22",
+          "source-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa",
+          "assurance-manifest-sha256": "a8154d0a365f21b5c1adb526af477c3cc937241793188f3708db73a9e756a8fd",
+          "aspnet-image-policy-sha256": "271dbbdddb0ec462b6d61e9bfdd2dc70f4ddb6ef3fee5b69d4fa95412bdf6d52",
           "claim-scope": "qualified-container-image-not-customer-environment-validation",
-          "public-source-commit": "6075d33f1fd0946f74fd047406f19f95850ee3fb",
-          "public-source-manifest-sha256": "9770114a4dc89c72bfd3d434b16b99dc8f2797c027450585a9a7b3f4feb1efcb",
+          "public-source-commit": "407dd255b24d636e304028b28eaa9bb560249860",
+          "public-source-manifest-sha256": "1e770a9276e4bb608914440efe2bc68f52dc4449845a1f0bc9a4308d4927c6e5",
           "publication-context": "protected-release",
           "release-registry": "github-container-registry",
-          "publisher-revision": "49cb323ef029b3dc7eff7dc4fcd4dafe891609c5"
+          "publisher-revision": "ce510b802716e8e81e9deeeb60fe3a34590d67fa"
         }
       },
       "anonymousDownload": {
@@ -516,21 +516,21 @@
         "credentialsUsed": false,
         "runtimeExecuted": false,
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
-        "verifiedAt": "2026-11-02T23:45:22.006145+00:00",
+        "verifiedAt": "2026-11-06T16:29:56.783066+00:00",
         "configCount": 1,
         "layerCount": 14,
-        "proofCoreSha256": "693bc2fea2337cb1012c5ed34a098715c534564a5a0aff0625c0de8f059195e9",
+        "proofCoreSha256": "03c202381956e1cf1e11288f67fbaf347dfb8b2ba62daccda36decdeb3c58e1c",
         "proofArtifact": "pipeline-evidence/catalog-reconciliation-proof.json",
         "proofAccess": "Retained GitLab artifact; project access may be required",
-        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17682249625"
+        "proofJobUrl": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers/-/jobs/17813568728"
       },
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/aspnet",
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:1ea1999fde133ba6661bbdb98a5aa654aaf1b3615d2aba62ecf2924068ec6470",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/aspnet@sha256:4d2ffa7d84da7e5dc466dd9f1b5801169c451a5d62637ee3bcd08bb64f09ed90",
       "cisReport": {
         "schemaVersion": 1,
-        "path": "cis-reports/3ee43b0466132f794112026ba5c923348c57f2735c1a214538a4d605516fab10.json",
-        "sha256": "c418fe44302a2548149bd9044576893fe048a85034a934a392377cb282d5f91c",
-        "sizeBytes": 363621
+        "path": "cis-reports/a8154d0a365f21b5c1adb526af477c3cc937241793188f3708db73a9e756a8fd.json",
+        "sha256": "eeca4cdc788d15ab491937a5327ab5fb9de86503333d2f6ad41c83890da9640c",
+        "sizeBytes": 363638
       }
     },
     {
