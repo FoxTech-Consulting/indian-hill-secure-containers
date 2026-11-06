@@ -1,6 +1,6 @@
 {
-  "catalogJobId": 17794564895,
-  "catalogPipelineId": 3034972633,
+  "catalogJobId": 17802491303,
+  "catalogPipelineId": 3036120494,
   "files": [
     {
       "mode": "100644",
@@ -10,8 +10,8 @@
     },
     {
       "mode": "100644",
-      "path": "cis-reports/552f92549a90bd848e9f7bc49bf5f1f90992c63fcb86b5478c860c8d72f9d45e.json",
-      "sha256": "27654bf25d07fb406324ece49fd80d92ebe8dbc8ef46b8eb3aa877821de53f69",
+      "path": "cis-reports/4f1263b620395d2148c015eb52882b9e194f967f21236299478af615a5f1b15f.json",
+      "sha256": "6f0d879b59e1c111f56c50dce5584438a4ff35433dc5133751011da0fe920551",
       "size": 363561
     },
     {
@@ -35,7 +35,7 @@
     {
       "mode": "100644",
       "path": "postgres-published-images.json",
-      "sha256": "07cd631d388c01b082cc33b8a186b39256ae3c4b3bfe66ee36862ed3310cac37",
+      "sha256": "89ac8dd19630e4a834e9449b6fcbd20bc19f18807a03b61c463f694cb4eb5913",
       "size": 128230
     }
   ],
