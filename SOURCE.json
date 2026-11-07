@@ -783,8 +783,8 @@
     {
       "mode": "100644",
       "path": "images/tomcat/config/Dockerfile",
-      "sha256": "d84d78b83f4b8b824cae567184a52dc6c42d76cab848c45b1066d0a73a5a7f08",
-      "size": 3987
+      "sha256": "9cc184bc98c21dfab5ddb3a453328752dca1a66f3b6dd7925c453abd2a72e7ca",
+      "size": 3976
     },
     {
       "mode": "100644",
@@ -825,8 +825,8 @@
     {
       "mode": "100644",
       "path": "images/tomcat/examples/reference-app/Dockerfile",
-      "sha256": "969d9b62d2258b02623e812b51cdd4cef22656f925444918fc81ae0cb4e465dc",
-      "size": 1861
+      "sha256": "4e8df33329dbf9ff50ca84cea30469ade0f71989c2c774585d994aad5cee8a8a",
+      "size": 1857
     },
     {
       "mode": "100644",
@@ -2781,7 +2781,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "c3d54d7fd9072603787d4be3677e046c286da8f6",
+  "sourceRevision": "a37788190454f6ff2d4e3d06507e3d6693223966",
   "tiers": [
     "secure",
     "hardened",

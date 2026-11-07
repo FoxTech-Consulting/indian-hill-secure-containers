@@ -9,14 +9,14 @@ FROM ${JAVA_BUILDER} AS java-build
 ARG TOMCAT_VERSION
 ARG TOMCAT_MAJOR
 ARG TOMCAT_SOURCE_SHA512
-ADD --checksum=sha256:ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94 https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz /tmp/jdk.tar.gz
+ADD --checksum=sha256:d7f5d5cf865a2902b70ff549b97586a7d3f234e016f041ab447ea740c7d66d1c https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13_9.tar.gz /tmp/jdk.tar.gz
 RUN mkdir /opt/jdk && tar -xzf /tmp/jdk.tar.gz --strip-components=1 -C /opt/jdk \
     && /opt/jdk/bin/jlink --add-modules java.base,java.logging,java.naming,java.management,java.sql,java.xml,java.net.http,jdk.httpserver,jdk.crypto.ec,jdk.unsupported,jdk.security.auth,java.desktop,java.instrument,java.rmi,java.security.jgss,jdk.management,jdk.zipfs,jdk.naming.dns \
        --strip-debug --no-header-files --no-man-pages --output /opt/java \
     && /opt/java/bin/java --version
 
 
-ADD https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz /tmp/tomcat.tar.gz
+ADD https://dlcdn.apache.org/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz /tmp/tomcat.tar.gz
 RUN echo "${TOMCAT_SOURCE_SHA512}  /tmp/tomcat.tar.gz" | sha512sum -c - \
     && mkdir -p /opt/tomcat && tar -xzf /tmp/tomcat.tar.gz --strip-components=1 -C /opt/tomcat \
     && rm -rf /opt/tomcat/webapps/* /opt/tomcat/bin/*.sh /opt/tomcat/bin/*.bat /opt/tomcat/bin/*.tar.gz \
