@@ -57,7 +57,7 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "217f91e757134febc488c160137c61df82001f49eb85a2b049ef940deb92b1a6",
+      "sha256": "a4b193bc88e12f06d590a4110084feaa653c1b086f55b59faa03d8208e76d56f",
       "size": 24057
     },
     {
@@ -98,6 +98,12 @@
     },
     {
       "mode": "100644",
+      "path": "cis-reports/6bdd994c1391cace19886376602e6e5b7fd71eb2cf71b79bf1691bdf8985ec54.json",
+      "sha256": "a4bbe0b173cfa9f0410f5d67cce4fc7e0328246655ac0f58fed650e0e38391e0",
+      "size": 363564
+    },
+    {
+      "mode": "100644",
       "path": "cis-reports/96df308473154021048082dee5b3fd87efd9a9d7ebc94647e84d15cfd41fc2e1.json",
       "sha256": "d7f8d3f4c4dfd90011b893db51d05aa4bcd00c2f1fe8b6663ee9c575658a6502",
       "size": 363613
@@ -125,12 +131,6 @@
       "path": "cis-reports/c83f2e2ba0160a894a87e9f855ca611bdd55bdd0d417d92c83b82f33e882dd2e.json",
       "sha256": "f79034ecd63c6fe769a326c4badfe3d9e7fc09cc0a79ba7f92a238b0e655c042",
       "size": 6206
-    },
-    {
-      "mode": "100644",
-      "path": "cis-reports/de33cb2476cffb9b7ac988abfae95c201fb4dde5a54c688101d22e2c34206d85.json",
-      "sha256": "9eeea431f2bb20dcf47ec8e0bac5f3c0e8c156f13fc792ca4fd8612dcfd11574",
-      "size": 363564
     },
     {
       "mode": "100644",
@@ -849,8 +849,8 @@
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "bdc490b67a50f6c9de9060b634d9d57a5ea04c178d8d69cb164594a73606fb3e",
-      "size": 477619
+      "sha256": "f984f1d90e5afcd105ccda9dd3a9e9204a3924d199afa98c86e0129f6269786d",
+      "size": 477618
     },
     {
       "mode": "100755",
@@ -2781,7 +2781,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "fa77f9f98e780f1c1688df65ec8fa7ac3f78f08c",
+  "sourceRevision": "d5b2e4506aab2ecb0de3020f5901313b183f5037",
   "tiers": [
     "secure",
     "hardened",
