@@ -1,6 +1,6 @@
 {
-  "catalogJobId": 17929827296,
-  "catalogPipelineId": 3053793333,
+  "catalogJobId": 17931535012,
+  "catalogPipelineId": 3054014299,
   "images": [
     {
       "anonymousDownload": {
@@ -746,24 +746,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-10T12:08:49.393430+00:00"
+        "verifiedAt": "2026-11-11T12:05:49.431067+00:00"
       },
-      "candidateManifestSha256": "887e12c2aaa1dd215a4f6034cad419d38ad51929b9e4890e3570eb9e5926ea77",
+      "candidateManifestSha256": "a7b08a33e7eda5a14fa8c06bdda67aab6eaf3bc1b1ca7b04e9f452d99c724c8e",
       "cisReport": {
-        "path": "cis-reports/887e12c2aaa1dd215a4f6034cad419d38ad51929b9e4890e3570eb9e5926ea77.json",
+        "path": "cis-reports/a7b08a33e7eda5a14fa8c06bdda67aab6eaf3bc1b1ca7b04e9f452d99c724c8e.json",
         "schemaVersion": 1,
-        "sha256": "a561879975a0a8916faffeae7221e0bcdc04cbc218ea300fd45a9a3cee26bc6a",
+        "sha256": "5bdf9cac8d557e75237bfab71e054fa62c86a773e13228358005a6921ded9f1b",
         "sizeBytes": 363559
       },
-      "digest": "sha256:383db153076d862127863efd1bed6cde40d8f822c7d7d5bde21b042944e4c5ba",
+      "digest": "sha256:7cae30c3ec16e38faf697905c59913e6175eded0c9c3bd8c91723fc86e205421",
       "family": "postgres",
-      "image": "ghcr.io/foxtech-consulting/postgres@sha256:383db153076d862127863efd1bed6cde40d8f822c7d7d5bde21b042944e4c5ba",
+      "image": "ghcr.io/foxtech-consulting/postgres@sha256:7cae30c3ec16e38faf697905c59913e6175eded0c9c3bd8c91723fc86e205421",
       "key": "postgres-18",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17895072111",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3049378857",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17932027346",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3054073773",
         "sourceRevision": "31c5007a9add2c1d2ea596ff9d60c6f99ce91695"
       },
       "publicSourceBinding": {
@@ -775,26 +775,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17894529356",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3049311345"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17931535011",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3054014299"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-10T12:07:07Z",
+      "publishedAt": "2026-11-11T12:04:06Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17894529356",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3049311345",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17931535011",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3054014299",
         "sourceRevision": "31c5007a9add2c1d2ea596ff9d60c6f99ce91695"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/postgres@sha256:383db153076d862127863efd1bed6cde40d8f822c7d7d5bde21b042944e4c5ba",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/postgres@sha256:7cae30c3ec16e38faf697905c59913e6175eded0c9c3bd8c91723fc86e205421",
       "repository": "ghcr.io/foxtech-consulting/postgres",
-      "signatureManifestSha256": "887e12c2aaa1dd215a4f6034cad419d38ad51929b9e4890e3570eb9e5926ea77",
+      "signatureManifestSha256": "a7b08a33e7eda5a14fa8c06bdda67aab6eaf3bc1b1ca7b04e9f452d99c724c8e",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/postgres//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "887e12c2aaa1dd215a4f6034cad419d38ad51929b9e4890e3570eb9e5926ea77",
+          "assurance-manifest-sha256": "a7b08a33e7eda5a14fa8c06bdda67aab6eaf3bc1b1ca7b04e9f452d99c724c8e",
           "assurance-tier": "hardened",
           "public-source-commit": "4c797401835a14764f9e2c2421d1861f6488f20b",
           "public-source-manifest-sha256": "89d43317addc7aad155671a5d140fdbe09cb7341745377884c634ea4cae9385f",
@@ -807,7 +807,7 @@
       },
       "sourceRevision": "31c5007a9add2c1d2ea596ff9d60c6f99ce91695",
       "status": "engineering-preview",
-      "tag": "IHL-Postgres-18.6-20261110T120707Z-Hardened",
+      "tag": "IHL-Postgres-18.6-20261111T120406Z-Hardened",
       "targetId": "postgres-18",
       "tier": "hardened",
       "version": "18.6",
@@ -841,18 +841,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-10T12:08:45.191624+00:00"
+        "verifiedAt": "2026-11-11T12:05:47.109736+00:00"
       },
-      "candidateManifestSha256": "e6231fc9b98685366f750ef7a141237fcde320f83f99d6421710731d7f802652",
-      "digest": "sha256:518bac56d41f959d865e3597aecdde2489b3edf817f19ac28562b3cdd19b3b19",
+      "candidateManifestSha256": "832f7f5364d5f51417b9c79ae6360cf24cf1c3a6cfc3563f80970d51562d9785",
+      "digest": "sha256:c143e47da1d3ef4ed9dbfb559e11e550b60e9bfba20f009f8598cd8ea29a112e",
       "family": "postgres",
-      "image": "ghcr.io/foxtech-consulting/postgres@sha256:518bac56d41f959d865e3597aecdde2489b3edf817f19ac28562b3cdd19b3b19",
+      "image": "ghcr.io/foxtech-consulting/postgres@sha256:c143e47da1d3ef4ed9dbfb559e11e550b60e9bfba20f009f8598cd8ea29a112e",
       "key": "postgres-18",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/postgres",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17894556996",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3049314622",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17931559415",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3054017037",
         "sourceRevision": "31c5007a9add2c1d2ea596ff9d60c6f99ce91695"
       },
       "publicSourceBinding": {
@@ -864,26 +864,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17894529355",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3049311345"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17931535010",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3054014299"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-10T12:03:58Z",
+      "publishedAt": "2026-11-11T12:01:47Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17894529355",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3049311345",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/jobs/17931535010",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/postgres/-/pipelines/3054014299",
         "sourceRevision": "31c5007a9add2c1d2ea596ff9d60c6f99ce91695"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/postgres@sha256:518bac56d41f959d865e3597aecdde2489b3edf817f19ac28562b3cdd19b3b19",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/postgres@sha256:c143e47da1d3ef4ed9dbfb559e11e550b60e9bfba20f009f8598cd8ea29a112e",
       "repository": "ghcr.io/foxtech-consulting/postgres",
-      "signatureManifestSha256": "e6231fc9b98685366f750ef7a141237fcde320f83f99d6421710731d7f802652",
+      "signatureManifestSha256": "832f7f5364d5f51417b9c79ae6360cf24cf1c3a6cfc3563f80970d51562d9785",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/postgres//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "e6231fc9b98685366f750ef7a141237fcde320f83f99d6421710731d7f802652",
+          "assurance-manifest-sha256": "832f7f5364d5f51417b9c79ae6360cf24cf1c3a6cfc3563f80970d51562d9785",
           "assurance-tier": "secure",
           "public-source-commit": "4c797401835a14764f9e2c2421d1861f6488f20b",
           "public-source-manifest-sha256": "89d43317addc7aad155671a5d140fdbe09cb7341745377884c634ea4cae9385f",
@@ -896,7 +896,7 @@
       },
       "sourceRevision": "31c5007a9add2c1d2ea596ff9d60c6f99ce91695",
       "status": "engineering-preview",
-      "tag": "IHL-Postgres-18.6-20261110T120358Z",
+      "tag": "IHL-Postgres-18.6-20261111T120147Z",
       "targetId": "postgres-18",
       "tier": "secure",
       "version": "18.6",
@@ -2522,16 +2522,16 @@
           "allConfigAndLayerBytesVerified": true,
           "blobs": [
             {
-              "digest": "sha256:65725f7c1252dfdc35f28570d4f6795b90f6f0bfe3a0ac5860bb37db151d889d",
+              "digest": "sha256:3b604beb9ffc5e3a1bfd708bac1cac7446f2a12fcda067762c4182a6f8a85172",
               "kind": "config",
               "platform": {
                 "architecture": "amd64",
                 "os": "linux"
               },
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 11882,
+              "sizeBytes": 11884,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:48.664381+00:00"
+              "verifiedAt": "2026-11-11T12:05:49.173209+00:00"
             },
             {
               "digest": "sha256:8164945af939628dbf268148232591571a422530d2732232ae7d766f9803ac85",
@@ -2539,7 +2539,7 @@
               "repository": "foxtech-consulting/postgres",
               "sizeBytes": 5805255,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.035346+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.028975+00:00"
             },
             {
               "digest": "sha256:0450c9ff46b1a1a38517e799cf0e555e1b483d744c0b3c1a2e599352b6fb5d15",
@@ -2547,135 +2547,135 @@
               "repository": "foxtech-consulting/postgres",
               "sizeBytes": 120,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.237230+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.088679+00:00"
             },
             {
-              "digest": "sha256:14a43f6bd78b7430b4271e74cbc04f56786a291cd625e30dfd801e5576016f05",
+              "digest": "sha256:8ee324bd64d35a5656130c118e8840e82a0d8e307e27e633c0e116a50ed0f65f",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 9836743,
+              "sizeBytes": 9836690,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.621795+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.298272+00:00"
             },
             {
-              "digest": "sha256:2cc25f8456a948bd5908f8218b38b4daf976f8394fa508f0db491f64b19902ed",
+              "digest": "sha256:9644acb5e5c185ef4a42f6b5275a347f47f404fde08857810bdbf076213d3219",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 62150,
+              "sizeBytes": 62151,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.821073+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.361462+00:00"
             },
             {
-              "digest": "sha256:0cbdb02e3ac3412e9acd27691dfaa6b2e40d14c8e18732f524299100425099a6",
+              "digest": "sha256:6addcab1499fa55ff3e87d23b73d9a60277ac232a71c804c898616811df77c84",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 2612116,
+              "sizeBytes": 2612118,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.096962+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.477967+00:00"
             },
             {
-              "digest": "sha256:0badb3671adea53c6c44fbacece386f8ec430c682c88adee3d05fc0fdd579993",
+              "digest": "sha256:0f75d2fac5c07337e0f338f998b5a50843e5680300603584b779cbde62cae791",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 533938,
+              "sizeBytes": 533937,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.323704+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.579818+00:00"
             },
             {
-              "digest": "sha256:0b65c58f459fe0ffa818c24b5833ea70d22ee29258c547393f93eb93abbf7675",
+              "digest": "sha256:4ebe22486d1ed73fea65f18b3787a0b30f8a6d8cb29d5660008daeec4a0b1e59",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 3754,
+              "sizeBytes": 3756,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.527298+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.746689+00:00"
             },
             {
-              "digest": "sha256:af9495a33b18b1c5db6482ecaca1f3eeb285af2e04379bcb5fa9e680d2bf3eea",
+              "digest": "sha256:6da41b14731b5c761354918b50f421245c8b1b7b538beda957f6ca2203303532",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 4610,
+              "sizeBytes": 4611,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.734137+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.804800+00:00"
             },
             {
-              "digest": "sha256:45f813a65d31734822da54a8f3ec82b78ca37a6c68ae2811bfc32b44067bbd14",
+              "digest": "sha256:f01ff89c85f7a4e7e160b6ef1a3dba29f2ba5c6a0c2995faf37365166a7de9bf",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 203,
+              "sizeBytes": 205,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.943241+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.731155+00:00"
             },
             {
-              "digest": "sha256:ca525f532e7a7a48f3680c6d8cedd9f2216154e42cb76cca276b2d0be0353d3e",
+              "digest": "sha256:eae77c0d95204d298ada334858c4d6854a5617220fe05ce2179dd72fb1dc1151",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 156,
+              "sizeBytes": 158,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.146467+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.788918+00:00"
             },
             {
-              "digest": "sha256:e58fa24aacc70f642b60e49d89957446558c1de65fde16600e9d6f95d5d46873",
+              "digest": "sha256:4286ca5a8a4accb5f0c29b9351085b11b92b5c05325b670c8b97df3abdc9ad2a",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 529,
+              "sizeBytes": 531,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.355251+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.856004+00:00"
             },
             {
-              "digest": "sha256:9aba0e977037812597d57493264f0ba2da6a5ffa24a2fa005a4555e0e009a493",
+              "digest": "sha256:3bb274897600b70bd8b79362ac9e2c559c7760bbe82b4255132a29212a7a6914",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 290,
+              "sizeBytes": 291,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.579830+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.914875+00:00"
             },
             {
-              "digest": "sha256:c5637472f3f0b0fbf8cf2340d017928e5e93569048d53e8023b75ed8c3e62734",
+              "digest": "sha256:c98c67ab6d0613def23ef39be7e0022d032e0e6af0f8edee391109bba04f7be3",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 242,
+              "sizeBytes": 243,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.786013+00:00"
+              "verifiedAt": "2026-11-11T12:05:46.456798+00:00"
             },
             {
-              "digest": "sha256:e49091f09e44c123eed0261b429bafddfbc5e8ceb3ce4f94cd42cc52961e60c4",
+              "digest": "sha256:a694a5807a60c3fac3f39fe28e9bf7962d5aa159264ff61c2f6b7a583103a2b3",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 244,
+              "sizeBytes": 246,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.994845+00:00"
+              "verifiedAt": "2026-11-11T12:05:47.043810+00:00"
             },
             {
-              "digest": "sha256:de7ac41fb05a56f259a2caa57426b2d8d864c7bb5be05afdcb087a8cf59aaf0f",
+              "digest": "sha256:48ba529097ff86f85965c800d7ef8181ee73fd90ae45ed87b90449d638047718",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 165,
+              "sizeBytes": 164,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:45.191584+00:00"
+              "verifiedAt": "2026-11-11T12:05:47.109715+00:00"
             },
             {
-              "digest": "sha256:610de8837120a153e5be70bee6b0f3e4b43850ad1dbd6473311f3ee4d5bf1424",
+              "digest": "sha256:8c9c6247619ef6fd48dd59f84863cc4cc4354aa05a4c24bbb023ed8553f3abe1",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 616,
+              "sizeBytes": 617,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:48.872933+00:00"
+              "verifiedAt": "2026-11-11T12:05:49.238603+00:00"
             },
             {
-              "digest": "sha256:85b6e2fd755a4319fb6a4775aa5d3f3687674e78ade6a3a1d2de70cf12df7cdc",
+              "digest": "sha256:eeffd04d4359a8663d3d96fd5afcd218e4007dc6a58f126178594130dc2dfb46",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 357,
+              "sizeBytes": 358,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:49.080713+00:00"
+              "verifiedAt": "2026-11-11T12:05:49.299515+00:00"
             },
             {
-              "digest": "sha256:d81c24527c5c67f95aa08b17ad87eaaf9158bf00f7638625e310480a2e54c9f2",
+              "digest": "sha256:75b9b8dd21affb39de2413f3cb40d21ef5c5a67242a54c28f2c05d1ae804e163",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 359,
+              "sizeBytes": 360,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:49.274228+00:00"
+              "verifiedAt": "2026-11-11T12:05:49.367534+00:00"
             },
             {
               "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
@@ -2683,20 +2683,20 @@
               "repository": "foxtech-consulting/postgres",
               "sizeBytes": 32,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:49.393396+00:00"
+              "verifiedAt": "2026-11-11T12:05:49.431048+00:00"
             }
           ],
           "configCount": 1,
           "credentialsUsed": false,
           "cryptographicSignatureVerification": "original CI receipts checked separately",
-          "digest": "sha256:383db153076d862127863efd1bed6cde40d8f822c7d7d5bde21b042944e4c5ba",
+          "digest": "sha256:7cae30c3ec16e38faf697905c59913e6175eded0c9c3bd8c91723fc86e205421",
           "key": "postgres-18",
           "layerCount": 19,
           "manifests": [
             {
-              "digest": "sha256:383db153076d862127863efd1bed6cde40d8f822c7d7d5bde21b042944e4c5ba",
+              "digest": "sha256:7cae30c3ec16e38faf697905c59913e6175eded0c9c3bd8c91723fc86e205421",
               "sizeBytes": 4010,
-              "verifiedAt": "2026-11-10T12:08:48.468245+00:00"
+              "verifiedAt": "2026-11-11T12:05:49.028956+00:00"
             }
           ],
           "platforms": [
@@ -2709,21 +2709,21 @@
           "role": "runtime",
           "runtimeExecuted": false,
           "status": "verified",
-          "tag": "IHL-Postgres-18.6-20261110T120707Z-Hardened",
+          "tag": "IHL-Postgres-18.6-20261111T120406Z-Hardened",
           "tagProof": {
-            "digest": "sha256:383db153076d862127863efd1bed6cde40d8f822c7d7d5bde21b042944e4c5ba",
+            "digest": "sha256:7cae30c3ec16e38faf697905c59913e6175eded0c9c3bd8c91723fc86e205421",
             "sizeBytes": 4010,
-            "verifiedAt": "2026-11-10T12:08:48.338756+00:00"
+            "verifiedAt": "2026-11-11T12:05:48.966872+00:00"
           },
           "tier": "hardened",
-          "verifiedAt": "2026-11-10T12:08:49.393430+00:00"
+          "verifiedAt": "2026-11-11T12:05:49.431067+00:00"
         }
       ],
-      "archiveSha256": "9a9e32dc6bc4bdfd63dfbff4702445338a7ac8cd7d6109296c24a9e23216870a",
-      "jobId": 17894529356,
+      "archiveSha256": "9550c5cefe4990f3e2cade435e1509635b99c883d3ff7d038960396ef633e288",
+      "jobId": 17931535011,
       "key": "postgres-18",
-      "pipelineId": 3049311345,
-      "receiptSha256": "7c326f1783c49cef010b994c75c06b9aeb7265555f702202b2a9a28103fe01c4",
+      "pipelineId": 3054014299,
+      "receiptSha256": "03cd8044bf06d7b8e196f2ad6c695f696ed0ad59efaf1b6bef18b87e460e4d10",
       "tier": "hardened"
     },
     {
@@ -2732,16 +2732,16 @@
           "allConfigAndLayerBytesVerified": true,
           "blobs": [
             {
-              "digest": "sha256:dbd96964fafbabbba8f420c0b8e439301fba851e68795f987fe446085187f3ea",
+              "digest": "sha256:e362ba98c355d4eeaa8d4d461b7b73007c74a18e7105f8431f257fff20d5b328",
               "kind": "config",
               "platform": {
                 "architecture": "amd64",
                 "os": "linux"
               },
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 8262,
+              "sizeBytes": 8264,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:41.706667+00:00"
+              "verifiedAt": "2026-11-11T12:05:42.250513+00:00"
             },
             {
               "digest": "sha256:8164945af939628dbf268148232591571a422530d2732232ae7d766f9803ac85",
@@ -2749,7 +2749,7 @@
               "repository": "foxtech-consulting/postgres",
               "sizeBytes": 5805255,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.035346+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.028975+00:00"
             },
             {
               "digest": "sha256:0450c9ff46b1a1a38517e799cf0e555e1b483d744c0b3c1a2e599352b6fb5d15",
@@ -2757,124 +2757,124 @@
               "repository": "foxtech-consulting/postgres",
               "sizeBytes": 120,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.237230+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.088679+00:00"
             },
             {
-              "digest": "sha256:14a43f6bd78b7430b4271e74cbc04f56786a291cd625e30dfd801e5576016f05",
+              "digest": "sha256:8ee324bd64d35a5656130c118e8840e82a0d8e307e27e633c0e116a50ed0f65f",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 9836743,
+              "sizeBytes": 9836690,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.621795+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.298272+00:00"
             },
             {
-              "digest": "sha256:2cc25f8456a948bd5908f8218b38b4daf976f8394fa508f0db491f64b19902ed",
+              "digest": "sha256:9644acb5e5c185ef4a42f6b5275a347f47f404fde08857810bdbf076213d3219",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 62150,
+              "sizeBytes": 62151,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:42.821073+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.361462+00:00"
             },
             {
-              "digest": "sha256:0cbdb02e3ac3412e9acd27691dfaa6b2e40d14c8e18732f524299100425099a6",
+              "digest": "sha256:6addcab1499fa55ff3e87d23b73d9a60277ac232a71c804c898616811df77c84",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 2612116,
+              "sizeBytes": 2612118,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.096962+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.477967+00:00"
             },
             {
-              "digest": "sha256:0badb3671adea53c6c44fbacece386f8ec430c682c88adee3d05fc0fdd579993",
+              "digest": "sha256:0f75d2fac5c07337e0f338f998b5a50843e5680300603584b779cbde62cae791",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 533938,
+              "sizeBytes": 533937,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.323704+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.579818+00:00"
             },
             {
-              "digest": "sha256:0b65c58f459fe0ffa818c24b5833ea70d22ee29258c547393f93eb93abbf7675",
+              "digest": "sha256:4ebe22486d1ed73fea65f18b3787a0b30f8a6d8cb29d5660008daeec4a0b1e59",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 3754,
+              "sizeBytes": 3756,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.527298+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.746689+00:00"
             },
             {
-              "digest": "sha256:af9495a33b18b1c5db6482ecaca1f3eeb285af2e04379bcb5fa9e680d2bf3eea",
+              "digest": "sha256:6da41b14731b5c761354918b50f421245c8b1b7b538beda957f6ca2203303532",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 4610,
+              "sizeBytes": 4611,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.734137+00:00"
+              "verifiedAt": "2026-11-11T12:05:43.804800+00:00"
             },
             {
-              "digest": "sha256:45f813a65d31734822da54a8f3ec82b78ca37a6c68ae2811bfc32b44067bbd14",
+              "digest": "sha256:f01ff89c85f7a4e7e160b6ef1a3dba29f2ba5c6a0c2995faf37365166a7de9bf",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 203,
+              "sizeBytes": 205,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:43.943241+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.731155+00:00"
             },
             {
-              "digest": "sha256:ca525f532e7a7a48f3680c6d8cedd9f2216154e42cb76cca276b2d0be0353d3e",
+              "digest": "sha256:eae77c0d95204d298ada334858c4d6854a5617220fe05ce2179dd72fb1dc1151",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 156,
+              "sizeBytes": 158,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.146467+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.788918+00:00"
             },
             {
-              "digest": "sha256:e58fa24aacc70f642b60e49d89957446558c1de65fde16600e9d6f95d5d46873",
+              "digest": "sha256:4286ca5a8a4accb5f0c29b9351085b11b92b5c05325b670c8b97df3abdc9ad2a",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 529,
+              "sizeBytes": 531,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.355251+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.856004+00:00"
             },
             {
-              "digest": "sha256:9aba0e977037812597d57493264f0ba2da6a5ffa24a2fa005a4555e0e009a493",
+              "digest": "sha256:3bb274897600b70bd8b79362ac9e2c559c7760bbe82b4255132a29212a7a6914",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 290,
+              "sizeBytes": 291,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.579830+00:00"
+              "verifiedAt": "2026-11-11T12:05:45.914875+00:00"
             },
             {
-              "digest": "sha256:c5637472f3f0b0fbf8cf2340d017928e5e93569048d53e8023b75ed8c3e62734",
+              "digest": "sha256:c98c67ab6d0613def23ef39be7e0022d032e0e6af0f8edee391109bba04f7be3",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 242,
+              "sizeBytes": 243,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.786013+00:00"
+              "verifiedAt": "2026-11-11T12:05:46.456798+00:00"
             },
             {
-              "digest": "sha256:e49091f09e44c123eed0261b429bafddfbc5e8ceb3ce4f94cd42cc52961e60c4",
+              "digest": "sha256:a694a5807a60c3fac3f39fe28e9bf7962d5aa159264ff61c2f6b7a583103a2b3",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 244,
+              "sizeBytes": 246,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:44.994845+00:00"
+              "verifiedAt": "2026-11-11T12:05:47.043810+00:00"
             },
             {
-              "digest": "sha256:de7ac41fb05a56f259a2caa57426b2d8d864c7bb5be05afdcb087a8cf59aaf0f",
+              "digest": "sha256:48ba529097ff86f85965c800d7ef8181ee73fd90ae45ed87b90449d638047718",
               "kind": "layer",
               "repository": "foxtech-consulting/postgres",
-              "sizeBytes": 165,
+              "sizeBytes": 164,
               "status": "verified",
-              "verifiedAt": "2026-11-10T12:08:45.191584+00:00"
+              "verifiedAt": "2026-11-11T12:05:47.109715+00:00"
             }
           ],
           "configCount": 1,
           "credentialsUsed": false,
           "cryptographicSignatureVerification": "original CI receipts checked separately",
-          "digest": "sha256:518bac56d41f959d865e3597aecdde2489b3edf817f19ac28562b3cdd19b3b19",
+          "digest": "sha256:c143e47da1d3ef4ed9dbfb559e11e550b60e9bfba20f009f8598cd8ea29a112e",
           "key": "postgres-18",
           "layerCount": 15,
           "manifests": [
             {
-              "digest": "sha256:518bac56d41f959d865e3597aecdde2489b3edf817f19ac28562b3cdd19b3b19",
+              "digest": "sha256:c143e47da1d3ef4ed9dbfb559e11e550b60e9bfba20f009f8598cd8ea29a112e",
               "sizeBytes": 3234,
-              "verifiedAt": "2026-11-10T12:08:41.491288+00:00"
+              "verifiedAt": "2026-11-11T12:05:42.200284+00:00"
             }
           ],
           "platforms": [
@@ -2887,21 +2887,21 @@
           "role": "runtime",
           "runtimeExecuted": false,
           "status": "verified",
-          "tag": "IHL-Postgres-18.6-20261110T120358Z",
+          "tag": "IHL-Postgres-18.6-20261111T120147Z",
           "tagProof": {
-            "digest": "sha256:518bac56d41f959d865e3597aecdde2489b3edf817f19ac28562b3cdd19b3b19",
+            "digest": "sha256:c143e47da1d3ef4ed9dbfb559e11e550b60e9bfba20f009f8598cd8ea29a112e",
             "sizeBytes": 3234,
-            "verifiedAt": "2026-11-10T12:08:41.358452+00:00"
+            "verifiedAt": "2026-11-11T12:05:42.158442+00:00"
           },
           "tier": "secure",
-          "verifiedAt": "2026-11-10T12:08:45.191624+00:00"
+          "verifiedAt": "2026-11-11T12:05:47.109736+00:00"
         }
       ],
-      "archiveSha256": "24d7d985f3bdedba7481790f12e834054d3c25cc0c44b2138a4e18a2958458e3",
-      "jobId": 17894529355,
+      "archiveSha256": "658bcda9d5384944560d793994cb50257162e89098a73d7ebd6fbd5876129259",
+      "jobId": 17931535010,
       "key": "postgres-18",
-      "pipelineId": 3049311345,
-      "receiptSha256": "9aba280ac892d955d276183d6bbd1b6b353d62d32f1cd2481a25c6f87f96ca3d",
+      "pipelineId": 3054014299,
+      "receiptSha256": "4f97c48a20473ef0de78cb506e256bfef1a4f0220b3f724d66510fbfede3a16f",
       "tier": "secure"
     }
   ],
