@@ -1,12 +1,18 @@
 {
-  "catalogJobId": 17926648228,
-  "catalogPipelineId": 3053374989,
+  "catalogJobId": 17928131635,
+  "catalogPipelineId": 3053573742,
   "files": [
     {
       "mode": "100644",
       "path": "cis-reports/377e975ea6bbeb2995373a3a849a079b3b5a7bb6da735e5e3e49a1918d15425c.json",
       "sha256": "7145b13972004d026775b2dd63a7f9b57a9537fb89e594d5ae26ab84a639a69d",
       "size": 363561
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/4269eb237ed1b3e258185997bb0107ee342df9f1904eb7a35a4adfbf8f4ab1c5.json",
+      "sha256": "221b44ddb352cbcd7b51101f5fa4bd4c981208d94f414798d9b49b317f50e738",
+      "size": 363519
     },
     {
       "mode": "100644",
@@ -22,12 +28,6 @@
     },
     {
       "mode": "100644",
-      "path": "cis-reports/caa737fd91964c2c972880c7ad8535d002c64d5b785db920c367922c2d730459.json",
-      "sha256": "b26b119652a30b3792370955c5460f9f4c34030d53959cbbac5afe06e656689a",
-      "size": 363519
-    },
-    {
-      "mode": "100644",
       "path": "cis-reports/db4ab8f8e96a46dc7ec5f024162d0a973ce70f34e22a7b50a9fda813064c8e59.json",
       "sha256": "3a10aba99ef7de60fd2f615c27c50e8f1162012c8b5e3f2a2365e9aeedae64db",
       "size": 363561
@@ -35,7 +35,7 @@
     {
       "mode": "100644",
       "path": "postgres-published-images.json",
-      "sha256": "3fe8d9567594251be0f92e4988a27e9b933845a35d0677adc6919d86cb055103",
+      "sha256": "914edb942b25f53d622b6932705a2a74f38c29efbc66246f2eb4a57fddeb5dec",
       "size": 128230
     }
   ],
