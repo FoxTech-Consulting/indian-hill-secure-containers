@@ -57,7 +57,7 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "0430ad398699b661495d68d5ee2b80ea77a8b24af61d33cb2e02c07f72eaee20",
+      "sha256": "0a823e8a90c6d4b2897b9250d7dea06ecef1896597505b7caf2c2eb13caa4712",
       "size": 24057
     },
     {
@@ -104,20 +104,20 @@
     },
     {
       "mode": "100644",
-      "path": "cis-reports/7358239127aacd6f8c93e790710931d4a9ec51d0e44822462f31076c85fe03d2.json",
-      "sha256": "7dfcdf18094144f85d39ef5849de0accadb3aea143e978d7414cb83f49cb3dde",
-      "size": 363690
-    },
-    {
-      "mode": "100644",
       "path": "cis-reports/7bca8e55fa4b2b944046775822f0a6679ed493744a7d3d14f2ba44261f9e636f.json",
       "sha256": "958fb299aa23bee7de08d2dbdc3081c59d5cff5fa17735188b34102031775a32",
       "size": 363638
     },
     {
       "mode": "100644",
-      "path": "cis-reports/900bb91e25ad74cd5f438514e49ffbf0d0f330192cb8e5fc738a91929b4d17b8.json",
-      "sha256": "6101d7138b58464c83c58026625396008c9fc1f42b6770646473a276ab2db7a9",
+      "path": "cis-reports/96adcb88f57331e45f500855e484e7e78af40ca3fb4da59dc21b405bdf7218db.json",
+      "sha256": "5ee19e84c6a5376d20ea7ebd3e4b7726068677f75c8603905b79a8da4196c364",
+      "size": 363690
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/a6b50c4b2ddda7a512bafbb87d010774da562c594f9a52d89a129688a62662c7.json",
+      "sha256": "06e3e79009cdaa4c716b34ac9ccddddd6278515afa758181d4adfab9ce0f5b96",
       "size": 363564
     },
     {
@@ -849,7 +849,7 @@
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "ec998ec469241639713344401c29d7e49016f96d7256695e56252db763a126c0",
+      "sha256": "2b4f0076a6fa1a77035640824c83720474756c066924b4d5d90858b6a3ec31c3",
       "size": 477642
     },
     {
@@ -2781,7 +2781,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "1586e0b8669bb2e770eb9ba1b943a94d4895da54",
+  "sourceRevision": "0f7921ddc84c702470b340145ae43d9e67ae4127",
   "tiers": [
     "secure",
     "hardened",
