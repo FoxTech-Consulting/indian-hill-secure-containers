@@ -1,5 +1,5 @@
 {
-  "dailyPipelineId": 3053750318,
+  "dailyPipelineId": 3063998373,
   "images": [
     {
       "anonymousDownload": {
@@ -9,24 +9,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:30:35.593310+00:00"
+        "verifiedAt": "2026-11-13T21:30:36.581930+00:00"
       },
-      "candidateManifestSha256": "47d5fbfaf4561690f5abc6862475cfd95b3096e431e249ffa1434c78a2763efb",
+      "candidateManifestSha256": "131357b579b14edfdbb55a33eef9fe801a742dd0f25f9715f2a821f686bc4da4",
       "cisReport": {
-        "path": "cis-reports/47d5fbfaf4561690f5abc6862475cfd95b3096e431e249ffa1434c78a2763efb.json",
+        "path": "cis-reports/131357b579b14edfdbb55a33eef9fe801a742dd0f25f9715f2a821f686bc4da4.json",
         "schemaVersion": 1,
-        "sha256": "30e239a1f06b365e12488bf21299eee0ed1be9158c7b744b0254b9055e63cb08",
+        "sha256": "6d7eaa667c1bb280a9b710bd743e295884259c05dc51be2cb76361857adfa9c1",
         "sizeBytes": 363556
       },
-      "digest": "sha256:5956f6c72824aa9aea17f2aed7abe73468672e0fd4f8c50dfbe9101a64ea9fe6",
+      "digest": "sha256:cab41391c2e25a4aea2feb79b4bae86570e2a628e733382829c93e98ca9df7b0",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:5956f6c72824aa9aea17f2aed7abe73468672e0fd4f8c50dfbe9101a64ea9fe6",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:cab41391c2e25a4aea2feb79b4bae86570e2a628e733382829c93e98ca9df7b0",
       "key": "java",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17938451973",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054942985",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18004119635",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064527488",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -38,26 +38,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048609",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794138",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:02:08Z",
+      "publishedAt": "2026-11-13T19:22:18Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048609",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794138",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:5956f6c72824aa9aea17f2aed7abe73468672e0fd4f8c50dfbe9101a64ea9fe6",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:cab41391c2e25a4aea2feb79b4bae86570e2a628e733382829c93e98ca9df7b0",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "47d5fbfaf4561690f5abc6862475cfd95b3096e431e249ffa1434c78a2763efb",
+      "signatureManifestSha256": "131357b579b14edfdbb55a33eef9fe801a742dd0f25f9715f2a821f686bc4da4",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "47d5fbfaf4561690f5abc6862475cfd95b3096e431e249ffa1434c78a2763efb",
+          "assurance-manifest-sha256": "131357b579b14edfdbb55a33eef9fe801a742dd0f25f9715f2a821f686bc4da4",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -71,7 +71,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-21.0.13-20261111T190208Z-Hardened",
+      "tag": "IHL-Java-21.0.13-20261113T192218Z-Hardened",
       "targetId": "java-21-bcfips-2-1-3",
       "tier": "hardened",
       "version": "21.0.13",
@@ -105,18 +105,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:49.247829+00:00"
+        "verifiedAt": "2026-11-13T21:31:53.000729+00:00"
       },
-      "candidateManifestSha256": "621bacf02ed290a561bf525d0d4aa8f00762ba06498ff8575e2476b158763f4f",
-      "digest": "sha256:a22b0ca1eb081c0192ce8ed81afea2f78182355e732ab6e1a43c28fb040ba36b",
+      "candidateManifestSha256": "810da70a2ed3fe209d876ea6f8adda463742f37940fb765304fe62d8b745b648",
+      "digest": "sha256:323db0d1cda31abee87142b22739084392ebb04c141f61cdfd220894ae49fcc0",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:a22b0ca1eb081c0192ce8ed81afea2f78182355e732ab6e1a43c28fb040ba36b",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:323db0d1cda31abee87142b22739084392ebb04c141f61cdfd220894ae49fcc0",
       "key": "java",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17929542255",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3053756313",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18000241666",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064005629",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -128,26 +128,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077986",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648983",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:20:36Z",
+      "publishedAt": "2026-11-13T18:20:43Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077986",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648983",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:a22b0ca1eb081c0192ce8ed81afea2f78182355e732ab6e1a43c28fb040ba36b",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:323db0d1cda31abee87142b22739084392ebb04c141f61cdfd220894ae49fcc0",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "621bacf02ed290a561bf525d0d4aa8f00762ba06498ff8575e2476b158763f4f",
+      "signatureManifestSha256": "810da70a2ed3fe209d876ea6f8adda463742f37940fb765304fe62d8b745b648",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "621bacf02ed290a561bf525d0d4aa8f00762ba06498ff8575e2476b158763f4f",
+          "assurance-manifest-sha256": "810da70a2ed3fe209d876ea6f8adda463742f37940fb765304fe62d8b745b648",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -161,7 +161,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-21.0.13-20261111T182036Z",
+      "tag": "IHL-Java-21.0.13-20261113T182043Z",
       "targetId": "java-21-bcfips-2-1-3",
       "tier": "secure",
       "version": "21.0.13",
@@ -195,24 +195,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:30:41.311152+00:00"
+        "verifiedAt": "2026-11-13T21:30:43.378597+00:00"
       },
-      "candidateManifestSha256": "d2e5510191fd1b99e49f43ceae95ac636d45c7167d42705a9f89b381788745a4",
+      "candidateManifestSha256": "6bccc529ee84210a56aa7a0d4273f8f89a39ce3bc89152024ff7d86f1be60926",
       "cisReport": {
-        "path": "cis-reports/d2e5510191fd1b99e49f43ceae95ac636d45c7167d42705a9f89b381788745a4.json",
+        "path": "cis-reports/6bccc529ee84210a56aa7a0d4273f8f89a39ce3bc89152024ff7d86f1be60926.json",
         "schemaVersion": 1,
-        "sha256": "4239d0aab0bd2a7de14653f44804eff0c1896ebecf0b483da503656d9209dbad",
+        "sha256": "9ffa29736923797b6984b5257e943971ae13cc3eb99acb9b1764123ba9c4b748",
         "sizeBytes": 363780
       },
-      "digest": "sha256:a842d235c47b13db335a435e95ac735a9fca00c819cd8578deb882ab4c2de04f",
+      "digest": "sha256:4a8efee70550f030ab8edb7f1771c1773aa6a0efee8da5ba63f47f7966c38cf1",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:a842d235c47b13db335a435e95ac735a9fca00c819cd8578deb882ab4c2de04f",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:4a8efee70550f030ab8edb7f1771c1773aa6a0efee8da5ba63f47f7966c38cf1",
       "key": "java-11-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17934809754",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054436072",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18004517953",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064579510",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -224,26 +224,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048610",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794139",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:34:14Z",
+      "publishedAt": "2026-11-13T19:25:52Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048610",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794139",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:a842d235c47b13db335a435e95ac735a9fca00c819cd8578deb882ab4c2de04f",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:4a8efee70550f030ab8edb7f1771c1773aa6a0efee8da5ba63f47f7966c38cf1",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "d2e5510191fd1b99e49f43ceae95ac636d45c7167d42705a9f89b381788745a4",
+      "signatureManifestSha256": "6bccc529ee84210a56aa7a0d4273f8f89a39ce3bc89152024ff7d86f1be60926",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "d2e5510191fd1b99e49f43ceae95ac636d45c7167d42705a9f89b381788745a4",
+          "assurance-manifest-sha256": "6bccc529ee84210a56aa7a0d4273f8f89a39ce3bc89152024ff7d86f1be60926",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -257,7 +257,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-11.0.33-20261111T193414Z-Hardened",
+      "tag": "IHL-Java-11.0.33-20261113T192552Z-Hardened",
       "targetId": "java-11-bcfips-2-1-1",
       "tier": "hardened",
       "version": "11.0.33",
@@ -291,18 +291,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:51.500994+00:00"
+        "verifiedAt": "2026-11-13T21:31:55.339651+00:00"
       },
-      "candidateManifestSha256": "5dee6a7d8d34a6de94dde5b3f049a50e05790bd67b7bfbc8632917cdbd399fe5",
-      "digest": "sha256:4305271ffbbdfbc40e52a0f5dc353ae26ae628a04e43b31aa1de17db3f06de92",
+      "candidateManifestSha256": "f312b4f7644f4b1e13b404d69a1469f17a4af63d57650bfa4c90a73274267596",
+      "digest": "sha256:5ce9553449e909d2e85c98f6b4a534990aae186753a32230523e388100c657f6",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:4305271ffbbdfbc40e52a0f5dc353ae26ae628a04e43b31aa1de17db3f06de92",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:5ce9553449e909d2e85c98f6b4a534990aae186753a32230523e388100c657f6",
       "key": "java-11-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17930621387",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3053894668",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18000826166",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064083255",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -314,26 +314,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077987",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648984",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:23:24Z",
+      "publishedAt": "2026-11-13T18:37:58Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077987",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648984",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:4305271ffbbdfbc40e52a0f5dc353ae26ae628a04e43b31aa1de17db3f06de92",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:5ce9553449e909d2e85c98f6b4a534990aae186753a32230523e388100c657f6",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "5dee6a7d8d34a6de94dde5b3f049a50e05790bd67b7bfbc8632917cdbd399fe5",
+      "signatureManifestSha256": "f312b4f7644f4b1e13b404d69a1469f17a4af63d57650bfa4c90a73274267596",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "5dee6a7d8d34a6de94dde5b3f049a50e05790bd67b7bfbc8632917cdbd399fe5",
+          "assurance-manifest-sha256": "f312b4f7644f4b1e13b404d69a1469f17a4af63d57650bfa4c90a73274267596",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -347,7 +347,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-11.0.33-20261111T182324Z",
+      "tag": "IHL-Java-11.0.33-20261113T183758Z",
       "targetId": "java-11-bcfips-2-1-1",
       "tier": "secure",
       "version": "11.0.33",
@@ -381,24 +381,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:30:48.393348+00:00"
+        "verifiedAt": "2026-11-13T21:30:50.286118+00:00"
       },
-      "candidateManifestSha256": "455a9ab1028b5035e18c738e47c887fa97a08202ca204205efb73b80d654982e",
+      "candidateManifestSha256": "73d54f9ca4bc8076170f688a6ec642bb65781138e3275385cc55aade13abd3f1",
       "cisReport": {
-        "path": "cis-reports/455a9ab1028b5035e18c738e47c887fa97a08202ca204205efb73b80d654982e.json",
+        "path": "cis-reports/73d54f9ca4bc8076170f688a6ec642bb65781138e3275385cc55aade13abd3f1.json",
         "schemaVersion": 1,
-        "sha256": "0f1c1eb801395273d69e219a3bb04f3f80c999e751f258d91fde5ee5a5035ddb",
+        "sha256": "2fae3a5966b0c4ef21ad74ee2de7912c139deeb0e65f8a6e230745bb356daaba",
         "sizeBytes": 363780
       },
-      "digest": "sha256:06d8c4d1faa7c748dfb41f1c3a5d52b0ccb111030ac67ca72fd094845bb2e9d3",
+      "digest": "sha256:4b5ecc38549bdfd93913758efcc92f4b7d36f00f22d7c473a14cea802eb97e7b",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:06d8c4d1faa7c748dfb41f1c3a5d52b0ccb111030ac67ca72fd094845bb2e9d3",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:4b5ecc38549bdfd93913758efcc92f4b7d36f00f22d7c473a14cea802eb97e7b",
       "key": "java-11-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17936986341",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054736977",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18004899867",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064629864",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -410,26 +410,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048611",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794140",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:37:37Z",
+      "publishedAt": "2026-11-13T19:29:02Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048611",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794140",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:06d8c4d1faa7c748dfb41f1c3a5d52b0ccb111030ac67ca72fd094845bb2e9d3",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:4b5ecc38549bdfd93913758efcc92f4b7d36f00f22d7c473a14cea802eb97e7b",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "455a9ab1028b5035e18c738e47c887fa97a08202ca204205efb73b80d654982e",
+      "signatureManifestSha256": "73d54f9ca4bc8076170f688a6ec642bb65781138e3275385cc55aade13abd3f1",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "455a9ab1028b5035e18c738e47c887fa97a08202ca204205efb73b80d654982e",
+          "assurance-manifest-sha256": "73d54f9ca4bc8076170f688a6ec642bb65781138e3275385cc55aade13abd3f1",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -443,7 +443,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-11.0.33-20261111T193737Z-Hardened",
+      "tag": "IHL-Java-11.0.33-20261113T192902Z-Hardened",
       "targetId": "java-11-bcfips-2-1-3",
       "tier": "hardened",
       "version": "11.0.33",
@@ -477,18 +477,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:53.495538+00:00"
+        "verifiedAt": "2026-11-13T21:31:57.529580+00:00"
       },
-      "candidateManifestSha256": "6ca28836709e4ea73ad92cf25be44fcf6cceeb7ea3a580ba3c241781dd6fcd71",
-      "digest": "sha256:d22667f9ce9cd44c63019928f4674b9bd33f46aef910130825ff93c0e9e06c65",
+      "candidateManifestSha256": "4641748224b13ac208d19f1509b92159963deee79a46af9db1dc8d4cc2ddf0e3",
+      "digest": "sha256:6342fde94279ded8484a0a0536c72ac3d903a7460aafe00f76276c8000a4eed8",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:d22667f9ce9cd44c63019928f4674b9bd33f46aef910130825ff93c0e9e06c65",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:6342fde94279ded8484a0a0536c72ac3d903a7460aafe00f76276c8000a4eed8",
       "key": "java-11-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17930950434",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3053935516",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18000525766",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064043352",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -500,26 +500,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077988",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648985",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:26:35Z",
+      "publishedAt": "2026-11-13T18:41:31Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077988",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648985",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:d22667f9ce9cd44c63019928f4674b9bd33f46aef910130825ff93c0e9e06c65",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:6342fde94279ded8484a0a0536c72ac3d903a7460aafe00f76276c8000a4eed8",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "6ca28836709e4ea73ad92cf25be44fcf6cceeb7ea3a580ba3c241781dd6fcd71",
+      "signatureManifestSha256": "4641748224b13ac208d19f1509b92159963deee79a46af9db1dc8d4cc2ddf0e3",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "6ca28836709e4ea73ad92cf25be44fcf6cceeb7ea3a580ba3c241781dd6fcd71",
+          "assurance-manifest-sha256": "4641748224b13ac208d19f1509b92159963deee79a46af9db1dc8d4cc2ddf0e3",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -533,7 +533,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-11.0.33-20261111T182635Z",
+      "tag": "IHL-Java-11.0.33-20261113T184131Z",
       "targetId": "java-11-bcfips-2-1-3",
       "tier": "secure",
       "version": "11.0.33",
@@ -567,24 +567,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:30:53.854240+00:00"
+        "verifiedAt": "2026-11-13T21:30:56.315995+00:00"
       },
-      "candidateManifestSha256": "525e1ab79679b5abc2a16b0f7f2bebc7dcbd4b51c4f946a453217ddb76798eb0",
+      "candidateManifestSha256": "c1c191e4aa2f1d233a8848e08037b17eac1ced9a78fca9fefe3f7d1801114cbe",
       "cisReport": {
-        "path": "cis-reports/525e1ab79679b5abc2a16b0f7f2bebc7dcbd4b51c4f946a453217ddb76798eb0.json",
+        "path": "cis-reports/c1c191e4aa2f1d233a8848e08037b17eac1ced9a78fca9fefe3f7d1801114cbe.json",
         "schemaVersion": 1,
-        "sha256": "139508b9e9a82507bd0573dc650b9c992d633f9103d6bbfe9b80d37023e50793",
+        "sha256": "ac19569747155328d8d1a0ad70ef7779f38f62750017ed4fea102a2a05b6318e",
         "sizeBytes": 363780
       },
-      "digest": "sha256:0dcd62c0ac856a225d76f1013eb0c6ec0539f14352f92128ce7f9a8721f0f33b",
+      "digest": "sha256:628a932996423c22b890e0ff01693c684d8c5200385e81691269675d4f21f7ef",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:0dcd62c0ac856a225d76f1013eb0c6ec0539f14352f92128ce7f9a8721f0f33b",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:628a932996423c22b890e0ff01693c684d8c5200385e81691269675d4f21f7ef",
       "key": "java-17-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17937440236",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054798396",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18005761622",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064720528",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -596,26 +596,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048612",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794141",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:24:32Z",
+      "publishedAt": "2026-11-13T19:32:33Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048612",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794141",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:0dcd62c0ac856a225d76f1013eb0c6ec0539f14352f92128ce7f9a8721f0f33b",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:628a932996423c22b890e0ff01693c684d8c5200385e81691269675d4f21f7ef",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "525e1ab79679b5abc2a16b0f7f2bebc7dcbd4b51c4f946a453217ddb76798eb0",
+      "signatureManifestSha256": "c1c191e4aa2f1d233a8848e08037b17eac1ced9a78fca9fefe3f7d1801114cbe",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "525e1ab79679b5abc2a16b0f7f2bebc7dcbd4b51c4f946a453217ddb76798eb0",
+          "assurance-manifest-sha256": "c1c191e4aa2f1d233a8848e08037b17eac1ced9a78fca9fefe3f7d1801114cbe",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -629,7 +629,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-17.0.21-20261111T192432Z-Hardened",
+      "tag": "IHL-Java-17.0.21-20261113T193233Z-Hardened",
       "targetId": "java-17-bcfips-2-1-1",
       "tier": "hardened",
       "version": "17.0.21",
@@ -663,18 +663,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:57.947116+00:00"
+        "verifiedAt": "2026-11-13T21:31:59.872599+00:00"
       },
-      "candidateManifestSha256": "f00af1ad5823a721d6f3c8d2557e30d8e47e8c70e15fef3bad7e4042534e0258",
-      "digest": "sha256:382eb44c9ced0eef3683e5f348deb510ef83e106b2fd4bcb3059ae7824b99209",
+      "candidateManifestSha256": "a79bb7e94ae3aecc1f9924983b2e1f38163a8c634bec9c326c4f3f09cb9c6e64",
+      "digest": "sha256:1ca69476126863b671def7a3a0aa61ae8436b2883b3831af5689420643ed167f",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:382eb44c9ced0eef3683e5f348deb510ef83e106b2fd4bcb3059ae7824b99209",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:1ca69476126863b671def7a3a0aa61ae8436b2883b3831af5689420643ed167f",
       "key": "java-17-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17931348251",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3053989764",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18001186876",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064132412",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -686,26 +686,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077989",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648986",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:29:51Z",
+      "publishedAt": "2026-11-13T18:44:32Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077989",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648986",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:382eb44c9ced0eef3683e5f348deb510ef83e106b2fd4bcb3059ae7824b99209",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:1ca69476126863b671def7a3a0aa61ae8436b2883b3831af5689420643ed167f",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "f00af1ad5823a721d6f3c8d2557e30d8e47e8c70e15fef3bad7e4042534e0258",
+      "signatureManifestSha256": "a79bb7e94ae3aecc1f9924983b2e1f38163a8c634bec9c326c4f3f09cb9c6e64",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "f00af1ad5823a721d6f3c8d2557e30d8e47e8c70e15fef3bad7e4042534e0258",
+          "assurance-manifest-sha256": "a79bb7e94ae3aecc1f9924983b2e1f38163a8c634bec9c326c4f3f09cb9c6e64",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -719,7 +719,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-17.0.21-20261111T182951Z",
+      "tag": "IHL-Java-17.0.21-20261113T184432Z",
       "targetId": "java-17-bcfips-2-1-1",
       "tier": "secure",
       "version": "17.0.21",
@@ -753,24 +753,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:30:59.134505+00:00"
+        "verifiedAt": "2026-11-13T21:31:03.273148+00:00"
       },
-      "candidateManifestSha256": "c2e131feef038c128bc01c444edb75363eb17566f697ff2abf648bf4c0ebe943",
+      "candidateManifestSha256": "81046b1aa21354c814a2424f0b15139ca89ec5320405cccf879b58c5c70b0e7f",
       "cisReport": {
-        "path": "cis-reports/c2e131feef038c128bc01c444edb75363eb17566f697ff2abf648bf4c0ebe943.json",
+        "path": "cis-reports/81046b1aa21354c814a2424f0b15139ca89ec5320405cccf879b58c5c70b0e7f.json",
         "schemaVersion": 1,
-        "sha256": "efab37795863c3717430f0a69d3a4d66344799220d7d1fcabd722e94e52ae2d5",
+        "sha256": "ca44a33ff985f3bdca7039eb9aecc82351d20d5ef1aeaa85f251264b3ae7afe1",
         "sizeBytes": 363780
       },
-      "digest": "sha256:171307e1b80758c5c23cd08dc3675564773740be2822d899ca20778c719cb7a3",
+      "digest": "sha256:7863dd906a156333111d5a474c90efb694d3fea6b86a40ee895732b3d71c0761",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:171307e1b80758c5c23cd08dc3675564773740be2822d899ca20778c719cb7a3",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:7863dd906a156333111d5a474c90efb694d3fea6b86a40ee895732b3d71c0761",
       "key": "java-17-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17936529565",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054676236",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18006549040",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064791930",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -782,26 +782,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048613",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794142",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:27:47Z",
+      "publishedAt": "2026-11-13T19:35:57Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048613",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794142",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:171307e1b80758c5c23cd08dc3675564773740be2822d899ca20778c719cb7a3",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:7863dd906a156333111d5a474c90efb694d3fea6b86a40ee895732b3d71c0761",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "c2e131feef038c128bc01c444edb75363eb17566f697ff2abf648bf4c0ebe943",
+      "signatureManifestSha256": "81046b1aa21354c814a2424f0b15139ca89ec5320405cccf879b58c5c70b0e7f",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "c2e131feef038c128bc01c444edb75363eb17566f697ff2abf648bf4c0ebe943",
+          "assurance-manifest-sha256": "81046b1aa21354c814a2424f0b15139ca89ec5320405cccf879b58c5c70b0e7f",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -815,7 +815,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-17.0.21-20261111T192747Z-Hardened",
+      "tag": "IHL-Java-17.0.21-20261113T193557Z-Hardened",
       "targetId": "java-17-bcfips-2-1-3",
       "tier": "hardened",
       "version": "17.0.21",
@@ -849,18 +849,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:00.203553+00:00"
+        "verifiedAt": "2026-11-13T21:32:02.581231+00:00"
       },
-      "candidateManifestSha256": "4952287d5d2b5f1d9655e4ae8ad4ffacae3f0b6ab56b0f70aae71f5df9b536c9",
-      "digest": "sha256:68f1de4cff3913327916d38268c6facd6e4ac21a72b2f1cb3f5187fda8e2e0b5",
+      "candidateManifestSha256": "55a63fddeacbf7ebcfa8ad95d6fdd340483c40884b304cff5d186c00bef8300d",
+      "digest": "sha256:6100e9a2a8ffe846a52258a281a6dd937a0fa79042b4dee7574e8e415949e8c4",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:68f1de4cff3913327916d38268c6facd6e4ac21a72b2f1cb3f5187fda8e2e0b5",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:6100e9a2a8ffe846a52258a281a6dd937a0fa79042b4dee7574e8e415949e8c4",
       "key": "java-17-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17931639193",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054026871",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18001555692",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064180289",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -872,26 +872,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077990",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648987",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:32:46Z",
+      "publishedAt": "2026-11-13T18:24:37Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077990",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648987",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:68f1de4cff3913327916d38268c6facd6e4ac21a72b2f1cb3f5187fda8e2e0b5",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:6100e9a2a8ffe846a52258a281a6dd937a0fa79042b4dee7574e8e415949e8c4",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "4952287d5d2b5f1d9655e4ae8ad4ffacae3f0b6ab56b0f70aae71f5df9b536c9",
+      "signatureManifestSha256": "55a63fddeacbf7ebcfa8ad95d6fdd340483c40884b304cff5d186c00bef8300d",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "4952287d5d2b5f1d9655e4ae8ad4ffacae3f0b6ab56b0f70aae71f5df9b536c9",
+          "assurance-manifest-sha256": "55a63fddeacbf7ebcfa8ad95d6fdd340483c40884b304cff5d186c00bef8300d",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -905,7 +905,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-17.0.21-20261111T183246Z",
+      "tag": "IHL-Java-17.0.21-20261113T182437Z",
       "targetId": "java-17-bcfips-2-1-3",
       "tier": "secure",
       "version": "17.0.21",
@@ -939,24 +939,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:04.424053+00:00"
+        "verifiedAt": "2026-11-13T21:31:09.427328+00:00"
       },
-      "candidateManifestSha256": "f295e4846d8600543606a9db0a928742ea651140fb6cd0214cc79c17328dd251",
+      "candidateManifestSha256": "4f7e0a9676d63966c72f1a52853cb29229dae085410bb203b9a43c0038e725fb",
       "cisReport": {
-        "path": "cis-reports/f295e4846d8600543606a9db0a928742ea651140fb6cd0214cc79c17328dd251.json",
+        "path": "cis-reports/4f7e0a9676d63966c72f1a52853cb29229dae085410bb203b9a43c0038e725fb.json",
         "schemaVersion": 1,
-        "sha256": "26d74dab2b94805f4bc34a8aa7150fb3e8f1b88df19cf051d8d54ae6f77a612a",
+        "sha256": "f321be2b7c4a29b2aa3e29e1a7ec05bcc541d7563f18448ab701275f8bccd7f5",
         "sizeBytes": 363780
       },
-      "digest": "sha256:bf26dc5a8fd1923af999ba0f8f5f1f1d2f1fd5a0784af9f11ff1f9758d6ab50b",
+      "digest": "sha256:44e1e422381da40d706fe34b36290310e2457ce39de78ddab7206ae8c33a2631",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:bf26dc5a8fd1923af999ba0f8f5f1f1d2f1fd5a0784af9f11ff1f9758d6ab50b",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:44e1e422381da40d706fe34b36290310e2457ce39de78ddab7206ae8c33a2631",
       "key": "java-21-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17937939954",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054867059",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18007121034",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064855615",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -968,26 +968,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048614",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794143",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:31:00Z",
+      "publishedAt": "2026-11-13T19:39:40Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048614",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794143",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:bf26dc5a8fd1923af999ba0f8f5f1f1d2f1fd5a0784af9f11ff1f9758d6ab50b",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:44e1e422381da40d706fe34b36290310e2457ce39de78ddab7206ae8c33a2631",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "f295e4846d8600543606a9db0a928742ea651140fb6cd0214cc79c17328dd251",
+      "signatureManifestSha256": "4f7e0a9676d63966c72f1a52853cb29229dae085410bb203b9a43c0038e725fb",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "f295e4846d8600543606a9db0a928742ea651140fb6cd0214cc79c17328dd251",
+          "assurance-manifest-sha256": "4f7e0a9676d63966c72f1a52853cb29229dae085410bb203b9a43c0038e725fb",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1001,7 +1001,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-21.0.13-20261111T193100Z-Hardened",
+      "tag": "IHL-Java-21.0.13-20261113T193940Z-Hardened",
       "targetId": "java-21-bcfips-2-1-1",
       "tier": "hardened",
       "version": "21.0.13",
@@ -1035,18 +1035,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:02.523232+00:00"
+        "verifiedAt": "2026-11-13T21:32:04.807752+00:00"
       },
-      "candidateManifestSha256": "36bfc6e5478cabfff92c4d66d73ec7a0a7b7813a939adc5bc420bb27a339741e",
-      "digest": "sha256:6ac95e6756c801854fe15faba769ed13ae4e97f067ada27be63964bef86b41c1",
+      "candidateManifestSha256": "e968d6d75bb280755a71668c762f1aecc697ee2de3cd03c5dd3657bea78f7d3f",
+      "digest": "sha256:97f01d67b8b98210a0526023c76cf62503bee6a00af46d301eee8744f1d96d46",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:6ac95e6756c801854fe15faba769ed13ae4e97f067ada27be63964bef86b41c1",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:97f01d67b8b98210a0526023c76cf62503bee6a00af46d301eee8744f1d96d46",
       "key": "java-21-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17931963633",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054065770",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18001938094",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064236322",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1058,26 +1058,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077991",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648988",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:36:13Z",
+      "publishedAt": "2026-11-13T18:28:07Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077991",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648988",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:6ac95e6756c801854fe15faba769ed13ae4e97f067ada27be63964bef86b41c1",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:97f01d67b8b98210a0526023c76cf62503bee6a00af46d301eee8744f1d96d46",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "36bfc6e5478cabfff92c4d66d73ec7a0a7b7813a939adc5bc420bb27a339741e",
+      "signatureManifestSha256": "e968d6d75bb280755a71668c762f1aecc697ee2de3cd03c5dd3657bea78f7d3f",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "36bfc6e5478cabfff92c4d66d73ec7a0a7b7813a939adc5bc420bb27a339741e",
+          "assurance-manifest-sha256": "e968d6d75bb280755a71668c762f1aecc697ee2de3cd03c5dd3657bea78f7d3f",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1091,7 +1091,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-21.0.13-20261111T183613Z",
+      "tag": "IHL-Java-21.0.13-20261113T182807Z",
       "targetId": "java-21-bcfips-2-1-1",
       "tier": "secure",
       "version": "21.0.13",
@@ -1125,24 +1125,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:09.597376+00:00"
+        "verifiedAt": "2026-11-13T21:31:15.540908+00:00"
       },
-      "candidateManifestSha256": "60dd149b82ea5a17776d335ce51e5f4209b213805f9bda6ad5e1d43c3c60e3b4",
+      "candidateManifestSha256": "ec368b2a2ba256ec36e7568010ba3ee2e48b713a8fc1c4fd92e2bcca15784b69",
       "cisReport": {
-        "path": "cis-reports/60dd149b82ea5a17776d335ce51e5f4209b213805f9bda6ad5e1d43c3c60e3b4.json",
+        "path": "cis-reports/ec368b2a2ba256ec36e7568010ba3ee2e48b713a8fc1c4fd92e2bcca15784b69.json",
         "schemaVersion": 1,
-        "sha256": "dd8bc78c3e2ba81e4c3695e7e8b792bf3307aebe30cf81a7272ff6fc7190da8e",
+        "sha256": "3fdfaf670f0cb41fe171a7a8fbd9fd5b4166ad3f497091b96445448cb4353b4f",
         "sizeBytes": 363778
       },
-      "digest": "sha256:5941b602964b5fb12fb53e47148d03d43ddaf1dda4d6a3e5f86e3e025da29f9a",
+      "digest": "sha256:cf4737f670ce1a53ec39d8d9390fd5900424f1a8a4c19253779875be2ce9953d",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:5941b602964b5fb12fb53e47148d03d43ddaf1dda4d6a3e5f86e3e025da29f9a",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:cf4737f670ce1a53ec39d8d9390fd5900424f1a8a4c19253779875be2ce9953d",
       "key": "java-25-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17933556815",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054271610",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18007542625",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064910447",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1154,26 +1154,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048615",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794144",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:05:23Z",
+      "publishedAt": "2026-11-13T19:43:16Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048615",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794144",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:5941b602964b5fb12fb53e47148d03d43ddaf1dda4d6a3e5f86e3e025da29f9a",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:cf4737f670ce1a53ec39d8d9390fd5900424f1a8a4c19253779875be2ce9953d",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "60dd149b82ea5a17776d335ce51e5f4209b213805f9bda6ad5e1d43c3c60e3b4",
+      "signatureManifestSha256": "ec368b2a2ba256ec36e7568010ba3ee2e48b713a8fc1c4fd92e2bcca15784b69",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "60dd149b82ea5a17776d335ce51e5f4209b213805f9bda6ad5e1d43c3c60e3b4",
+          "assurance-manifest-sha256": "ec368b2a2ba256ec36e7568010ba3ee2e48b713a8fc1c4fd92e2bcca15784b69",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1187,7 +1187,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-25.0.5-20261111T190523Z-Hardened",
+      "tag": "IHL-Java-25.0.5-20261113T194316Z-Hardened",
       "targetId": "java-25-bcfips-2-1-1",
       "tier": "hardened",
       "version": "25.0.5",
@@ -1221,18 +1221,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:04.744857+00:00"
+        "verifiedAt": "2026-11-13T21:32:07.205426+00:00"
       },
-      "candidateManifestSha256": "ca2156008572ba182c61958cffba0b9adca4f2c80325e0fcb6c2a6a7d62825c0",
-      "digest": "sha256:101cf0a67db9f645702da4d98bd137037896da86822b10a32b48fa58b6602e61",
+      "candidateManifestSha256": "827a49a0e2912421b24ac60e30c50be2a43c3fe34e2331af102eddbc72ff713c",
+      "digest": "sha256:c3687cf5b2916f5666232e6e233ebff030e0f194eaaf5d86aa54cb2116a734be",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:101cf0a67db9f645702da4d98bd137037896da86822b10a32b48fa58b6602e61",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:c3687cf5b2916f5666232e6e233ebff030e0f194eaaf5d86aa54cb2116a734be",
       "key": "java-25-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17929891097",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3053801571",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18002253811",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064278655",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1244,26 +1244,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077992",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648989",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:39:21Z",
+      "publishedAt": "2026-11-13T18:31:33Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077992",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648989",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:101cf0a67db9f645702da4d98bd137037896da86822b10a32b48fa58b6602e61",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:c3687cf5b2916f5666232e6e233ebff030e0f194eaaf5d86aa54cb2116a734be",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "ca2156008572ba182c61958cffba0b9adca4f2c80325e0fcb6c2a6a7d62825c0",
+      "signatureManifestSha256": "827a49a0e2912421b24ac60e30c50be2a43c3fe34e2331af102eddbc72ff713c",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "ca2156008572ba182c61958cffba0b9adca4f2c80325e0fcb6c2a6a7d62825c0",
+          "assurance-manifest-sha256": "827a49a0e2912421b24ac60e30c50be2a43c3fe34e2331af102eddbc72ff713c",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1277,7 +1277,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-25.0.5-20261111T183921Z",
+      "tag": "IHL-Java-25.0.5-20261113T183133Z",
       "targetId": "java-25-bcfips-2-1-1",
       "tier": "secure",
       "version": "25.0.5",
@@ -1311,24 +1311,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:15.048449+00:00"
+        "verifiedAt": "2026-11-13T21:31:21.735052+00:00"
       },
-      "candidateManifestSha256": "1aa2a9145c21606e34620028faab86937a88a48edcc0896a3cee99b433258ae3",
+      "candidateManifestSha256": "11682ce015fbc51d049698f20dbaf622c7deb3795cbe65928a9a76923fbe4fb6",
       "cisReport": {
-        "path": "cis-reports/1aa2a9145c21606e34620028faab86937a88a48edcc0896a3cee99b433258ae3.json",
+        "path": "cis-reports/11682ce015fbc51d049698f20dbaf622c7deb3795cbe65928a9a76923fbe4fb6.json",
         "schemaVersion": 1,
-        "sha256": "902ffc48fc22fdf99cf29eb0e67ad5da638b7f2dab7eb05d9d2dfcb84d743721",
+        "sha256": "af726ab3c20528639d0e2ce021749908e3c5183569948cfad4bfe387bb6e9a7b",
         "sizeBytes": 363778
       },
-      "digest": "sha256:183c0c77456bcb8479c02065f45b06bc769e09f992a720a0448355d911d54e30",
+      "digest": "sha256:b78ce981421b27c474c017a1e7c5ac3bda0d43b8e8a2b56058e5b8c76c7e7710",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:183c0c77456bcb8479c02065f45b06bc769e09f992a720a0448355d911d54e30",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:b78ce981421b27c474c017a1e7c5ac3bda0d43b8e8a2b56058e5b8c76c7e7710",
       "key": "java-25-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17935224846",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054492483",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18008057968",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064981149",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1340,26 +1340,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048616",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794145",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:09:01Z",
+      "publishedAt": "2026-11-13T19:05:14Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048616",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794145",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:183c0c77456bcb8479c02065f45b06bc769e09f992a720a0448355d911d54e30",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:b78ce981421b27c474c017a1e7c5ac3bda0d43b8e8a2b56058e5b8c76c7e7710",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "1aa2a9145c21606e34620028faab86937a88a48edcc0896a3cee99b433258ae3",
+      "signatureManifestSha256": "11682ce015fbc51d049698f20dbaf622c7deb3795cbe65928a9a76923fbe4fb6",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "1aa2a9145c21606e34620028faab86937a88a48edcc0896a3cee99b433258ae3",
+          "assurance-manifest-sha256": "11682ce015fbc51d049698f20dbaf622c7deb3795cbe65928a9a76923fbe4fb6",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1373,7 +1373,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-25.0.5-20261111T190901Z-Hardened",
+      "tag": "IHL-Java-25.0.5-20261113T190514Z-Hardened",
       "targetId": "java-25-bcfips-2-1-3",
       "tier": "hardened",
       "version": "25.0.5",
@@ -1407,18 +1407,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:06.744098+00:00"
+        "verifiedAt": "2026-11-13T21:32:09.452035+00:00"
       },
-      "candidateManifestSha256": "7d2f50866099131c4a867364d5ae66fae6e068b51165b8d23d8ec399c4c2a35b",
-      "digest": "sha256:5a89c5b5b9a39761b283e97a3c6fa9278169d1b18ded1ec040cfa56c57a569fd",
+      "candidateManifestSha256": "5b385247f643d7896af18ac8de5a55d0776b85dbd89bdec6c5c6594b10c46d3c",
+      "digest": "sha256:b1d0934a1ecb54a9e6549c287ed9a8d60612e9944a817b04998a5f61f900cecc",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:5a89c5b5b9a39761b283e97a3c6fa9278169d1b18ded1ec040cfa56c57a569fd",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:b1d0934a1ecb54a9e6549c287ed9a8d60612e9944a817b04998a5f61f900cecc",
       "key": "java-25-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17932251752",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054102248",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18002542977",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064316895",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1430,26 +1430,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077993",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648990",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:42:27Z",
+      "publishedAt": "2026-11-13T18:58:10Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077993",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648990",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:5a89c5b5b9a39761b283e97a3c6fa9278169d1b18ded1ec040cfa56c57a569fd",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:b1d0934a1ecb54a9e6549c287ed9a8d60612e9944a817b04998a5f61f900cecc",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "7d2f50866099131c4a867364d5ae66fae6e068b51165b8d23d8ec399c4c2a35b",
+      "signatureManifestSha256": "5b385247f643d7896af18ac8de5a55d0776b85dbd89bdec6c5c6594b10c46d3c",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "7d2f50866099131c4a867364d5ae66fae6e068b51165b8d23d8ec399c4c2a35b",
+          "assurance-manifest-sha256": "5b385247f643d7896af18ac8de5a55d0776b85dbd89bdec6c5c6594b10c46d3c",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1463,7 +1463,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-25.0.5-20261111T184227Z",
+      "tag": "IHL-Java-25.0.5-20261113T185810Z",
       "targetId": "java-25-bcfips-2-1-3",
       "tier": "secure",
       "version": "25.0.5",
@@ -1497,24 +1497,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:20.216569+00:00"
+        "verifiedAt": "2026-11-13T21:31:27.700919+00:00"
       },
-      "candidateManifestSha256": "5301776d752716d4a1a1370d97958ea86543c33183cf73ebe9c8bf7a1289b019",
+      "candidateManifestSha256": "97bcc32b22c364f3dbb47e6d4ae9015dac7615c2d1065b1f64aa984ebb67b3cf",
       "cisReport": {
-        "path": "cis-reports/5301776d752716d4a1a1370d97958ea86543c33183cf73ebe9c8bf7a1289b019.json",
+        "path": "cis-reports/97bcc32b22c364f3dbb47e6d4ae9015dac7615c2d1065b1f64aa984ebb67b3cf.json",
         "schemaVersion": 1,
-        "sha256": "c21bd644490968301dc4d148dade171378b89af42748d84c76d901395b210532",
+        "sha256": "ec9f451e8ec0b0909bf18d9d0a0d1f9740ce6bc854fded8d61b7599be0e271fd",
         "sizeBytes": 363770
       },
-      "digest": "sha256:30d4d72bc32856b8e6de47d7bcc5d772df45a3a3c6769c2926c81775a73c2e4e",
+      "digest": "sha256:2202af461b570bbbf02becdb4d14adc65449ea380443c7b8cad7b8b79eeee3aa",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:30d4d72bc32856b8e6de47d7bcc5d772df45a3a3c6769c2926c81775a73c2e4e",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:2202af461b570bbbf02becdb4d14adc65449ea380443c7b8cad7b8b79eeee3aa",
       "key": "java-27-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17935651077",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054552154",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18008530965",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065041682",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1526,26 +1526,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048617",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794146",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:11:53Z",
+      "publishedAt": "2026-11-13T19:08:55Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048617",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794146",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:30d4d72bc32856b8e6de47d7bcc5d772df45a3a3c6769c2926c81775a73c2e4e",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:2202af461b570bbbf02becdb4d14adc65449ea380443c7b8cad7b8b79eeee3aa",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "5301776d752716d4a1a1370d97958ea86543c33183cf73ebe9c8bf7a1289b019",
+      "signatureManifestSha256": "97bcc32b22c364f3dbb47e6d4ae9015dac7615c2d1065b1f64aa984ebb67b3cf",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "5301776d752716d4a1a1370d97958ea86543c33183cf73ebe9c8bf7a1289b019",
+          "assurance-manifest-sha256": "97bcc32b22c364f3dbb47e6d4ae9015dac7615c2d1065b1f64aa984ebb67b3cf",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1559,7 +1559,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-27-20261111T191153Z-Hardened",
+      "tag": "IHL-Java-27-20261113T190855Z-Hardened",
       "targetId": "java-27-bcfips-2-1-1",
       "tier": "hardened",
       "version": "27",
@@ -1593,18 +1593,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:09.649251+00:00"
+        "verifiedAt": "2026-11-13T21:32:11.568775+00:00"
       },
-      "candidateManifestSha256": "c963f14ce9385b517f6b96d67d19791c73fced96568507df0d7033975e65c29a",
-      "digest": "sha256:4968da1a3a598750ae2f89ecac2d74cd340a6868f1622cd3165914d8127f9703",
+      "candidateManifestSha256": "973851dd2b28fa7337eea7df071829e1f0b5ac3aba13722362384a960b903eec",
+      "digest": "sha256:48b0539724b4f9305de9a5d843b991b5bad3aad9b9b1734f2e81dee73bab7fc2",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:4968da1a3a598750ae2f89ecac2d74cd340a6868f1622cd3165914d8127f9703",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:48b0539724b4f9305de9a5d843b991b5bad3aad9b9b1734f2e81dee73bab7fc2",
       "key": "java-27-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17932912593",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054190955",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18002829607",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064355055",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1616,26 +1616,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077994",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648991",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:45:06Z",
+      "publishedAt": "2026-11-13T18:47:37Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077994",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648991",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:4968da1a3a598750ae2f89ecac2d74cd340a6868f1622cd3165914d8127f9703",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:48b0539724b4f9305de9a5d843b991b5bad3aad9b9b1734f2e81dee73bab7fc2",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "c963f14ce9385b517f6b96d67d19791c73fced96568507df0d7033975e65c29a",
+      "signatureManifestSha256": "973851dd2b28fa7337eea7df071829e1f0b5ac3aba13722362384a960b903eec",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "c963f14ce9385b517f6b96d67d19791c73fced96568507df0d7033975e65c29a",
+          "assurance-manifest-sha256": "973851dd2b28fa7337eea7df071829e1f0b5ac3aba13722362384a960b903eec",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1649,7 +1649,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-27-20261111T184506Z",
+      "tag": "IHL-Java-27-20261113T184737Z",
       "targetId": "java-27-bcfips-2-1-1",
       "tier": "secure",
       "version": "27",
@@ -1683,24 +1683,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:32.493648+00:00"
+        "verifiedAt": "2026-11-13T21:31:33.928145+00:00"
       },
-      "candidateManifestSha256": "aa4e26adb7c4e5126b0b74d473c6bd6b558119caaeb90dfc99a949b947e91ffb",
+      "candidateManifestSha256": "74291bfe79f999354e70cffa2faa563cc6307163374097e984be6c4ba557ffd4",
       "cisReport": {
-        "path": "cis-reports/aa4e26adb7c4e5126b0b74d473c6bd6b558119caaeb90dfc99a949b947e91ffb.json",
+        "path": "cis-reports/74291bfe79f999354e70cffa2faa563cc6307163374097e984be6c4ba557ffd4.json",
         "schemaVersion": 1,
-        "sha256": "957e5f662f77f4d698a0727907456c8725e1dfbfdc8404375f8d819287f327f6",
+        "sha256": "c6fcd3fb5946d694d590d3c067f4576e03f17552a7b6eb42aa9bc65a5b5f7d8f",
         "sizeBytes": 363770
       },
-      "digest": "sha256:33259d7b144c4cc0686579c2e4cfee452b90b10df9b8d446a48347768b22efd7",
+      "digest": "sha256:419260b663fc190728a8fa1ea010e6d29b7d2db714c4d2177f9480afaff3cea4",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:33259d7b144c4cc0686579c2e4cfee452b90b10df9b8d446a48347768b22efd7",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:419260b663fc190728a8fa1ea010e6d29b7d2db714c4d2177f9480afaff3cea4",
       "key": "java-27-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17934365039",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054374878",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18008994007",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065100090",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1712,26 +1712,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048618",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794147",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:15:25Z",
+      "publishedAt": "2026-11-13T19:12:28Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048618",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794147",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:33259d7b144c4cc0686579c2e4cfee452b90b10df9b8d446a48347768b22efd7",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:419260b663fc190728a8fa1ea010e6d29b7d2db714c4d2177f9480afaff3cea4",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "aa4e26adb7c4e5126b0b74d473c6bd6b558119caaeb90dfc99a949b947e91ffb",
+      "signatureManifestSha256": "74291bfe79f999354e70cffa2faa563cc6307163374097e984be6c4ba557ffd4",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "aa4e26adb7c4e5126b0b74d473c6bd6b558119caaeb90dfc99a949b947e91ffb",
+          "assurance-manifest-sha256": "74291bfe79f999354e70cffa2faa563cc6307163374097e984be6c4ba557ffd4",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1745,7 +1745,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-27-20261111T191525Z-Hardened",
+      "tag": "IHL-Java-27-20261113T191228Z-Hardened",
       "targetId": "java-27-bcfips-2-1-3",
       "tier": "hardened",
       "version": "27",
@@ -1779,18 +1779,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:11.673425+00:00"
+        "verifiedAt": "2026-11-13T21:32:14.134337+00:00"
       },
-      "candidateManifestSha256": "d7afeccd0a63b36d78e960eaea777635248a6b47140e480449f3b160c9113ce6",
-      "digest": "sha256:5eb3f147f6befab048910da26446252add01f91971b4691c7768b0d9b8e6a763",
+      "candidateManifestSha256": "fe76b9c43ee135e0318f7f3ce51a8dc3c430d13f43851241e983bbc954a620da",
+      "digest": "sha256:b8e65cdf2bc6a4657deb41caa2582e6aca7b8cbf743c31cce1886fa800f643c4",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:5eb3f147f6befab048910da26446252add01f91971b4691c7768b0d9b8e6a763",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:b8e65cdf2bc6a4657deb41caa2582e6aca7b8cbf743c31cce1886fa800f643c4",
       "key": "java-27-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17932560450",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054140595",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18003147824",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064396173",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1802,26 +1802,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077995",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648992",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:47:57Z",
+      "publishedAt": "2026-11-13T18:51:07Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077995",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648992",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:5eb3f147f6befab048910da26446252add01f91971b4691c7768b0d9b8e6a763",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:b8e65cdf2bc6a4657deb41caa2582e6aca7b8cbf743c31cce1886fa800f643c4",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "d7afeccd0a63b36d78e960eaea777635248a6b47140e480449f3b160c9113ce6",
+      "signatureManifestSha256": "fe76b9c43ee135e0318f7f3ce51a8dc3c430d13f43851241e983bbc954a620da",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "d7afeccd0a63b36d78e960eaea777635248a6b47140e480449f3b160c9113ce6",
+          "assurance-manifest-sha256": "fe76b9c43ee135e0318f7f3ce51a8dc3c430d13f43851241e983bbc954a620da",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1835,7 +1835,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-27-20261111T184757Z",
+      "tag": "IHL-Java-27-20261113T185107Z",
       "targetId": "java-27-bcfips-2-1-3",
       "tier": "secure",
       "version": "27",
@@ -1869,24 +1869,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:38.383414+00:00"
+        "verifiedAt": "2026-11-13T21:31:40.370397+00:00"
       },
-      "candidateManifestSha256": "f77a4b1f2eda09d9809828e67d43c11239c9b7a4b124d4a0a1694e5c204df695",
+      "candidateManifestSha256": "5608f54fd1c6b5cd05e2a5283dd0d1b1a20d2564776f5c9ca8181e498a6bcd90",
       "cisReport": {
-        "path": "cis-reports/f77a4b1f2eda09d9809828e67d43c11239c9b7a4b124d4a0a1694e5c204df695.json",
+        "path": "cis-reports/5608f54fd1c6b5cd05e2a5283dd0d1b1a20d2564776f5c9ca8181e498a6bcd90.json",
         "schemaVersion": 1,
-        "sha256": "846b38b8821fde43a900e32d1f0d732606002ad774a28fcedb98b3a187a80668",
+        "sha256": "3f0b5cc69c4aaaa91441ea1db0711488fcb0b079294c574773f0cd52f83e84fb",
         "sizeBytes": 363765
       },
-      "digest": "sha256:2cc2ba246be0b31da6d34367fd7ae0e932cc24eed47c59b32e3bd57a0f977106",
+      "digest": "sha256:9f8d6acf684f95a422e514af16e46b4c59844a9800b88a77007a09476f7b8888",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:2cc2ba246be0b31da6d34367fd7ae0e932cc24eed47c59b32e3bd57a0f977106",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:9f8d6acf684f95a422e514af16e46b4c59844a9800b88a77007a09476f7b8888",
       "key": "java-8-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17936053032",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054608810",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18009498128",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065164054",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1898,26 +1898,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048619",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794148",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:18:21Z",
+      "publishedAt": "2026-11-13T19:15:31Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048619",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794148",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:2cc2ba246be0b31da6d34367fd7ae0e932cc24eed47c59b32e3bd57a0f977106",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:9f8d6acf684f95a422e514af16e46b4c59844a9800b88a77007a09476f7b8888",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "f77a4b1f2eda09d9809828e67d43c11239c9b7a4b124d4a0a1694e5c204df695",
+      "signatureManifestSha256": "5608f54fd1c6b5cd05e2a5283dd0d1b1a20d2564776f5c9ca8181e498a6bcd90",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "f77a4b1f2eda09d9809828e67d43c11239c9b7a4b124d4a0a1694e5c204df695",
+          "assurance-manifest-sha256": "5608f54fd1c6b5cd05e2a5283dd0d1b1a20d2564776f5c9ca8181e498a6bcd90",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -1931,7 +1931,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-8.0.512-20261111T191821Z-Hardened",
+      "tag": "IHL-Java-8.0.512-20261113T191531Z-Hardened",
       "targetId": "java-8-bcfips-2-1-1",
       "tier": "hardened",
       "version": "8.0.512",
@@ -1965,18 +1965,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:13.706352+00:00"
+        "verifiedAt": "2026-11-13T21:32:16.478131+00:00"
       },
-      "candidateManifestSha256": "3a919b845b37a391acf0893811a63c6b52d753a514f797203ec46cf3b0c51292",
-      "digest": "sha256:ceffd144d863c98d454eca941962e9b5d8ae662df172721df416fdaeaf393851",
+      "candidateManifestSha256": "79319f144a2eb6c6a8efbec942a4bd8502776ebd7b86fb063ed6357e4403a808",
+      "digest": "sha256:debcfe2a6ab61512b252c7017ec890019e670d1c903675284f8e819f5d01b7a5",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:ceffd144d863c98d454eca941962e9b5d8ae662df172721df416fdaeaf393851",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:debcfe2a6ab61512b252c7017ec890019e670d1c903675284f8e819f5d01b7a5",
       "key": "java-8-bcfips-2-1-1",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17933214052",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054228489",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18003489988",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064446705",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -1988,26 +1988,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077996",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648993",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:51:11Z",
+      "publishedAt": "2026-11-13T18:54:39Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077996",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648993",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:ceffd144d863c98d454eca941962e9b5d8ae662df172721df416fdaeaf393851",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:debcfe2a6ab61512b252c7017ec890019e670d1c903675284f8e819f5d01b7a5",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "3a919b845b37a391acf0893811a63c6b52d753a514f797203ec46cf3b0c51292",
+      "signatureManifestSha256": "79319f144a2eb6c6a8efbec942a4bd8502776ebd7b86fb063ed6357e4403a808",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "3a919b845b37a391acf0893811a63c6b52d753a514f797203ec46cf3b0c51292",
+          "assurance-manifest-sha256": "79319f144a2eb6c6a8efbec942a4bd8502776ebd7b86fb063ed6357e4403a808",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -2021,7 +2021,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-8.0.512-20261111T185111Z",
+      "tag": "IHL-Java-8.0.512-20261113T185439Z",
       "targetId": "java-8-bcfips-2-1-1",
       "tier": "secure",
       "version": "8.0.512",
@@ -2055,24 +2055,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:31:44.253757+00:00"
+        "verifiedAt": "2026-11-13T21:31:47.129543+00:00"
       },
-      "candidateManifestSha256": "a9aaba23d3dcd69883507650d41232216bb638191ce20ee45ea848bbaafbfe13",
+      "candidateManifestSha256": "27eaeb267a479ee57d603f1d832e9695528a40192189dd95489b048d34afa441",
       "cisReport": {
-        "path": "cis-reports/a9aaba23d3dcd69883507650d41232216bb638191ce20ee45ea848bbaafbfe13.json",
+        "path": "cis-reports/27eaeb267a479ee57d603f1d832e9695528a40192189dd95489b048d34afa441.json",
         "schemaVersion": 1,
-        "sha256": "f3ff0e6718413ada82f79d8f0703e87d64cb786d065a5852759d1d01628c9ab0",
+        "sha256": "f3133b985146a469a2ec5b3ee7ef63fe1739bc72dd064cb1c0fe4e1850501e54",
         "sizeBytes": 363765
       },
-      "digest": "sha256:0d5e17d1a5cb43b352d70cfbef573234930bfc3bb17cc8fe6c797abb145d53c7",
+      "digest": "sha256:ed18bee5857e64e3d648a01c09fa89fe48ed99ec9da3e285af9f95d86b70108e",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:0d5e17d1a5cb43b352d70cfbef573234930bfc3bb17cc8fe6c797abb145d53c7",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:ed18bee5857e64e3d648a01c09fa89fe48ed99ec9da3e285af9f95d86b70108e",
       "key": "java-8-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17933974684",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3054325397",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18010019415",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065231716",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -2084,26 +2084,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048620",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794149",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T19:21:11Z",
+      "publishedAt": "2026-11-13T19:18:43Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17945048620",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055901231",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18016794149",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3066100270",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:0d5e17d1a5cb43b352d70cfbef573234930bfc3bb17cc8fe6c797abb145d53c7",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:ed18bee5857e64e3d648a01c09fa89fe48ed99ec9da3e285af9f95d86b70108e",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "a9aaba23d3dcd69883507650d41232216bb638191ce20ee45ea848bbaafbfe13",
+      "signatureManifestSha256": "27eaeb267a479ee57d603f1d832e9695528a40192189dd95489b048d34afa441",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "a9aaba23d3dcd69883507650d41232216bb638191ce20ee45ea848bbaafbfe13",
+          "assurance-manifest-sha256": "27eaeb267a479ee57d603f1d832e9695528a40192189dd95489b048d34afa441",
           "assurance-tier": "hardened",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -2117,7 +2117,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-8.0.512-20261111T192111Z-Hardened",
+      "tag": "IHL-Java-8.0.512-20261113T191843Z-Hardened",
       "targetId": "java-8-bcfips-2-1-3",
       "tier": "hardened",
       "version": "8.0.512",
@@ -2151,18 +2151,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-11T20:32:16.388464+00:00"
+        "verifiedAt": "2026-11-13T21:32:18.581667+00:00"
       },
-      "candidateManifestSha256": "ed92f632b8d8270a26e4bb6a1bf8ce930e8c28b7fd96361614de0ae67cbae58a",
-      "digest": "sha256:b65ce85e9b25c862a3c2d0c560cd98473c4a4fb85d4a25c9324ee7c97f959334",
+      "candidateManifestSha256": "510ee1832efd3a6b689ca2a0f7c1f20c00d2adc4ce36f96308a4e336c24d58dd",
+      "digest": "sha256:fd775ea4e8b1ab31394e4945ad8d5494307b2f09bb8244e00a9543dc6960bfaa",
       "family": "java",
-      "image": "ghcr.io/foxtech-consulting/java@sha256:b65ce85e9b25c862a3c2d0c560cd98473c4a4fb85d4a25c9324ee7c97f959334",
+      "image": "ghcr.io/foxtech-consulting/java@sha256:fd775ea4e8b1ab31394e4945ad8d5494307b2f09bb8244e00a9543dc6960bfaa",
       "key": "java-8-bcfips-2-1-3",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/java",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17930220526",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3053842748",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18003791656",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3064485171",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
       "publicSourceBinding": {
@@ -2174,26 +2174,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077997",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648994",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-11T18:54:36Z",
+      "publishedAt": "2026-11-13T18:35:02Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/17944077997",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3055759806",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/java/-/jobs/18015648994",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/java/-/pipelines/3065958780",
         "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:b65ce85e9b25c862a3c2d0c560cd98473c4a4fb85d4a25c9324ee7c97f959334",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/java@sha256:fd775ea4e8b1ab31394e4945ad8d5494307b2f09bb8244e00a9543dc6960bfaa",
       "repository": "ghcr.io/foxtech-consulting/java",
-      "signatureManifestSha256": "ed92f632b8d8270a26e4bb6a1bf8ce930e8c28b7fd96361614de0ae67cbae58a",
+      "signatureManifestSha256": "510ee1832efd3a6b689ca2a0f7c1f20c00d2adc4ce36f96308a4e336c24d58dd",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/java//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "ed92f632b8d8270a26e4bb6a1bf8ce930e8c28b7fd96361614de0ae67cbae58a",
+          "assurance-manifest-sha256": "510ee1832efd3a6b689ca2a0f7c1f20c00d2adc4ce36f96308a4e336c24d58dd",
           "assurance-tier": "secure",
           "public-source-commit": "fe45ee53e18a6077a6c4972bcfa7ee898d9b9f90",
           "public-source-manifest-sha256": "808af0b611a18ab2dff107b1fbaa5cfc96aa508048f2a02aff727b3cff638b4c",
@@ -2207,7 +2207,7 @@
       },
       "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab",
       "status": "engineering-preview",
-      "tag": "IHL-Java-8.0.512-20261111T185436Z",
+      "tag": "IHL-Java-8.0.512-20261113T183502Z",
       "targetId": "java-8-bcfips-2-1-3",
       "tier": "secure",
       "version": "8.0.512",
@@ -2240,31 +2240,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:5956f6c72824aa9aea17f2aed7abe73468672e0fd4f8c50dfbe9101a64ea9fe6",
+          "digest": "sha256:cab41391c2e25a4aea2feb79b4bae86570e2a628e733382829c93e98ca9df7b0",
           "key": "java",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-21.0.13-20261111T190208Z-Hardened",
+          "tag": "IHL-Java-21.0.13-20261113T192218Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:060ab2860761eb6cf25e7e843db3c393f5bf6475bebedcf2542b449826bb9611",
+          "digest": "sha256:223a2cf5c1b1023ef4ad5077bbc117efa11d0b720c16421b4a821afc237d8ac4",
           "key": "java",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-21.0.13-20261111T190208Z-Hardened",
+          "tag": "IHL-Java-21.0.13-20261113T192218Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "8653cd36a41ed8e584dfb5579fd59e7dcffe8a9a47e60ba65fe14269f033704c",
-      "jobId": 17945048609,
+      "archiveSha256": "af122f4a8489832da2ea6ee2eb2219c1288cdc4472f58706f564f589f07b2d7e",
+      "jobId": 18016794138,
       "key": "java",
-      "pipelineId": 3055901231,
-      "receiptSha256": "7a92ea5a5592b5b75925cbbe8fac3137f88780bd76f421c011e2eb200327c38a",
+      "pipelineId": 3066100270,
+      "receiptSha256": "92c99585ea7aa6dcdc4d430d98bc49572c3f01f899052cb98b30844e6a688710",
       "tier": "hardened"
     },
     {
@@ -2272,31 +2272,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:a842d235c47b13db335a435e95ac735a9fca00c819cd8578deb882ab4c2de04f",
+          "digest": "sha256:4a8efee70550f030ab8edb7f1771c1773aa6a0efee8da5ba63f47f7966c38cf1",
           "key": "java-11-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-11.0.33-20261111T193414Z-Hardened",
+          "tag": "IHL-Java-11.0.33-20261113T192552Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:93884ad10733a0dca4949cbe49a2e12eccb482988a9ac7af03deea3c84011ef2",
+          "digest": "sha256:9bc43bc92f79296cb0e4f7ba58aba590db83259d5ce3e7dea3381eed5388b2ab",
           "key": "java-11-bcfips-2-1-1",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-11.0.33-20261111T193414Z-Hardened",
+          "tag": "IHL-Java-11.0.33-20261113T192552Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "9d7792631294ae23e9e32cef3a677585147c1039a7cc4b53fd080e47ce05f8c1",
-      "jobId": 17945048610,
+      "archiveSha256": "2386b73f8444857116a4f1da795644e56feed9571d5eb30e93ee8680c86b74e7",
+      "jobId": 18016794139,
       "key": "java-11-bcfips-2-1-1",
-      "pipelineId": 3055901231,
-      "receiptSha256": "3480200d7d1b682fe2b006fd12317d60e13359361ef4cf4350fe2e7b359bc802",
+      "pipelineId": 3066100270,
+      "receiptSha256": "c92f187dad4b37fff39a11a31a6c1a16e1426dd0c4c2e897c3636ce34209ec9e",
       "tier": "hardened"
     },
     {
@@ -2304,31 +2304,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:06d8c4d1faa7c748dfb41f1c3a5d52b0ccb111030ac67ca72fd094845bb2e9d3",
+          "digest": "sha256:4b5ecc38549bdfd93913758efcc92f4b7d36f00f22d7c473a14cea802eb97e7b",
           "key": "java-11-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-11.0.33-20261111T193737Z-Hardened",
+          "tag": "IHL-Java-11.0.33-20261113T192902Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:244157398d4298e7d57ef414269feadf0497efc338700595e215e87372438657",
+          "digest": "sha256:255ab48180db84fe13c4d3d29ab80ceff36c9147183e8eb57e1e1e9d26fd8965",
           "key": "java-11-bcfips-2-1-3",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-11.0.33-20261111T193737Z-Hardened",
+          "tag": "IHL-Java-11.0.33-20261113T192902Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "e9eca97b80b27b0e0e9078d5768deb9bb58c46e98ee9d2be414e2399a96c1ba8",
-      "jobId": 17945048611,
+      "archiveSha256": "3bf75cfc8ec9293270c4b8f33475da9bbc2f5d813c56eb7ad535164a1deca0cc",
+      "jobId": 18016794140,
       "key": "java-11-bcfips-2-1-3",
-      "pipelineId": 3055901231,
-      "receiptSha256": "99dd08891257b6da49a91cf9feef1c1bedec2aef0669d49e140f24144658cce6",
+      "pipelineId": 3066100270,
+      "receiptSha256": "c7df2563767997efb4fc47cdf9adb0099f36ce0f098605ccab2a5ce3445b95c8",
       "tier": "hardened"
     },
     {
@@ -2336,31 +2336,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:0dcd62c0ac856a225d76f1013eb0c6ec0539f14352f92128ce7f9a8721f0f33b",
+          "digest": "sha256:628a932996423c22b890e0ff01693c684d8c5200385e81691269675d4f21f7ef",
           "key": "java-17-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-17.0.21-20261111T192432Z-Hardened",
+          "tag": "IHL-Java-17.0.21-20261113T193233Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:3769878616dec394b635f3c4618e45bf5330d9f844b8c34e7829790e417eee95",
+          "digest": "sha256:654d45c6306f6de32a3fc61eb999f4d81c5595a121b4da88a69f5c0f404dac11",
           "key": "java-17-bcfips-2-1-1",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-17.0.21-20261111T192432Z-Hardened",
+          "tag": "IHL-Java-17.0.21-20261113T193233Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "5e162b5a714d2f36d9b7d0ffadea3f99149136e01cdc0e83c397ff1750c48f14",
-      "jobId": 17945048612,
+      "archiveSha256": "fdd3204b5e24624007b5e226db30e91dd5017616245ba52b040f2616c7c321d1",
+      "jobId": 18016794141,
       "key": "java-17-bcfips-2-1-1",
-      "pipelineId": 3055901231,
-      "receiptSha256": "2837cf431ac738219a0cdcdf33beb522abf147ab5061f6b3bcd635409737842d",
+      "pipelineId": 3066100270,
+      "receiptSha256": "66a2b1abb3738127b87a2a55b6f0ee05c2a48ef59c1aff5141d8b51ff3430ab6",
       "tier": "hardened"
     },
     {
@@ -2368,31 +2368,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:171307e1b80758c5c23cd08dc3675564773740be2822d899ca20778c719cb7a3",
+          "digest": "sha256:7863dd906a156333111d5a474c90efb694d3fea6b86a40ee895732b3d71c0761",
           "key": "java-17-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-17.0.21-20261111T192747Z-Hardened",
+          "tag": "IHL-Java-17.0.21-20261113T193557Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:19365aa799074861091ca6ac707f8819041ea3c5cc29a7736c4763f7e1a87c3d",
+          "digest": "sha256:49364a8aafc82a9d5ffe0c37e33cff569dd795f34036b6fec6729694ac5ab761",
           "key": "java-17-bcfips-2-1-3",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-17.0.21-20261111T192747Z-Hardened",
+          "tag": "IHL-Java-17.0.21-20261113T193557Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "04b483b1126c76a2d17bc1286c44cad55e1662804d00a4f5becd15091070cc07",
-      "jobId": 17945048613,
+      "archiveSha256": "c75ebd820c0286810eeb6494481ac5efe3fcd88d7e7bf024e96bab75aa3a7cf7",
+      "jobId": 18016794142,
       "key": "java-17-bcfips-2-1-3",
-      "pipelineId": 3055901231,
-      "receiptSha256": "3474e2f21c1b20fbc5584fc25be2e729eb00e7842c8c2f653316cf28caeddce4",
+      "pipelineId": 3066100270,
+      "receiptSha256": "aa72821866b724121c9f0dbc188f46b25b0614e66977603a48b41087cac26056",
       "tier": "hardened"
     },
     {
@@ -2400,31 +2400,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:bf26dc5a8fd1923af999ba0f8f5f1f1d2f1fd5a0784af9f11ff1f9758d6ab50b",
+          "digest": "sha256:44e1e422381da40d706fe34b36290310e2457ce39de78ddab7206ae8c33a2631",
           "key": "java-21-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-21.0.13-20261111T193100Z-Hardened",
+          "tag": "IHL-Java-21.0.13-20261113T193940Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:7e6b9f18ad2e454b4fa72255c1ebc618b8cbc72297deefb083f5f674ae8c5a52",
+          "digest": "sha256:46bea8ab4284e2a5b6dc29b5d0c675def9be09903c8e58a84010ab91b49280de",
           "key": "java-21-bcfips-2-1-1",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-21.0.13-20261111T193100Z-Hardened",
+          "tag": "IHL-Java-21.0.13-20261113T193940Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "ebb70a1d99e25366d953c67b41ca3ac7f2e26dc39cad6a433d6ce184f59b1504",
-      "jobId": 17945048614,
+      "archiveSha256": "7c86279833d704435982c8743c354f127ae815b4fc601b9587f9590f3bb0ca46",
+      "jobId": 18016794143,
       "key": "java-21-bcfips-2-1-1",
-      "pipelineId": 3055901231,
-      "receiptSha256": "3c27f7f5704c96730c08187f281b0ef4d5912e89a33340199ba43a64d660815f",
+      "pipelineId": 3066100270,
+      "receiptSha256": "53723fbec7ceef4984abaac6fa33442cb378553e6c99d00853c89a3f2eea084d",
       "tier": "hardened"
     },
     {
@@ -2432,31 +2432,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:5941b602964b5fb12fb53e47148d03d43ddaf1dda4d6a3e5f86e3e025da29f9a",
+          "digest": "sha256:cf4737f670ce1a53ec39d8d9390fd5900424f1a8a4c19253779875be2ce9953d",
           "key": "java-25-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-25.0.5-20261111T190523Z-Hardened",
+          "tag": "IHL-Java-25.0.5-20261113T194316Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:63e28a424fd0259e322ce0b65e7c1be1838e6420f97280dd0e222ede08e209f5",
+          "digest": "sha256:c4a0186804758b08172cebf64849193973acbdc8e3490912bdec1113d6eb2a62",
           "key": "java-25-bcfips-2-1-1",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-25.0.5-20261111T190523Z-Hardened",
+          "tag": "IHL-Java-25.0.5-20261113T194316Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "086f9973c3764b07c8b1cdced6e5645e8fded96c735c825ce07ef188a52f07eb",
-      "jobId": 17945048615,
+      "archiveSha256": "06827af758a78851f42f66088b74e5913925d3509aeb40ada724fef8ea9f2852",
+      "jobId": 18016794144,
       "key": "java-25-bcfips-2-1-1",
-      "pipelineId": 3055901231,
-      "receiptSha256": "3664483213f9c657ff875b1c506cb971b315c9f4e8774df70c5f67871f02b599",
+      "pipelineId": 3066100270,
+      "receiptSha256": "045b368c494c0aebff566c0d2b63ca35c394b107efb96ed63dde893bc0f9cc00",
       "tier": "hardened"
     },
     {
@@ -2464,31 +2464,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:183c0c77456bcb8479c02065f45b06bc769e09f992a720a0448355d911d54e30",
+          "digest": "sha256:b78ce981421b27c474c017a1e7c5ac3bda0d43b8e8a2b56058e5b8c76c7e7710",
           "key": "java-25-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-25.0.5-20261111T190901Z-Hardened",
+          "tag": "IHL-Java-25.0.5-20261113T190514Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:8203ac70b7ea22e2bfae7127b1df53d6f1b1710dcf66db3daaf4b8dc5a14f5b8",
+          "digest": "sha256:2b8d6029c09be851f88b3236224e5fee07dd1a8011e1eade55ffcf07d8a98a50",
           "key": "java-25-bcfips-2-1-3",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-25.0.5-20261111T190901Z-Hardened",
+          "tag": "IHL-Java-25.0.5-20261113T190514Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "a117e06f97bc059bb6edaa36bed837c507b42f8161128b6902d6af5df401c8e2",
-      "jobId": 17945048616,
+      "archiveSha256": "4cb70f6ce7b4a6f87e617496efc22a0ec02dc7c47546ac70414a3df7b14ad761",
+      "jobId": 18016794145,
       "key": "java-25-bcfips-2-1-3",
-      "pipelineId": 3055901231,
-      "receiptSha256": "51dd3a47f6bd64241f0e09df443f7452daa0a1a4fe18ca83f834981cd79fa9ad",
+      "pipelineId": 3066100270,
+      "receiptSha256": "544c4451b9daa40a7b9e7eb85ca0d4997698a6312243f488e4817e03b218ef82",
       "tier": "hardened"
     },
     {
@@ -2496,31 +2496,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:30d4d72bc32856b8e6de47d7bcc5d772df45a3a3c6769c2926c81775a73c2e4e",
+          "digest": "sha256:2202af461b570bbbf02becdb4d14adc65449ea380443c7b8cad7b8b79eeee3aa",
           "key": "java-27-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-27-20261111T191153Z-Hardened",
+          "tag": "IHL-Java-27-20261113T190855Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:79fa4e451d7331e1e337fe1f032dc7f0d4669393e24671d187348e14942c81e9",
+          "digest": "sha256:9be7c30bca0443149e3a683fe9c94bb3e348534ee509d5480486657625173655",
           "key": "java-27-bcfips-2-1-1",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-27-20261111T191153Z-Hardened",
+          "tag": "IHL-Java-27-20261113T190855Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "c99764ea5262a47c203ab9e11eac3da5c1e5e6191e212de554075458ba36dc13",
-      "jobId": 17945048617,
+      "archiveSha256": "ab07279ce4b0a58d3efa97fa61752df31d7516d723a36db8c8becb767b38e365",
+      "jobId": 18016794146,
       "key": "java-27-bcfips-2-1-1",
-      "pipelineId": 3055901231,
-      "receiptSha256": "75f0deac2aa161701ae95ea6d786469362d1306f32037bb1de6c5e0aa33e051c",
+      "pipelineId": 3066100270,
+      "receiptSha256": "b51a24a0cbba5f6b22646d72e6654937929a90effce1f6aa2c7a69480bb33995",
       "tier": "hardened"
     },
     {
@@ -2528,31 +2528,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:33259d7b144c4cc0686579c2e4cfee452b90b10df9b8d446a48347768b22efd7",
+          "digest": "sha256:419260b663fc190728a8fa1ea010e6d29b7d2db714c4d2177f9480afaff3cea4",
           "key": "java-27-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-27-20261111T191525Z-Hardened",
+          "tag": "IHL-Java-27-20261113T191228Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:a513f660419289a5cc33bb5001b7c0033b5ce5e0afc6506f29c057101a11362a",
+          "digest": "sha256:341bd957aab41134ccd1cf190c95334ffccac5ab6fd8630a7bfe2054fd0e2e4e",
           "key": "java-27-bcfips-2-1-3",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-27-20261111T191525Z-Hardened",
+          "tag": "IHL-Java-27-20261113T191228Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "52697bdeb4fed6db5e6aa022f6073a7b432d11447fd718ff2d3daede5bb95829",
-      "jobId": 17945048618,
+      "archiveSha256": "2c80cf5f40a2e0b9e75fc43e4785872a843451635b0d8aa8fe6397263ac97dc9",
+      "jobId": 18016794147,
       "key": "java-27-bcfips-2-1-3",
-      "pipelineId": 3055901231,
-      "receiptSha256": "e337eae0ed8b2c843143665f2011c7278b68684c5f03b66fef514b2a285dddb6",
+      "pipelineId": 3066100270,
+      "receiptSha256": "b2465278c9c2b2d0ea64ac9d55ebe742f1abbe03fb63c60d94bbc68e226593a3",
       "tier": "hardened"
     },
     {
@@ -2560,31 +2560,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:2cc2ba246be0b31da6d34367fd7ae0e932cc24eed47c59b32e3bd57a0f977106",
+          "digest": "sha256:9f8d6acf684f95a422e514af16e46b4c59844a9800b88a77007a09476f7b8888",
           "key": "java-8-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-8.0.512-20261111T191821Z-Hardened",
+          "tag": "IHL-Java-8.0.512-20261113T191531Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:34f91fdcf6d072563692c1027af664243196dcfbc2aa153c7c50e91c206338e9",
+          "digest": "sha256:a7e8a82062e82ea15b3117a27dd2df5fea4bbc0e588d8f83b22c95f9406c79a9",
           "key": "java-8-bcfips-2-1-1",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-8.0.512-20261111T191821Z-Hardened",
+          "tag": "IHL-Java-8.0.512-20261113T191531Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "f55e5a6362c962b43b32d8923d6f7b68398a407837f04e77134760ac8e9b20d2",
-      "jobId": 17945048619,
+      "archiveSha256": "e6f7ec5bd1230a43a19202d3b9477c2869f81ef6fe2eabd7e952c2c747b0bfd9",
+      "jobId": 18016794148,
       "key": "java-8-bcfips-2-1-1",
-      "pipelineId": 3055901231,
-      "receiptSha256": "47c402168531faab94929f92e2a310b532987389cf9b12cbea0105ff9b7a8c9e",
+      "pipelineId": 3066100270,
+      "receiptSha256": "8b4c0bcc809d16e526ee9ee2294ad486bcf5a8ee5ff6b3dc05c9384d9f860cdb",
       "tier": "hardened"
     },
     {
@@ -2592,31 +2592,31 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:0d5e17d1a5cb43b352d70cfbef573234930bfc3bb17cc8fe6c797abb145d53c7",
+          "digest": "sha256:ed18bee5857e64e3d648a01c09fa89fe48ed99ec9da3e285af9f95d86b70108e",
           "key": "java-8-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-8.0.512-20261111T192111Z-Hardened",
+          "tag": "IHL-Java-8.0.512-20261113T191843Z-Hardened",
           "tier": "hardened"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:5a322643de742c99d5e763ebf2b54a5a4837c1fa32a5df6a30ceb4f815442c52",
+          "digest": "sha256:b892b1bea237cccfc94926ba597665f4582f1e7ef0e7cba062d7e98954361119",
           "key": "java-8-bcfips-2-1-3",
           "repository": "foxtech-consulting/java-test",
           "role": "reference-test-workload",
           "status": "verified",
-          "tag": "IHL-Java-8.0.512-20261111T192111Z-Hardened",
+          "tag": "IHL-Java-8.0.512-20261113T191843Z-Hardened",
           "tier": "hardened"
         }
       ],
-      "archiveSha256": "651027e9ae0ff0dd31fb837a4cfd997ee7d2c3b0dc3bf01ae48fd49b51bec257",
-      "jobId": 17945048620,
+      "archiveSha256": "eb572507b53a3affd1112ad4fd11f640e48921c95e5d4ca071ed5ed84aab1879",
+      "jobId": 18016794149,
       "key": "java-8-bcfips-2-1-3",
-      "pipelineId": 3055901231,
-      "receiptSha256": "17e05361837d9ecdf931e9cf82a4f45d728a39d3f37c143daa629c2a4c7b9b75",
+      "pipelineId": 3066100270,
+      "receiptSha256": "ad8314fd80adb7849b6f41570ef9ce5fe200d577f994e027a6231955658951b4",
       "tier": "hardened"
     },
     {
@@ -2624,20 +2624,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:a22b0ca1eb081c0192ce8ed81afea2f78182355e732ab6e1a43c28fb040ba36b",
+          "digest": "sha256:323db0d1cda31abee87142b22739084392ebb04c141f61cdfd220894ae49fcc0",
           "key": "java",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-21.0.13-20261111T182036Z",
+          "tag": "IHL-Java-21.0.13-20261113T182043Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "9182c9dd3daeacedff2154fc271f82a7cbfb5da71fb01aabcbe59e284fcd07f6",
-      "jobId": 17944077986,
+      "archiveSha256": "58e2f80b51759346d33cffbea8d8238696400a9045a104a8be72895adcf3f90e",
+      "jobId": 18015648983,
       "key": "java",
-      "pipelineId": 3055759806,
-      "receiptSha256": "caab94d7d29768bb043d1f7bc1f94f009c3adf7b79f0b54df67c409d98dbb77a",
+      "pipelineId": 3065958780,
+      "receiptSha256": "be4b6917bd0d7fa7aaf3903eeab51f9ae089dd5a88a4e11f4b72b62ba1af714b",
       "tier": "secure"
     },
     {
@@ -2645,20 +2645,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:4305271ffbbdfbc40e52a0f5dc353ae26ae628a04e43b31aa1de17db3f06de92",
+          "digest": "sha256:5ce9553449e909d2e85c98f6b4a534990aae186753a32230523e388100c657f6",
           "key": "java-11-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-11.0.33-20261111T182324Z",
+          "tag": "IHL-Java-11.0.33-20261113T183758Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "2e463b73d92704ce22df9468fdbf567aa178f6030efb913306246ac73719e4ef",
-      "jobId": 17944077987,
+      "archiveSha256": "339f0ecf79d599dc27c69637a2c13f3421e192e8c2378cff541453abacc13d3f",
+      "jobId": 18015648984,
       "key": "java-11-bcfips-2-1-1",
-      "pipelineId": 3055759806,
-      "receiptSha256": "e6f3113737d552baecaa84cdd232ad7517165ed82f9df816e48dd41b809fe319",
+      "pipelineId": 3065958780,
+      "receiptSha256": "3d3c8f4643ec328128b33333d20a02fea36efee65d1b6bda79d5fe4cb361ce33",
       "tier": "secure"
     },
     {
@@ -2666,20 +2666,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:d22667f9ce9cd44c63019928f4674b9bd33f46aef910130825ff93c0e9e06c65",
+          "digest": "sha256:6342fde94279ded8484a0a0536c72ac3d903a7460aafe00f76276c8000a4eed8",
           "key": "java-11-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-11.0.33-20261111T182635Z",
+          "tag": "IHL-Java-11.0.33-20261113T184131Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "7c83ed5040ede46dabacfd0cca1b9e73935835bb11757305c15f6ab396e07460",
-      "jobId": 17944077988,
+      "archiveSha256": "e24952ba408774c0d042ad2aa2b9a0f782b806c4877b494d5aa5eb795c57af4b",
+      "jobId": 18015648985,
       "key": "java-11-bcfips-2-1-3",
-      "pipelineId": 3055759806,
-      "receiptSha256": "672f8740964c5366c9b05ebedcebd932b34615774ca01cd75073648654e9c155",
+      "pipelineId": 3065958780,
+      "receiptSha256": "27d37af2510e3075cd200cd6e21bc299f7b8450ba29c377aac4fce75f5324a28",
       "tier": "secure"
     },
     {
@@ -2687,20 +2687,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:382eb44c9ced0eef3683e5f348deb510ef83e106b2fd4bcb3059ae7824b99209",
+          "digest": "sha256:1ca69476126863b671def7a3a0aa61ae8436b2883b3831af5689420643ed167f",
           "key": "java-17-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-17.0.21-20261111T182951Z",
+          "tag": "IHL-Java-17.0.21-20261113T184432Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "1082d3f453aff8b674c86b13a920b35325c1df4b29ea80a88d580bca9d3a80d6",
-      "jobId": 17944077989,
+      "archiveSha256": "e1e9696daf719db030ddfdd4adf22d4f873516c9d1942699fe8cc5d69136c08b",
+      "jobId": 18015648986,
       "key": "java-17-bcfips-2-1-1",
-      "pipelineId": 3055759806,
-      "receiptSha256": "19137b972f4d19b523d09952b272381d5df119e26ac01814172641b746ff59bb",
+      "pipelineId": 3065958780,
+      "receiptSha256": "11042f9084c3701eb644aabde36dcfb2ce0f8fd84f5753b603b24efc65e22866",
       "tier": "secure"
     },
     {
@@ -2708,20 +2708,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:68f1de4cff3913327916d38268c6facd6e4ac21a72b2f1cb3f5187fda8e2e0b5",
+          "digest": "sha256:6100e9a2a8ffe846a52258a281a6dd937a0fa79042b4dee7574e8e415949e8c4",
           "key": "java-17-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-17.0.21-20261111T183246Z",
+          "tag": "IHL-Java-17.0.21-20261113T182437Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "d430498c97e1f16bd2efd5c4a40edc089353905e13f1c7ecc65fa9876302564d",
-      "jobId": 17944077990,
+      "archiveSha256": "470b4693c6e9a69232ccae2b4ba9863fec9a0316c2fda5f31d292d72ec1f9d5a",
+      "jobId": 18015648987,
       "key": "java-17-bcfips-2-1-3",
-      "pipelineId": 3055759806,
-      "receiptSha256": "9cba5bb55b835787e48c993d1aa497c7571dbf626be39de9525a055301ba8c81",
+      "pipelineId": 3065958780,
+      "receiptSha256": "77795725a0711eb3224fa30d89e0fe932e4766aa85b300b959153d85ec506565",
       "tier": "secure"
     },
     {
@@ -2729,20 +2729,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:6ac95e6756c801854fe15faba769ed13ae4e97f067ada27be63964bef86b41c1",
+          "digest": "sha256:97f01d67b8b98210a0526023c76cf62503bee6a00af46d301eee8744f1d96d46",
           "key": "java-21-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-21.0.13-20261111T183613Z",
+          "tag": "IHL-Java-21.0.13-20261113T182807Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "d88ae889b00486d706c0c77d81bc825aeb89b8a38dbe60b5cb150de744c0c4f1",
-      "jobId": 17944077991,
+      "archiveSha256": "ebd95b5adb9865c97de80d2cccf2113b0605d7401181e676a1b6023f7bba92f8",
+      "jobId": 18015648988,
       "key": "java-21-bcfips-2-1-1",
-      "pipelineId": 3055759806,
-      "receiptSha256": "304cf4f67010393137f5ecfebdc03fbe6e973174a3de137d8b2b90264eff35c9",
+      "pipelineId": 3065958780,
+      "receiptSha256": "40fae70ceb280fee368895fecc8070444e5e64afc93c7aa01abd467d59d872ae",
       "tier": "secure"
     },
     {
@@ -2750,20 +2750,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:101cf0a67db9f645702da4d98bd137037896da86822b10a32b48fa58b6602e61",
+          "digest": "sha256:c3687cf5b2916f5666232e6e233ebff030e0f194eaaf5d86aa54cb2116a734be",
           "key": "java-25-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-25.0.5-20261111T183921Z",
+          "tag": "IHL-Java-25.0.5-20261113T183133Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "1e41b39d5be45766961b75af432a5481a9f427afadd1e646d14bb83084b860d6",
-      "jobId": 17944077992,
+      "archiveSha256": "25ea7599795630a5ceba6f9148aa2fe89373fc55b0f55ee389e78ee92f7c277e",
+      "jobId": 18015648989,
       "key": "java-25-bcfips-2-1-1",
-      "pipelineId": 3055759806,
-      "receiptSha256": "ed05ce63f032b8bb52c08ce0a3007ccea969f9a74cf10e2060ac2c531c117b17",
+      "pipelineId": 3065958780,
+      "receiptSha256": "63281604505f8813a81a71356a32e97f3f3ae67aa4531803ef605d2189b9a075",
       "tier": "secure"
     },
     {
@@ -2771,20 +2771,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:5a89c5b5b9a39761b283e97a3c6fa9278169d1b18ded1ec040cfa56c57a569fd",
+          "digest": "sha256:b1d0934a1ecb54a9e6549c287ed9a8d60612e9944a817b04998a5f61f900cecc",
           "key": "java-25-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-25.0.5-20261111T184227Z",
+          "tag": "IHL-Java-25.0.5-20261113T185810Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "5911fca775aaf4f53cd15e34d58a010d1220a4bc7f183057fd28b3264f372754",
-      "jobId": 17944077993,
+      "archiveSha256": "7fd3a7d09519f32b18b603757613935349b1d69994a02f117f15e06e0f2a412d",
+      "jobId": 18015648990,
       "key": "java-25-bcfips-2-1-3",
-      "pipelineId": 3055759806,
-      "receiptSha256": "2fe1a912ebc7747b55b467f568a913215e2d4787e749b3fcbbb574d02ee92f08",
+      "pipelineId": 3065958780,
+      "receiptSha256": "345956e2b3ca22026c7ff239710802ec66279bc2d5da69bedc96bda8deeeed5e",
       "tier": "secure"
     },
     {
@@ -2792,20 +2792,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:4968da1a3a598750ae2f89ecac2d74cd340a6868f1622cd3165914d8127f9703",
+          "digest": "sha256:48b0539724b4f9305de9a5d843b991b5bad3aad9b9b1734f2e81dee73bab7fc2",
           "key": "java-27-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-27-20261111T184506Z",
+          "tag": "IHL-Java-27-20261113T184737Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "a400c412820f9044b4ff2c1e0e096cefe35b219339adc697cca5d9b7ba4c7dc6",
-      "jobId": 17944077994,
+      "archiveSha256": "cbf8b1150f8f81443457f7b344ac9eddc6250d0ed9c631fdffc27636fd41960c",
+      "jobId": 18015648991,
       "key": "java-27-bcfips-2-1-1",
-      "pipelineId": 3055759806,
-      "receiptSha256": "7dd6388762d2ded722b0219214f041179786cdfee568703aee107110232a14ca",
+      "pipelineId": 3065958780,
+      "receiptSha256": "448eb98600dfa182756b274dc9ecbf0271cf5dbcb680be61559d2f1107e7a166",
       "tier": "secure"
     },
     {
@@ -2813,20 +2813,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:5eb3f147f6befab048910da26446252add01f91971b4691c7768b0d9b8e6a763",
+          "digest": "sha256:b8e65cdf2bc6a4657deb41caa2582e6aca7b8cbf743c31cce1886fa800f643c4",
           "key": "java-27-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-27-20261111T184757Z",
+          "tag": "IHL-Java-27-20261113T185107Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "756258cb9a1720c2c74f600f6612c16f551c2606ff069eb96a56bc91c4b99a52",
-      "jobId": 17944077995,
+      "archiveSha256": "b1d5aad26e854b710f2f2f3b121a20628aa5a65ff11a9bb4b7a54312b1cf5ed0",
+      "jobId": 18015648992,
       "key": "java-27-bcfips-2-1-3",
-      "pipelineId": 3055759806,
-      "receiptSha256": "e5086e373ae6125bc59f3b4ead2f852c9fc9e61e552c70207b323288ae20a6d0",
+      "pipelineId": 3065958780,
+      "receiptSha256": "738449675687f7b684c5c23538c9e3df9113358204b00fecb5d0f8daeaa420ee",
       "tier": "secure"
     },
     {
@@ -2834,20 +2834,20 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:ceffd144d863c98d454eca941962e9b5d8ae662df172721df416fdaeaf393851",
+          "digest": "sha256:debcfe2a6ab61512b252c7017ec890019e670d1c903675284f8e819f5d01b7a5",
           "key": "java-8-bcfips-2-1-1",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-8.0.512-20261111T185111Z",
+          "tag": "IHL-Java-8.0.512-20261113T185439Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "66471c5a852f9004447cb538a3528c9903a7212be407e6abf3814de90d772879",
-      "jobId": 17944077996,
+      "archiveSha256": "060c1b1db7a3f8e80f6977728cce0ff2924de00b2df018b6751ae76fec8da572",
+      "jobId": 18015648993,
       "key": "java-8-bcfips-2-1-1",
-      "pipelineId": 3055759806,
-      "receiptSha256": "a28c1ef2dd2c4ca498142b44d0105b609694d4b1e68a8ef4662c82d6b585e1f7",
+      "pipelineId": 3065958780,
+      "receiptSha256": "142ffec408df2f5f37cb0745696a783528ee225192578bd0521aff0ecb55ab9c",
       "tier": "secure"
     },
     {
@@ -2855,28 +2855,28 @@
         {
           "allConfigAndLayerBytesVerified": true,
           "credentialsUsed": false,
-          "digest": "sha256:b65ce85e9b25c862a3c2d0c560cd98473c4a4fb85d4a25c9324ee7c97f959334",
+          "digest": "sha256:fd775ea4e8b1ab31394e4945ad8d5494307b2f09bb8244e00a9543dc6960bfaa",
           "key": "java-8-bcfips-2-1-3",
           "repository": "foxtech-consulting/java",
           "role": "runtime",
           "status": "verified",
-          "tag": "IHL-Java-8.0.512-20261111T185436Z",
+          "tag": "IHL-Java-8.0.512-20261113T183502Z",
           "tier": "secure"
         }
       ],
-      "archiveSha256": "69fcd9fbebf2371234de6d18ea16ab604a3d808e623359d4c809110623111df6",
-      "jobId": 17944077997,
+      "archiveSha256": "a7e2bb61372ed185bd7f4109e11f7288af557f011e18e54404d5125c61917bc1",
+      "jobId": 18015648994,
       "key": "java-8-bcfips-2-1-3",
-      "pipelineId": 3055759806,
-      "receiptSha256": "b188cb4a972ad451d1c16d643bf596bbd00aaae6c0a571de4eff6755f31d4127",
+      "pipelineId": 3065958780,
+      "receiptSha256": "67afcb60d46b693218217f953907cc6f567a2b9c4aab9c89e697d0b4d6966f35",
       "tier": "secure"
     }
   ],
   "publicationPipelines": {
-    "hardened": 3055901231,
-    "secure": 3055759806
+    "hardened": 3066100270,
+    "secure": 3065958780
   },
-  "publisherPipelineId": 3055901231,
+  "publisherPipelineId": 3066100270,
   "reportType": "ihl-java-owned-catalog",
   "schemaVersion": 1,
   "sourceRevision": "dd13a386af2388eb24d8cc79a31489a0e6afcaab"
