@@ -1,13 +1,7 @@
 {
-  "catalogJobId": 18030436559,
-  "catalogPipelineId": 3067971005,
+  "catalogJobId": 18030899573,
+  "catalogPipelineId": 3068057503,
   "files": [
-    {
-      "mode": "100644",
-      "path": "cis-reports/09b1970cb95be019437a958edab7a89d7111c480652ebba589a346438c556b48.json",
-      "sha256": "f06ec3a8ee8d78b6c5b6e4173afde82df6250be15d8d9b5f97d20871181c4a09",
-      "size": 363561
-    },
     {
       "mode": "100644",
       "path": "cis-reports/100ad346bb7cd452aa0014f3228ddc83d7b521dcb740d39e984dfce5eff75eb5.json",
@@ -28,6 +22,12 @@
     },
     {
       "mode": "100644",
+      "path": "cis-reports/66873a593b36aa7185960c02741164c2f0b73fce44dd1c39efcec3cdea6e02e3.json",
+      "sha256": "385177720dfac6f1f5a3867c109f8c7230260d8ca54cc2039e130c3ee9acb20d",
+      "size": 363561
+    },
+    {
+      "mode": "100644",
       "path": "cis-reports/a8a2060d8af796b3651cbf2829dec09618dcd748e059a3190683f54be034a893.json",
       "sha256": "12cc25f40049a7f4a92c104324986bda4569054d9126849b2c9d61a2a59ce56c",
       "size": 363561
@@ -35,8 +35,8 @@
     {
       "mode": "100644",
       "path": "postgres-published-images.json",
-      "sha256": "879983121bcc7ac878f2b5e217c37c311a73876022993064cea406f475882146",
-      "size": 128282
+      "sha256": "9bccfb6bd97d94b58a6406163e1f917fe9f0719376125c737d6d9a2b33985211",
+      "size": 128334
     }
   ],
   "license": "Apache-2.0",
