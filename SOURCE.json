@@ -57,7 +57,7 @@
     {
       "mode": "100644",
       "path": "README.md",
-      "sha256": "0a823e8a90c6d4b2897b9250d7dea06ecef1896597505b7caf2c2eb13caa4712",
+      "sha256": "fff578012d27735344b95e5814d227cd6757273c1a3bccf6a248002279c37705",
       "size": 24057
     },
     {
@@ -110,14 +110,8 @@
     },
     {
       "mode": "100644",
-      "path": "cis-reports/96adcb88f57331e45f500855e484e7e78af40ca3fb4da59dc21b405bdf7218db.json",
-      "sha256": "5ee19e84c6a5376d20ea7ebd3e4b7726068677f75c8603905b79a8da4196c364",
-      "size": 363690
-    },
-    {
-      "mode": "100644",
-      "path": "cis-reports/a6b50c4b2ddda7a512bafbb87d010774da562c594f9a52d89a129688a62662c7.json",
-      "sha256": "06e3e79009cdaa4c716b34ac9ccddddd6278515afa758181d4adfab9ce0f5b96",
+      "path": "cis-reports/99cd2bf864b1dcd8982e50696300ab689481a6a6394d55c265fd8439d20c1dd5.json",
+      "sha256": "1d9d12ab637893840659af4ecaefc13528648896efd9a516f6cc41571e39f02a",
       "size": 363564
     },
     {
@@ -137,6 +131,12 @@
       "path": "cis-reports/c83f2e2ba0160a894a87e9f855ca611bdd55bdd0d417d92c83b82f33e882dd2e.json",
       "sha256": "f79034ecd63c6fe769a326c4badfe3d9e7fc09cc0a79ba7f92a238b0e655c042",
       "size": 6206
+    },
+    {
+      "mode": "100644",
+      "path": "cis-reports/f7900213cc5f936c22d38a0b3d5ff6f66fa0251096fd7df0718f3232f22edd71.json",
+      "sha256": "9d073ff910608de7154a8c9e0ce0570496957d5c01c440691e2e1522d94204f3",
+      "size": 363690
     },
     {
       "mode": "100644",
@@ -849,8 +849,8 @@
     {
       "mode": "100644",
       "path": "published-images.json",
-      "sha256": "2b4f0076a6fa1a77035640824c83720474756c066924b4d5d90858b6a3ec31c3",
-      "size": 477642
+      "sha256": "381976e2d6663e6f70c28d5c7d9f283823c7f1af9f221f9d1db291cae30f4d1b",
+      "size": 477746
     },
     {
       "mode": "100755",
@@ -2781,7 +2781,7 @@
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
   "schemaVersion": 1,
   "sourceRepository": "https://gitlab.com/indianhilllabs/indian-hill-secure-containers",
-  "sourceRevision": "0f7921ddc84c702470b340145ae43d9e67ae4127",
+  "sourceRevision": "9bd0e52c9d71dd1f6fdfabccca74b92c816cb275",
   "tiers": [
     "secure",
     "hardened",
