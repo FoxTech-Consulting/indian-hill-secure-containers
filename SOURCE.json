@@ -2,27 +2,27 @@
   "files": [
     {
       "mode": "100644",
-      "path": "cis-reports/ca4d69e834e45aa2622726423352fb21f66882162597cf34c43ce571d5e0c259.json",
-      "sha256": "f2fe5dee3a942f4ccae338f5fb492a3b8671faf60ab9ccd798192eb2ccf52717",
-      "size": 6218
-    },
-    {
-      "mode": "100644",
-      "path": "cis-reports/fb5854520714a06d9fc7bb1ae16db901b68c3cb0f8339d1d21c2c8b06ff38f3c.json",
-      "sha256": "8cd6c30548f7eefeb35a63b65ea882cf7e5da479533cfd6f9d07f6260cfde431",
+      "path": "cis-reports/671ef19dff522812b430e63c74316d6fa04f5825546098ebc60c05161d8ec2f4.json",
+      "sha256": "60d69a06a8b6756ab92205dc75201125a65fd4caaa560d3b6ac474436be43884",
       "size": 6206
     },
     {
       "mode": "100644",
+      "path": "cis-reports/6f2085e98079c746bbccee4d393ac1a2adeaffa4c13dd881db1d0beb5d2f3eb4.json",
+      "sha256": "b33437be28470e865bd184533905f2237fa6ddbe557489530c2bca69a65c07c9",
+      "size": 6218
+    },
+    {
+      "mode": "100644",
       "path": "go-published-images.json",
-      "sha256": "7ae290649db8b943000ffd216d23f43fb83d0d4796518241e6868993311f40a5",
+      "sha256": "8ce12b82d35bf7f730bf728723b41231c5f870246613b5188eef0dd561ea4cb3",
       "size": 31590
     }
   ],
   "license": "Apache-2.0",
   "productionQualified": false,
   "publicRepository": "https://github.com/foxtech-consulting/indian-hill-secure-containers",
-  "publisherPipelineId": 3083600581,
+  "publisherPipelineId": 3093706629,
   "reportType": "ihl-go-catalog-source",
   "schemaVersion": 1,
   "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
