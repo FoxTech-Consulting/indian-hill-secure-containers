@@ -8,24 +8,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-20T11:14:53.429115+00:00"
+        "verifiedAt": "2026-11-21T11:08:28.204323+00:00"
       },
-      "candidateManifestSha256": "671ef19dff522812b430e63c74316d6fa04f5825546098ebc60c05161d8ec2f4",
+      "candidateManifestSha256": "b06c0c6a65d475fbdab2c2cb150fb2f482c9ceb18e4ed2c963c26b3cd1f1b28a",
       "cisReport": {
-        "path": "cis-reports/671ef19dff522812b430e63c74316d6fa04f5825546098ebc60c05161d8ec2f4.json",
+        "path": "cis-reports/b06c0c6a65d475fbdab2c2cb150fb2f482c9ceb18e4ed2c963c26b3cd1f1b28a.json",
         "schemaVersion": 1,
-        "sha256": "60d69a06a8b6756ab92205dc75201125a65fd4caaa560d3b6ac474436be43884",
+        "sha256": "71396624cdf71f3f4c9d308a3d76020edd3c9166c6bedab86595962d645b1107",
         "sizeBytes": 6206
       },
-      "digest": "sha256:d83fc214304db42423fa729d660c47c835095fd8154dee7a46e736f1a30181a6",
+      "digest": "sha256:93285f2675a0b3630f6296dabebee87c0106ddbe2654f8d22599599d611d8d8a",
       "family": "go",
-      "image": "ghcr.io/foxtech-consulting/go@sha256:d83fc214304db42423fa729d660c47c835095fd8154dee7a46e736f1a30181a6",
+      "image": "ghcr.io/foxtech-consulting/go@sha256:93285f2675a0b3630f6296dabebee87c0106ddbe2654f8d22599599d611d8d8a",
       "key": "go",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/go",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18217958512",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093662817",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244846298",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097298580",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
       "publicSourceBinding": {
@@ -37,26 +37,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292933",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924195",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-20T11:14:04.453Z",
+      "publishedAt": "2026-11-21T11:05:18.601Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292933",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924195",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:d83fc214304db42423fa729d660c47c835095fd8154dee7a46e736f1a30181a6",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:93285f2675a0b3630f6296dabebee87c0106ddbe2654f8d22599599d611d8d8a",
       "repository": "ghcr.io/foxtech-consulting/go",
-      "signatureManifestSha256": "671ef19dff522812b430e63c74316d6fa04f5825546098ebc60c05161d8ec2f4",
+      "signatureManifestSha256": "b06c0c6a65d475fbdab2c2cb150fb2f482c9ceb18e4ed2c963c26b3cd1f1b28a",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/go//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "671ef19dff522812b430e63c74316d6fa04f5825546098ebc60c05161d8ec2f4",
+          "assurance-manifest-sha256": "b06c0c6a65d475fbdab2c2cb150fb2f482c9ceb18e4ed2c963c26b3cd1f1b28a",
           "assurance-tier": "hardened",
           "production-qualified": "false",
           "public-source-commit": "d36a0aefbc599e7a03d93a847f48f15f3a8dc9c2",
@@ -70,7 +70,7 @@
       },
       "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09",
       "status": "engineering-preview",
-      "tag": "ihl-go-1.27.3-hardened-a09ce151a1c5-p3093549210",
+      "tag": "ihl-go-1.27.3-hardened-a09ce151a1c5-p3097264993",
       "targetId": "go-1.27",
       "tier": "hardened",
       "version": "1.27.3"
@@ -83,18 +83,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-20T11:14:48.277613+00:00"
+        "verifiedAt": "2026-11-21T11:08:23.461037+00:00"
       },
-      "candidateManifestSha256": "1a81ae69fcd7a076da61af80503c870923ddc230b0471c1ba00d388813d203c3",
-      "digest": "sha256:8df130c0aaa0763da7b2cbdce004451375d94232feb8313ecce9e072733c7e4b",
+      "candidateManifestSha256": "641e843e63e25e8b42270011d5caef49f838816177a2a245e8716ee8ef9c93b9",
+      "digest": "sha256:fa1e37266cbfa329facc8f81762ef895fe565ab684cd1a20a26ad1821ac8e879",
       "family": "go",
-      "image": "ghcr.io/foxtech-consulting/go@sha256:8df130c0aaa0763da7b2cbdce004451375d94232feb8313ecce9e072733c7e4b",
+      "image": "ghcr.io/foxtech-consulting/go@sha256:fa1e37266cbfa329facc8f81762ef895fe565ab684cd1a20a26ad1821ac8e879",
       "key": "go",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/go",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18217176011",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093562249",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244721030",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097275660",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
       "publicSourceBinding": {
@@ -106,26 +106,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292932",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924194",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-20T11:11:08.714Z",
+      "publishedAt": "2026-11-21T11:07:42.280Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292932",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924194",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:8df130c0aaa0763da7b2cbdce004451375d94232feb8313ecce9e072733c7e4b",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:fa1e37266cbfa329facc8f81762ef895fe565ab684cd1a20a26ad1821ac8e879",
       "repository": "ghcr.io/foxtech-consulting/go",
-      "signatureManifestSha256": "1a81ae69fcd7a076da61af80503c870923ddc230b0471c1ba00d388813d203c3",
+      "signatureManifestSha256": "641e843e63e25e8b42270011d5caef49f838816177a2a245e8716ee8ef9c93b9",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/go//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "1a81ae69fcd7a076da61af80503c870923ddc230b0471c1ba00d388813d203c3",
+          "assurance-manifest-sha256": "641e843e63e25e8b42270011d5caef49f838816177a2a245e8716ee8ef9c93b9",
           "assurance-tier": "secure",
           "production-qualified": "false",
           "public-source-commit": "d36a0aefbc599e7a03d93a847f48f15f3a8dc9c2",
@@ -139,7 +139,7 @@
       },
       "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09",
       "status": "engineering-preview",
-      "tag": "ihl-go-1.27.3-secure-a09ce151a1c5-p3093549210",
+      "tag": "ihl-go-1.27.3-secure-a09ce151a1c5-p3097264993",
       "targetId": "go-1.27",
       "tier": "secure",
       "version": "1.27.3"
@@ -152,24 +152,24 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-20T11:14:51.898489+00:00"
+        "verifiedAt": "2026-11-21T11:08:27.000392+00:00"
       },
-      "candidateManifestSha256": "6f2085e98079c746bbccee4d393ac1a2adeaffa4c13dd881db1d0beb5d2f3eb4",
+      "candidateManifestSha256": "a99f49b5f6d684b06151837d71a028aeacf89ff777ccb5ac167699224361668c",
       "cisReport": {
-        "path": "cis-reports/6f2085e98079c746bbccee4d393ac1a2adeaffa4c13dd881db1d0beb5d2f3eb4.json",
+        "path": "cis-reports/a99f49b5f6d684b06151837d71a028aeacf89ff777ccb5ac167699224361668c.json",
         "schemaVersion": 1,
-        "sha256": "b33437be28470e865bd184533905f2237fa6ddbe557489530c2bca69a65c07c9",
+        "sha256": "b9dcd43306271fd747e7cc07e5ce3372a8b72d2d510eabc213ba72abe9b07a25",
         "sizeBytes": 6218
       },
-      "digest": "sha256:28ba52f28c896cc7f73d74ff54afd6ebbf36ed7d78c0a86f48d7b2195440086c",
+      "digest": "sha256:2719d3ca8827f30b32881a7100b135a459fc0b5654c01fa258df33a8ff9abe0f",
       "family": "go",
-      "image": "ghcr.io/foxtech-consulting/go@sha256:28ba52f28c896cc7f73d74ff54afd6ebbf36ed7d78c0a86f48d7b2195440086c",
+      "image": "ghcr.io/foxtech-consulting/go@sha256:2719d3ca8827f30b32881a7100b135a459fc0b5654c01fa258df33a8ff9abe0f",
       "key": "go-1-26",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/go",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18217710169",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093631278",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244790180",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097288308",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
       "publicSourceBinding": {
@@ -181,26 +181,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292933",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924195",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-20T11:14:04.453Z",
+      "publishedAt": "2026-11-21T11:05:18.601Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292933",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924195",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:28ba52f28c896cc7f73d74ff54afd6ebbf36ed7d78c0a86f48d7b2195440086c",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:2719d3ca8827f30b32881a7100b135a459fc0b5654c01fa258df33a8ff9abe0f",
       "repository": "ghcr.io/foxtech-consulting/go",
-      "signatureManifestSha256": "6f2085e98079c746bbccee4d393ac1a2adeaffa4c13dd881db1d0beb5d2f3eb4",
+      "signatureManifestSha256": "a99f49b5f6d684b06151837d71a028aeacf89ff777ccb5ac167699224361668c",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/go//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "6f2085e98079c746bbccee4d393ac1a2adeaffa4c13dd881db1d0beb5d2f3eb4",
+          "assurance-manifest-sha256": "a99f49b5f6d684b06151837d71a028aeacf89ff777ccb5ac167699224361668c",
           "assurance-tier": "hardened",
           "production-qualified": "false",
           "public-source-commit": "d36a0aefbc599e7a03d93a847f48f15f3a8dc9c2",
@@ -214,7 +214,7 @@
       },
       "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09",
       "status": "engineering-preview",
-      "tag": "ihl-go-1.26.10-hardened-a09ce151a1c5-p3093549210",
+      "tag": "ihl-go-1.26.10-hardened-a09ce151a1c5-p3097264993",
       "targetId": "go-1.26",
       "tier": "hardened",
       "version": "1.26.10"
@@ -227,18 +227,18 @@
         "method": "OCI manifest, configuration and all layer bytes downloaded and SHA-256 verified",
         "runtimeExecuted": false,
         "status": "verified",
-        "verifiedAt": "2026-11-20T11:14:46.681732+00:00"
+        "verifiedAt": "2026-11-21T11:08:22.054376+00:00"
       },
-      "candidateManifestSha256": "5f84672d80924b857dc5e7cd607f5c0032ca570ba9f4475986f7c123260577c4",
-      "digest": "sha256:8006dfdf3d063a21d8900bbfa3da11cbf1916a69b66c4da69bcc2083749bd65d",
+      "candidateManifestSha256": "f875500a6f4f7cfb1a43a8336cbe0abb009493c42443f841060aa5e9b30dc52d",
+      "digest": "sha256:b722cda8418bfcfeb72fe90deea7c73e9058f81f3966a6824de8e7e960849700",
       "family": "go",
-      "image": "ghcr.io/foxtech-consulting/go@sha256:8006dfdf3d063a21d8900bbfa3da11cbf1916a69b66c4da69bcc2083749bd65d",
+      "image": "ghcr.io/foxtech-consulting/go@sha256:b722cda8418bfcfeb72fe90deea7c73e9058f81f3966a6824de8e7e960849700",
       "key": "go-1-26",
       "packageUrl": "https://github.com/orgs/FoxTech-Consulting/packages/container/package/go",
       "platform": "linux/amd64",
       "producer": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18217404368",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093592327",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244673481",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097267772",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
       "publicSourceBinding": {
@@ -250,26 +250,26 @@
         "status": "verified-by-original-publication-ci"
       },
       "publication": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292932",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629"
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924194",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714"
       },
       "publicationContext": "engineering-candidate",
-      "publishedAt": "2026-11-20T11:11:08.714Z",
+      "publishedAt": "2026-11-21T11:07:42.280Z",
       "publisher": {
-        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18218292932",
-        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3093706629",
+        "jobUrl": "https://gitlab.com/indianhilllabs/containers/go/-/jobs/18244924194",
+        "pipelineUrl": "https://gitlab.com/indianhilllabs/containers/go/-/pipelines/3097311714",
         "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09"
       },
-      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:8006dfdf3d063a21d8900bbfa3da11cbf1916a69b66c4da69bcc2083749bd65d",
+      "pullCommand": "docker pull --platform linux/amd64 ghcr.io/foxtech-consulting/go@sha256:b722cda8418bfcfeb72fe90deea7c73e9058f81f3966a6824de8e7e960849700",
       "repository": "ghcr.io/foxtech-consulting/go",
-      "signatureManifestSha256": "5f84672d80924b857dc5e7cd607f5c0032ca570ba9f4475986f7c123260577c4",
+      "signatureManifestSha256": "f875500a6f4f7cfb1a43a8336cbe0abb009493c42443f841060aa5e9b30dc52d",
       "signatureVerification": {
         "anonymousSignatureVerifiedAtPublication": true,
         "certificateIdentity": "https://gitlab.com/indianhilllabs/containers/go//.gitlab-ci.yml@refs/heads/main",
         "certificateOidcIssuer": "https://gitlab.com",
         "independentlyReverifiedDuringDownload": false,
         "signedAnnotations": {
-          "assurance-manifest-sha256": "5f84672d80924b857dc5e7cd607f5c0032ca570ba9f4475986f7c123260577c4",
+          "assurance-manifest-sha256": "f875500a6f4f7cfb1a43a8336cbe0abb009493c42443f841060aa5e9b30dc52d",
           "assurance-tier": "secure",
           "production-qualified": "false",
           "public-source-commit": "d36a0aefbc599e7a03d93a847f48f15f3a8dc9c2",
@@ -283,7 +283,7 @@
       },
       "sourceRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09",
       "status": "engineering-preview",
-      "tag": "ihl-go-1.26.10-secure-a09ce151a1c5-p3093549210",
+      "tag": "ihl-go-1.26.10-secure-a09ce151a1c5-p3097264993",
       "targetId": "go-1.26",
       "tier": "secure",
       "version": "1.26.10"
@@ -296,7 +296,7 @@
           "allConfigAndLayerBytesVerified": true,
           "blobs": [
             {
-              "digest": "sha256:70e359cd1b30940a3956ed26305fab74aa80278e1134e6063ce5b6b622a49a9e",
+              "digest": "sha256:7bcc992265bd0d869640d60d521e89bc1769ce82cf6099004a9302f745114384",
               "kind": "config",
               "platform": {
                 "architecture": "amd64",
@@ -305,52 +305,52 @@
               "repository": "foxtech-consulting/go",
               "sizeBytes": 3467,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.330312+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.703908+00:00"
             },
             {
-              "digest": "sha256:408e57642543b5cec79f34f7788d3e25b9de686127a4a375a79dd62952096567",
+              "digest": "sha256:b7bb2615668d58fcd4e7fccff7366858af80829f0a86d60a304346e071c0a01e",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 106309,
+              "sizeBytes": 106306,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.416660+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.790946+00:00"
             },
             {
-              "digest": "sha256:ca58cfbd11db01e79334347799555170b5974928dbfa5df988c4a9bf11be1dee",
+              "digest": "sha256:010e1183d499ecabda2630d6e7a74fc596465e1f58cbce480740740ce1e46144",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 186,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.499727+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.881353+00:00"
             },
             {
-              "digest": "sha256:85b8805afb10314883dedfb475c35a83e8e7ec88526741b9a093fcbe1f19249b",
+              "digest": "sha256:1daba98d027c57a68012ebe7d651b4da27acdf98b191beeba70a64cf8353573f",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 155,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.581606+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.964395+00:00"
             },
             {
-              "digest": "sha256:a0bdf84fa7fb0b2159b5bcab0936ce2548deb87192c61c266b3a910f05030ef4",
+              "digest": "sha256:d999b89b371c00eebc39d89aa769f4ad833c3e8c7e2674712e1049db899e724b",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 94,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.681718+00:00"
+              "verifiedAt": "2026-11-21T11:08:22.054362+00:00"
             }
           ],
           "configCount": 1,
           "credentialsUsed": false,
           "cryptographicSignatureVerification": "original CI receipts checked separately",
-          "digest": "sha256:8006dfdf3d063a21d8900bbfa3da11cbf1916a69b66c4da69bcc2083749bd65d",
+          "digest": "sha256:b722cda8418bfcfeb72fe90deea7c73e9058f81f3966a6824de8e7e960849700",
           "key": "go-1-26",
           "layerCount": 4,
           "manifests": [
             {
-              "digest": "sha256:8006dfdf3d063a21d8900bbfa3da11cbf1916a69b66c4da69bcc2083749bd65d",
+              "digest": "sha256:b722cda8418bfcfeb72fe90deea7c73e9058f81f3966a6824de8e7e960849700",
               "sizeBytes": 1083,
-              "verifiedAt": "2026-11-20T11:14:46.236933+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.611879+00:00"
             }
           ],
           "platforms": [
@@ -363,20 +363,20 @@
           "role": "runtime",
           "runtimeExecuted": false,
           "status": "verified",
-          "tag": "ihl-go-1.26.10-secure-a09ce151a1c5-p3093549210",
+          "tag": "ihl-go-1.26.10-secure-a09ce151a1c5-p3097264993",
           "tagProof": {
-            "digest": "sha256:8006dfdf3d063a21d8900bbfa3da11cbf1916a69b66c4da69bcc2083749bd65d",
+            "digest": "sha256:b722cda8418bfcfeb72fe90deea7c73e9058f81f3966a6824de8e7e960849700",
             "sizeBytes": 1083,
-            "verifiedAt": "2026-11-20T11:14:46.199156+00:00"
+            "verifiedAt": "2026-11-21T11:08:21.557353+00:00"
           },
           "tier": "secure",
-          "verifiedAt": "2026-11-20T11:14:46.681732+00:00"
+          "verifiedAt": "2026-11-21T11:08:22.054376+00:00"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "blobs": [
             {
-              "digest": "sha256:cf65bb51894b43e7f1ffcd68b201104da9b0569c8981583ed979221e140a55a9",
+              "digest": "sha256:7b54e0f0ff725bc64f33d41cfe333515b4667aa8d8dae8a7dfd84b8bcf414629",
               "kind": "config",
               "platform": {
                 "architecture": "amd64",
@@ -385,52 +385,52 @@
               "repository": "foxtech-consulting/go",
               "sizeBytes": 3464,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:47.929904+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.122094+00:00"
             },
             {
-              "digest": "sha256:15556cdbf18601a01cffc0d134666957dcb0bc1e825bf5af4865ddfeafabb79c",
+              "digest": "sha256:5070f139ca9576a946ff8a21e3d844d7131ea3581e990e0005ff4836d470a1e5",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 106309,
+              "sizeBytes": 106306,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.021832+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.209028+00:00"
             },
             {
-              "digest": "sha256:8d7001824644147297f5c0f77bcdc2eaa4ccaa4e06c64f3dc034e7bdeae331cd",
+              "digest": "sha256:e79d6472fab9dea90c124bd6cdf88dc5e94386394f2cec4478570e9bd56e1f02",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 183,
+              "sizeBytes": 185,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.110399+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.295030+00:00"
             },
             {
-              "digest": "sha256:d56ba24039a52e514ab709d1bb74b33696c60310bfc68f774ffaf4c15e05464e",
+              "digest": "sha256:1c89c86d31ba1edf1f36244c6fab5aaf1becc1b686530a5874e4be77e24a6d37",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 154,
+              "sizeBytes": 153,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.195769+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.380511+00:00"
             },
             {
-              "digest": "sha256:d9fd0aaa33154d8a5712cb45779da481454e94230eac401c4d734b7eabff271c",
+              "digest": "sha256:73660acad6d244b02fbbbfd9a8dee3974475357d21d30279b82cc2bf11b28c23",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 94,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.277584+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.461018+00:00"
             }
           ],
           "configCount": 1,
           "credentialsUsed": false,
           "cryptographicSignatureVerification": "original CI receipts checked separately",
-          "digest": "sha256:8df130c0aaa0763da7b2cbdce004451375d94232feb8313ecce9e072733c7e4b",
+          "digest": "sha256:fa1e37266cbfa329facc8f81762ef895fe565ab684cd1a20a26ad1821ac8e879",
           "key": "go",
           "layerCount": 4,
           "manifests": [
             {
-              "digest": "sha256:8df130c0aaa0763da7b2cbdce004451375d94232feb8313ecce9e072733c7e4b",
+              "digest": "sha256:fa1e37266cbfa329facc8f81762ef895fe565ab684cd1a20a26ad1821ac8e879",
               "sizeBytes": 1083,
-              "verifiedAt": "2026-11-20T11:14:47.848710+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.037491+00:00"
             }
           ],
           "platforms": [
@@ -443,19 +443,19 @@
           "role": "runtime",
           "runtimeExecuted": false,
           "status": "verified",
-          "tag": "ihl-go-1.27.3-secure-a09ce151a1c5-p3093549210",
+          "tag": "ihl-go-1.27.3-secure-a09ce151a1c5-p3097264993",
           "tagProof": {
-            "digest": "sha256:8df130c0aaa0763da7b2cbdce004451375d94232feb8313ecce9e072733c7e4b",
+            "digest": "sha256:fa1e37266cbfa329facc8f81762ef895fe565ab684cd1a20a26ad1821ac8e879",
             "sizeBytes": 1083,
-            "verifiedAt": "2026-11-20T11:14:47.806248+00:00"
+            "verifiedAt": "2026-11-21T11:08:22.991340+00:00"
           },
           "tier": "secure",
-          "verifiedAt": "2026-11-20T11:14:48.277613+00:00"
+          "verifiedAt": "2026-11-21T11:08:23.461037+00:00"
         }
       ],
-      "jobId": 18218292932,
-      "receiptSha256": "58f6896bb087153b112e1a5dcf1dcd690de621d654980d43aee23f2ade70aba4",
-      "retainedArchiveSha256": "28cb6620556c633bb2f9cd828e8a5d637a9d5e7ddaa12d2aa65ece158fde61da"
+      "jobId": 18244924194,
+      "receiptSha256": "f94c96b79452e7e1f5a9ddfc5c7695f50bd2ba925dc0e20dc1a2b509138828c3",
+      "retainedArchiveSha256": "eeba7199bbbbdc9ede65927637a6fc68897faa57645a5720bb23802fdc3d4568"
     },
     {
       "anonymousProofs": [
@@ -463,64 +463,64 @@
           "allConfigAndLayerBytesVerified": true,
           "blobs": [
             {
-              "digest": "sha256:a8ee551a022f3f73f9c8e0a9b47619d1dbabfed49d8c7e152b664b821d2bfd8d",
+              "digest": "sha256:6b44b087753366d7754bae43dd78df1020fa329fce10478aaf5aa623dcdb62c3",
               "kind": "config",
               "platform": {
                 "architecture": "amd64",
                 "os": "linux"
               },
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 5378,
+              "sizeBytes": 5372,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:51.651874+00:00"
+              "verifiedAt": "2026-11-21T11:08:26.749034+00:00"
             },
             {
-              "digest": "sha256:408e57642543b5cec79f34f7788d3e25b9de686127a4a375a79dd62952096567",
+              "digest": "sha256:b7bb2615668d58fcd4e7fccff7366858af80829f0a86d60a304346e071c0a01e",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 106309,
+              "sizeBytes": 106306,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.416660+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.790946+00:00"
             },
             {
-              "digest": "sha256:ca58cfbd11db01e79334347799555170b5974928dbfa5df988c4a9bf11be1dee",
+              "digest": "sha256:010e1183d499ecabda2630d6e7a74fc596465e1f58cbce480740740ce1e46144",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 186,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.499727+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.881353+00:00"
             },
             {
-              "digest": "sha256:85b8805afb10314883dedfb475c35a83e8e7ec88526741b9a093fcbe1f19249b",
+              "digest": "sha256:1daba98d027c57a68012ebe7d651b4da27acdf98b191beeba70a64cf8353573f",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 155,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.581606+00:00"
+              "verifiedAt": "2026-11-21T11:08:21.964395+00:00"
             },
             {
-              "digest": "sha256:a0bdf84fa7fb0b2159b5bcab0936ce2548deb87192c61c266b3a910f05030ef4",
+              "digest": "sha256:d999b89b371c00eebc39d89aa769f4ad833c3e8c7e2674712e1049db899e724b",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 94,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:46.681718+00:00"
+              "verifiedAt": "2026-11-21T11:08:22.054362+00:00"
             },
             {
-              "digest": "sha256:9c3714de64984b1247c5f0617bd2e8ceb7191301e15ef5cd7940a7daada4d856",
+              "digest": "sha256:339986d1d5e60af866f59fd848d69be7fd08d61850790ad8a935f5cb3b711856",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 127,
+              "sizeBytes": 128,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:51.751394+00:00"
+              "verifiedAt": "2026-11-21T11:08:26.832940+00:00"
             },
             {
-              "digest": "sha256:b0b093057ad48979b66683e994306a014d714ca1a1622bbf4100e79f28e49288",
+              "digest": "sha256:948425e3df93569da511f8a5be14bb6d1e1e0bdcfd55c06e3697e07c5f251f52",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 96,
+              "sizeBytes": 95,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:51.828638+00:00"
+              "verifiedAt": "2026-11-21T11:08:26.928740+00:00"
             },
             {
               "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
@@ -528,20 +528,20 @@
               "repository": "foxtech-consulting/go",
               "sizeBytes": 32,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:51.898476+00:00"
+              "verifiedAt": "2026-11-21T11:08:27.000366+00:00"
             }
           ],
           "configCount": 1,
           "credentialsUsed": false,
           "cryptographicSignatureVerification": "original CI receipts checked separately",
-          "digest": "sha256:28ba52f28c896cc7f73d74ff54afd6ebbf36ed7d78c0a86f48d7b2195440086c",
+          "digest": "sha256:2719d3ca8827f30b32881a7100b135a459fc0b5654c01fa258df33a8ff9abe0f",
           "key": "go-1-26",
           "layerCount": 7,
           "manifests": [
             {
-              "digest": "sha256:28ba52f28c896cc7f73d74ff54afd6ebbf36ed7d78c0a86f48d7b2195440086c",
+              "digest": "sha256:2719d3ca8827f30b32881a7100b135a459fc0b5654c01fa258df33a8ff9abe0f",
               "sizeBytes": 1663,
-              "verifiedAt": "2026-11-20T11:14:51.581821+00:00"
+              "verifiedAt": "2026-11-21T11:08:26.667634+00:00"
             }
           ],
           "platforms": [
@@ -554,20 +554,20 @@
           "role": "runtime",
           "runtimeExecuted": false,
           "status": "verified",
-          "tag": "ihl-go-1.26.10-hardened-a09ce151a1c5-p3093549210",
+          "tag": "ihl-go-1.26.10-hardened-a09ce151a1c5-p3097264993",
           "tagProof": {
-            "digest": "sha256:28ba52f28c896cc7f73d74ff54afd6ebbf36ed7d78c0a86f48d7b2195440086c",
+            "digest": "sha256:2719d3ca8827f30b32881a7100b135a459fc0b5654c01fa258df33a8ff9abe0f",
             "sizeBytes": 1663,
-            "verifiedAt": "2026-11-20T11:14:51.532483+00:00"
+            "verifiedAt": "2026-11-21T11:08:26.622413+00:00"
           },
           "tier": "hardened",
-          "verifiedAt": "2026-11-20T11:14:51.898489+00:00"
+          "verifiedAt": "2026-11-21T11:08:27.000392+00:00"
         },
         {
           "allConfigAndLayerBytesVerified": true,
           "blobs": [
             {
-              "digest": "sha256:0f21410b5f2526340926d8e410ed79be4cabd1eb72c5597b68ab383c5c780a1f",
+              "digest": "sha256:696e09d8ff699688efb86fe3c5f4dca1c0485ab4b7c50d39a53f99cad1739004",
               "kind": "config",
               "platform": {
                 "architecture": "amd64",
@@ -576,55 +576,55 @@
               "repository": "foxtech-consulting/go",
               "sizeBytes": 5376,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:53.263498+00:00"
+              "verifiedAt": "2026-11-21T11:08:28.034298+00:00"
             },
             {
-              "digest": "sha256:15556cdbf18601a01cffc0d134666957dcb0bc1e825bf5af4865ddfeafabb79c",
+              "digest": "sha256:5070f139ca9576a946ff8a21e3d844d7131ea3581e990e0005ff4836d470a1e5",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 106309,
+              "sizeBytes": 106306,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.021832+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.209028+00:00"
             },
             {
-              "digest": "sha256:8d7001824644147297f5c0f77bcdc2eaa4ccaa4e06c64f3dc034e7bdeae331cd",
+              "digest": "sha256:e79d6472fab9dea90c124bd6cdf88dc5e94386394f2cec4478570e9bd56e1f02",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 183,
+              "sizeBytes": 185,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.110399+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.295030+00:00"
             },
             {
-              "digest": "sha256:d56ba24039a52e514ab709d1bb74b33696c60310bfc68f774ffaf4c15e05464e",
+              "digest": "sha256:1c89c86d31ba1edf1f36244c6fab5aaf1becc1b686530a5874e4be77e24a6d37",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
-              "sizeBytes": 154,
+              "sizeBytes": 153,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.195769+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.380511+00:00"
             },
             {
-              "digest": "sha256:d9fd0aaa33154d8a5712cb45779da481454e94230eac401c4d734b7eabff271c",
+              "digest": "sha256:73660acad6d244b02fbbbfd9a8dee3974475357d21d30279b82cc2bf11b28c23",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 94,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:48.277584+00:00"
+              "verifiedAt": "2026-11-21T11:08:23.461018+00:00"
             },
             {
-              "digest": "sha256:ea801bb25fb86e2a955ea547f66faa6cc075a5c0fde0f74a2519e6a5f8a954bd",
+              "digest": "sha256:49c90c6e02f1c13a029a02b455f4acade2ee7d099c0a883dfe3a8ec0b3c02f08",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 128,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:53.345786+00:00"
+              "verifiedAt": "2026-11-21T11:08:28.122393+00:00"
             },
             {
-              "digest": "sha256:5f9471112ad300141eb1c995e1ca4f527b820ef659c9fcfc52c1d49c8c271eb8",
+              "digest": "sha256:e66c6bbef676d83271dcad8818d7af2b366867ac22de8ca495b0e977fd658178",
               "kind": "layer",
               "repository": "foxtech-consulting/go",
               "sizeBytes": 96,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:53.429100+00:00"
+              "verifiedAt": "2026-11-21T11:08:28.204308+00:00"
             },
             {
               "digest": "sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1",
@@ -632,20 +632,20 @@
               "repository": "foxtech-consulting/go",
               "sizeBytes": 32,
               "status": "verified",
-              "verifiedAt": "2026-11-20T11:14:51.898476+00:00"
+              "verifiedAt": "2026-11-21T11:08:27.000366+00:00"
             }
           ],
           "configCount": 1,
           "credentialsUsed": false,
           "cryptographicSignatureVerification": "original CI receipts checked separately",
-          "digest": "sha256:d83fc214304db42423fa729d660c47c835095fd8154dee7a46e736f1a30181a6",
+          "digest": "sha256:93285f2675a0b3630f6296dabebee87c0106ddbe2654f8d22599599d611d8d8a",
           "key": "go",
           "layerCount": 7,
           "manifests": [
             {
-              "digest": "sha256:d83fc214304db42423fa729d660c47c835095fd8154dee7a46e736f1a30181a6",
+              "digest": "sha256:93285f2675a0b3630f6296dabebee87c0106ddbe2654f8d22599599d611d8d8a",
               "sizeBytes": 1663,
-              "verifiedAt": "2026-11-20T11:14:53.181517+00:00"
+              "verifiedAt": "2026-11-21T11:08:27.956471+00:00"
             }
           ],
           "platforms": [
@@ -658,22 +658,22 @@
           "role": "runtime",
           "runtimeExecuted": false,
           "status": "verified",
-          "tag": "ihl-go-1.27.3-hardened-a09ce151a1c5-p3093549210",
+          "tag": "ihl-go-1.27.3-hardened-a09ce151a1c5-p3097264993",
           "tagProof": {
-            "digest": "sha256:d83fc214304db42423fa729d660c47c835095fd8154dee7a46e736f1a30181a6",
+            "digest": "sha256:93285f2675a0b3630f6296dabebee87c0106ddbe2654f8d22599599d611d8d8a",
             "sizeBytes": 1663,
-            "verifiedAt": "2026-11-20T11:14:53.136781+00:00"
+            "verifiedAt": "2026-11-21T11:08:27.908174+00:00"
           },
           "tier": "hardened",
-          "verifiedAt": "2026-11-20T11:14:53.429115+00:00"
+          "verifiedAt": "2026-11-21T11:08:28.204323+00:00"
         }
       ],
-      "jobId": 18218292933,
-      "receiptSha256": "5ba8b3e85433ab705d6146f3fdd5b569a6ae096c919ef390ed7d7bb56ea6cfe5",
-      "retainedArchiveSha256": "832fd29a19b32fe805ff7ce4114099f7cd2caa0cb94c1ef1e057588c8838cd44"
+      "jobId": 18244924195,
+      "receiptSha256": "3cd99d25f3a8412b5d2b08f0987f9e40f8858cde9b4e58f6bd28aa9fa9829bc9",
+      "retainedArchiveSha256": "b59acdc044b0a53a048a5e252102151378c1871c005da00c1046f3db82636de8"
     }
   ],
-  "publisherPipelineId": 3093706629,
+  "publisherPipelineId": 3097311714,
   "publisherRevision": "a09ce151a1c5b6ab6b0c0b0cf8543b5d98a16e09",
   "reportType": "ihl-go-owned-catalog",
   "schemaVersion": 1
